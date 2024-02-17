@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1094_CarPooling_Test
     {
-        [TestMethod]
-        public void CarPooling_1()
-        {
+        [Test]
+        public void CarPooling_1() {
             var solution = new _1094_CarPooling();
             var result = solution.CarPooling(new int[][] {
                 new int[] { 2, 1, 5 },
@@ -16,9 +12,8 @@ namespace LeetCode.Test
             Assert.IsFalse(result);
         }
 
-        [TestMethod]
-        public void CarPooling_2()
-        {
+        [Test]
+        public void CarPooling_2() {
             var solution = new _1094_CarPooling();
             var result = solution.CarPooling(new int[][] {
                 new int[] { 2, 1, 5 },
@@ -27,9 +22,8 @@ namespace LeetCode.Test
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void CarPooling_3()
-        {
+        [Test]
+        public void CarPooling_3() {
             var solution = new _1094_CarPooling();
             var result = solution.CarPooling(new int[][] {
                 new int[] { 2, 1, 5 },
@@ -38,9 +32,8 @@ namespace LeetCode.Test
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void CarPooling_4()
-        {
+        [Test]
+        public void CarPooling_4() {
             var solution = new _1094_CarPooling();
             var result = solution.CarPooling(new int[][] {
                 new int[] { 3, 2, 7 },

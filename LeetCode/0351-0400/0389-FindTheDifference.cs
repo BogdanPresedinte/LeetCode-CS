@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0389_FindTheDifference
     {
-        public char FindTheDifference(string s, string t)
-        {
+        public char FindTheDifference(string s, string t) {
             char result = (char)0;
             foreach (var ch in s)
                 result ^= ch;

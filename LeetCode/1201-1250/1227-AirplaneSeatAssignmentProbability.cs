@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _1227_AirplaneSeatAssignmentProbability
     {
-        public double NthPersonGetsNthSeat(int n)
-        {
+        public double NthPersonGetsNthSeat(int n) {
             return n == 1 ? 1.0 : 0.5;
         }
     }

@@ -21,8 +21,7 @@ namespace LeetCode
      */
     public class _0606_ConstructStringFromBinaryTree
     {
-        public string Tree2str(TreeNode t)
-        {
+        public string Tree2str(TreeNode t) {
             if (t == null) return string.Empty;
             if (t.left == null && t.right == null) return $"{t.val}";
             if (t.right == null) return $"{t.val}({Tree2str(t.left)})";

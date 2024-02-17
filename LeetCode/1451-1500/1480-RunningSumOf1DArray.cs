@@ -8,11 +8,9 @@ namespace LeetCode
 {
     public class _1480_RunningSumOf1DArray
     {
-        public int[] RunningSum(int[] nums)
-        {
+        public int[] RunningSum(int[] nums) {
             var sum = nums[0];
-            for (int i = 1; i < nums.Length; i++)
-            {
+            for (int i = 1; i < nums.Length; i++) {
                 sum += nums[i];
                 nums[i] = sum;
             }

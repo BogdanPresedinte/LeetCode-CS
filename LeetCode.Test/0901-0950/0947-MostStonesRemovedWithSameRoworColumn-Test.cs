@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0947_MostStonesRemovedWithSameRoworColumn_Test
     {
-        [TestMethod]
-        public void RemoveStonesTest_1()
-        {
+        [Test]
+        public void RemoveStonesTest_1() {
             var solution = new _0947_MostStonesRemovedWithSameRoworColumn();
             var result = solution.RemoveStones(
                 new int[][]
@@ -24,9 +20,8 @@ namespace LeetCode.Test
             Assert.AreEqual(5, result);
         }
 
-        [TestMethod]
-        public void RemoveStonesTest_2()
-        {
+        [Test]
+        public void RemoveStonesTest_2() {
             var solution = new _0947_MostStonesRemovedWithSameRoworColumn();
             var result = solution.RemoveStones(
                 new int[][]
@@ -42,9 +37,8 @@ namespace LeetCode.Test
             Assert.AreEqual(3, result);
         }
 
-        [TestMethod]
-        public void RemoveStonesTest_3()
-        {
+        [Test]
+        public void RemoveStonesTest_3() {
             var solution = new _0947_MostStonesRemovedWithSameRoworColumn();
             var result = solution.RemoveStones(
                 new int[][]
@@ -56,9 +50,8 @@ namespace LeetCode.Test
             Assert.AreEqual(0, result);
         }
 
-        [TestMethod]
-        public void RemoveStonesTest_4()
-        {
+        [Test]
+        public void RemoveStonesTest_4() {
             var solution = new _0947_MostStonesRemovedWithSameRoworColumn();
             var result = solution.RemoveStones(
                 new int[][]

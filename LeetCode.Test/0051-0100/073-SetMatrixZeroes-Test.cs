@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _073_SetMatrixZeroes_Test
     {
-        [TestMethod]
-        public void SetZeroesTest_NoZero()
-        {
+        [Test]
+        public void SetZeroesTest_NoZero() {
             var input = new int[,]
             {
                 { 1, 2, 3 },
@@ -26,9 +22,8 @@ namespace LeetCode.Test
             }, input);
         }
 
-        [TestMethod]
-        public void SetZeroesTest_HasZero()
-        {
+        [Test]
+        public void SetZeroesTest_HasZero() {
             var input = new int[,]
             {
                 { 1, 2, 3 },
@@ -47,9 +42,8 @@ namespace LeetCode.Test
             }, input);
         }
 
-        [TestMethod]
-        public void SetZeroesTest_HasZero_FirstRow()
-        {
+        [Test]
+        public void SetZeroesTest_HasZero_FirstRow() {
             var input = new int[,]
             {
                 { 1, 0, 3 },
@@ -68,9 +62,8 @@ namespace LeetCode.Test
             }, input);
         }
 
-        [TestMethod]
-        public void SetZeroesTest_HasZero_FirstColumn()
-        {
+        [Test]
+        public void SetZeroesTest_HasZero_FirstColumn() {
             var input = new int[,]
             {
                 { 1, 2, 3 },
@@ -89,9 +82,8 @@ namespace LeetCode.Test
             }, input);
         }
 
-        [TestMethod]
-        public void SetZeroesTest_HasZero_TopLeft()
-        {
+        [Test]
+        public void SetZeroesTest_HasZero_TopLeft() {
             var input = new int[,]
             {
                 { 0, 2, 3 },
@@ -110,9 +102,8 @@ namespace LeetCode.Test
             }, input);
         }
 
-        [TestMethod]
-        public void SetZeroesTest_HasZero_Multiple()
-        {
+        [Test]
+        public void SetZeroesTest_HasZero_Multiple() {
             var input = new int[,]
             {
                 { 1, 2, 3, 4 },
@@ -134,9 +125,8 @@ namespace LeetCode.Test
         }
 
 
-        [TestMethod]
-        public void SetZeroes_2Test_NoZero()
-        {
+        [Test]
+        public void SetZeroes_2Test_NoZero() {
             var input = new int[,]
             {
                 { 1, 2, 3 },
@@ -155,9 +145,8 @@ namespace LeetCode.Test
             }, input);
         }
 
-        [TestMethod]
-        public void SetZeroes_2Test_HasZero()
-        {
+        [Test]
+        public void SetZeroes_2Test_HasZero() {
             var input = new int[,]
             {
                 { 1, 2, 3 },
@@ -176,9 +165,8 @@ namespace LeetCode.Test
             }, input);
         }
 
-        [TestMethod]
-        public void SetZeroes_2Test_HasZero_FirstRow()
-        {
+        [Test]
+        public void SetZeroes_2Test_HasZero_FirstRow() {
             var input = new int[,]
             {
                 { 1, 0, 3 },
@@ -197,9 +185,8 @@ namespace LeetCode.Test
             }, input);
         }
 
-        [TestMethod]
-        public void SetZeroes_2Test_HasZero_FirstColumn()
-        {
+        [Test]
+        public void SetZeroes_2Test_HasZero_FirstColumn() {
             var input = new int[,]
             {
                 { 1, 2, 3 },
@@ -218,9 +205,8 @@ namespace LeetCode.Test
             }, input);
         }
 
-        [TestMethod]
-        public void SetZeroes_2Test_HasZero_TopLeft()
-        {
+        [Test]
+        public void SetZeroes_2Test_HasZero_TopLeft() {
             var input = new int[,]
             {
                 { 0, 2, 3 },
@@ -239,9 +225,8 @@ namespace LeetCode.Test
             }, input);
         }
 
-        [TestMethod]
-        public void SetZeroes_2Test_HasZero_Multiple()
-        {
+        [Test]
+        public void SetZeroes_2Test_HasZero_Multiple() {
             var input = new int[,]
             {
                 { 1, 2, 3, 4 },

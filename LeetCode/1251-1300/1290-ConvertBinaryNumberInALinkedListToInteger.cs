@@ -16,11 +16,9 @@ namespace LeetCode
      */
     public class _1290_ConvertBinaryNumberInALinkedListToInteger
     {
-        public int GetDecimalValue(ListNode head)
-        {
+        public int GetDecimalValue(ListNode head) {
             uint result = 0;
-            while (head != null)
-            {
+            while (head != null) {
                 result <<= 1;
                 result += (uint)head.val;
                 head = head.next;

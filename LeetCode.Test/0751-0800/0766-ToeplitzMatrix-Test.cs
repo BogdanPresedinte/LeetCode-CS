@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0766_ToeplitzMatrix_Test
     {
-        [TestMethod]
-        public void IsToeplitzMatrix_1()
-        {
+        [Test]
+        public void IsToeplitzMatrix_1() {
             var solution = new _0766_ToeplitzMatrix();
             var result = solution.IsToeplitzMatrix(new int[][] {
                 new int[] { 1, 2, 3, 4 },
@@ -17,9 +13,8 @@ namespace LeetCode.Test
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void IsToeplitzMatrix_2()
-        {
+        [Test]
+        public void IsToeplitzMatrix_2() {
             var solution = new _0766_ToeplitzMatrix();
             var result = solution.IsToeplitzMatrix(new int[][] {
                 new int[] { 1, 2 },

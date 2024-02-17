@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1314_MatrixBlockSum_Test
     {
-        [TestMethod]
-        public void MatrixBlockSum_1()
-        {
+        [Test]
+        public void MatrixBlockSum_1() {
             var solution = new _1314_MatrixBlockSum();
             var result = solution.MatrixBlockSum(new int[][]
                 {
@@ -24,9 +20,8 @@ namespace LeetCode.Test
                 }, result);
         }
 
-        [TestMethod]
-        public void MatrixBlockSum_2()
-        {
+        [Test]
+        public void MatrixBlockSum_2() {
             var solution = new _1314_MatrixBlockSum();
             var result = solution.MatrixBlockSum(
                 new int[][]
@@ -44,9 +39,8 @@ namespace LeetCode.Test
                 }, result);
         }
 
-        [TestMethod]
-        public void MatrixBlockSum_3()
-        {
+        [Test]
+        public void MatrixBlockSum_3() {
             var solution = new _1314_MatrixBlockSum();
             var result = solution.MatrixBlockSum(
                 new int[][]

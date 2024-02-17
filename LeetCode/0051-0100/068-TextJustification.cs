@@ -4,27 +4,22 @@
 // Link: https://leetcode.com/submissions/detail/378577412/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
 using System.Text;
 
 namespace LeetCode
 {
     public class _068_TextJustification
     {
-        public IList<string> FullJustify(string[] words, int maxWidth)
-        {
+        public IList<string> FullJustify(string[] words, int maxWidth) {
             var result = new List<string>();
 
             int start = 0, len = 0;
             var builder = new StringBuilder();
-            for (int i = 0; i < words.Length; i++)
-            {
-                if (len + words[i].Length > maxWidth)
-                {
+            for (int i = 0; i < words.Length; i++) {
+                if (len + words[i].Length > maxWidth) {
                     var space = maxWidth - len + (i - start);
                     builder.Clear();
-                    for (int j = start; j < i; j++)
-                    {
+                    for (int j = start; j < i; j++) {
                         builder.Append(words[j]);
 
                         var tempSpace = j != i - 1
@@ -42,8 +37,7 @@ namespace LeetCode
             }
 
             builder.Clear();
-            for (int j = start; j < words.Length; j++)
-            {
+            for (int j = start; j < words.Length; j++) {
                 builder.Append(words[j]);
                 var tempSpace = j != words.Length - 1
                     ? 1

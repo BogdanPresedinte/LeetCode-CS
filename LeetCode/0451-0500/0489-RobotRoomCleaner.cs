@@ -4,9 +4,6 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -31,24 +28,20 @@ namespace LeetCode
         private readonly int[][] directions = { new int[] { -1, 0 }, new int[] { 0, 1 }, new int[] { 1, 0 }, new int[] { 0, -1 } };
 
 
-        public void CleanRoom(Robot robot)
-        {
+        public void CleanRoom(Robot robot) {
             var visited = new HashSet<Position>();
             CleanRoom(robot, 0, 0, 0, visited);
         }
 
-        private void CleanRoom(Robot robot, int row, int col, int direction, HashSet<Position> visited)
-        {
+        private void CleanRoom(Robot robot, int row, int col, int direction, HashSet<Position> visited) {
             visited.Add(new Position(row, col));
             robot.Clean();
-            for (int turn = 0; turn < 4; turn++)
-            {
+            for (int turn = 0; turn < 4; turn++) {
                 var newDirection = (direction + turn) % 4;
                 int newRow = row + directions[newDirection][0];
                 int newCol = col + directions[newDirection][1];
 
-                if (!visited.Contains(new Position(newRow, newCol)) && robot.Move())
-                {
+                if (!visited.Contains(new Position(newRow, newCol)) && robot.Move()) {
                     CleanRoom(robot, newRow, newCol, newDirection, visited);
                     TurnBack(robot);
                 }
@@ -57,8 +50,7 @@ namespace LeetCode
             }
         }
 
-        private void TurnBack(Robot robot)
-        {
+        private void TurnBack(Robot robot) {
             robot.TurnRight();
             robot.TurnRight();
             robot.Move();
@@ -69,8 +61,7 @@ namespace LeetCode
 
     public class Position : IComparable<Position>, IEquatable<Position>
     {
-        public Position(int row, int col)
-        {
+        public Position(int row, int col) {
             Row = row;
             Column = col;
         }
@@ -79,8 +70,7 @@ namespace LeetCode
 
         public int Column { get; set; }
 
-        public int CompareTo(Position other)
-        {
+        public int CompareTo(Position other) {
             var result = Row.CompareTo(other.Row);
             if (result == 0)
                 return Column.CompareTo(other.Column);
@@ -88,18 +78,15 @@ namespace LeetCode
                 return result;
         }
 
-        public bool Equals(Position other)
-        {
+        public bool Equals(Position other) {
             return Row == other.Row && Column == other.Column;
         }
 
-        public override int GetHashCode()
-        {
+        public override int GetHashCode() {
             return Row.GetHashCode() ^ Column.GetHashCode();
         }
 
-        public override bool Equals(object obj)
-        {
+        public override bool Equals(object obj) {
             if (obj.GetType() == typeof(Position)) return Equals((Position)obj);
             else return false;
         }
@@ -115,8 +102,7 @@ namespace LeetCode
 
         private readonly int[][] directions = { new int[] { -1, 0 }, new int[] { 0, 1 }, new int[] { 1, 0 }, new int[] { 0, -1 } };
 
-        public Robot(int[][] grid, int row, int col)
-        {
+        public Robot(int[][] grid, int row, int col) {
             this.grid = grid;
             this.current_row = row;
             this.current_col = col;
@@ -126,13 +112,11 @@ namespace LeetCode
 
         public bool[,] CleannedGrid { get { return cleannedGrid; } }
 
-        public bool Move()
-        {
+        public bool Move() {
             int newRow = current_row + directions[direction][0];
             int newCol = current_col + directions[direction][1];
 
-            if ((newRow >= 0 && newRow < grid.Length) && (newCol >= 0 && newCol < grid[0].Length) && grid[newRow][newCol] == 1)
-            {
+            if ((newRow >= 0 && newRow < grid.Length) && (newCol >= 0 && newCol < grid[0].Length) && grid[newRow][newCol] == 1) {
                 current_row = newRow;
                 current_col = newCol;
                 return true;
@@ -140,18 +124,15 @@ namespace LeetCode
             return false;
         }
 
-        public void TurnLeft()
-        {
+        public void TurnLeft() {
             direction = (direction - 1 + 4) % 4;
         }
 
-        public void TurnRight()
-        {
+        public void TurnRight() {
             direction = (direction + 1) % 4;
         }
 
-        public void Clean()
-        {
+        public void Clean() {
             cleannedGrid[current_row, current_col] = true;
         }
     }

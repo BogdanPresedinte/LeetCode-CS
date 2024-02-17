@@ -11,24 +11,20 @@ namespace LeetCode
         private string result = string.Empty;
         private int count = 0;
 
-        public string GetHappyString(int n, int k)
-        {
+        public string GetHappyString(int n, int k) {
             DFS("", n, k, ' ');
             return result;
         }
 
-        private void DFS(string currentStr, int n, int k, char prev)
-        {
-            if (currentStr.Length == n)
-            {
+        private void DFS(string currentStr, int n, int k, char prev) {
+            if (currentStr.Length == n) {
                 count++;
                 if (count == k)
                     result = currentStr;
                 return;
             }
 
-            for (char ch = 'a'; ch <= 'c'; ch++)
-            {
+            for (char ch = 'a'; ch <= 'c'; ch++) {
                 if (currentStr.Length > 0 && prev == ch)
                     continue;
 

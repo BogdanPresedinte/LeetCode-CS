@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0447_NumberOfBoomerangs_Test
     {
-        [TestMethod]
-        public void NumberOfBoomerangs_1()
-        {
+        [Test]
+        public void NumberOfBoomerangs_1() {
             var solution = new _0447_NumberOfBoomerangs();
             var result = solution.NumberOfBoomerangs(new int[][] {
                 new int[] { 0, 0 },

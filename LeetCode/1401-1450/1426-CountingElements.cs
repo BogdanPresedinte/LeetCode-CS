@@ -4,18 +4,14 @@
 // Link: https://leetcode.com/submissions/detail/321449442/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _1426_CountingElements
     {
-        public int CountElements(int[] arr)
-        {
+        public int CountElements(int[] arr) {
             var mapping = new SortedDictionary<int, int>();
 
-            foreach (var num in arr)
-            {
+            foreach (var num in arr) {
                 if (!mapping.ContainsKey(num)) mapping.Add(num, 0);
                 mapping[num]++;
             }

@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0566_ReshapeTheMatrix_Test
     {
-        [TestMethod]
-        public void MatrixReshape_1()
-        {
+        [Test]
+        public void MatrixReshape_1() {
             var solution = new _0566_ReshapeTheMatrix();
             var result = solution.MatrixReshape(new int[][]
                 {
@@ -21,9 +17,8 @@ namespace LeetCode.Test
                 }, result);
         }
 
-        [TestMethod]
-        public void MatrixReshape_2()
-        {
+        [Test]
+        public void MatrixReshape_2() {
             var solution = new _0566_ReshapeTheMatrix();
             var result = solution.MatrixReshape(new int[][]
                 {

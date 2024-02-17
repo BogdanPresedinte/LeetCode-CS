@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0835_ImageOverlap_Test
     {
-        [TestMethod]
-        public void LargestOverlap_1()
-        {
+        [Test]
+        public void LargestOverlap_1() {
             var solution = new _0835_ImageOverlap();
             var result = solution.LargestOverlap(new int[][] {
                 new int[] { 1, 1, 0 },
@@ -21,9 +17,8 @@ namespace LeetCode.Test
             Assert.AreEqual(3, result);
         }
 
-        [TestMethod]
-        public void LargestOverlap_2()
-        {
+        [Test]
+        public void LargestOverlap_2() {
             var solution = new _0835_ImageOverlap();
             var result = solution.LargestOverlap(new int[][] {
                 new int[] { 1 },
@@ -33,9 +28,8 @@ namespace LeetCode.Test
             Assert.AreEqual(1, result);
         }
 
-        [TestMethod]
-        public void LargestOverlap_3()
-        {
+        [Test]
+        public void LargestOverlap_3() {
             var solution = new _0835_ImageOverlap();
             var result = solution.LargestOverlap(new int[][] {
                 new int[] { 0 },
@@ -45,9 +39,8 @@ namespace LeetCode.Test
             Assert.AreEqual(0, result);
         }
 
-        [TestMethod]
-        public void LargestOverlap_4()
-        {
+        [Test]
+        public void LargestOverlap_4() {
             var solution = new _0835_ImageOverlap();
             var result = solution.LargestOverlap(new int[][] {
                 new int[] { 0, 0, 0, 0, 1 },

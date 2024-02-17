@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0489_RobotRoomCleaner_Test
     {
-        [TestMethod]
-        public void CleanRoomTest()
-        {
+        [Test]
+        public void CleanRoomTest() {
             var grid = new int[][]
             {
                 new int[] { 1, 1, 1, 1, 1, 0, 1, 1 },

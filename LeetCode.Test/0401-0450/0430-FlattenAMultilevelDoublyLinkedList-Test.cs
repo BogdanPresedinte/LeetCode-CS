@@ -1,12 +1,10 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static LeetCode._0430_FlattenAMultilevelDoublyLinkedList;
 
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0430_FlattenAMultilevelDoublyLinkedList_Test
     {
-        //[TestMethod]
+        //[Test]
         //public void Flatten_1()
         //{
         //    var solution = new _0430_FlattenAMultilevelDoublyLinkedList();
@@ -14,9 +12,8 @@ namespace LeetCode.Test
         //    Assert.AreEqual(EXPECTED, result);
         //}
 
-        [TestMethod]
-        public void Flatten_2()
-        {
+        [Test]
+        public void Flatten_2() {
             var node1 = new Node() { val = 1 };
             var node2 = new Node() { val = 2 };
             var node3 = new Node() { val = 3 };
@@ -42,9 +39,8 @@ namespace LeetCode.Test
             Assert.AreEqual(3, resultNode3.prev.val);
         }
 
-        [TestMethod]
-        public void Flatten_3()
-        {
+        [Test]
+        public void Flatten_3() {
             var solution = new _0430_FlattenAMultilevelDoublyLinkedList();
             var result = solution.Flatten(null);
             Assert.IsNull(result);

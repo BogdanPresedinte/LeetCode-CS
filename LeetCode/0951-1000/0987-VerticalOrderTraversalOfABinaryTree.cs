@@ -4,9 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/378620291/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Linq;
-
 namespace LeetCode
 {
     /**
@@ -24,8 +21,7 @@ namespace LeetCode
      */
     public class _0987_VerticalOrderTraversalOfABinaryTree
     {
-        public IList<IList<int>> VerticalTraversal(TreeNode root)
-        {
+        public IList<IList<int>> VerticalTraversal(TreeNode root) {
             var results = new List<IList<int>>();
             if (root == null) return results;
 
@@ -33,12 +29,10 @@ namespace LeetCode
             var queue = new Queue<(int col, TreeNode node)>();
             queue.Enqueue((0, root));
 
-            while (queue.Count > 0)
-            {
+            while (queue.Count > 0) {
                 var size = queue.Count;
                 var levelColumnTable = new Dictionary<int, List<int>>();
-                for (int i = 0; i < size; i++)
-                {
+                for (int i = 0; i < size; i++) {
                     (int col, TreeNode node) = queue.Dequeue();
 
                     if (!levelColumnTable.ContainsKey(col))
@@ -51,8 +45,7 @@ namespace LeetCode
                         queue.Enqueue((col + 1, node.right));
                 }
 
-                foreach (var pair in levelColumnTable)
-                {
+                foreach (var pair in levelColumnTable) {
                     if (!columnTable.ContainsKey(pair.Key))
                         columnTable[pair.Key] = new List<int>();
 

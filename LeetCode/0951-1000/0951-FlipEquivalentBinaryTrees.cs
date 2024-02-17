@@ -21,8 +21,7 @@ namespace LeetCode
      */
     public class _0951_FlipEquivalentBinaryTrees
     {
-        public bool FlipEquiv(TreeNode root1, TreeNode root2)
-        {
+        public bool FlipEquiv(TreeNode root1, TreeNode root2) {
             if (root1 == null) return root2 == null;
             if (root2 == null) return root1 == null;
             if (root1.val != root2.val) return false;

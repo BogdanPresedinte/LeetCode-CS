@@ -4,15 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/360478346/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Linq;
-
 namespace LeetCode
 {
     public class _1198_FindSmallestCommonElementInAllRows
     {
-        public int SmallestCommonElement(int[][] mat)
-        {
+        public int SmallestCommonElement(int[][] mat) {
             int n = mat.Length;
             if (n == 1) return -1;
             int m = mat[0].Length;
@@ -21,8 +17,7 @@ namespace LeetCode
             for (int i = 0; i < m; i++)
                 set.Add(mat[0][i]);
 
-            for (int i = 1; i < n; i++)
-            {
+            for (int i = 1; i < n; i++) {
                 var newSet = new HashSet<int>();
                 for (int j = 0; j < m; j++)
                     if (set.Contains(mat[i][j]))

@@ -4,21 +4,17 @@
 // Link: https://leetcode.com/submissions/detail/381919537/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace LeetCode
 {
     public class _0726_NumberOfAtoms
     {
-        public string CountOfAtoms(string formula)
-        {
+        public string CountOfAtoms(string formula) {
             var map = Parser(formula, 0, formula.Length);
 
             var sb = new StringBuilder();
-            foreach (var key in map.Keys.OrderBy(k => k))
-            {
+            foreach (var key in map.Keys.OrderBy(k => k)) {
                 sb.Append(key);
                 if (map[key] > 1)
                     sb.Append(map[key]);
@@ -27,23 +23,19 @@ namespace LeetCode
             return sb.ToString();
         }
 
-        private IDictionary<string, int> Parser(string formula, int start, int end)
-        {
+        private IDictionary<string, int> Parser(string formula, int start, int end) {
             var results = new Dictionary<string, int>();
 
             var count = 0;
             var atom = string.Empty;
-            for (int i = start; i < end; i++)
-            {
+            for (int i = start; i < end; i++) {
                 var ch = formula[i];
                 if (char.IsDigit(ch))
                     count = count * 10 + ch - '0';
                 else if (char.IsLower(ch))
                     atom += ch;
-                else if (char.IsUpper(ch))
-                {
-                    if (atom != string.Empty)
-                    {
+                else if (char.IsUpper(ch)) {
+                    if (atom != string.Empty) {
                         if (results.ContainsKey(atom))
                             results[atom] += count == 0 ? 1 : count;
                         else
@@ -51,11 +43,8 @@ namespace LeetCode
                     }
                     atom = ch.ToString();
                     count = 0;
-                }
-                else if (ch == '(')
-                {
-                    if (atom != string.Empty)
-                    {
+                } else if (ch == '(') {
+                    if (atom != string.Empty) {
                         if (results.ContainsKey(atom))
                             results[atom] += count == 0 ? 1 : count;
                         else
@@ -66,8 +55,7 @@ namespace LeetCode
 
                     var balance = 1;
                     var j = i;
-                    while (balance != 0)
-                    {
+                    while (balance != 0) {
                         j++;
                         if (formula[j] == '(')
                             balance++;
@@ -80,8 +68,7 @@ namespace LeetCode
                         count = count * 10 + formula[i] - '0';
                     i--;
 
-                    foreach (var key in map.Keys)
-                    {
+                    foreach (var key in map.Keys) {
                         if (results.ContainsKey(key))
                             results[key] += map[key] * count;
                         else
@@ -91,8 +78,7 @@ namespace LeetCode
                 }
             }
 
-            if (atom != string.Empty)
-            {
+            if (atom != string.Empty) {
                 if (results.ContainsKey(atom))
                     results[atom] += count == 0 ? 1 : count;
                 else

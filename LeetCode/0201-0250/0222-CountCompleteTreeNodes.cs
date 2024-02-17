@@ -4,21 +4,17 @@
 // Link: https://leetcode.com/submissions/detail/357621851/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0222_CountCompleteTreeNodes
     {
-        public int CountNodes(TreeNode root)
-        {
+        public int CountNodes(TreeNode root) {
             if (root == null) { return 0; }
 
             // Find Depth
             var current = root;
             var depth = 0;
-            while (current.left != null)
-            {
+            while (current.left != null) {
                 current = current.left;
                 depth++;
             }
@@ -29,8 +25,7 @@ namespace LeetCode
 
             var l = 0;
             var r = count;
-            while (l <= r)
-            {
+            while (l <= r) {
                 var mid = l + (r - l) / 2;
                 if (FindNode(root, mid, count, depth))
                     l = mid + 1;
@@ -41,20 +36,15 @@ namespace LeetCode
             return count + l;
         }
 
-        public bool FindNode(TreeNode root, int index, int count, int depth)
-        {
+        public bool FindNode(TreeNode root, int index, int count, int depth) {
             var l = 0;
             var r = count;
-            for (int i = 0; i < depth; i++)
-            {
+            for (int i = 0; i < depth; i++) {
                 var mid = l + (r - l) / 2;
-                if (index <= mid)
-                {
+                if (index <= mid) {
                     root = root.left;
                     r = mid;
-                }
-                else
-                {
+                } else {
                     root = root.right;
                     l = mid + 1;
                 }

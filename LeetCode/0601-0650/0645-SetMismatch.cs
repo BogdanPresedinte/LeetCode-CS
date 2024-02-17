@@ -4,17 +4,13 @@
 // Link: https://leetcode.com/submissions/detail/352836267/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0645_SetMismatch
     {
-        public int[] FindErrorNums(int[] nums)
-        {
+        public int[] FindErrorNums(int[] nums) {
             int duplicate = -1, missing = -1;
-            foreach (int num in nums)
-            {
+            foreach (int num in nums) {
                 if (nums[Math.Abs(num) - 1] < 0)
                     duplicate = Math.Abs(num);
                 else

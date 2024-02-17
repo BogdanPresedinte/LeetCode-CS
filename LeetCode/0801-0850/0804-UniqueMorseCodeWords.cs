@@ -4,7 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/327567110/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
 using System.Text;
 
 namespace LeetCode
@@ -13,11 +12,9 @@ namespace LeetCode
     {
         private readonly string[] MORSE_CODE = new string[] { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.." };
 
-        public int UniqueMorseRepresentations(string[] words)
-        {
+        public int UniqueMorseRepresentations(string[] words) {
             var map = new HashSet<string>();
-            foreach (var word in words)
-            {
+            foreach (var word in words) {
                 var sb = new StringBuilder();
                 foreach (var ch in word)
                     sb.Append(MORSE_CODE[ch - 'a']);

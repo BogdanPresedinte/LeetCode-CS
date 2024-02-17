@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0998_MaximumBinaryTreeII_Test
     {
-        [TestMethod]
-        public void InsertIntoMaxTree_1()
-        {
+        [Test]
+        public void InsertIntoMaxTree_1() {
             var root = TestHelper.GenerateTree(new int?[] { 4, 1, 3, null, null, 2 });
 
             var solution = new _0998_MaximumBinaryTreeII();
@@ -15,9 +11,8 @@ namespace LeetCode.Test
             AssertHelper.AssertTree(new int?[] { 5, 4, null, 1, 3, null, null, 2 }, result);
         }
 
-        [TestMethod]
-        public void InsertIntoMaxTree_2()
-        {
+        [Test]
+        public void InsertIntoMaxTree_2() {
             var root = TestHelper.GenerateTree(new int?[] { 5, 2, 4, null, 1 });
 
             var solution = new _0998_MaximumBinaryTreeII();
@@ -25,9 +20,8 @@ namespace LeetCode.Test
             AssertHelper.AssertTree(new int?[] { 5, 2, 4, null, 1, null, 3 }, result);
         }
 
-        [TestMethod]
-        public void InsertIntoMaxTree_3()
-        {
+        [Test]
+        public void InsertIntoMaxTree_3() {
             var root = TestHelper.GenerateTree(new int?[] { 5, 2, 3, null, 1 });
 
             var solution = new _0998_MaximumBinaryTreeII();

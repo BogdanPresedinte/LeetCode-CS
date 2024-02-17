@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1357_ApplyDiscountEveryNOrders_Test
     {
-        [TestMethod]
-        public void ApplyDiscountEveryNOrders_1()
-        {
+        [Test]
+        public void ApplyDiscountEveryNOrders_1() {
             var cashier = new _1357_ApplyDiscountEveryNOrders(3, 50, new int[] { 1, 2, 3, 4, 5, 6, 7 }, new int[] { 100, 200, 300, 400, 300, 200, 100 });
 
             Assert.AreEqual(500.0, cashier.GetBill(new int[] { 1, 2 }, new int[] { 1, 2 }));

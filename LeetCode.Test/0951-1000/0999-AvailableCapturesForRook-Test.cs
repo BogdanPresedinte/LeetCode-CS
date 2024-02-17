@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0999_AvailableCapturesForRook_Test
     {
-        [TestMethod]
-        public void NumRookCaptures_1()
-        {
+        [Test]
+        public void NumRookCaptures_1() {
             var solution = new _0999_AvailableCapturesForRook();
             var result = solution.NumRookCaptures(new char[][] {
                 new char[] { '.', '.', '.', '.', '.', '.', '.', '.' },
@@ -22,9 +18,8 @@ namespace LeetCode.Test
             Assert.AreEqual(3, result);
         }
 
-        [TestMethod]
-        public void NumRookCaptures_2()
-        {
+        [Test]
+        public void NumRookCaptures_2() {
             var solution = new _0999_AvailableCapturesForRook();
             var result = solution.NumRookCaptures(new char[][] {
                 new char[] { '.', '.', '.', '.', '.', '.', '.', '.' },
@@ -39,9 +34,8 @@ namespace LeetCode.Test
             Assert.AreEqual(0, result);
         }
 
-        [TestMethod]
-        public void NumRookCaptures_3()
-        {
+        [Test]
+        public void NumRookCaptures_3() {
             var solution = new _0999_AvailableCapturesForRook();
             var result = solution.NumRookCaptures(new char[][] {
                 new char[] { '.', '.', '.', '.', '.', '.', '.', '.' },

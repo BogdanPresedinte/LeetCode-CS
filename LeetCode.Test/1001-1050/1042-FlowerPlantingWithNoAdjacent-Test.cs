@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1042_FlowerPlantingWithNoAdjacent_Test
     {
-        [TestMethod]
-        public void GardenNoAdj_1()
-        {
+        [Test]
+        public void GardenNoAdj_1() {
             var solution = new _1042_FlowerPlantingWithNoAdjacent();
             var result = solution.GardenNoAdj(3, new int[][] {
                 new int[] { 1, 2 },
@@ -17,9 +13,8 @@ namespace LeetCode.Test
             AssertHelper.AssertArray(new int[] { 1, 2, 3 }, result);
         }
 
-        [TestMethod]
-        public void GardenNoAdj_2()
-        {
+        [Test]
+        public void GardenNoAdj_2() {
             var solution = new _1042_FlowerPlantingWithNoAdjacent();
             var result = solution.GardenNoAdj(4, new int[][] {
                 new int[] { 1, 2 },
@@ -28,9 +23,8 @@ namespace LeetCode.Test
             AssertHelper.AssertArray(new int[] { 1, 2, 1, 2 }, result);
         }
 
-        [TestMethod]
-        public void GardenNoAdj_3()
-        {
+        [Test]
+        public void GardenNoAdj_3() {
             var solution = new _1042_FlowerPlantingWithNoAdjacent();
             var result = solution.GardenNoAdj(4, new int[][] {
                 new int[] { 1, 2 },

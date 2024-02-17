@@ -4,15 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/378084324/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _015_3Sum
     {
-        public IList<IList<int>> ThreeSum(int[] nums)
-        {
+        public IList<IList<int>> ThreeSum(int[] nums) {
             var results = new List<IList<int>>();
             if (nums.Length < 3) return results;
 
@@ -22,11 +18,9 @@ namespace LeetCode
             if (nums[0] > 0) return results;
             if (nums[nums.Length - 1] < 0) return results;
 
-            for (int i = 0; i < nums.Length - 2 && nums[i] <= 0; i++)
-            {
+            for (int i = 0; i < nums.Length - 2 && nums[i] <= 0; i++) {
                 int lo = i + 1, hi = nums.Length - 1;
-                while (lo < hi && nums[hi] >= 0)
-                {
+                while (lo < hi && nums[hi] >= 0) {
                     var sum = nums[i] + nums[lo] + nums[hi];
                     if (sum < 0)
                         do
@@ -36,8 +30,7 @@ namespace LeetCode
                         do
                             hi--;
                         while (lo < hi && nums[hi] == nums[hi + 1]);
-                    else
-                    {
+                    else {
                         results.Add(new List<int>() { nums[i], nums[lo], nums[hi] });
                         do
                             lo++;
@@ -54,13 +47,11 @@ namespace LeetCode
             return results;
         }
 
-        void Suffle(int[] nums)
-        {
+        void Suffle(int[] nums) {
             var random = new Random();
             int N = nums.Length;
             int r, temp;
-            for (int i = 0; i < N; i++)
-            {
+            for (int i = 0; i < N; i++) {
                 r = random.Next(i + 1);
 
                 temp = nums[r];
@@ -69,8 +60,7 @@ namespace LeetCode
             }
         }
 
-        void Quick3WaySort(int[] nums, int lo, int hi)
-        {
+        void Quick3WaySort(int[] nums, int lo, int hi) {
             if (lo >= hi) { return; }
             var lt = lo;
             var gt = hi;
@@ -78,21 +68,16 @@ namespace LeetCode
             var v = nums[i];
             int temp;
 
-            while (i <= gt)
-            {
-                if (nums[i] > v)
-                {
+            while (i <= gt) {
+                if (nums[i] > v) {
                     temp = nums[i];
                     nums[i] = nums[gt];
                     nums[gt--] = temp;
-                }
-                else if (nums[i] < v)
-                {
+                } else if (nums[i] < v) {
                     temp = nums[i];
                     nums[i] = nums[lt];
                     nums[lt++] = temp;
-                }
-                else { i++; }
+                } else { i++; }
             }
             Quick3WaySort(nums, lo, lt - 1);
             Quick3WaySort(nums, gt + 1, hi);

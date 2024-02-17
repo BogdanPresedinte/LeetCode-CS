@@ -4,9 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/367606994/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -24,8 +21,7 @@ namespace LeetCode
      */
     public class _0314_BinaryTreeVerticalOrderTraversal
     {
-        public IList<IList<int>> VerticalOrder(TreeNode root)
-        {
+        public IList<IList<int>> VerticalOrder(TreeNode root) {
             var results = new List<IList<int>>();
             if (root == null) return results;
 
@@ -34,8 +30,7 @@ namespace LeetCode
             queue.Enqueue((0, root));
 
             int minColumn = 0, maxColumn = 0;
-            while (queue.Count > 0)
-            {
+            while (queue.Count > 0) {
                 (int col, TreeNode node) = queue.Dequeue();
 
                 if (!columnTable.ContainsKey(col))

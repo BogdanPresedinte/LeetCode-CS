@@ -1,14 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0218_TheSkylineProblem_Test
     {
-        [TestMethod]
-        public void GetSkylineTest()
-        {
+        [Test]
+        public void GetSkylineTest() {
             var buildings = new int[][]
             {
                 new int[] { 2, 9, 10, },
@@ -32,9 +27,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void GetSkylineTest_2()
-        {
+        [Test]
+        public void GetSkylineTest_2() {
             var buildings = new int[][]
             {
                 new int[] { 0, 2, 3, },
@@ -50,9 +44,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void GetSkylineTest_3()
-        {
+        [Test]
+        public void GetSkylineTest_3() {
             var buildings = new int[][]
             {
                 new int[] { 0, 2, 3, },

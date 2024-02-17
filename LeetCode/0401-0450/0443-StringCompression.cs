@@ -8,20 +8,16 @@ namespace LeetCode
 {
     public class _0443_StringCompression
     {
-        public int Compress(char[] chars)
-        {
+        public int Compress(char[] chars) {
             int index = 0, count = 0;
             char current = chars[0];
-            for (int i = 0; i < chars.Length; i++)
-            {
+            for (int i = 0; i < chars.Length; i++) {
                 if (chars[i] == current)
                     count++;
-                else
-                {
+                else {
                     chars[index++] = current;
 
-                    if (count > 1)
-                    {
+                    if (count > 1) {
                         var countStr = count.ToString();
                         foreach (var ch in countStr)
                             chars[index++] = ch;
@@ -33,8 +29,7 @@ namespace LeetCode
             }
 
             chars[index++] = current;
-            if (count > 1)
-            {
+            if (count > 1) {
                 var countStr = count.ToString();
                 foreach (var ch in countStr)
                     chars[index++] = ch;

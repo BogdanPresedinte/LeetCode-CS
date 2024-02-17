@@ -10,20 +10,17 @@ namespace LeetCode
     {
         private int[] memo = new int[38];
 
-        public _1137_NThTribonacciNumber()
-        {
+        public _1137_NThTribonacciNumber() {
             memo[0] = 0;
             memo[1] = 1;
             memo[2] = 1;
         }
 
-        public int Tribonacci(int n)
-        {
+        public int Tribonacci(int n) {
             if (n < 3) return memo[n];
             if (memo[n] != 0) return memo[n];
 
-            for (int i = 3; i <= n; i++)
-            {
+            for (int i = 3; i <= n; i++) {
                 if (memo[i] != 0) continue;
                 memo[i] = memo[i - 1] + memo[i - 2] + memo[i - 3];
             }

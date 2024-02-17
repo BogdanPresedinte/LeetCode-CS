@@ -17,13 +17,11 @@ namespace LeetCode
          *     public TreeNode(int x) { val = x; }
          * }
          */
-        public int SumNumbers(TreeNode root)
-        {
+        public int SumNumbers(TreeNode root) {
             return SumNumbers(root, 0);
         }
 
-        private int SumNumbers(TreeNode node, int number)
-        {
+        private int SumNumbers(TreeNode node, int number) {
             if (node == null) return 0;
 
             var result = number * 10 + node.val;

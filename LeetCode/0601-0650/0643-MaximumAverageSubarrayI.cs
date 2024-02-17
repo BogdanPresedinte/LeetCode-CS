@@ -8,15 +8,13 @@ namespace LeetCode
 {
     public class _0643_MaximumAverageSubarrayI
     {
-        public double FindMaxAverage(int[] nums, int k)
-        {
+        public double FindMaxAverage(int[] nums, int k) {
             var sum = 0;
             for (int i = 0; i < k; i++)
                 sum += nums[i];
 
             double max = (double)sum / k;
-            for (int i = k; i < nums.Length; i++)
-            {
+            for (int i = k; i < nums.Length; i++) {
                 sum = sum + nums[i] - nums[i - k];
                 var average = (double)sum / k;
                 if (average > max)

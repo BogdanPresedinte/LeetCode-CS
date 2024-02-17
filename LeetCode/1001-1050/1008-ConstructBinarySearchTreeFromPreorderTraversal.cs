@@ -20,16 +20,14 @@ namespace LeetCode
         private int[] preorder;
         private int index;
 
-        public TreeNode BstFromPreorder(int[] preorder)
-        {
+        public TreeNode BstFromPreorder(int[] preorder) {
             this.preorder = preorder;
             index = 0;
 
             return Build(int.MinValue, int.MaxValue);
         }
 
-        private TreeNode Build(int minValue, int maxValue)
-        {
+        private TreeNode Build(int minValue, int maxValue) {
             if (index >= preorder.Length) return null;
 
             var value = preorder[index];

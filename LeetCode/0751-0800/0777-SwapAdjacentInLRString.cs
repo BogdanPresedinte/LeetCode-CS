@@ -8,14 +8,12 @@ namespace LeetCode
 {
     public class _0777_SwapAdjacentInLRString
     {
-        public bool CanTransform(string start, string end)
-        {
+        public bool CanTransform(string start, string end) {
             var N = start.Length;
 
             var startIndex = -1;
             var endIndex = -1;
-            while (++startIndex < N && ++endIndex < N)
-            {
+            while (++startIndex < N && ++endIndex < N) {
                 while (startIndex < N && start[startIndex] == 'X') startIndex++;
                 while (endIndex < N && end[endIndex] == 'X') endIndex++;
 

@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/360781980/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -25,20 +23,17 @@ namespace LeetCode
     {
         private readonly HashSet<int> values;
 
-        public _1261_FindElementsInAContaminatedBinaryTree(TreeNode root)
-        {
+        public _1261_FindElementsInAContaminatedBinaryTree(TreeNode root) {
             values = new HashSet<int>();
             Recover(root, 0);
         }
 
-        public bool Find(int target)
-        {
+        public bool Find(int target) {
             return values.Contains(target);
         }
 
 
-        private void Recover(TreeNode node, int value)
-        {
+        private void Recover(TreeNode node, int value) {
             if (node == null) return;
             node.val = value;
             values.Add(value);

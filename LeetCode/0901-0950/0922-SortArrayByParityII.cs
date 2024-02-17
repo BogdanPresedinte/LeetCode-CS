@@ -8,13 +8,10 @@ namespace LeetCode
 {
     public class _0922_SortArrayByParityII
     {
-        public int[] SortArrayByParityII(int[] A)
-        {
+        public int[] SortArrayByParityII(int[] A) {
             var oddIndex = 1;
-            for (int evenIndex = 0; evenIndex < A.Length; evenIndex += 2)
-            {
-                if (A[evenIndex] % 2 == 1)
-                {
+            for (int evenIndex = 0; evenIndex < A.Length; evenIndex += 2) {
+                if (A[evenIndex] % 2 == 1) {
                     while (A[oddIndex] % 2 == 1)
                         oddIndex += 2;
 

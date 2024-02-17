@@ -1,14 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1260_Shift2DGrid_Test
     {
-        [TestMethod]
-        public void ShiftGrid_1()
-        {
+        [Test]
+        public void ShiftGrid_1() {
             var solution = new _1260_Shift2DGrid();
             var result = solution.ShiftGrid(new int[][] {
                 new int[] { 1, 2, 3 },
@@ -22,9 +17,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void ShiftGrid_2()
-        {
+        [Test]
+        public void ShiftGrid_2() {
             var solution = new _1260_Shift2DGrid();
             var result = solution.ShiftGrid(new int[][] {
                 new int[] { 3, 8, 1, 9 },
@@ -40,9 +34,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void ShiftGrid_3()
-        {
+        [Test]
+        public void ShiftGrid_3() {
             var solution = new _1260_Shift2DGrid();
             var result = solution.ShiftGrid(new int[][] {
                 new int[] { 1, 2, 3 },

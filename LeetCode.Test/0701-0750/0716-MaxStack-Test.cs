@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0716_MaxStack_Test
     {
-        [TestMethod]
-        public void MaxStackTest()
-        {
+        [Test]
+        public void MaxStackTest() {
             var stack = new _0716_MaxStack();
             stack.Push(5);
             stack.Push(1);
@@ -20,9 +16,8 @@ namespace LeetCode.Test
             Assert.AreEqual(5, stack.Top());
         }
 
-        [TestMethod]
-        public void MaxStackTest_2()
-        {
+        [Test]
+        public void MaxStackTest_2() {
             var stack = new _0716_MaxStack();
             stack.Push(5);
             stack.Push(1);

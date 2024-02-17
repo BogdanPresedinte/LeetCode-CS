@@ -4,9 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/361289301/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -26,16 +23,14 @@ namespace LeetCode
     {
         private List<IList<int>> results;
 
-        public IList<IList<int>> FindLeaves(TreeNode root)
-        {
+        public IList<IList<int>> FindLeaves(TreeNode root) {
             results = new List<IList<int>>();
             Helper(root);
 
             return results;
         }
 
-        private int Helper(TreeNode root)
-        {
+        private int Helper(TreeNode root) {
             if (root == null) return 0;
 
             var leftLevel = Helper(root.left);

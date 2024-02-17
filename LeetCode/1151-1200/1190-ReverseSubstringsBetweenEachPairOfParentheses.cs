@@ -4,23 +4,18 @@
 // Link: https://leetcode.com/submissions/detail/370341726/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace LeetCode
 {
     public class _1190_ReverseSubstringsBetweenEachPairOfParentheses
     {
-        public string ReverseParentheses(string s)
-        {
+        public string ReverseParentheses(string s) {
             var stack = new Stack<char>();
 
-            foreach (var ch in s)
-            {
+            foreach (var ch in s) {
                 if (ch != ')') stack.Push(ch);
-                else
-                {
+                else {
                     var sb = new StringBuilder();
                     while (stack.Peek() != '(')
                         sb.Append(stack.Pop());

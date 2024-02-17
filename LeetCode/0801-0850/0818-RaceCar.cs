@@ -4,26 +4,21 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0818_RaceCar
     {
         private const int INT_BITS = sizeof(int) * 8; // compile time constant
 
-        public int Racecar(int target)
-        {
+        public int Racecar(int target) {
             var dp = new int[target + 1];
             for (int i = 1; i <= target; i++)
                 dp[i] = int.MaxValue;
             dp[0] = 0;
 
-            for (int i = 1; i <= target; i++)
-            {
+            for (int i = 1; i <= target; i++) {
                 var k = INT_BITS - GetLeadingZeros(i);
-                if ((1 << k) - 1 == i)
-                {
+                if ((1 << k) - 1 == i) {
                     dp[i] = k;
                     continue;
                 }
@@ -39,8 +34,7 @@ namespace LeetCode
         }
 
         // https://stackoverflow.com/questions/10439242/count-leading-zeroes-in-an-int32
-        private int GetLeadingZeros(int x)
-        {
+        private int GetLeadingZeros(int x) {
             // do the smearing
             x |= x >> 1;
             x |= x >> 2;

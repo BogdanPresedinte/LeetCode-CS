@@ -1,15 +1,11 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 using static LeetCode._0590_NAryTreePostorderTraversal;
 
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0590_NAryTreePostorderTraversal_Test
     {
-        [TestMethod]
-        public void Postorder_1()
-        {
+        [Test]
+        public void Postorder_1() {
             var root = new Node(1, new List<Node>()
             {
                 new Node(3, new List<Node>()
@@ -26,9 +22,8 @@ namespace LeetCode.Test
             AssertHelper.AssertList(new int[] { 5, 6, 3, 2, 4, 1 }, result);
         }
 
-        [TestMethod]
-        public void Postorder_2()
-        {
+        [Test]
+        public void Postorder_2() {
             var root = new Node(1, new List<Node>()
             {
                 new Node(2),
@@ -65,9 +60,8 @@ namespace LeetCode.Test
             AssertHelper.AssertList(new int[] { 2, 6, 14, 11, 7, 3, 12, 8, 4, 13, 9, 10, 5, 1 }, result);
         }
 
-        [TestMethod]
-        public void Postorder_3()
-        {
+        [Test]
+        public void Postorder_3() {
             var solution = new _0590_NAryTreePostorderTraversal();
             var result = solution.Postorder(null);
             Assert.AreEqual(0, result.Count);

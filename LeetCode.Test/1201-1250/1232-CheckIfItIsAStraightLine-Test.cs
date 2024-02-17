@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1232_CheckIfItIsAStraightLine_Test
     {
-        [TestMethod]
-        public void CheckStraightLine_1()
-        {
+        [Test]
+        public void CheckStraightLine_1() {
             var solution = new _1232_CheckIfItIsAStraightLine();
             var result = solution.CheckStraightLine(new int[][] {
                 new int[] { 1, 2 },
@@ -20,9 +16,8 @@ namespace LeetCode.Test
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void CheckStraightLine_2()
-        {
+        [Test]
+        public void CheckStraightLine_2() {
             var solution = new _1232_CheckIfItIsAStraightLine();
             var result = solution.CheckStraightLine(new int[][] {
                 new int[] { 1, 1 },

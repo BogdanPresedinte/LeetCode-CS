@@ -10,8 +10,7 @@ namespace LeetCode
 {
     public class _0269_AlienDictionary
     {
-        public string AlienOrder(string[] words)
-        {
+        public string AlienOrder(string[] words) {
             var adj = new bool[26, 26];
             var visited = new int[26];
             //  Array.Fill(visited, int.MinValue);
@@ -29,13 +28,11 @@ namespace LeetCode
             return result.ToString();
         }
 
-        private bool DFS(bool[,] adj, int[] visited, int index, StringBuilder sb)
-        {
+        private bool DFS(bool[,] adj, int[] visited, int index, StringBuilder sb) {
             visited[index] = 1;
 
             for (int j = 0; j < 26; j++)
-                if (adj[index, j])
-                {
+                if (adj[index, j]) {
                     if (visited[j] == 1) return false;
                     if (visited[j] == 0)
                         if (!DFS(adj, visited, j, sb))
@@ -47,23 +44,19 @@ namespace LeetCode
             return true;
         }
 
-        private bool BuildGraph(string[] words, bool[,] adj, int[] visited)
-        {
-            for (int i = 0; i < words.Length; i++)
-            {
+        private bool BuildGraph(string[] words, bool[,] adj, int[] visited) {
+            for (int i = 0; i < words.Length; i++) {
                 var word = words[i];
                 foreach (var ch in word)
                     visited[ch - 'a'] = 0;
                 if (i == 0) continue;
 
                 var prevWord = words[i - 1];
-                for (int j = 0; j < prevWord.Length; j++)
-                {
+                for (int j = 0; j < prevWord.Length; j++) {
                     if (j >= word.Length) return false;
 
                     char ch = word[j], prevWordCh = prevWord[j];
-                    if (ch != prevWordCh)
-                    {
+                    if (ch != prevWordCh) {
                         adj[prevWordCh - 'a', ch - 'a'] = true;
                         break;
                     }

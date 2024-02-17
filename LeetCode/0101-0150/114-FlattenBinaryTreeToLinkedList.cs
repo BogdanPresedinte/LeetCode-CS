@@ -10,8 +10,7 @@ namespace LeetCode
     {
         TreeNode prev = null;
 
-        public void Flatten(TreeNode root)
-        {
+        public void Flatten(TreeNode root) {
             if (root == null) return;
 
             Flatten(root.right);

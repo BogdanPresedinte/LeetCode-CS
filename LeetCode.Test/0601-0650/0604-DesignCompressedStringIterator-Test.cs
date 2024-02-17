@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0604_DesignCompressedStringIterator_Test
     {
-        [TestMethod]
-        public void DesignCompressedStringIterator_1()
-        {
+        [Test]
+        public void DesignCompressedStringIterator_1() {
             var solution = new _0604_DesignCompressedStringIterator("L1e2t1C1o1d1e1");
 
             Assert.AreEqual('L', solution.Next());

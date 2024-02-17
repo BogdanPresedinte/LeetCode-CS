@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _004_MedianOfTwoSortedArrays
     {
-        public double FindMedianSortedArrays(int[] nums1, int[] nums2)
-        {
+        public double FindMedianSortedArrays(int[] nums1, int[] nums2) {
             int m = nums1.Length + nums2.Length;
             if (m % 2 == 1)
                 return FindKth(nums1, 0, nums2, 0, (m + 1) / 2);
@@ -17,8 +16,7 @@ namespace LeetCode
                 return (FindKth(nums1, 0, nums2, 0, (m + 1) / 2) + FindKth(nums1, 0, nums2, 0, (m + 1) / 2 + 1)) / 2;
         }
 
-        double FindKth(int[] nums1, int startIndex1, int[] nums2, int startIndex2, int k)
-        {
+        double FindKth(int[] nums1, int startIndex1, int[] nums2, int startIndex2, int k) {
             var nums1Left = nums1.Length - startIndex1;
             var nums2Left = nums2.Length - startIndex2;
 
@@ -32,8 +30,7 @@ namespace LeetCode
                 return FindKth(nums1, startIndex1, nums2, index2 + startIndex2, k - index2);
             else if (nums1[index1 + startIndex1 - 1] < nums2[index2 + startIndex2 - 1])
                 return FindKth(nums1, index1 + startIndex1, nums2, startIndex2, k - index1);
-            else
-            {
+            else {
                 if (index1 + index2 == k)
                     return nums1[index1 + startIndex1 - 1];
                 return FindKth(nums1, index1 + startIndex1, nums2, index2 + startIndex2, k - index1 - index2);

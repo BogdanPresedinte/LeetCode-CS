@@ -8,11 +8,9 @@ namespace LeetCode
 {
     public class _0540_SingleElementInASortedArray
     {
-        public int SingleNonDuplicate(int[] nums)
-        {
+        public int SingleNonDuplicate(int[] nums) {
             int lo = 0, hi = nums.Length - 1;
-            while (lo < hi)
-            {
+            while (lo < hi) {
                 int mid = lo + (hi - lo) / 2;
                 if (mid % 2 == 1) mid--;
                 if (nums[mid] == nums[mid + 1])

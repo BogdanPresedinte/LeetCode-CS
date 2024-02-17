@@ -1,31 +1,25 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _062_UniquePaths_Test
     {
-        [TestMethod]
-        public void UniquePathsTest()
-        {
+        [Test]
+        public void UniquePathsTest() {
             var solution = new _062_UniquePaths();
             var result = solution.UniquePaths(3, 7);
 
             Assert.AreEqual(28, result);
         }
 
-        [TestMethod]
-        public void UniquePathsTest_OneRow()
-        {
+        [Test]
+        public void UniquePathsTest_OneRow() {
             var solution = new _062_UniquePaths();
             var result = solution.UniquePaths(1, 7);
 
             Assert.AreEqual(1, result);
         }
 
-        [TestMethod]
-        public void UniquePathsTest_OneColumn()
-        {
+        [Test]
+        public void UniquePathsTest_OneColumn() {
             var solution = new _062_UniquePaths();
             var result = solution.UniquePaths(7, 1);
 

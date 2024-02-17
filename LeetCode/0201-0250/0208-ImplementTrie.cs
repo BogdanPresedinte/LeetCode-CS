@@ -11,18 +11,15 @@ namespace LeetCode
         private Node root;
 
         /** Initialize your data structure here. */
-        public _0208_ImplementTrie()
-        {
+        public _0208_ImplementTrie() {
             root = new Node();
         }
 
         /** Inserts a word into the trie. */
-        public void Insert(string word)
-        {
+        public void Insert(string word) {
             var currentNode = root;
 
-            foreach (var ch in word)
-            {
+            foreach (var ch in word) {
                 if (currentNode.Children[ch - 'a'] == null)
                     currentNode.Children[ch - 'a'] = new Node();
                 currentNode = currentNode.Children[ch - 'a'];
@@ -32,8 +29,7 @@ namespace LeetCode
         }
 
         /** Returns if the word is in the trie. */
-        public bool Search(string word)
-        {
+        public bool Search(string word) {
             var currentNode = root;
 
             foreach (var ch in word)
@@ -46,8 +42,7 @@ namespace LeetCode
         }
 
         /** Returns if there is any word in the trie that starts with the given prefix. */
-        public bool StartsWith(string prefix)
-        {
+        public bool StartsWith(string prefix) {
             var currentNode = root;
 
             foreach (var ch in prefix)

@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/368551226/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _1507_ReformatDate
     {
-        public string ReformatDate(string date)
-        {
+        public string ReformatDate(string date) {
             var months = new Dictionary<string, string>()
             {
                 { "Jan", "01" },

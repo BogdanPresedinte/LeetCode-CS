@@ -8,17 +8,13 @@ namespace LeetCode
 {
     public class _0551_StudentAttendanceRecordI
     {
-        public bool CheckRecord(string s)
-        {
+        public bool CheckRecord(string s) {
             int countA = 0, countL = 0;
-            foreach (var ch in s)
-            {
-                if (ch == 'A')
-                {
+            foreach (var ch in s) {
+                if (ch == 'A') {
                     countA++;
                     countL = 0;
-                }
-                else if (ch == 'L')
+                } else if (ch == 'L')
                     countL++;
                 else
                     countL = 0;

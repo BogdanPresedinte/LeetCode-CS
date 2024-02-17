@@ -8,14 +8,12 @@ namespace LeetCode
 {
     public class _002_AddTwoNumbers
     {
-        public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
-        {
+        public ListNode AddTwoNumbers(ListNode l1, ListNode l2) {
             var dummy = new ListNode(-1);
             var current = dummy;
 
             var carry = 0;
-            while (l1 != null || l2 != null)
-            {
+            while (l1 != null || l2 != null) {
                 var value1 = l1 == null ? 0 : l1.val;
                 var value2 = l2 == null ? 0 : l2.val;
 

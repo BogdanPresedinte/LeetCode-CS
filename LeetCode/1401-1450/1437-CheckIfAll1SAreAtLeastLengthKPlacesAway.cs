@@ -8,13 +8,11 @@ namespace LeetCode
 {
     public class _1437_CheckIfAll1SAreAtLeastLengthKPlacesAway
     {
-        public bool KLengthApart(int[] nums, int k)
-        {
+        public bool KLengthApart(int[] nums, int k) {
             if (k == 0) return true;
 
             var lastIndex = -k - 1;
-            for (int i = 0; i < nums.Length; i++)
-            {
+            for (int i = 0; i < nums.Length; i++) {
                 if (nums[i] == 0) continue;
                 if (i - lastIndex <= k) return false;
 

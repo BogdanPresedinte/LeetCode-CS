@@ -4,17 +4,13 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Linq;
-
 namespace LeetCode
 {
     public class _0913_CatAndMouse
     {
         private const int DRAW = 0, MOUSE_WIN = 1, CAT_WIN = 2, MOUSE_TURN = 0, CAT_TURN = 1;
 
-        public int CatMouseGame(int[][] graph)
-        {
+        public int CatMouseGame(int[][] graph) {
             var N = graph.Length;
 
             var degrees = new int[N, N, 2];
@@ -22,8 +18,7 @@ namespace LeetCode
             var visited = new bool[N, N, 2];
 
             for (int mouseIndex = 0; mouseIndex < N; mouseIndex++)
-                for (int catIndex = 0; catIndex < N; catIndex++)
-                {
+                for (int catIndex = 0; catIndex < N; catIndex++) {
                     degrees[mouseIndex, catIndex, MOUSE_TURN] = graph[mouseIndex].Length;
                     degrees[mouseIndex, catIndex, CAT_TURN] = graph[catIndex].Length;
 
@@ -32,8 +27,7 @@ namespace LeetCode
 
             var queue = new Queue<(int mouseIndex, int catIndex, int turn, int color)>();
             for (int catIndex = 1; catIndex < N; catIndex++)
-                for (int turn = 0; turn < 2; turn++)
-                {
+                for (int turn = 0; turn < 2; turn++) {
                     colors[0, catIndex, turn] = MOUSE_WIN;
                     queue.Enqueue((0, catIndex, turn, MOUSE_WIN));
                     visited[0, catIndex, turn] = true;
@@ -43,29 +37,22 @@ namespace LeetCode
                     visited[catIndex, catIndex, turn] = true;
                 }
 
-            while (queue.Count > 0)
-            {
+            while (queue.Count > 0) {
                 (int mouseIndex, int catIndex, int turn, int color) = queue.Dequeue();
-                foreach (var parent in GetParents(graph, mouseIndex, catIndex, turn))
-                {
+                foreach (var parent in GetParents(graph, mouseIndex, catIndex, turn)) {
                     if (visited[parent.mouseIndex, parent.catIndex, parent.turn]) continue;
 
-                    if (colors[parent.mouseIndex, parent.catIndex, parent.turn] == DRAW)
-                    {
-                        if ((parent.turn == MOUSE_TURN && color == MOUSE_WIN) || (parent.turn == CAT_TURN && color == CAT_WIN))
-                        {
+                    if (colors[parent.mouseIndex, parent.catIndex, parent.turn] == DRAW) {
+                        if ((parent.turn == MOUSE_TURN && color == MOUSE_WIN) || (parent.turn == CAT_TURN && color == CAT_WIN)) {
                             if (parent.mouseIndex == 1 && parent.catIndex == 2 && parent.turn == MOUSE_TURN)
                                 return color;
 
                             colors[parent.mouseIndex, parent.catIndex, parent.turn] = color;
                             queue.Enqueue((parent.mouseIndex, parent.catIndex, parent.turn, color));
                             visited[parent.mouseIndex, parent.catIndex, parent.turn] = true;
-                        }
-                        else
-                        {
+                        } else {
                             degrees[parent.mouseIndex, parent.catIndex, parent.turn]--;
-                            if (degrees[parent.mouseIndex, parent.catIndex, parent.turn] == 0)
-                            {
+                            if (degrees[parent.mouseIndex, parent.catIndex, parent.turn] == 0) {
                                 var nextColor = parent.turn == MOUSE_TURN ? CAT_WIN : MOUSE_WIN;
                                 if (parent.mouseIndex == 1 && parent.catIndex == 2 && parent.turn == MOUSE_TURN)
                                     return nextColor;
@@ -82,8 +69,7 @@ namespace LeetCode
             return colors[1, 2, MOUSE_TURN];
         }
 
-        private IList<(int mouseIndex, int catIndex, int turn)> GetParents(int[][] graph, int mouseIndex, int catIndex, int turn)
-        {
+        private IList<(int mouseIndex, int catIndex, int turn)> GetParents(int[][] graph, int mouseIndex, int catIndex, int turn) {
             var result = new List<(int mouseIndex, int catIndex, int turn)>();
             if (turn == CAT_TURN)
                 foreach (var newMouseIndex in graph[mouseIndex])

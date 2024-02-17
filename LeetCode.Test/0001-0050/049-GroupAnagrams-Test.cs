@@ -1,14 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _049_GroupAnagrams_Test
     {
-        [TestMethod]
-        public void GroupAnagramsTest()
-        {
+        [Test]
+        public void GroupAnagramsTest() {
             var input = new string[] { "eat", "tea", "tan", "ate", "nat", "bat" };
 
             var solution = new _049_GroupAnagrams();
@@ -23,9 +18,8 @@ namespace LeetCode.Test
                 }, result);
         }
 
-        [TestMethod]
-        public void GroupAnagramsTest_Empty()
-        {
+        [Test]
+        public void GroupAnagramsTest_Empty() {
             var input = new string[] { };
 
             var solution = new _049_GroupAnagrams();

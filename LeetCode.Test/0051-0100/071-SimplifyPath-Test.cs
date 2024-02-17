@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _071_SimplifyPath_Test
     {
-        [TestMethod]
-        public void SimplifyPathTest()
-        {
+        [Test]
+        public void SimplifyPathTest() {
             var input = "/home/";
 
             var solution = new _071_SimplifyPath();
@@ -16,9 +12,8 @@ namespace LeetCode.Test
             Assert.AreEqual("/home", result);
         }
 
-        [TestMethod]
-        public void SimplifyPathTest_OnlyBack()
-        {
+        [Test]
+        public void SimplifyPathTest_OnlyBack() {
 
             var input = "/..";
 
@@ -28,9 +23,8 @@ namespace LeetCode.Test
             Assert.AreEqual("/", result);
         }
 
-        [TestMethod]
-        public void SimplifyPathTest_WithBack()
-        {
+        [Test]
+        public void SimplifyPathTest_WithBack() {
 
             var input = "/a/../c/";
 
@@ -40,9 +34,8 @@ namespace LeetCode.Test
             Assert.AreEqual("/c", result);
         }
 
-        [TestMethod]
-        public void SimplifyPathTest_WithMultipleBack()
-        {
+        [Test]
+        public void SimplifyPathTest_WithMultipleBack() {
 
             var input = "/a/b/../../c/";
 
@@ -52,9 +45,8 @@ namespace LeetCode.Test
             Assert.AreEqual("/c", result);
         }
 
-        [TestMethod]
-        public void SimplifyPathTest_WithCurrentFolder()
-        {
+        [Test]
+        public void SimplifyPathTest_WithCurrentFolder() {
 
             var input = "/a/./b/../../c/";
 
@@ -64,9 +56,8 @@ namespace LeetCode.Test
             Assert.AreEqual("/c", result);
         }
 
-        [TestMethod]
-        public void SimplifyPathTest_WithEmptyFolder()
-        {
+        [Test]
+        public void SimplifyPathTest_WithEmptyFolder() {
 
             var input = "/home//foo//";
 

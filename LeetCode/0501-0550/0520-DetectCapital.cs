@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0520_DetectCapital
     {
-        public bool DetectCapitalUse(string word)
-        {
+        public bool DetectCapitalUse(string word) {
             var upper = 0;
             foreach (var ch in word)
                 if (ch >= 'A' && ch <= 'Z')

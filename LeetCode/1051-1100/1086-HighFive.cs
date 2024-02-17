@@ -4,18 +4,13 @@
 // Link: https://leetcode.com/submissions/detail/327393922/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Linq;
-
 namespace LeetCode
 {
     public class _1086_HighFive
     {
-        public int[][] HighFive(int[][] items)
-        {
+        public int[][] HighFive(int[][] items) {
             var map = new Dictionary<int, List<int>>();
-            foreach (var item in items)
-            {
+            foreach (var item in items) {
                 if (!map.ContainsKey(item[0]))
                     map.Add(item[0], new List<int>());
 

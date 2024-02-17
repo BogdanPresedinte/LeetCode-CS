@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1382_BalanceABinarySearchTree_Test
     {
-        [TestMethod]
-        public void BalanceBST_1()
-        {
+        [Test]
+        public void BalanceBST_1() {
             var root = TestHelper.GenerateTree(new int?[] { 1, null, 2, null, 3, null, 4, null, null });
 
             var solution = new _1382_BalanceABinarySearchTree();

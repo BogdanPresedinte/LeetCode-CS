@@ -4,15 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/335023222/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Linq;
-
 namespace LeetCode
 {
     public class _0884_UncommonWordsFromTwoSentences
     {
-        public string[] UncommonFromSentences(string A, string B)
-        {
+        public string[] UncommonFromSentences(string A, string B) {
             var counts = new Dictionary<string, int>();
             foreach (var word in A.Split())
                 if (counts.ContainsKey(word))

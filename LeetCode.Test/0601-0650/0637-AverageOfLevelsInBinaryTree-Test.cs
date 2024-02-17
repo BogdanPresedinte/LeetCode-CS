@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0637_AverageOfLevelsInBinaryTree_Test
     {
-        [TestMethod]
-        public void AverageOfLevels_1()
-        {
+        [Test]
+        public void AverageOfLevels_1() {
             var root = TestHelper.GenerateTree(new int?[] { 3, 9, 20, null, null, 15, 7 });
 
             var solution = new _0637_AverageOfLevelsInBinaryTree();

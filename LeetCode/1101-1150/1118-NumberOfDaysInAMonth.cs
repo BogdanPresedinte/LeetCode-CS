@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _1118_NumberOfDaysInAMonth
     {
-        public int NumberOfDays(int Y, int M)
-        {
+        public int NumberOfDays(int Y, int M) {
             var days = new int[] { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
             var result = days[M - 1];

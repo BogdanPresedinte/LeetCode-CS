@@ -4,23 +4,17 @@
 // Link: https://leetcode.com/submissions/detail/383925072/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace LeetCode
 {
     public class _0715_RangeModule
     {
         private readonly SortedList<int, int> list;
 
-        public _0715_RangeModule()
-        {
+        public _0715_RangeModule() {
             list = new SortedList<int, int>();
         }
 
-        public void AddRange(int left, int right)
-        {
+        public void AddRange(int left, int right) {
             var leftIndex = GetIndex(left);
             if (leftIndex >= 0) left = list.Keys[leftIndex];
             else leftIndex = ~leftIndex;
@@ -35,15 +29,13 @@ namespace LeetCode
             list[left] = right;
         }
 
-        public bool QueryRange(int left, int right)
-        {
+        public bool QueryRange(int left, int right) {
             var leftIndex = GetIndex(left);
             var rightIndex = GetIndex(right);
             return leftIndex == rightIndex && leftIndex >= 0;
         }
 
-        public void RemoveRange(int left, int right)
-        {
+        public void RemoveRange(int left, int right) {
             var leftIndex = GetIndex(left);
             var rightIndex = GetIndex(right);
 
@@ -52,20 +44,17 @@ namespace LeetCode
             else
                 rightIndex = ~rightIndex - 1;
 
-            if (leftIndex >= 0)
-            {
+            if (leftIndex >= 0) {
                 list[list.Keys[leftIndex]] = left;
                 leftIndex++;
-            }
-            else
+            } else
                 leftIndex = ~leftIndex;
 
             for (int i = leftIndex; i <= rightIndex; i++)
                 list.RemoveAt(leftIndex);
         }
 
-        private int GetIndex(int value)
-        {
+        private int GetIndex(int value) {
             var index = Array.BinarySearch(list.Keys.ToArray(), value);
             if (index >= 0) return index;
 

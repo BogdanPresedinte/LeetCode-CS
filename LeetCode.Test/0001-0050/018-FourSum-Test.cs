@@ -1,14 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _018_FourSum_Test
     {
-        [TestMethod]
-        public void FourSumTest()
-        {
+        [Test]
+        public void FourSumTest() {
             int[] input = { 1, 0, -1, 0, -2, 2 };
 
             var solution = new _018_4Sum();
@@ -23,9 +18,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void FourSumTest_2()
-        {
+        [Test]
+        public void FourSumTest_2() {
             int[] input = { 1, 4, -3, 0, 0, 0, 5, 0 };
 
             var solution = new _018_4Sum();
@@ -38,9 +32,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void FourSumTest_Empty()
-        {
+        [Test]
+        public void FourSumTest_Empty() {
             int[] input = { };
 
             var solution = new _018_4Sum();
@@ -49,9 +42,8 @@ namespace LeetCode.Test
             Assert.AreEqual(0, result.Count);
         }
 
-        [TestMethod]
-        public void FourSumTest_NotEnough()
-        {
+        [Test]
+        public void FourSumTest_NotEnough() {
             var solution = new _018_4Sum();
 
             int[] input1 = { -1 };
@@ -67,9 +59,8 @@ namespace LeetCode.Test
             Assert.AreEqual(0, result.Count);
         }
 
-        [TestMethod]
-        public void FourSumTest_AllTheSame()
-        {
+        [Test]
+        public void FourSumTest_AllTheSame() {
             int[] input = { 0, 0, 0, 0, 0, 0 };
 
             var solution = new _018_4Sum();
@@ -84,9 +75,8 @@ namespace LeetCode.Test
             Assert.AreEqual(0, result.Count);
         }
 
-        [TestMethod]
-        public void FourSumTest_SomeDuplicate()
-        {
+        [Test]
+        public void FourSumTest_SomeDuplicate() {
             int[] input = { 1, 0, 0, 1, 0, 0, -1, -1, 0, 0 };
 
             var solution = new _018_4Sum();

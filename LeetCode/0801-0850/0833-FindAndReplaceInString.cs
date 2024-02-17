@@ -4,15 +4,13 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System.Linq;
 using System.Text;
 
 namespace LeetCode
 {
     public class _0833_FindAndReplaceInString
     {
-        public string FindReplaceString(string S, int[] indexes, string[] sources, string[] targets)
-        {
+        public string FindReplaceString(string S, int[] indexes, string[] sources, string[] targets) {
             var N = S.Length;
             var match = new int[N];
             for (int i = 0; i < N; i++)
@@ -24,15 +22,11 @@ namespace LeetCode
 
             var sb = new StringBuilder();
             var index = 0;
-            while (index < N)
-            {
-                if (match[index] > -1)
-                {
+            while (index < N) {
+                if (match[index] > -1) {
                     sb.Append(targets[match[index]]);
                     index += sources[match[index]].Length;
-                }
-                else
-                {
+                } else {
                     sb.Append(S[index++]);
                 }
             }

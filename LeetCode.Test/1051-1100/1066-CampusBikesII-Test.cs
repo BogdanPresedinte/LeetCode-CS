@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _1066_CampusBikesII_Test
     {
-        [TestMethod]
-        public void AssignBikesTest_1()
-        {
+        [Test]
+        public void AssignBikesTest_1() {
             var solution = new _1066_CampusBikesII();
             var result = solution.AssignBikes(
                 new int[][] {
@@ -21,9 +17,8 @@ namespace LeetCode.Test
             Assert.AreEqual(6, result);
         }
 
-        [TestMethod]
-        public void AssignBikesTest_2()
-        {
+        [Test]
+        public void AssignBikesTest_2() {
             var solution = new _1066_CampusBikesII();
             var result = solution.AssignBikes(
                 new int[][] {
@@ -39,9 +34,8 @@ namespace LeetCode.Test
             Assert.AreEqual(4, result);
         }
 
-        [TestMethod]
-        public void AssignBikesTest_3()
-        {
+        [Test]
+        public void AssignBikesTest_3() {
             var solution = new _1066_CampusBikesII();
             var result = solution.AssignBikes(
                 new int[][] {

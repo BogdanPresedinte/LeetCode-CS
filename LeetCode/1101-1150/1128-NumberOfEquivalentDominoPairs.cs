@@ -4,18 +4,13 @@
 // Link: https://leetcode.com/submissions/detail/351908414/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _1128_NumberOfEquivalentDominoPairs
     {
-        public int NumEquivDominoPairs(int[][] dominoes)
-        {
+        public int NumEquivDominoPairs(int[][] dominoes) {
             var counts = new Dictionary<int, int>();
-            foreach (var domino in dominoes)
-            {
+            foreach (var domino in dominoes) {
                 var index = Math.Min(domino[0], domino[1]) * 10 + Math.Max(domino[0], domino[1]);
                 if (!counts.ContainsKey(index))
                     counts[index] = 1;

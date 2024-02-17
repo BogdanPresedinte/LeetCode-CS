@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0892_SurfaceAreaOf3DShapes_Test
     {
-        [TestMethod]
-        public void SurfaceArea_1()
-        {
+        [Test]
+        public void SurfaceArea_1() {
             var solution = new _0892_SurfaceAreaOf3DShapes();
             var result = solution.SurfaceArea(new int[][] {
                 new int[] { 2 },
@@ -15,9 +11,8 @@ namespace LeetCode.Test
             Assert.AreEqual(10, result);
         }
 
-        [TestMethod]
-        public void SurfaceArea_2()
-        {
+        [Test]
+        public void SurfaceArea_2() {
             var solution = new _0892_SurfaceAreaOf3DShapes();
             var result = solution.SurfaceArea(new int[][] {
                 new int[] { 1, 2 },
@@ -26,9 +21,8 @@ namespace LeetCode.Test
             Assert.AreEqual(34, result);
         }
 
-        [TestMethod]
-        public void SurfaceArea_3()
-        {
+        [Test]
+        public void SurfaceArea_3() {
             var solution = new _0892_SurfaceAreaOf3DShapes();
             var result = solution.SurfaceArea(new int[][] {
                 new int[] { 1, 0 },
@@ -37,9 +31,8 @@ namespace LeetCode.Test
             Assert.AreEqual(16, result);
         }
 
-        [TestMethod]
-        public void SurfaceArea_4()
-        {
+        [Test]
+        public void SurfaceArea_4() {
             var solution = new _0892_SurfaceAreaOf3DShapes();
             var result = solution.SurfaceArea(new int[][] {
                 new int[] { 1, 1, 1 },
@@ -49,9 +42,8 @@ namespace LeetCode.Test
             Assert.AreEqual(32, result);
         }
 
-        [TestMethod]
-        public void SurfaceArea_5()
-        {
+        [Test]
+        public void SurfaceArea_5() {
             var solution = new _0892_SurfaceAreaOf3DShapes();
             var result = solution.SurfaceArea(new int[][] {
                 new int[] { 2, 2, 2 },

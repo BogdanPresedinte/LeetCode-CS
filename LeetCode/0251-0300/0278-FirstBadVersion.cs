@@ -11,12 +11,10 @@ namespace LeetCode
 
     public class _0278_FirstBadVersion : VersionControl
     {
-        public int FirstBadVersion(int n)
-        {
+        public int FirstBadVersion(int n) {
             int left = 1;
             int right = n;
-            while (left < right)
-            {
+            while (left < right) {
                 int mid = left + (right - left) / 2;
                 if (IsBadVersion(mid))
                     right = mid;
@@ -29,8 +27,7 @@ namespace LeetCode
 
     public class VersionControl
     {
-        public bool IsBadVersion(int version)
-        {
+        public bool IsBadVersion(int version) {
             return version > 3;
         }
     }

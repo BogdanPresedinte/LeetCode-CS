@@ -8,13 +8,11 @@ namespace LeetCode
 {
     public class _0206_ReverseLinkedList
     {
-        public ListNode ReverseList(ListNode head)
-        {
+        public ListNode ReverseList(ListNode head) {
             var dummyHead = new ListNode(-1);
 
             var current = head;
-            while (current != null)
-            {
+            while (current != null) {
                 var next = current.next;
 
                 current.next = dummyHead.next;

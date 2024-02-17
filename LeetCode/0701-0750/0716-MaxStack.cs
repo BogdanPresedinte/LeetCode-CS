@@ -4,8 +4,6 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0716_MaxStack
@@ -14,14 +12,12 @@ namespace LeetCode
         private Stack<int> maxStack;
 
         /** initialize your data structure here. */
-        public _0716_MaxStack()
-        {
+        public _0716_MaxStack() {
             stack = new Stack<int>();
             maxStack = new Stack<int>();
         }
 
-        public void Push(int x)
-        {
+        public void Push(int x) {
             if (maxStack.Count == 0)
                 maxStack.Push(x);
             else
@@ -29,8 +25,7 @@ namespace LeetCode
             stack.Push(x);
         }
 
-        public int Pop()
-        {
+        public int Pop() {
             var result = stack.Pop();
 
             if (result == maxStack.Peek()) maxStack.Pop();
@@ -38,31 +33,26 @@ namespace LeetCode
             return result;
         }
 
-        public int Top()
-        {
+        public int Top() {
             return stack.Peek();
         }
 
-        public int PeekMax()
-        {
+        public int PeekMax() {
             return maxStack.Peek();
         }
 
-        public int PopMax()
-        {
+        public int PopMax() {
             var result = maxStack.Pop();
 
             var tempStack = new Stack<int>();
-            while (stack.Peek() != result)
-            {
+            while (stack.Peek() != result) {
                 var value = stack.Pop();
                 tempStack.Push(value);
             }
 
             stack.Pop();
 
-            while (tempStack.Count > 0)
-            {
+            while (tempStack.Count > 0) {
                 var value = tempStack.Pop();
                 Push(value);
             }

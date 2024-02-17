@@ -4,34 +4,27 @@
 // Link: https://leetcode.com/submissions/detail/373281127/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0772_BasicCalculatorIII
     {
-        public int Calculate(string s)
-        {
+        public int Calculate(string s) {
             if (string.IsNullOrWhiteSpace(s)) return 0;
 
             var stack = new Stack<int>();
             int num = 0;
             char sign = '+';
 
-            for (int i = 0; i < s.Length; i++)
-            {
+            for (int i = 0; i < s.Length; i++) {
                 var ch = s[i];
                 if (char.IsDigit(ch))
                     num = 10 * num + (ch - '0');
-                else if (ch == '(')
-                {
+                else if (ch == '(') {
                     int balance = 1;
-                    for (int j = i + 1; j < s.Length; j++)
-                    {
+                    for (int j = i + 1; j < s.Length; j++) {
                         if (s[j] == '(') balance++;
                         if (s[j] == ')') balance--;
-                        if (balance == 0)
-                        {
+                        if (balance == 0) {
                             num = Calculate(s.Substring(i + 1, j - i - 1));
                             i = j;
                             break;
@@ -39,10 +32,8 @@ namespace LeetCode
                     }
                 }
 
-                if (ch == '+' || ch == '-' || ch == '*' || ch == '/' || i == s.Length - 1)
-                {
-                    switch (sign)
-                    {
+                if (ch == '+' || ch == '-' || ch == '*' || ch == '/' || i == s.Length - 1) {
+                    switch (sign) {
                         case '+':
                             stack.Push(num);
                             break;

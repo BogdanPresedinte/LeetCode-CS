@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1329_SortTheMatrixDiagonally_Test
     {
-        [TestMethod]
-        public void DiagonalSort_1()
-        {
+        [Test]
+        public void DiagonalSort_1() {
             var solution = new _1329_SortTheMatrixDiagonally();
             var result = solution.DiagonalSort(new int[][]
             {

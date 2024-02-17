@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/351914327/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     /**
@@ -25,15 +23,13 @@ namespace LeetCode
     {
         private int result = 0;
 
-        public int ClosestValue(TreeNode root, double target)
-        {
+        public int ClosestValue(TreeNode root, double target) {
             result = root.val;
             BinarySearch(root, target);
             return result;
         }
 
-        private void BinarySearch(TreeNode node, double target)
-        {
+        private void BinarySearch(TreeNode node, double target) {
             if (node == null) return;
 
             if (Math.Abs(target - node.val) < Math.Abs(result - target))

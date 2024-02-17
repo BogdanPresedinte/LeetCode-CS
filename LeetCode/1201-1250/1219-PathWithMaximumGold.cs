@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/364458054/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _1219_PathWithMaximumGold
     {
-        public int GetMaximumGold(int[][] grid)
-        {
+        public int GetMaximumGold(int[][] grid) {
             var count = 0;
             for (var i = 0; i < grid.Length; i++)
                 for (var j = 0; j < grid[i].Length; j++)
@@ -20,8 +17,7 @@ namespace LeetCode
             return count;
         }
 
-        private int MaxGold(int[][] grid, int row, int col, int count)
-        {
+        private int MaxGold(int[][] grid, int row, int col, int count) {
             if (row >= grid.Length || col >= grid[0].Length || row < 0 || col < 0) return count;
             if (grid[row][col] == 0) return count;
 

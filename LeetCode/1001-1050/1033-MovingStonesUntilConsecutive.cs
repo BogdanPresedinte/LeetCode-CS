@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/352941120/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _1033_MovingStonesUntilConsecutive
     {
-        public int[] NumMovesStones(int a, int b, int c)
-        {
+        public int[] NumMovesStones(int a, int b, int c) {
             var arr = new int[] { a, b, c };
             Array.Sort(arr);
 

@@ -18,8 +18,7 @@ namespace LeetCode
 
     public class _1379_FindACorrespondingNodeOfABinaryTreeInACloneOfThatTree
     {
-        public TreeNode GetTargetCopy(TreeNode original, TreeNode cloned, TreeNode target)
-        {
+        public TreeNode GetTargetCopy(TreeNode original, TreeNode cloned, TreeNode target) {
             if (original == null || original == target)
                 return cloned;
 

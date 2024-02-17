@@ -4,10 +4,6 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace LeetCode
 {
     public class _0843_GuesstheWord
@@ -19,13 +15,11 @@ namespace LeetCode
          *     public int Guess(string word);
          * }
          */
-        public void FindSecretWord(string[] wordlist, Master master)
-        {
+        public void FindSecretWord(string[] wordlist, Master master) {
             var random = new Random();
             var wordlistHashSet = new HashSet<string>(wordlist);
 
-            for (int i = 0; i < 10; i++)
-            {
+            for (int i = 0; i < 10; i++) {
                 var word = wordlistHashSet.ElementAt(random.Next(wordlistHashSet.Count));
                 var result = master.Guess(word);
                 if (result == word.Length) return;
@@ -35,8 +29,7 @@ namespace LeetCode
             }
         }
 
-        public int MatchCount(string word1, string word2)
-        {
+        public int MatchCount(string word1, string word2) {
             var count = 0;
             for (int i = 0; i < word1.Length; i++)
                 if (word1[i] == word2[i])
@@ -51,8 +44,7 @@ namespace LeetCode
         private readonly string secret;
         private readonly HashSet<string> wordlist;
 
-        public Master(string secret, string[] wordlist)
-        {
+        public Master(string secret, string[] wordlist) {
             this.secret = secret;
             this.wordlist = new HashSet<string>(wordlist);
 
@@ -61,8 +53,7 @@ namespace LeetCode
 
         public int GuessCount { get; set; }
 
-        public int Guess(string word)
-        {
+        public int Guess(string word) {
             GuessCount++;
             if (this.secret.Length != word.Length) { return -1; }
             if (!wordlist.Contains(word)) { return -1; }

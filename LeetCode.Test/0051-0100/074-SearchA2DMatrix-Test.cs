@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _074_SearchA2DMatrix_Test
     {
-        [TestMethod]
-        public void SearchMatrixTest_Exist_FirstRow()
-        {
+        [Test]
+        public void SearchMatrixTest_Exist_FirstRow() {
             var input = new int[][]
             {
                 new int[] {  1,  3,  5,  7 },
@@ -21,9 +17,8 @@ namespace LeetCode.Test
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void SearchMatrixTest_Exist_FirstColumn()
-        {
+        [Test]
+        public void SearchMatrixTest_Exist_FirstColumn() {
             var input = new int[][]
             {
                 new int[] {  1,  3,  5,  7 },
@@ -37,9 +32,8 @@ namespace LeetCode.Test
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void SearchMatrixTest_Exist_MidRow()
-        {
+        [Test]
+        public void SearchMatrixTest_Exist_MidRow() {
             var input = new int[][]
             {
                 new int[] {  1,  3,  5,  7 },
@@ -53,9 +47,8 @@ namespace LeetCode.Test
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void SearchMatrixTest_Exist_LastRow()
-        {
+        [Test]
+        public void SearchMatrixTest_Exist_LastRow() {
             var input = new int[][]
             {
                 new int[] {  1,  3,  5,  7 },
@@ -69,9 +62,8 @@ namespace LeetCode.Test
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void SearchMatrixTest_NotExist_LessThanFirst()
-        {
+        [Test]
+        public void SearchMatrixTest_NotExist_LessThanFirst() {
             var input = new int[][]
             {
                 new int[] {  1,  3,  5,  7 },
@@ -85,9 +77,8 @@ namespace LeetCode.Test
             Assert.IsFalse(result);
         }
 
-        [TestMethod]
-        public void SearchMatrixTest_NotExist_GreaterThanLast()
-        {
+        [Test]
+        public void SearchMatrixTest_NotExist_GreaterThanLast() {
             var input = new int[][]
             {
                 new int[] {  1,  3,  5,  7 },
@@ -101,9 +92,8 @@ namespace LeetCode.Test
             Assert.IsFalse(result);
         }
 
-        [TestMethod]
-        public void SearchMatrixTest_NotExist_GreaterThanFirstRow()
-        {
+        [Test]
+        public void SearchMatrixTest_NotExist_GreaterThanFirstRow() {
             var input = new int[][]
             {
                 new int[] {  1,  3,  5,  7 },

@@ -4,22 +4,19 @@
 // Link: https://leetcode.com/submissions/detail/372034527/
 //-----------------------------------------------------------------------------
 
-using System;
 using System.Text;
 
 namespace LeetCode
 {
     public class _0420_StrongPasswordChecker
     {
-        public int StrongPasswordChecker(string s)
-        {
+        public int StrongPasswordChecker(string s) {
             if (string.IsNullOrEmpty(s)) return 6;
 
             var length = s.Length;
             var sb = new StringBuilder();
             sb.Append(s[0]);
-            for (int i = 1; i < length; i++)
-            {
+            for (int i = 1; i < length; i++) {
                 if (s[i] != s[i - 1])
                     sb.Append(' ');
                 sb.Append(s[i]);
@@ -29,8 +26,7 @@ namespace LeetCode
             int replacements = 0;
             var replace = new int[3] { 0, 0, 0 };
             var words = sb.ToString().Split();
-            foreach (var word in words)
-            {
+            foreach (var word in words) {
                 var ch = word[0];
                 hasDigit = hasDigit || char.IsDigit(ch);
                 hasLower = hasLower || char.IsLower(ch);

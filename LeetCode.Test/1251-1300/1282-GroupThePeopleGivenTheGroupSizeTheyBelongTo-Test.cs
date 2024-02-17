@@ -1,14 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1282_GroupThePeopleGivenTheGroupSizeTheyBelongTo_Test
     {
-        [TestMethod]
-        public void GroupThePeople_1()
-        {
+        [Test]
+        public void GroupThePeople_1() {
             var solution = new _1282_GroupThePeopleGivenTheGroupSizeTheyBelongTo();
             var result = solution.GroupThePeople(new int[] { 3, 3, 3, 3, 3, 1, 3 });
             AssertHelper.AssertList(new List<IList<int>> {
@@ -18,9 +13,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void GroupThePeople_2()
-        {
+        [Test]
+        public void GroupThePeople_2() {
             var solution = new _1282_GroupThePeopleGivenTheGroupSizeTheyBelongTo();
             var result = solution.GroupThePeople(new int[] { 2, 1, 3, 3, 3, 2 });
             AssertHelper.AssertList(new List<IList<int>> {

@@ -18,8 +18,7 @@ namespace LeetCode
 
     public class _0430_FlattenAMultilevelDoublyLinkedList
     {
-        public Node Flatten(Node head)
-        {
+        public Node Flatten(Node head) {
             var dummy = new Node();
             dummy.next = head;
             var curr = dummy;
@@ -29,19 +28,14 @@ namespace LeetCode
             return dummy.next;
         }
 
-        private Node FlattenHelper(Node head)
-        {
+        private Node FlattenHelper(Node head) {
             var curr = head;
-            while (curr != null)
-            {
-                if (curr.child == null)
-                {
-                    if (curr.next != null)
-                    {
+            while (curr != null) {
+                if (curr.child == null) {
+                    if (curr.next != null) {
                         curr = curr.next;
                         continue;
-                    }
-                    else
+                    } else
                         break;
                 }
 

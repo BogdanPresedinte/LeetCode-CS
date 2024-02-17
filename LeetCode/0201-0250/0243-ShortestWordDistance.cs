@@ -4,18 +4,14 @@
 // Link: https://leetcode.com/submissions/detail/336928800/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0243_ShortestWordDistance
     {
-        public int ShortestDistance(string[] words, string word1, string word2)
-        {
+        public int ShortestDistance(string[] words, string word1, string word2) {
             int index1 = -1, index2 = -1;
             int distance = int.MaxValue;
-            for (int i = 0; i < words.Length; i++)
-            {
+            for (int i = 0; i < words.Length; i++) {
                 if (words[i] == word1)
                     index1 = i;
                 if (words[i] == word2)

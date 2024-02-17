@@ -1,15 +1,11 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 using static LeetCode._1237_FindPositiveIntegerSolutionForAGivenEquation;
 
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1237_FindPositiveIntegerSolutionForAGivenEquation_Test
     {
-        [TestMethod]
-        public void FindSolution_1()
-        {
+        [Test]
+        public void FindSolution_1() {
             var solution = new _1237_FindPositiveIntegerSolutionForAGivenEquation();
             var result = solution.FindSolution(new CustomFunction((x, y) => x + y), 5);
             AssertHelper.AssertList(new List<IList<int>> {
@@ -20,9 +16,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void FindSolution_2()
-        {
+        [Test]
+        public void FindSolution_2() {
             var solution = new _1237_FindPositiveIntegerSolutionForAGivenEquation();
             var result = solution.FindSolution(new CustomFunction((x, y) => x * y), 5);
             AssertHelper.AssertList(new List<IList<int>> {

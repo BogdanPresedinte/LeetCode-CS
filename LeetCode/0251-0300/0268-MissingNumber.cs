@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0268_MissingNumber
     {
-        public int MissingNumber(int[] nums)
-        {
+        public int MissingNumber(int[] nums) {
             int result = 0;
             for (int i = 0; i < nums.Length; ++i)
                 result += (i + 1) - nums[i];

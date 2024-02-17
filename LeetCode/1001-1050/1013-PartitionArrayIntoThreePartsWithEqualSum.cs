@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _1013_PartitionArrayIntoThreePartsWithEqualSum
     {
-        public bool CanThreePartsEqualSum(int[] A)
-        {
+        public bool CanThreePartsEqualSum(int[] A) {
             var sum = 0;
             foreach (var num in A)
                 sum += num;
@@ -19,11 +18,9 @@ namespace LeetCode
             var target = sum / 3;
             var count = 0;
             var currentSum = 0;
-            foreach (var num in A)
-            {
+            foreach (var num in A) {
                 currentSum += num;
-                if (currentSum == target)
-                {
+                if (currentSum == target) {
                     count++;
                     currentSum = 0;
                 }

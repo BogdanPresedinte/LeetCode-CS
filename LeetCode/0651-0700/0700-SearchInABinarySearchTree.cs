@@ -17,8 +17,7 @@ namespace LeetCode
      */
     public class _0700_SearchInABinarySearchTree
     {
-        public TreeNode SearchBST(TreeNode root, int val)
-        {
+        public TreeNode SearchBST(TreeNode root, int val) {
             if (root == null) return null;
 
             if (root.val == val) return root;

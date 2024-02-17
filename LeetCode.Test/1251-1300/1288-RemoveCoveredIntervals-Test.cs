@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1288_RemoveCoveredIntervals_Test
     {
-        [TestMethod]
-        public void RemoveCoveredIntervals_1()
-        {
+        [Test]
+        public void RemoveCoveredIntervals_1() {
             var solution = new _1288_RemoveCoveredIntervals();
             var result = solution.RemoveCoveredIntervals(new int[][] {
                 new int[] { 1, 4 },
@@ -17,9 +13,8 @@ namespace LeetCode.Test
             Assert.AreEqual(2, result);
         }
 
-        [TestMethod]
-        public void RemoveCoveredIntervals_2()
-        {
+        [Test]
+        public void RemoveCoveredIntervals_2() {
             var solution = new _1288_RemoveCoveredIntervals();
             var result = solution.RemoveCoveredIntervals(new int[][] {
                 new int[] { 1, 4 },
@@ -28,9 +23,8 @@ namespace LeetCode.Test
             Assert.AreEqual(1, result);
         }
 
-        [TestMethod]
-        public void RemoveCoveredIntervals_3()
-        {
+        [Test]
+        public void RemoveCoveredIntervals_3() {
             var solution = new _1288_RemoveCoveredIntervals();
             var result = solution.RemoveCoveredIntervals(new int[][] {
                 new int[] { 0, 10 },
@@ -39,9 +33,8 @@ namespace LeetCode.Test
             Assert.AreEqual(2, result);
         }
 
-        [TestMethod]
-        public void RemoveCoveredIntervals_4()
-        {
+        [Test]
+        public void RemoveCoveredIntervals_4() {
             var solution = new _1288_RemoveCoveredIntervals();
             var result = solution.RemoveCoveredIntervals(new int[][] {
                 new int[] { 3, 10 },
@@ -51,9 +44,8 @@ namespace LeetCode.Test
             Assert.AreEqual(2, result);
         }
 
-        [TestMethod]
-        public void RemoveCoveredIntervals_5()
-        {
+        [Test]
+        public void RemoveCoveredIntervals_5() {
             var solution = new _1288_RemoveCoveredIntervals();
             var result = solution.RemoveCoveredIntervals(new int[][] {
                 new int[] { 1, 2 },

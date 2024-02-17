@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0305_NumberOfIslandsII_Test
     {
-        [TestMethod]
-        public void NumIslands2_1()
-        {
+        [Test]
+        public void NumIslands2_1() {
             var solution = new _0305_NumberOfIslandsII();
             var result = solution.NumIslands2(3, 3, new int[][] {
                 new int[] { 0, 0 },
@@ -18,9 +14,8 @@ namespace LeetCode.Test
             AssertHelper.AssertList(new int[] { 1, 1, 2, 3 }, result);
         }
 
-        [TestMethod]
-        public void NumIslands2_2()
-        {
+        [Test]
+        public void NumIslands2_2() {
             var solution = new _0305_NumberOfIslandsII();
             var result = solution.NumIslands2(2, 2, new int[][] {
                 new int[] { 0, 0 },
@@ -30,9 +25,8 @@ namespace LeetCode.Test
             AssertHelper.AssertList(new int[] { 1, 2, 1 }, result);
         }
 
-        [TestMethod]
-        public void NumIslands2_3()
-        {
+        [Test]
+        public void NumIslands2_3() {
             var solution = new _0305_NumberOfIslandsII();
             var result = solution.NumIslands2(3, 3, new int[][] {
                 new int[] { 0, 0 },
@@ -43,9 +37,8 @@ namespace LeetCode.Test
             AssertHelper.AssertList(new int[] { 1, 1, 2, 2 }, result);
         }
 
-        [TestMethod]
-        public void NumIslands2_4()
-        {
+        [Test]
+        public void NumIslands2_4() {
             var solution = new _0305_NumberOfIslandsII();
             var result = solution.NumIslands2(8, 6, new int[][] {
                 new int[] { 0, 5 },

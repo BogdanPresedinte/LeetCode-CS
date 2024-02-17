@@ -8,13 +8,11 @@ namespace LeetCode
 {
     public class _0459_RepeatedSubstringPattern
     {
-        public bool RepeatedSubstringPattern(string s)
-        {
+        public bool RepeatedSubstringPattern(string s) {
             var N = s.Length;
             var dp = new int[N];
 
-            for (int i = 1; i < N; i++)
-            {
+            for (int i = 1; i < N; i++) {
                 int j = dp[i - 1];
                 while (j > 0 && s[j] != s[i])
                     j = dp[j - 1];

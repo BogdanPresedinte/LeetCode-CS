@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1032_StreamOfCharacters_Test
     {
-        [TestMethod]
-        public void StreamCheckerTest_1()
-        {
+        [Test]
+        public void StreamCheckerTest_1() {
             var solution = new _1032_StreamOfCharacters(new string[] { "cd", "f", "kl" });
             Assert.IsFalse(solution.Query('a'));          // return false
             Assert.IsFalse(solution.Query('b'));          // return false
@@ -23,9 +19,8 @@ namespace LeetCode.Test
             Assert.IsTrue(solution.Query('l'));          // return true, because 'kl' is in the wordlist
         }
 
-        [TestMethod]
-        public void StreamCheckerTest_2()
-        {
+        [Test]
+        public void StreamCheckerTest_2() {
             var solution = new _1032_StreamOfCharacters(new string[] { "ab", "baa" });
             Assert.IsFalse(solution.Query('a'));
             Assert.IsTrue(solution.Query('b'));
@@ -33,10 +28,9 @@ namespace LeetCode.Test
             Assert.IsTrue(solution.Query('a'));
         }
 
-        [TestMethod]
+        [Test]
         [Timeout(100)]
-        public void StreamCheckerTest_3()
-        {
+        public void StreamCheckerTest_3() {
             var input = new string[500];
             for (int i = 0; i < 500; i++)
                 input[i] = new string('a', 1000 + i) + "b";

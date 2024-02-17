@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _079_WordSearch
     {
-        public bool Exist(char[][] board, string word)
-        {
+        public bool Exist(char[][] board, string word) {
             int R = board.Length, C = board[0].Length;
             var used = new bool[R, C];
 
@@ -22,8 +21,7 @@ namespace LeetCode
             return false;
         }
 
-        private bool Exist(char[][] board, string word, int index, int row, int column, bool[,] used)
-        {
+        private bool Exist(char[][] board, string word, int index, int row, int column, bool[,] used) {
             int R = board.Length, C = board[0].Length;
             if (board[row][column] != word[index] || used[row, column]) { return false; }
 
@@ -35,8 +33,7 @@ namespace LeetCode
             if ((row + 1 < R && Exist(board, word, index, row + 1, column, used)) ||
                 (row > 0 && Exist(board, word, index, row - 1, column, used)) ||
                 (column + 1 < C && Exist(board, word, index, row, column + 1, used)) ||
-                (column > 0 && Exist(board, word, index, row, column - 1, used)))
-            {
+                (column > 0 && Exist(board, word, index, row, column - 1, used))) {
                 return true;
             }
 

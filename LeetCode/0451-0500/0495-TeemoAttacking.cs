@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/409239239/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0495_TeemoAttacking
     {
-        public int FindPoisonedDuration(int[] timeSeries, int duration)
-        {
+        public int FindPoisonedDuration(int[] timeSeries, int duration) {
             int n = timeSeries.Length;
             if (n == 0) return 0;
 

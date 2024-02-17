@@ -8,11 +8,9 @@ namespace LeetCode
 {
     public class _0172_FactorialTrailingZeroes
     {
-        public int TrailingZeroes(int n)
-        {
+        public int TrailingZeroes(int n) {
             var count = 0;
-            while (n > 0)
-            {
+            while (n > 0) {
                 n /= 5;
                 count += n;
             }

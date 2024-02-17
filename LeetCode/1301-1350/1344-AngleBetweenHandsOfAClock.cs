@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/366587381/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _1344_AngleBetweenHandsOfAClock
     {
-        public double AngleClock(int hour, int minutes)
-        {
+        public double AngleClock(int hour, int minutes) {
             if (hour == 12) hour = 0;
             double hourAngle = (hour + (minutes / 60.0)) * 30.0;
             double minuteAngle = minutes * 6.0;

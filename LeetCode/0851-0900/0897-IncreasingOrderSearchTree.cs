@@ -19,8 +19,7 @@ namespace LeetCode
     {
         private TreeNode currentRoot;
 
-        public TreeNode IncreasingBST(TreeNode root)
-        {
+        public TreeNode IncreasingBST(TreeNode root) {
             var dummy = new TreeNode(-1);
             currentRoot = dummy;
 
@@ -28,8 +27,7 @@ namespace LeetCode
             return dummy.right;
         }
 
-        private void InOrder(TreeNode node)
-        {
+        private void InOrder(TreeNode node) {
             if (node == null) return;
 
             InOrder(node.left);

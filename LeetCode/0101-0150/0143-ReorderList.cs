@@ -19,20 +19,17 @@ namespace LeetCode
      */
     public class _0143_ReorderList
     {
-        public void ReorderList(ListNode head)
-        {
+        public void ReorderList(ListNode head) {
             if (head == null) return;
 
             ListNode slow = head, fast = head;
-            while (fast != null && fast.next != null)
-            {
+            while (fast != null && fast.next != null) {
                 slow = slow.next;
                 fast = fast.next.next;
             }
 
             ListNode prev = null, curr = slow, temp;
-            while (curr != null)
-            {
+            while (curr != null) {
                 temp = curr.next;
                 curr.next = prev;
                 prev = curr;
@@ -40,8 +37,7 @@ namespace LeetCode
             }
 
             ListNode first = head, second = prev;
-            while (second.next != null)
-            {
+            while (second.next != null) {
                 temp = first.next;
                 first.next = second;
                 first = temp;

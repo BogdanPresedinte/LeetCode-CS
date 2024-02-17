@@ -4,16 +4,13 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0947_MostStonesRemovedWithSameRoworColumn
     {
         private const int BOARD_SIZE = 10000;
 
-        public int RemoveStones(int[][] stones)
-        {
+        public int RemoveStones(int[][] stones) {
             var uf = new UnionFind(BOARD_SIZE * 2);
 
             foreach (var stone in stones)
@@ -29,22 +26,19 @@ namespace LeetCode
         {
             private int[] parents;
 
-            public UnionFind(int size)
-            {
+            public UnionFind(int size) {
                 parents = new int[size];
                 for (int i = 0; i < size; i++)
                     parents[i] = i;
             }
 
-            public int FindParent(int x)
-            {
+            public int FindParent(int x) {
                 while (parents[x] != x)
                     x = parents[x];
                 return parents[x];
             }
 
-            public void Union(int x, int y)
-            {
+            public void Union(int x, int y) {
                 parents[FindParent(x)] = FindParent(y);
             }
         }

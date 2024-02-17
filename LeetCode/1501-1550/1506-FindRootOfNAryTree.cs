@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/368559375/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /*
@@ -33,20 +31,16 @@ namespace LeetCode
 
     public class _1506_FindRootOfNAryTree
     {
-        public Node FindRoot(List<Node> tree)
-        {
+        public Node FindRoot(List<Node> tree) {
             var value = 0;
-            foreach (var node in tree)
-            {
+            foreach (var node in tree) {
                 value ^= node.val;
-                foreach (var child in node.children)
-                {
+                foreach (var child in node.children) {
                     value ^= child.val;
                 }
             }
 
-            foreach (var node in tree)
-            {
+            foreach (var node in tree) {
                 if (node.val == value) return node;
             }
 
@@ -58,20 +52,17 @@ namespace LeetCode
             public int val;
             public IList<Node> children;
 
-            public Node()
-            {
+            public Node() {
                 val = 0;
                 children = new List<Node>();
             }
 
-            public Node(int _val)
-            {
+            public Node(int _val) {
                 val = _val;
                 children = new List<Node>();
             }
 
-            public Node(int _val, List<Node> _children)
-            {
+            public Node(int _val, List<Node> _children) {
                 val = _val;
                 children = _children;
             }

@@ -10,8 +10,7 @@ namespace LeetCode
     {
         private readonly int MOD_NUMBER = 1000000007;
 
-        public int CheckRecord(int n)
-        {
+        public int CheckRecord(int n) {
             var dp = new long[n < 5 ? 6 : n + 1];
             dp[0] = 1;
             dp[1] = 2;

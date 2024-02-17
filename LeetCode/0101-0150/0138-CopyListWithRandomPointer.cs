@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/379065640/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /*
@@ -24,13 +22,11 @@ namespace LeetCode
     */
     public class _0138_CopyListWithRandomPointer
     {
-        public Node CopyRandomList(Node head)
-        {
+        public Node CopyRandomList(Node head) {
             if (head == null) return null;
             var map = new Dictionary<Node, Node>();
             var curr = head;
-            while (curr != null)
-            {
+            while (curr != null) {
                 var clone = CloneNode(curr, map);
                 clone.next = CloneNode(curr.next, map);
                 clone.random = CloneNode(curr.random, map);
@@ -40,8 +36,7 @@ namespace LeetCode
             return map[head];
         }
 
-        private Node CloneNode(Node node, IDictionary<Node, Node> map)
-        {
+        private Node CloneNode(Node node, IDictionary<Node, Node> map) {
             if (node == null) return null;
             if (map.ContainsKey(node)) return map[node];
 
@@ -58,13 +53,11 @@ namespace LeetCode
 
             public Node() { }
 
-            public Node(int _val)
-            {
+            public Node(int _val) {
                 val = _val;
             }
 
-            public Node(int _val, Node _next, Node _random)
-            {
+            public Node(int _val, Node _next, Node _random) {
                 val = _val;
                 next = _next;
                 random = _random;

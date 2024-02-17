@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0380_InsertDeleteGetRandom_Test
     {
-        [TestMethod]
-        public void RandomizedSetTest()
-        {
+        [Test]
+        public void RandomizedSetTest() {
             // Init an empty set.
             var randomSet = new _0380_InsertDeleteGetRandom();
 

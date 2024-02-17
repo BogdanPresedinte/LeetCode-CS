@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0326_PowerOfThree
     {
-        public bool IsPowerOfThree(int n)
-        {
+        public bool IsPowerOfThree(int n) {
             return n > 0 && 1162261467 % n == 0;
         }
     }

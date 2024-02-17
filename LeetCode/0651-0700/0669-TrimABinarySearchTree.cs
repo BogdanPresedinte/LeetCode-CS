@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0669_TrimABinarySearchTree
     {
-        public TreeNode TrimBST(TreeNode root, int L, int R)
-        {
+        public TreeNode TrimBST(TreeNode root, int L, int R) {
             if (root == null) return null;
             if (root.val > R) return TrimBST(root.left, L, R);
             if (root.val < L) return TrimBST(root.right, L, R);

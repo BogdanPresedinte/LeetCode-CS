@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0231_PowerOfTwo
     {
-        public bool IsPowerOfTwo(int n)
-        {
+        public bool IsPowerOfTwo(int n) {
             if (n == 0) return false;
             long x = n;
             return (x & -x) == x;

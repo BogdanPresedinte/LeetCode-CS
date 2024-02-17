@@ -1,14 +1,11 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static LeetCode._0426_ConvertBinarySearchTreeToSortedDoublyLinkedList;
 
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0426_ConvertBinarySearchTreeToSortedDoublyLinkedList_Test
     {
-        [TestMethod]
-        public void TreeToDoublyList_1()
-        {
+        [Test]
+        public void TreeToDoublyList_1() {
             var node1 = new Node(1);
             var node2 = new Node(2);
             var node3 = new Node(3);
@@ -43,9 +40,8 @@ namespace LeetCode.Test
             Assert.AreEqual(4, result5.left.val);
         }
 
-        [TestMethod]
-        public void TreeToDoublyList_2()
-        {
+        [Test]
+        public void TreeToDoublyList_2() {
             var node1 = new Node(1);
             var node2 = new Node(2);
             var node3 = new Node(3);
@@ -68,17 +64,15 @@ namespace LeetCode.Test
             Assert.AreEqual(2, result3.left.val);
         }
 
-        [TestMethod]
-        public void TreeToDoublyList_3()
-        {
+        [Test]
+        public void TreeToDoublyList_3() {
             var solution = new _0426_ConvertBinarySearchTreeToSortedDoublyLinkedList();
             var result = solution.TreeToDoublyList(null);
             Assert.IsNull(result);
         }
 
-        [TestMethod]
-        public void TreeToDoublyList_4()
-        {
+        [Test]
+        public void TreeToDoublyList_4() {
             var root = new Node(1);
 
             var solution = new _0426_ConvertBinarySearchTreeToSortedDoublyLinkedList();

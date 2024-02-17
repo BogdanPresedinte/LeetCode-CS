@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1381_DesignAStackWithIncrementOperation_Test
     {
-        [TestMethod]
-        public void DesignAStackWithIncrementOperation_1()
-        {
+        [Test]
+        public void DesignAStackWithIncrementOperation_1() {
             var customStack = new _1381_DesignAStackWithIncrementOperation(3);
 
             customStack.Push(1);

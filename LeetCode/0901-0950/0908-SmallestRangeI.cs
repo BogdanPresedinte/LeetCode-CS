@@ -4,17 +4,13 @@
 // Link: https://leetcode.com/submissions/detail/333013905/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0908_SmallestRangeI
     {
-        public int SmallestRangeI(int[] A, int K)
-        {
+        public int SmallestRangeI(int[] A, int K) {
             int max = int.MinValue, min = int.MaxValue;
-            foreach (var num in A)
-            {
+            foreach (var num in A) {
                 max = Math.Max(num, max);
                 min = Math.Min(num, min);
             }

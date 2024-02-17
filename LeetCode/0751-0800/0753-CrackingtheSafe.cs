@@ -4,16 +4,13 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace LeetCode
 {
     public class _0753_CrackingtheSafe
     {
-        public string CrackSafe(int n, int k)
-        {
+        public string CrackSafe(int n, int k) {
             var totalSize = (int)Math.Pow(k, n);
             var alreadySeen = new HashSet<string>();
             var results = new StringBuilder();
@@ -25,13 +22,11 @@ namespace LeetCode
             return results.ToString();
         }
 
-        private void DFS(string currentString, int k, int totalSize, ISet<string> alreadySeen, StringBuilder results)
-        {
+        private void DFS(string currentString, int k, int totalSize, ISet<string> alreadySeen, StringBuilder results) {
             if (alreadySeen.Count == totalSize)
                 return;
 
-            for (int i = 0; i < k; i++)
-            {
+            for (int i = 0; i < k; i++) {
                 var newString = currentString + i.ToString();
                 if (alreadySeen.Contains(newString))
                     continue;

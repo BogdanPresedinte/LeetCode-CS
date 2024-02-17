@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/363015170/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0537_ComplexNumberMultiplication
     {
-        public string ComplexNumberMultiply(string a, string b)
-        {
+        public string ComplexNumberMultiply(string a, string b) {
             var split1 = a.Split(new char[] { '+', 'i' }, StringSplitOptions.RemoveEmptyEntries);
             var split2 = b.Split(new char[] { '+', 'i' }, StringSplitOptions.RemoveEmptyEntries);
 

@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _006_ZigZagConversion_Test
     {
-        [TestMethod]
-        public void ConvertTest_General()
-        {
+        [Test]
+        public void ConvertTest_General() {
             var input = "PAYPALISHIRING";
 
             var solution = new _006_ZigZagConversion();
@@ -22,9 +18,8 @@ namespace LeetCode.Test
             Assert.AreEqual("PHASIYIRPLIGAN", result);
         }
 
-        [TestMethod]
-        public void ConvertTest_RowNumberEqualOne()
-        {
+        [Test]
+        public void ConvertTest_RowNumberEqualOne() {
             var input = "PAYPALISHIRING";
 
             var solution = new _006_ZigZagConversion();
@@ -33,9 +28,8 @@ namespace LeetCode.Test
             Assert.AreEqual(input, result);
         }
 
-        [TestMethod]
-        public void ConvertTest_RowNumberEqualZero()
-        {
+        [Test]
+        public void ConvertTest_RowNumberEqualZero() {
             var input = "PAYPALISHIRING";
 
             var solution = new _006_ZigZagConversion();
@@ -44,9 +38,8 @@ namespace LeetCode.Test
             Assert.AreEqual(input, result);
         }
 
-        [TestMethod]
-        public void ConvertTest_EmptyString()
-        {
+        [Test]
+        public void ConvertTest_EmptyString() {
             var input = string.Empty;
 
             var solution = new _006_ZigZagConversion();

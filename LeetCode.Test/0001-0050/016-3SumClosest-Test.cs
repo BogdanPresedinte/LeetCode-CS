@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _016_3SumClosest_Test
     {
-        [TestMethod]
-        public void ThreeSumClosestTest_NotMatch()
-        {
+        [Test]
+        public void ThreeSumClosestTest_NotMatch() {
             int[] input = { -1, 2, 1, -4 };
 
             var solution = new _016_3SumClosest();
@@ -19,9 +15,8 @@ namespace LeetCode.Test
             Assert.AreEqual(-3, result);
         }
 
-        [TestMethod]
-        public void ThreeSumClosestTest_NotMatch_Duplicate()
-        {
+        [Test]
+        public void ThreeSumClosestTest_NotMatch_Duplicate() {
             var solution = new _016_3SumClosest();
 
             int[] input1 = { 0, 0, 0 };
@@ -33,9 +28,8 @@ namespace LeetCode.Test
             Assert.AreEqual(3, result);
         }
 
-        [TestMethod]
-        public void ThreeSumClosestTest_HaveMatch()
-        {
+        [Test]
+        public void ThreeSumClosestTest_HaveMatch() {
             int[] input = { -1, 2, 1, -4 };
 
             var solution = new _016_3SumClosest();
@@ -46,9 +40,8 @@ namespace LeetCode.Test
             Assert.AreEqual(-1, result);
         }
 
-        [TestMethod]
-        public void ThreeSumClosestTest_HaveMatch_2()
-        {
+        [Test]
+        public void ThreeSumClosestTest_HaveMatch_2() {
             int[] input = { 1, 1, -1, -1, 3 };
 
             var solution = new _016_3SumClosest();

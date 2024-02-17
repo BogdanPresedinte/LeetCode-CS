@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0865_SmallestSubtreeWithAllTheDeepestNodes_Test
     {
-        [TestMethod]
-        public void SubtreeWithAllDeepest_1()
-        {
+        [Test]
+        public void SubtreeWithAllDeepest_1() {
             var root = TestHelper.GenerateTree(new int?[] { 3, 5, 1, 6, 2, 0, 8, null, null, 7, 4 });
 
             var solution = new _0865_SmallestSubtreeWithAllTheDeepestNodes();

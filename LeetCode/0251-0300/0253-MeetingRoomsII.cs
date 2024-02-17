@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/409212378/
 //-----------------------------------------------------------------------------
 
-using System.Linq;
-
 namespace LeetCode
 {
     public class _0253_MeetingRoomsII
     {
-        public int MinMeetingRooms(int[][] intervals)
-        {
+        public int MinMeetingRooms(int[][] intervals) {
             if (intervals.Length == 0) return 0;
 
             var starts = intervals.Select(i => i[0]).OrderBy(i => i).ToArray();

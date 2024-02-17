@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/370316414/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -23,17 +21,14 @@ namespace LeetCode
      */
     public class _0513_FindBottomLeftTreeValue
     {
-        public int FindBottomLeftValue(TreeNode root)
-        {
+        public int FindBottomLeftValue(TreeNode root) {
             var queue = new Queue<TreeNode>();
             queue.Enqueue(root);
 
             var result = 0;
-            while (queue.Count > 0)
-            {
+            while (queue.Count > 0) {
                 var size = queue.Count;
-                for (int i = 0; i < size; i++)
-                {
+                for (int i = 0; i < size; i++) {
                     var node = queue.Dequeue();
                     if (i == 0) result = node.val;
 

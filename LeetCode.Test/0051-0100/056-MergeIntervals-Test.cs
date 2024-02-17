@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _056_MergeIntervals_Test
     {
-        [TestMethod]
-        public void MergeTest()
-        {
+        [Test]
+        public void MergeTest() {
             var solution = new _056_MergeIntervals();
             var result = solution.Merge(new int[][] {
                 new int[] { 1, 3 },
@@ -22,9 +18,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void MergeTest_NotOrdered()
-        {
+        [Test]
+        public void MergeTest_NotOrdered() {
             var solution = new _056_MergeIntervals();
             var result = solution.Merge(new int[][] {
                 new int[] { 1, 3 },
@@ -35,9 +30,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void MergeTest_2()
-        {
+        [Test]
+        public void MergeTest_2() {
             var solution = new _056_MergeIntervals();
             var result = solution.Merge(new int[][] {
                 new int[] { 1, 4 },
@@ -48,9 +42,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void MergeTest_Empty()
-        {
+        [Test]
+        public void MergeTest_Empty() {
             var solution = new _056_MergeIntervals();
             var result = solution.Merge(new int[][] {
             });

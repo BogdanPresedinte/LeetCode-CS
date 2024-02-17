@@ -8,16 +8,13 @@ namespace LeetCode
 {
     public class _1170_CompareStringsByFrequencyOfTheSmallestCharacter
     {
-        public int[] NumSmallerByFrequency(string[] queries, string[] words)
-        {
+        public int[] NumSmallerByFrequency(string[] queries, string[] words) {
             var count = new int[12];
 
-            foreach (var word in words)
-            {
+            foreach (var word in words) {
                 var charCount = new int[26];
                 var minChar = 26;
-                foreach (var ch in word)
-                {
+                foreach (var ch in word) {
                     var index = ch - 'a';
                     charCount[index]++;
                     if (index < minChar)
@@ -31,12 +28,10 @@ namespace LeetCode
 
             var result = new int[queries.Length];
             var queryIndex = 0;
-            foreach (var query in queries)
-            {
+            foreach (var query in queries) {
                 var charCount = new int[26];
                 var minChar = 26;
-                foreach (var ch in query)
-                {
+                foreach (var ch in query) {
                     var index = ch - 'a';
                     charCount[index]++;
                     if (index < minChar)

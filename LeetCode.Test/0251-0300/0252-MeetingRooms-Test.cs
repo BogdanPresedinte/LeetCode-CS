@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0252_MeetingRooms_Test
     {
-        [TestMethod]
-        public void CanAttendMeetings_1()
-        {
+        [Test]
+        public void CanAttendMeetings_1() {
             var solution = new _0252_MeetingRooms();
             var result = solution.CanAttendMeetings(new int[][] {
                 new int[] { 0, 30 },
@@ -17,9 +13,8 @@ namespace LeetCode.Test
             Assert.IsFalse(result);
         }
 
-        [TestMethod]
-        public void CanAttendMeetings_2()
-        {
+        [Test]
+        public void CanAttendMeetings_2() {
             var solution = new _0252_MeetingRooms();
             var result = solution.CanAttendMeetings(new int[][] {
                 new int[] { 7, 10 },

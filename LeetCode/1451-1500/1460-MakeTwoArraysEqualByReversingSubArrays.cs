@@ -8,14 +8,12 @@ namespace LeetCode
 {
     public class _1460_MakeTwoArraysEqualByReversingSubArrays
     {
-        public bool CanBeEqual(int[] target, int[] arr)
-        {
+        public bool CanBeEqual(int[] target, int[] arr) {
             var counts = new int[1001];
             foreach (var num in target)
                 counts[num]++;
 
-            foreach (var num in arr)
-            {
+            foreach (var num in arr) {
                 if (counts[num] == 0) return false;
                 counts[num]--;
             }

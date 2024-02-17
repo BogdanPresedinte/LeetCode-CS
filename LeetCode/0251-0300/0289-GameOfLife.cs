@@ -4,28 +4,23 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0289_GameOfLife
     {
-        public void GameOfLife(int[][] board)
-        {
+        public void GameOfLife(int[][] board) {
             int[] neighbors = { 0, 1, -1 };
 
             int rowsCount = board.Length;
             int colsCount = board[0].Length;
 
             for (int row = 0; row < rowsCount; row++)
-                for (int col = 0; col < colsCount; col++)
-                {
+                for (int col = 0; col < colsCount; col++) {
                     int liveNeighbors = 0;
 
                     for (int i = 0; i < 3; i++)
                         for (int j = 0; j < 3; j++)
-                            if (!(neighbors[i] == 0 && neighbors[j] == 0))
-                            {
+                            if (!(neighbors[i] == 0 && neighbors[j] == 0)) {
                                 int r = (row + neighbors[i]);
                                 int c = (col + neighbors[j]);
 

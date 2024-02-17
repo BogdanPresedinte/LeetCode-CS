@@ -4,18 +4,14 @@
 // Link: https://leetcode.com/submissions/detail/373295514/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0529_Minesweeper
     {
         private static readonly (int dr, int dc)[] directions = { (0, 1), (0, -1), (1, 0), (-1, 0), (1, 1), (1, -1), (-1, 1), (-1, -1) };
 
-        public char[][] UpdateBoard(char[][] board, int[] click)
-        {
-            if (board[click[0]][click[1]] == 'M')
-            {
+        public char[][] UpdateBoard(char[][] board, int[] click) {
+            if (board[click[0]][click[1]] == 'M') {
                 board[click[0]][click[1]] = 'X';
                 return board;
             }
@@ -28,8 +24,7 @@ namespace LeetCode
             queue.Enqueue((click[0], click[1]));
 
             var adjList = new List<(int r, int c)>();
-            while (queue.Count > 0)
-            {
+            while (queue.Count > 0) {
                 (int r, int c) = queue.Dequeue();
                 if (visisted.Contains((r, c))) continue;
                 visisted.Add((r, c));
@@ -39,8 +34,7 @@ namespace LeetCode
                 adjList.Clear();
 
                 var count = 0;
-                foreach (var dir in directions)
-                {
+                foreach (var dir in directions) {
                     var newR = r + dir.dr;
                     var newC = c + dir.dc;
 

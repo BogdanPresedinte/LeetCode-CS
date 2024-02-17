@@ -4,21 +4,17 @@
 // Link: https://leetcode.com/submissions/detail/361224882/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _1104_PathInZigzagLabelledBinaryTree
     {
-        public IList<int> PathInZigZagTree(int label)
-        {
+        public IList<int> PathInZigZagTree(int label) {
             int nodeCount = 1;
             while (label >= nodeCount * 2)
                 nodeCount *= 2;
 
             var result = new List<int>();
-            while (label > 0)
-            {
+            while (label > 0) {
                 result.Add(label);
                 var maxLevellable = nodeCount * 2 - 1;
                 var minLevellable = nodeCount;

@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _009_PalindromeNumber_Test
     {
-        [TestMethod]
-        public void IsPalindromeTest_SingleDigit()
-        {
+        [Test]
+        public void IsPalindromeTest_SingleDigit() {
             var solution = new _009_PalindromeNumber();
             var result = solution.IsPalindrome(0);
             Assert.IsTrue(result);
@@ -16,17 +12,15 @@ namespace LeetCode.Test
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void IsPalindromeTest_NegativeNumber()
-        {
+        [Test]
+        public void IsPalindromeTest_NegativeNumber() {
             var solution = new _009_PalindromeNumber();
             var result = solution.IsPalindrome(-1);
             Assert.IsFalse(result);
         }
 
-        [TestMethod]
-        public void IsPalindromeTest_MultipleDigit()
-        {
+        [Test]
+        public void IsPalindromeTest_MultipleDigit() {
             var solution = new _009_PalindromeNumber();
             var result = solution.IsPalindrome(11);
             Assert.IsTrue(result);

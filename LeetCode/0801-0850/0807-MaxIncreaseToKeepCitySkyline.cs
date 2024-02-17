@@ -4,21 +4,17 @@
 // Link: https://leetcode.com/submissions/detail/360406293/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0807_MaxIncreaseToKeepCitySkyline
     {
-        public int MaxIncreaseKeepingSkyline(int[][] grid)
-        {
+        public int MaxIncreaseKeepingSkyline(int[][] grid) {
             var N = grid.Length;
 
             var skylineRows = new int[N];
             var skylineCols = new int[N];
             for (int i = 0; i < N; i++)
-                for (int j = 0; j < N; j++)
-                {
+                for (int j = 0; j < N; j++) {
                     skylineRows[i] = Math.Max(skylineRows[i], grid[i][j]);
                     skylineCols[j] = Math.Max(skylineCols[j], grid[i][j]);
                 }

@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0211_AddAndSearchWordDataStructureDesign_Test
     {
-        [TestMethod]
-        public void WordDictionary_1()
-        {
+        [Test]
+        public void WordDictionary_1() {
             var solution = new _0211_AddAndSearchWordDataStructureDesign();
 
             solution.AddWord("bad");
@@ -19,9 +15,8 @@ namespace LeetCode.Test
             Assert.IsTrue(solution.Search("b.."));
         }
 
-        [TestMethod]
-        public void WordDictionary_2()
-        {
+        [Test]
+        public void WordDictionary_2() {
             var solution = new _0211_AddAndSearchWordDataStructureDesign();
 
             solution.AddWord("a");

@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _073_SetMatrixZeroes
     {
-        public void SetZeroes(int[,] matrix)
-        {
+        public void SetZeroes(int[,] matrix) {
             var rowLength = matrix.GetLength(0);
             var columnLenght = matrix.GetLength(1);
 
@@ -19,8 +18,7 @@ namespace LeetCode
             int i, j;
             for (i = 0; i < rowLength; i++)
                 for (j = 0; j < columnLenght; j++)
-                    if (matrix[i, j] == 0)
-                    {
+                    if (matrix[i, j] == 0) {
                         rowZero[i] = true;
                         columnZero[j] = true;
                     }
@@ -31,8 +29,7 @@ namespace LeetCode
                         matrix[i, j] = 0;
         }
 
-        public void SetZeroes_2(int[,] matrix)
-        {
+        public void SetZeroes_2(int[,] matrix) {
             var rowLength = matrix.GetLength(0);
             var columnLenght = matrix.GetLength(1);
 

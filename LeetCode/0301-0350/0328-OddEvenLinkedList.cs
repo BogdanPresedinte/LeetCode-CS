@@ -19,12 +19,10 @@ namespace LeetCode
      */
     public class _0328_OddEvenLinkedList
     {
-        public ListNode OddEvenList(ListNode head)
-        {
+        public ListNode OddEvenList(ListNode head) {
             if (head == null) return null;
             ListNode odd = head, even = head.next, evenHead = even;
-            while (even != null && even.next != null)
-            {
+            while (even != null && even.next != null) {
                 odd.next = even.next;
                 odd = odd.next;
                 even.next = odd.next;

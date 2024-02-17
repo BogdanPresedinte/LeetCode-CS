@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/371088478/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _1504_CountSubmatricesWithAllOnes
     {
-        public int NumSubmat(int[][] mat)
-        {
+        public int NumSubmat(int[][] mat) {
             int N = mat.Length;
             int M = mat[0].Length;
 
@@ -22,13 +19,11 @@ namespace LeetCode
 
             int result = 0;
             for (int i = 0; i < N; i++)
-                for (int j = 0; j < M; j++)
-                {
+                for (int j = 0; j < M; j++) {
                     if (mat[i][j] == 0) continue;
 
                     int min = mat[i][j];
-                    for (int k = j; k < M; k++)
-                    {
+                    for (int k = j; k < M; k++) {
                         min = Math.Min(min, mat[i][k]);
                         if (min == 0) break;
                         result += min;

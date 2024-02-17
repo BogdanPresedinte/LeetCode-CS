@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/358747421/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     /**
@@ -25,15 +23,13 @@ namespace LeetCode
     {
         private int result = 0;
 
-        public int LongestUnivaluePath(TreeNode root)
-        {
+        public int LongestUnivaluePath(TreeNode root) {
             result = 0;
             GetLenght(root);
             return result;
         }
 
-        private int GetLenght(TreeNode node)
-        {
+        private int GetLenght(TreeNode node) {
             if (node == null) return 0;
 
             var leftLength = GetLenght(node.left);

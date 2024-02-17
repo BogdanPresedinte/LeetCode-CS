@@ -8,11 +8,9 @@ namespace LeetCode
 {
     public class _1064_FixedPoint
     {
-        public int FixedPoint(int[] A)
-        {
+        public int FixedPoint(int[] A) {
             int lo = 0, hi = A.Length - 1;
-            while (lo < hi)
-            {
+            while (lo < hi) {
                 int mid = lo + (hi - lo) / 2;
                 if (A[mid] < mid)
                     lo = mid + 1;

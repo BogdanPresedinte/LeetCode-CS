@@ -8,14 +8,12 @@ namespace LeetCode
 {
     public class _106_ConstructBinaryTreeFromInorderAndPostorderTraversal
     {
-        public TreeNode BuildTree(int[] inorder, int[] postorder)
-        {
+        public TreeNode BuildTree(int[] inorder, int[] postorder) {
             if (inorder.Length == 0 || postorder.Length == 0) return null;
             return BuildTree(inorder, 0, inorder.Length, postorder, 0, postorder.Length);
         }
 
-        private TreeNode BuildTree(int[] inorder, int inorderStart, int inorderEnd, int[] postorder, int postorderStart, int postorderEnd)
-        {
+        private TreeNode BuildTree(int[] inorder, int inorderStart, int inorderEnd, int[] postorder, int postorderStart, int postorderEnd) {
             var root = new TreeNode(postorder[postorderEnd - 1]);
 
             var inorderIndex = inorderStart;

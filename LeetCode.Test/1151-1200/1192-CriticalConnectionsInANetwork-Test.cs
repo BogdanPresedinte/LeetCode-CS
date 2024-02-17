@@ -1,14 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1192_CriticalConnectionsInANetwork_Test
     {
-        [TestMethod]
-        public void CriticalConnections_1()
-        {
+        [Test]
+        public void CriticalConnections_1() {
             var solution = new _1192_CriticalConnectionsInANetwork();
             var result = solution.CriticalConnections(4, new List<IList<int>>() {
                 new int[] { 0, 1 },

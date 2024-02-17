@@ -1,14 +1,11 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static LeetCode._0708_InsertIntoASortedCircularLinkedList;
 
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0708_InsertIntoASortedCircularLinkedList_Test
     {
-        [TestMethod]
-        public void Insert_1()
-        {
+        [Test]
+        public void Insert_1() {
             var node1 = new Node(1);
             var node3 = new Node(3);
             var node4 = new Node(4);
@@ -26,18 +23,16 @@ namespace LeetCode.Test
             Assert.AreEqual(3, result.next.next.next.next.val);
         }
 
-        [TestMethod]
-        public void Insert_2()
-        {
+        [Test]
+        public void Insert_2() {
             var solution = new _0708_InsertIntoASortedCircularLinkedList();
             var result = solution.Insert(null, 1);
             Assert.AreEqual(1, result.val);
             Assert.AreEqual(1, result.next.val);
         }
 
-        [TestMethod]
-        public void Insert_3()
-        {
+        [Test]
+        public void Insert_3() {
             var node1 = new Node(1);
             node1.next = node1;
 

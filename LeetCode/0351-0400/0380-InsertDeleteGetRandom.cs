@@ -4,9 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/352711483/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0380_InsertDeleteGetRandom
@@ -16,15 +13,13 @@ namespace LeetCode
         private readonly IList<int> nums;
 
         /** Initialize your data structure here. */
-        public _0380_InsertDeleteGetRandom()
-        {
+        public _0380_InsertDeleteGetRandom() {
             locations = new Dictionary<int, int>();
             nums = new List<int>();
         }
 
         /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */
-        public bool Insert(int val)
-        {
+        public bool Insert(int val) {
             if (locations.ContainsKey(val)) return false;
             locations.Add(val, nums.Count);
             nums.Add(val);
@@ -32,11 +27,9 @@ namespace LeetCode
         }
 
         /** Removes a value from the set. Returns true if the set contained the specified element. */
-        public bool Remove(int val)
-        {
+        public bool Remove(int val) {
             if (!locations.ContainsKey(val)) return false;
-            if (locations[val] != nums.Count - 1)
-            {
+            if (locations[val] != nums.Count - 1) {
                 nums[locations[val]] = nums[nums.Count - 1];
                 locations[nums[nums.Count - 1]] = locations[val];
             }
@@ -47,8 +40,7 @@ namespace LeetCode
         }
 
         /** Get a random element from the set. */
-        public int GetRandom()
-        {
+        public int GetRandom() {
             var index = random.Next(nums.Count);
             return nums[index];
         }

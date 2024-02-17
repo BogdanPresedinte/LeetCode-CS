@@ -8,11 +8,9 @@ namespace LeetCode
 {
     public class _1273_DeleteTreeNodes
     {
-        public int DeleteTreeNodes(int nodes, int[] parent, int[] value)
-        {
+        public int DeleteTreeNodes(int nodes, int[] parent, int[] value) {
             var counts = new int[nodes];
-            for (int i = nodes - 1; i > 0; i--)
-            {
+            for (int i = nodes - 1; i > 0; i--) {
                 value[parent[i]] += value[i];
                 counts[parent[i]] += (value[i] == 0 ? 0 : counts[i] + 1);
             }

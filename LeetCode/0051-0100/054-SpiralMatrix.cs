@@ -4,21 +4,17 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _054_SpiralMatrix
     {
-        public IList<int> SpiralOrder(int[,] matrix)
-        {
+        public IList<int> SpiralOrder(int[,] matrix) {
             var result = new List<int>();
             var rowLength = matrix.GetLength(0);
             var colLength = matrix.GetLength(1);
             int circle = 0, i, lastCol, lastRow;
 
-            while (true)
-            {
+            while (true) {
                 lastCol = colLength - circle - 1;
                 lastRow = rowLength - circle - 1;
 

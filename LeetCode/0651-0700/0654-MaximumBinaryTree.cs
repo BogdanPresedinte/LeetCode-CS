@@ -8,13 +8,11 @@ namespace LeetCode
 {
     public class _0654_MaximumBinaryTree
     {
-        public TreeNode ConstructMaximumBinaryTree(int[] nums)
-        {
+        public TreeNode ConstructMaximumBinaryTree(int[] nums) {
             return ConstructMaximumBinaryTree(nums, 0, nums.Length);
         }
 
-        private TreeNode ConstructMaximumBinaryTree(int[] nums, int left, int right)
-        {
+        private TreeNode ConstructMaximumBinaryTree(int[] nums, int left, int right) {
             if (left == right) return null;
             var maxIndex = GetMaxIndex(nums, left, right);
 
@@ -25,8 +23,7 @@ namespace LeetCode
             return node;
         }
 
-        private int GetMaxIndex(int[] nums, int left, int right)
-        {
+        private int GetMaxIndex(int[] nums, int left, int right) {
             var result = left;
             for (int i = left; i < right; i++)
                 if (nums[result] < nums[i]) result = i;

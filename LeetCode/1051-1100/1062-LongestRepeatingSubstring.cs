@@ -4,9 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/357945290/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _1062_LongestRepeatingSubstring
@@ -14,8 +11,7 @@ namespace LeetCode
         private const int a = 26;
         private long modulus = (long)Math.Pow(2, 32);
 
-        public int LongestRepeatingSubstring(string S)
-        {
+        public int LongestRepeatingSubstring(string S) {
             var n = S.Length;
             var nums = new int[n];
 
@@ -23,8 +19,7 @@ namespace LeetCode
                 nums[i] = S[i] - 'a';
 
             int left = 1, right = n;
-            while (left <= right)
-            {
+            while (left <= right) {
                 var mid = left + (right - left) / 2;
                 if (Search(nums, mid) != -1) left = mid + 1;
                 else right = mid - 1;
@@ -33,8 +28,7 @@ namespace LeetCode
             return left - 1;
         }
 
-        private int Search(int[] nums, int targetLength)
-        {
+        private int Search(int[] nums, int targetLength) {
             var n = nums.Length;
 
             long h = 0;
@@ -48,8 +42,7 @@ namespace LeetCode
             for (int i = 1; i <= targetLength; i++)
                 aL = (aL * a) % modulus;
 
-            for (int start = 1; start < n - targetLength + 1; start++)
-            {
+            for (int start = 1; start < n - targetLength + 1; start++) {
                 h = (h * a - nums[start - 1] * aL % modulus + modulus) % modulus;
                 h = (h + nums[start + targetLength - 1]) % modulus;
                 if (seen.Contains(h)) return start;

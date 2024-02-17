@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1102_PathWithMaximumMinimumValue_Test
     {
-        [TestMethod]
-        public void MaximumMinimumPath_1()
-        {
+        [Test]
+        public void MaximumMinimumPath_1() {
             var solution = new _1102_PathWithMaximumMinimumValue();
             var result = solution.MaximumMinimumPath(new int[][] {
                 new int[] { 5, 4, 5 },
@@ -17,9 +13,8 @@ namespace LeetCode.Test
             Assert.AreEqual(4, result);
         }
 
-        [TestMethod]
-        public void MaximumMinimumPath_2()
-        {
+        [Test]
+        public void MaximumMinimumPath_2() {
             var solution = new _1102_PathWithMaximumMinimumValue();
             var result = solution.MaximumMinimumPath(new int[][] {
                 new int[] { 2, 2, 1, 2, 2, 2 },
@@ -28,9 +23,8 @@ namespace LeetCode.Test
             Assert.AreEqual(2, result);
         }
 
-        [TestMethod]
-        public void MaximumMinimumPath_3()
-        {
+        [Test]
+        public void MaximumMinimumPath_3() {
             var solution = new _1102_PathWithMaximumMinimumValue();
             var result = solution.MaximumMinimumPath(new int[][] {
                 new int[] { 3, 4, 6, 3, 4 },

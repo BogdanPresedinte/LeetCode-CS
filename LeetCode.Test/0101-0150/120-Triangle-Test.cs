@@ -1,14 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _120_Triangle_Test
     {
-        [TestMethod]
-        public void MinimumTotalTest()
-        {
+        [Test]
+        public void MinimumTotalTest() {
             var solution = new _120_Triangle();
             var result = solution.MinimumTotal(new List<IList<int>>()
             {
@@ -20,9 +15,8 @@ namespace LeetCode.Test
             Assert.AreEqual(11, result);
         }
 
-        [TestMethod]
-        public void MinimumTotalTest_NotMiniumInProcess()
-        {
+        [Test]
+        public void MinimumTotalTest_NotMiniumInProcess() {
             var solution = new _120_Triangle();
             var result = solution.MinimumTotal(new List<IList<int>>()
             {
@@ -34,17 +28,15 @@ namespace LeetCode.Test
             Assert.AreEqual(8, result);
         }
 
-        [TestMethod]
-        public void MinimumTotalTest_Empty()
-        {
+        [Test]
+        public void MinimumTotalTest_Empty() {
             var solution = new _120_Triangle();
             var result = solution.MinimumTotal(new List<IList<int>>());
             Assert.AreEqual(0, result);
         }
 
-        [TestMethod]
-        public void MinimumTotalTest_OneLayer()
-        {
+        [Test]
+        public void MinimumTotalTest_OneLayer() {
             var solution = new _120_Triangle();
             var result = solution.MinimumTotal(new List<IList<int>>()
             {
@@ -53,9 +45,8 @@ namespace LeetCode.Test
             Assert.AreEqual(2, result);
         }
 
-        [TestMethod]
-        public void MinimumTotalTest_SameResult()
-        {
+        [Test]
+        public void MinimumTotalTest_SameResult() {
             var solution = new _120_Triangle();
             var result = solution.MinimumTotal(new List<IList<int>>()
             {

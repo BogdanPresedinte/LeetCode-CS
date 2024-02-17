@@ -1,14 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0721_AccountsMerge_Test
     {
-        [TestMethod]
-        public void AccountsMerge_1()
-        {
+        [Test]
+        public void AccountsMerge_1() {
             var solution = new _0721_AccountsMerge();
             var result = solution.AccountsMerge(new List<IList<string>>() {
                 new string[] { "John", "johnsmith@mail.com", "john00@mail.com" },

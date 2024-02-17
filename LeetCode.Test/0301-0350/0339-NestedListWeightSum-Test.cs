@@ -1,15 +1,11 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 using static LeetCode._0339_NestedListWeightSum;
 
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0339_NestedListWeightSum_Test
     {
-        [TestMethod]
-        public void DepthSum_1()
-        {
+        [Test]
+        public void DepthSum_1() {
             var input1 = new NestedInteger();
             input1.Add(new NestedInteger(1));
             input1.Add(new NestedInteger(1));
@@ -23,9 +19,8 @@ namespace LeetCode.Test
             Assert.AreEqual(10, result);
         }
 
-        [TestMethod]
-        public void DepthSum_2()
-        {
+        [Test]
+        public void DepthSum_2() {
             var input3 = new NestedInteger();
             input3.Add(new NestedInteger(6));
             var input2 = new NestedInteger();

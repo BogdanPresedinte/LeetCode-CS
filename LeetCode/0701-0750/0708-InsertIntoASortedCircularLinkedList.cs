@@ -28,10 +28,8 @@ namespace LeetCode
 
     public class _0708_InsertIntoASortedCircularLinkedList
     {
-        public Node Insert(Node head, int insertVal)
-        {
-            if (head == null)
-            {
+        public Node Insert(Node head, int insertVal) {
+            if (head == null) {
                 Node newNode = new Node(insertVal, null);
                 newNode.next = newNode;
                 return newNode;
@@ -39,8 +37,7 @@ namespace LeetCode
 
             Node prev = head;
             Node curr = head.next;
-            do
-            {
+            do {
                 if (prev.val <= insertVal && insertVal <= curr.val)
                     break;
                 else if (prev.val > curr.val)
@@ -62,14 +59,12 @@ namespace LeetCode
 
             public Node() { }
 
-            public Node(int _val)
-            {
+            public Node(int _val) {
                 val = _val;
                 next = null;
             }
 
-            public Node(int _val, Node _next)
-            {
+            public Node(int _val, Node _next) {
                 val = _val;
                 next = _next;
             }

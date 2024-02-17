@@ -10,20 +10,17 @@ namespace LeetCode
     {
         private readonly int[] sums;
 
-        public _0303_RangeSumQueryImmutable(int[] nums)
-        {
+        public _0303_RangeSumQueryImmutable(int[] nums) {
             sums = new int[nums.Length];
 
             var sum = 0;
-            for (int i = 0; i < nums.Length; i++)
-            {
+            for (int i = 0; i < nums.Length; i++) {
                 sum += nums[i];
                 sums[i] = sum;
             }
         }
 
-        public int SumRange(int i, int j)
-        {
+        public int SumRange(int i, int j) {
             if (i == 0)
                 return sums[j];
             else

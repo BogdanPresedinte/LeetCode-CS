@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/351844879/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0232_ImplementQueueUsingStacks
@@ -16,23 +14,20 @@ namespace LeetCode
 
 
         /** Initialize your data structure here. */
-        public _0232_ImplementQueueUsingStacks()
-        {
+        public _0232_ImplementQueueUsingStacks() {
             s1 = new Stack<int>();
             s2 = new Stack<int>();
         }
 
         /** Push element x to the back of queue. */
-        public void Push(int x)
-        {
+        public void Push(int x) {
             if (s1.Count == 0)
                 s1Front = x;
             s1.Push(x);
         }
 
         /** Removes the element from in front of queue and returns that element. */
-        public int Pop()
-        {
+        public int Pop() {
             if (s2.Count == 0)
                 while (s1.Count > 0)
                     s2.Push(s1.Pop());
@@ -41,8 +36,7 @@ namespace LeetCode
         }
 
         /** Get the front element. */
-        public int Peek()
-        {
+        public int Peek() {
             if (s2.Count > 0)
                 return s2.Peek();
 
@@ -50,8 +44,7 @@ namespace LeetCode
         }
 
         /** Returns whether the queue is empty. */
-        public bool Empty()
-        {
+        public bool Empty() {
             return s1.Count == 0 && s2.Count == 0;
         }
     }

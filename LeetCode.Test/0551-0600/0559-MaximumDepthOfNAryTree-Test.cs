@@ -1,15 +1,11 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 using static LeetCode._0559_MaximumDepthOfNAryTree;
 
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0559_MaximumDepthOfNAryTree_Test
     {
-        [TestMethod]
-        public void MaxDepth_1()
-        {
+        [Test]
+        public void MaxDepth_1() {
             var root = new Node(1, new List<Node>()
             {
                 new Node(3, new List<Node>()
@@ -26,9 +22,8 @@ namespace LeetCode.Test
             Assert.AreEqual(3, result);
         }
 
-        [TestMethod]
-        public void MaxDepth_2()
-        {
+        [Test]
+        public void MaxDepth_2() {
             var root = new Node(1, new List<Node>()
             {
                 new Node(2),

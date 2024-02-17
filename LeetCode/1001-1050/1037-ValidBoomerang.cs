@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _1037_ValidBoomerang
     {
-        public bool IsBoomerang(int[][] points)
-        {
+        public bool IsBoomerang(int[][] points) {
             double x1 = points[0][0] - points[1][0], y1 = points[0][1] - points[1][1];
             double x2 = points[0][0] - points[2][0], y2 = points[0][1] - points[2][1];
 

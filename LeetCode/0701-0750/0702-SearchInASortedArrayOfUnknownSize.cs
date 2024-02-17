@@ -16,16 +16,13 @@ namespace LeetCode
 
     public class _0702_SearchInASortedArrayOfUnknownSize
     {
-        public int Search(ArrayReader reader, int target)
-        {
+        public int Search(ArrayReader reader, int target) {
             int left = 0, right = 1;
-            while (reader.Get(right) < target)
-            {
+            while (reader.Get(right) < target) {
                 left = right;
                 right <<= 1;
             }
-            while (left <= right)
-            {
+            while (left <= right) {
                 var mid = left + (right - left) / 2;
                 var value = reader.Get(mid);
                 if (value == target) return mid;
@@ -41,13 +38,11 @@ namespace LeetCode
         {
             private readonly int[] arr;
 
-            public ArrayReader(int[] arr)
-            {
+            public ArrayReader(int[] arr) {
                 this.arr = arr;
             }
 
-            public int Get(int index)
-            {
+            public int Get(int index) {
                 if (index >= arr.Length) return int.MaxValue;
                 return arr[index];
             }

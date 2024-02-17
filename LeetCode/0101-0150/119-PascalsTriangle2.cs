@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/351846277/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _119_PascalsTriangle2
     {
-        public IList<int> GetRow(int rowIndex)
-        {
+        public IList<int> GetRow(int rowIndex) {
             var result = new int[rowIndex + 1];
             result[0] = 1;
             if (rowIndex == 0) return result;

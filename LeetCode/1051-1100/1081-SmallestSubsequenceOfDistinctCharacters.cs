@@ -4,22 +4,18 @@
 // Link: https://leetcode.com/submissions/detail/379521732/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _1081_SmallestSubsequenceOfDistinctCharacters
     {
-        public string SmallestSubsequence(string text)
-        {
+        public string SmallestSubsequence(string text) {
             var indexes = new int[26];
             for (int i = 0; i < text.Length; i++)
                 indexes[text[i] - 'a'] = i;
 
             var seen = new HashSet<char>();
             var stack = new Stack<char>();
-            for (int i = 0; i < text.Length; i++)
-            {
+            for (int i = 0; i < text.Length; i++) {
                 var ch = text[i];
                 if (seen.Contains(ch)) continue;
 

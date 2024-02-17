@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _048_RotateImage_Test
     {
-        [TestMethod]
-        public void RotateTest_OddLength()
-        {
+        [Test]
+        public void RotateTest_OddLength() {
             var input = new int[5, 5] {
                 { 1, 2, 3, 4, 5 },
                 { 1, 2, 3, 4, 5 },
@@ -29,9 +25,8 @@ namespace LeetCode.Test
                 }, input);
         }
 
-        [TestMethod]
-        public void RotateTest_EvenLength()
-        {
+        [Test]
+        public void RotateTest_EvenLength() {
             var input = new int[6, 6] {
                 { 1, 2, 3, 4, 5, 6 },
                 { 1, 2, 3, 4, 5, 6 },
@@ -55,9 +50,8 @@ namespace LeetCode.Test
                 }, input);
         }
 
-        [TestMethod]
-        public void RotateTest_Empty()
-        {
+        [Test]
+        public void RotateTest_Empty() {
             var input = new int[0, 0] { };
 
             var solution = new _048_RotateImage();
@@ -66,9 +60,8 @@ namespace LeetCode.Test
             AssertHelper.AssertArray(new int[0, 0] { }, input);
         }
 
-        [TestMethod]
-        public void RotateTest_OneItem()
-        {
+        [Test]
+        public void RotateTest_OneItem() {
             var input = new int[1, 1] { { 1 } };
 
             var solution = new _048_RotateImage();

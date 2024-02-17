@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _008_StringToInteger_Test
     {
-        [TestMethod]
-        public void MyAtoiTest_Positive()
-        {
+        [Test]
+        public void MyAtoiTest_Positive() {
             var solution = new _008_StringToInteger();
 
             var result = solution.MyAtoi("123");
@@ -17,45 +13,40 @@ namespace LeetCode.Test
             Assert.AreEqual(123, result);
         }
 
-        [TestMethod]
-        public void MyAtoiTest_Nagative()
-        {
+        [Test]
+        public void MyAtoiTest_Nagative() {
             var solution = new _008_StringToInteger();
 
             var result = solution.MyAtoi("-123");
             Assert.AreEqual(-123, result);
         }
 
-        [TestMethod]
-        public void MyAtoiTest_Zero()
-        {
+        [Test]
+        public void MyAtoiTest_Zero() {
             var solution = new _008_StringToInteger();
 
             var result = solution.MyAtoi("0");
             Assert.AreEqual(0, result);
         }
 
-        [TestMethod]
-        public void MyAtoiTest_PositiveZero()
-        {
+        [Test]
+        public void MyAtoiTest_PositiveZero() {
             var solution = new _008_StringToInteger();
 
             var result = solution.MyAtoi("+0");
             Assert.AreEqual(0, result);
         }
 
-        [TestMethod]
-        public void MyAtoiTest_NagativeZero()
-        {
+        [Test]
+        public void MyAtoiTest_NagativeZero() {
             var solution = new _008_StringToInteger();
 
             var result = solution.MyAtoi("-0");
             Assert.AreEqual(0, result);
         }
 
-        [TestMethod]
-        public void MyAtoiTest_Boundary()
-        {
+        [Test]
+        public void MyAtoiTest_Boundary() {
             var solution = new _008_StringToInteger();
 
             var result = solution.MyAtoi("2147483647");
@@ -71,9 +62,8 @@ namespace LeetCode.Test
             Assert.AreEqual(-2147483647, result);
         }
 
-        [TestMethod]
-        public void MyAtoiTest_PositiveOverflow()
-        {
+        [Test]
+        public void MyAtoiTest_PositiveOverflow() {
             var solution = new _008_StringToInteger();
 
             var result = solution.MyAtoi("2147483648");
@@ -83,9 +73,8 @@ namespace LeetCode.Test
             Assert.AreEqual(int.MaxValue, result);
         }
 
-        [TestMethod]
-        public void MyAtoiTest_NagativeOverflow()
-        {
+        [Test]
+        public void MyAtoiTest_NagativeOverflow() {
             var solution = new _008_StringToInteger();
 
             var result = solution.MyAtoi("-2147483649");
@@ -95,9 +84,8 @@ namespace LeetCode.Test
             Assert.AreEqual(int.MinValue, result);
         }
 
-        [TestMethod]
-        public void MyAtoiTest_WhiteSpaceInFrontOfInput()
-        {
+        [Test]
+        public void MyAtoiTest_WhiteSpaceInFrontOfInput() {
             var solution = new _008_StringToInteger();
 
             var result = solution.MyAtoi("   123");
@@ -107,9 +95,8 @@ namespace LeetCode.Test
             Assert.AreEqual(-123, result);
         }
 
-        [TestMethod]
-        public void MyAtoiTest_EmptyString()
-        {
+        [Test]
+        public void MyAtoiTest_EmptyString() {
             var solution = new _008_StringToInteger();
 
             var result = solution.MyAtoi("");
@@ -119,18 +106,16 @@ namespace LeetCode.Test
             Assert.AreEqual(0, result);
         }
 
-        [TestMethod]
-        public void MyAtoiTest_InvalidInput()
-        {
+        [Test]
+        public void MyAtoiTest_InvalidInput() {
             var solution = new _008_StringToInteger();
 
             var result = solution.MyAtoi("abc");
             Assert.AreEqual(0, result);
         }
 
-        [TestMethod]
-        public void MyAtoiTest_MixInput()
-        {
+        [Test]
+        public void MyAtoiTest_MixInput() {
             var solution = new _008_StringToInteger();
 
             var result = solution.MyAtoi("123abc");
@@ -140,9 +125,8 @@ namespace LeetCode.Test
             Assert.AreEqual(-123, result);
         }
 
-        [TestMethod]
-        public void MyAtoiTest_MixInputWithOverflow()
-        {
+        [Test]
+        public void MyAtoiTest_MixInputWithOverflow() {
             var solution = new _008_StringToInteger();
 
             var result = solution.MyAtoi("  2147483648abc");

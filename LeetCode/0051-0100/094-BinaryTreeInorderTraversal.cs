@@ -4,21 +4,17 @@
 // Link: https://leetcode.com/submissions/detail/369513686/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _094_BinaryTreeInorderTraversal
     {
-        public IList<int> InorderTraversal(TreeNode root)
-        {
+        public IList<int> InorderTraversal(TreeNode root) {
             IList<int> result = new List<int>();
             InorderTraversal(root, result);
             return result;
         }
 
-        public void InorderTraversal(TreeNode node, IList<int> result)
-        {
+        public void InorderTraversal(TreeNode node, IList<int> result) {
             if (node == null) return;
 
             InorderTraversal(node.left, result);

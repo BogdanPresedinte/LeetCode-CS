@@ -8,14 +8,11 @@ namespace LeetCode
 {
     public class _027_RemoveElement
     {
-        public int RemoveElement(int[] nums, int val)
-        {
+        public int RemoveElement(int[] nums, int val) {
             var lastIndex = nums.Length - 1;
 
-            for (int i = 0; i <= lastIndex; i++)
-            {
-                if (nums[i] == val)
-                {
+            for (int i = 0; i <= lastIndex; i++) {
+                if (nums[i] == val) {
                     nums[i--] = nums[lastIndex--];
                 }
             }

@@ -1,14 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _040_CombinationSum2_Test
     {
-        [TestMethod]
-        public void CombinationSum2Test_WhenCandidiatesOrdered()
-        {
+        [Test]
+        public void CombinationSum2Test_WhenCandidiatesOrdered() {
             var solution = new _040_CombinationSum2();
             var result = solution.CombinationSum2(new int[] { 1, 1, 2, 5, 6, 7, 10 }, 8);
 
@@ -21,9 +16,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void CombinationSum2Test_WhenCandidiatesWithoutOrdered()
-        {
+        [Test]
+        public void CombinationSum2Test_WhenCandidiatesWithoutOrdered() {
             var solution = new _040_CombinationSum2();
             var result = solution.CombinationSum2(new int[] { 10, 1, 2, 7, 6, 1, 5 }, 8);
 
@@ -36,9 +30,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void CombinationSum2Test_NoMatch()
-        {
+        [Test]
+        public void CombinationSum2Test_NoMatch() {
             var solution = new _040_CombinationSum2();
             var result = solution.CombinationSum2(new int[] { 2, 3, 6, 7 }, 1);
 

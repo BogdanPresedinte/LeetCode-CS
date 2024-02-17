@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _076_MinimumWindowSubstring
     {
-        public string MinWindow(string s, string t)
-        {
+        public string MinWindow(string s, string t) {
             if (string.IsNullOrEmpty(s) || string.IsNullOrEmpty(t) || t.Length > s.Length) { return string.Empty; }
 
             var counts = new int[256];
@@ -18,13 +17,10 @@ namespace LeetCode
 
             var remaining = t.Length;
             int left = 0, right = 0, minStart = 0, minLength = int.MaxValue;
-            while (right < s.Length)
-            {
+            while (right < s.Length) {
                 if (--counts[s[right++]] >= 0) remaining--;
-                while (remaining == 0)
-                {
-                    if (right - left < minLength)
-                    {
+                while (remaining == 0) {
+                    if (right - left < minLength) {
                         minLength = right - left;
                         minStart = left;
                     }

@@ -4,15 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/340971330/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Linq;
-
 namespace LeetCode
 {
     public class _0438_FindAllAnagramsInAString
     {
-        public IList<int> FindAnagrams(string s, string p)
-        {
+        public IList<int> FindAnagrams(string s, string p) {
             var sLength = s.Length;
             var pLength = p.Length;
 
@@ -22,8 +18,7 @@ namespace LeetCode
 
             var sCount = new int[26];
             var result = new List<int>();
-            for (int i = 0; i < sLength; i++)
-            {
+            for (int i = 0; i < sLength; i++) {
                 sCount[s[i] - 'a']++;
                 if (i >= pLength)
                     sCount[s[i - pLength] - 'a']--;

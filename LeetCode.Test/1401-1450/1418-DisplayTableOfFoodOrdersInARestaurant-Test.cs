@@ -1,14 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1418_DisplayTableOfFoodOrdersInARestaurant_Test
     {
-        [TestMethod]
-        public void DisplayTable_1()
-        {
+        [Test]
+        public void DisplayTable_1() {
             var solution = new _1418_DisplayTableOfFoodOrdersInARestaurant();
             var result = solution.DisplayTable(new string[][] {
                 new string[] { "David", "3", "Ceviche" },
@@ -26,9 +21,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void DisplayTable_2()
-        {
+        [Test]
+        public void DisplayTable_2() {
             var solution = new _1418_DisplayTableOfFoodOrdersInARestaurant();
             var result = solution.DisplayTable(new string[][] {
                 new string[] { "James", "12", "Fried Chicken" },
@@ -44,9 +38,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void DisplayTable_3()
-        {
+        [Test]
+        public void DisplayTable_3() {
             var solution = new _1418_DisplayTableOfFoodOrdersInARestaurant();
             var result = solution.DisplayTable(new string[][] {
                 new string[] { "Laura", "2", "Bean Burrito" },
@@ -59,9 +52,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void DisplayTable_4()
-        {
+        [Test]
+        public void DisplayTable_4() {
             var solution = new _1418_DisplayTableOfFoodOrdersInARestaurant();
             var result = solution.DisplayTable(new string[][] {
                 new string[] { "pKKgO", "1", "qgGxK" },

@@ -1,14 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0399_EvaluateDivision_Test
     {
-        [TestMethod]
-        public void CalcEquationTest()
-        {
+        [Test]
+        public void CalcEquationTest() {
             var solution = new _0399_EvaluateDivision();
             var result = solution.CalcEquation(
                 new List<IList<string>>

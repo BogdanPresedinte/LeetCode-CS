@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/406714064/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace LeetCode
@@ -23,8 +21,7 @@ namespace LeetCode
     {
 
         // Encodes a tree to a single string.
-        public string serialize(TreeNode root)
-        {
+        public string serialize(TreeNode root) {
             var sb = PostOrder(root, new StringBuilder());
             if (sb.Length > 0)
                 sb.Remove(sb.Length - 1, 1);
@@ -33,16 +30,14 @@ namespace LeetCode
         }
 
         // Decodes your encoded data to tree.
-        public TreeNode deserialize(string data)
-        {
+        public TreeNode deserialize(string data) {
             if (string.IsNullOrEmpty(data)) return null;
 
             var nums = data.Split().Select(n => int.Parse(n)).ToList();
             return Helper(int.MinValue, int.MaxValue, nums);
         }
 
-        private StringBuilder PostOrder(TreeNode root, StringBuilder sb)
-        {
+        private StringBuilder PostOrder(TreeNode root, StringBuilder sb) {
             if (root == null) return sb;
             PostOrder(root.left, sb);
             PostOrder(root.right, sb);
@@ -51,8 +46,7 @@ namespace LeetCode
             return sb;
         }
 
-        private TreeNode Helper(int lower, int upper, IList<int> nums)
-        {
+        private TreeNode Helper(int lower, int upper, IList<int> nums) {
             if (nums.Count == 0) return null;
             var value = nums.Last();
             if (value < lower || value > upper) return null;

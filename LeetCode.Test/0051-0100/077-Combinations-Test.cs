@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _077_Combinations_Test
     {
-        [TestMethod]
-        public void CombineTest()
-        {
+        [Test]
+        public void CombineTest() {
             var solution = new _077_Combinations();
             var result = solution.Combine(4, 2);
 
@@ -20,18 +16,16 @@ namespace LeetCode.Test
             AssertHelper.AssertList(new int[] { 3, 4 }, result[5]);
         }
 
-        [TestMethod]
-        public void CombineTest_2()
-        {
+        [Test]
+        public void CombineTest_2() {
             var solution = new _077_Combinations();
             var result = solution.Combine(5, 2);
 
             Assert.AreEqual(10, result.Count);
         }
 
-        [TestMethod]
-        public void CombineTest_KEqualN()
-        {
+        [Test]
+        public void CombineTest_KEqualN() {
             var solution = new _077_Combinations();
             var result = solution.Combine(4, 4);
 
@@ -39,27 +33,24 @@ namespace LeetCode.Test
             AssertHelper.AssertList(new int[] { 1, 2, 3, 4 }, result[0]);
         }
 
-        [TestMethod]
-        public void CombineTest_NLessThanK()
-        {
+        [Test]
+        public void CombineTest_NLessThanK() {
             var solution = new _077_Combinations();
             var result = solution.Combine(2, 3);
 
             Assert.IsNull(result);
         }
 
-        [TestMethod]
-        public void CombineTest_NEqual0()
-        {
+        [Test]
+        public void CombineTest_NEqual0() {
             var solution = new _077_Combinations();
             var result = solution.Combine(0, 3);
 
             Assert.IsNull(result);
         }
 
-        [TestMethod]
-        public void CombineTest_KEqual0()
-        {
+        [Test]
+        public void CombineTest_KEqual0() {
             var solution = new _077_Combinations();
             var result = solution.Combine(4, 0);
 

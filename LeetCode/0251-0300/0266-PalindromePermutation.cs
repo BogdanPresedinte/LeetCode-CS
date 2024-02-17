@@ -8,15 +8,13 @@ namespace LeetCode
 {
     public class _0266_PalindromePermutation
     {
-        public bool CanPermutePalindrome(string s)
-        {
+        public bool CanPermutePalindrome(string s) {
             var counts = new int[256];
             foreach (var ch in s)
                 counts[ch]++;
 
             var result = 0;
-            foreach (var count in counts)
-            {
+            foreach (var count in counts) {
                 if (count % 2 == 0) continue;
                 result++;
             }

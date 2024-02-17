@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0136_SingleNumber
     {
-        public int SingleNumber(int[] nums)
-        {
+        public int SingleNumber(int[] nums) {
             var a = 0;
             foreach (var num in nums)
                 a ^= num;

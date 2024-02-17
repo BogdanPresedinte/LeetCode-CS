@@ -4,8 +4,6 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     /**
@@ -23,15 +21,12 @@ namespace LeetCode
          * @param n   Number of characters to read
          * @return    The number of actual characters read
          */
-        public int Read(char[] buf, int n)
-        {
+        public int Read(char[] buf, int n) {
             if (n == 0) return 0;
             var length = 0;
 
-            while (n > 0)
-            {
-                while (end > start && n > 0)
-                {
+            while (n > 0) {
+                while (end > start && n > 0) {
                     buf[length++] = cache[start++];
                     n--;
                 }
@@ -53,14 +48,12 @@ namespace LeetCode
         private string str = string.Empty;
         private int index = 0;
 
-        public void FillData(string s)
-        {
+        public void FillData(string s) {
             str = s;
             index = 0;
         }
 
-        public int Read4(char[] buf)
-        {
+        public int Read4(char[] buf) {
             if (index >= str.Length) return 0;
             var length = Math.Min(4, str.Length - index);
             var data = str.Substring(index, Math.Min(4, str.Length - index));

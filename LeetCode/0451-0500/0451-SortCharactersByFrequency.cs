@@ -4,21 +4,17 @@
 // Link: https://leetcode.com/submissions/detail/343384693/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace LeetCode
 {
     public class _0451_SortCharactersByFrequency
     {
-        public string FrequencySort(string s)
-        {
+        public string FrequencySort(string s) {
             if (string.IsNullOrWhiteSpace(s)) return s;
 
             var counts = new Dictionary<char, int>();
-            foreach (var ch in s)
-            {
+            foreach (var ch in s) {
                 if (!counts.ContainsKey(ch))
                     counts.Add(ch, 1);
                 else

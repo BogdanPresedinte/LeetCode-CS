@@ -4,10 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/368867930/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace LeetCode
 {
     /**
@@ -20,18 +16,15 @@ namespace LeetCode
 
     public class _1236_WebCrawler
     {
-        public IList<string> Crawl(string startUrl, HtmlParser htmlParser)
-        {
+        public IList<string> Crawl(string startUrl, HtmlParser htmlParser) {
             var uri = new Uri(startUrl);
             var visited = new HashSet<string>();
             var queue = new List<string>();
             queue.Add(startUrl);
 
-            while (queue.Count > 0)
-            {
+            while (queue.Count > 0) {
                 var nextWave = new List<string>();
-                foreach (var next in queue)
-                {
+                foreach (var next in queue) {
                     if (visited.Contains(next) || !next.StartsWith($"http://{uri.Host}")) continue;
 
                     visited.Add(next);
@@ -47,8 +40,7 @@ namespace LeetCode
         {
             private readonly IDictionary<string, List<string>> connections;
 
-            public HtmlParser(List<string> urls, List<int[]> edges)
-            {
+            public HtmlParser(List<string> urls, List<int[]> edges) {
                 connections = new Dictionary<string, List<string>>();
                 foreach (var url in urls)
                     connections.Add(url, new List<string>());
@@ -57,8 +49,7 @@ namespace LeetCode
                     connections[urls[edge[0]]].Add(urls[edge[1]]);
             }
 
-            public List<string> GetUrls(string url)
-            {
+            public List<string> GetUrls(string url) {
                 return connections[url];
             }
         }

@@ -4,19 +4,15 @@
 // Link: https://leetcode.com/submissions/detail/342552893/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _1422_MaximumScoreAfterSplittingAString
     {
-        public int MaxScore(string s)
-        {
+        public int MaxScore(string s) {
             var score = new int[s.Length - 1];
 
             int zeros = 0, ones = 0;
-            for (int i = 0; i < s.Length - 1; i++)
-            {
+            for (int i = 0; i < s.Length - 1; i++) {
                 if (s[i] == '0') zeros++;
                 score[i] += zeros;
 

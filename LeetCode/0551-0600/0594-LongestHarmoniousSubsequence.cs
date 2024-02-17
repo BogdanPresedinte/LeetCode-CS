@@ -4,20 +4,15 @@
 // Link: https://leetcode.com/submissions/detail/352333415/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0594_LongestHarmoniousSubsequence
     {
-        public int FindLHS(int[] nums)
-        {
+        public int FindLHS(int[] nums) {
             var counts = new Dictionary<int, int>();
 
             var result = 0;
-            foreach (var num in nums)
-            {
+            foreach (var num in nums) {
                 if (!counts.ContainsKey(num))
                     counts[num] = 1;
                 else

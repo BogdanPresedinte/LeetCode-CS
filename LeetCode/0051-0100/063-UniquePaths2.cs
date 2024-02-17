@@ -8,13 +8,11 @@ namespace LeetCode
 {
     public class _063_UniquePaths2
     {
-        public int UniquePathsWithObstacles(int[,] obstacleGrid)
-        {
+        public int UniquePathsWithObstacles(int[,] obstacleGrid) {
             var rowLenght = obstacleGrid.GetLength(0);
             var columnLenght = obstacleGrid.GetLength(1);
 
-            if (rowLenght <= columnLenght)
-            {
+            if (rowLenght <= columnLenght) {
                 var possiblePath = new int[rowLenght];
                 possiblePath[0] = obstacleGrid[0, 0] == 0 ? 1 : 0;
 
@@ -25,9 +23,7 @@ namespace LeetCode
                             : j != 0 ? possiblePath[j - 1] + possiblePath[j] : possiblePath[j];
 
                 return possiblePath[rowLenght - 1];
-            }
-            else
-            {
+            } else {
                 var possiblePath = new int[columnLenght];
                 possiblePath[0] = obstacleGrid[0, 0] == 0 ? 1 : 0;
 

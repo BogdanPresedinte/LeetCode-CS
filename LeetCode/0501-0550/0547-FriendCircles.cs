@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0547_FriendCircles
     {
-        public int FindCircleNum(int[][] M)
-        {
+        public int FindCircleNum(int[][] M) {
             var N = M.Length;
             var uf = new UnionFind(N);
             for (int i = 0; i < N; i++)
@@ -24,8 +23,7 @@ namespace LeetCode
         {
             private int[] parents;
 
-            public UnionFind(int N)
-            {
+            public UnionFind(int N) {
                 parents = new int[N];
                 for (int i = 0; i < N; i++)
                     parents[i] = i;
@@ -34,16 +32,14 @@ namespace LeetCode
 
             public int Count { get; set; }
 
-            public int Find(int i)
-            {
+            public int Find(int i) {
                 if (parents[i] != i)
                     parents[i] = Find(parents[i]);
 
                 return parents[i];
             }
 
-            public void Union(int i, int j)
-            {
+            public void Union(int i, int j) {
                 var index1 = Find(i);
                 var index2 = Find(j);
 

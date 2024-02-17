@@ -21,13 +21,11 @@ namespace LeetCode
      */
     public class _0865_SmallestSubtreeWithAllTheDeepestNodes
     {
-        public TreeNode SubtreeWithAllDeepest(TreeNode root)
-        {
+        public TreeNode SubtreeWithAllDeepest(TreeNode root) {
             return GetDeepest(root, 0).node;
         }
 
-        private (TreeNode node, int deep) GetDeepest(TreeNode node, int deep)
-        {
+        private (TreeNode node, int deep) GetDeepest(TreeNode node, int deep) {
             if (node == null) return (node, 0);
 
             (var leftNode, var leftDeep) = GetDeepest(node.left, deep + 1);

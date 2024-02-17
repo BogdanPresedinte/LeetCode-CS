@@ -19,16 +19,13 @@ namespace LeetCode
     {
         private readonly int number;
 
-        public _0374_GuessNumberHigherOrLower(int number)
-        {
+        public _0374_GuessNumberHigherOrLower(int number) {
             this.number = number;
         }
 
-        public int GuessNumber(int n)
-        {
+        public int GuessNumber(int n) {
             int lo = 1, hi = n;
-            while (lo <= hi)
-            {
+            while (lo <= hi) {
                 var mid = lo + (hi - lo) / 2;
 
                 var compare = guess(mid);
@@ -40,8 +37,7 @@ namespace LeetCode
             return -1;
         }
 
-        private int guess(int num)
-        {
+        private int guess(int num) {
             if (num < number) return 1;
             else if (num > number) return -1;
             else return 0;

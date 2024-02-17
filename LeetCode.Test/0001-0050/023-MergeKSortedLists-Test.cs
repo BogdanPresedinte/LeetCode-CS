@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _023_MergeKSortedLists_Test
     {
-        [TestMethod]
-        public void MergeKListsTest()
-        {
+        [Test]
+        public void MergeKListsTest() {
             var input = new ListNode[] {
                 TestHelper.GenerateList(new int[] { 1, 3, 5, 7, 9 }),
                 TestHelper.GenerateList(new int[] { 2, 4, 6, 8, 10 })
@@ -19,9 +15,8 @@ namespace LeetCode.Test
             AssertHelper.AssertLinkList(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }, result);
         }
 
-        [TestMethod]
-        public void MergeKListsTest_2()
-        {
+        [Test]
+        public void MergeKListsTest_2() {
             var input = new ListNode[] {
                 TestHelper.GenerateList(new int[] { 1, 3, 7 }),
                 TestHelper.GenerateList(new int[] { 2, 10 }),
@@ -35,9 +30,8 @@ namespace LeetCode.Test
             AssertHelper.AssertLinkList(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }, result);
         }
 
-        [TestMethod]
-        public void MergeKListsTest_OneList()
-        {
+        [Test]
+        public void MergeKListsTest_OneList() {
             var input = new ListNode[] {
                 TestHelper.GenerateList(new int[] { 1, 2, 3 })
             };
@@ -48,9 +42,8 @@ namespace LeetCode.Test
             AssertHelper.AssertLinkList(new int[] { 1, 2, 3 }, result);
         }
 
-        [TestMethod]
-        public void MergeKListsTest_EmptyList()
-        {
+        [Test]
+        public void MergeKListsTest_EmptyList() {
             var input = new ListNode[] { };
 
             var solution = new _023_MergeKSortedLists();

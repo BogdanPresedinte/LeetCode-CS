@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0355_DesignTwitter_Test
     {
-        [TestMethod]
-        public void Twitter_1()
-        {
+        [Test]
+        public void Twitter_1() {
             _0355_DesignTwitter twitter = new _0355_DesignTwitter();
 
             // User 1 posts a new tweet (id = 5).

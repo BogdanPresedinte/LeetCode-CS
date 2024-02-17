@@ -1,14 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1222_QueensThatCanAttackTheKing_Test
     {
-        [TestMethod]
-        public void QueensAttacktheKing_1()
-        {
+        [Test]
+        public void QueensAttacktheKing_1() {
             var solution = new _1222_QueensThatCanAttackTheKing();
             var result = solution.QueensAttacktheKing(new int[][] {
                 new int[] { 0, 1 },
@@ -25,9 +20,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void QueensAttacktheKing_2()
-        {
+        [Test]
+        public void QueensAttacktheKing_2() {
             var solution = new _1222_QueensThatCanAttackTheKing();
             var result = solution.QueensAttacktheKing(new int[][] {
                 new int[] { 0, 0 },
@@ -45,9 +39,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void QueensAttacktheKing_3()
-        {
+        [Test]
+        public void QueensAttacktheKing_3() {
             var solution = new _1222_QueensThatCanAttackTheKing();
             var result = solution.QueensAttacktheKing(new int[][] {
                 new int[] { 5, 6 },

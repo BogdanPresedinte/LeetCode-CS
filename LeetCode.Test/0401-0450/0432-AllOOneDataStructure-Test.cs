@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0432_AllOOneDataStructure_Test
     {
-        [TestMethod]
-        public void AllOne_1()
-        {
+        [Test]
+        public void AllOne_1() {
             var solution = new _0432_AllOOneDataStructure();
             solution.Inc("abc");
             string abc = solution.GetMaxKey();

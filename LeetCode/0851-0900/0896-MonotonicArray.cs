@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0896_MonotonicArray
     {
-        public bool IsMonotonic(int[] A)
-        {
+        public bool IsMonotonic(int[] A) {
             if (A.Length <= 2) return true;
 
             var i = 0;
@@ -20,13 +19,10 @@ namespace LeetCode
 
             var isIncreasing = A[i] < A[i + 1];
             i++;
-            if (isIncreasing)
-            {
+            if (isIncreasing) {
                 for (int k = i; k < A.Length - 1; k++)
                     if (A[k] > A[k + 1]) return false;
-            }
-            else
-            {
+            } else {
                 for (int k = i; k < A.Length - 1; k++)
                     if (A[k] < A[k + 1]) return false;
             }

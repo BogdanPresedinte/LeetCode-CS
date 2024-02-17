@@ -8,13 +8,11 @@ namespace LeetCode
 {
     public class _1281_SubtractTheProductAndSumOfDigitsOfAnInteger
     {
-        public int SubtractProductAndSum(int n)
-        {
+        public int SubtractProductAndSum(int n) {
             var sum = 0;
             var product = 1;
 
-            while (n > 0)
-            {
+            while (n > 0) {
                 var value = n % 10;
                 sum += value;
                 product *= value;

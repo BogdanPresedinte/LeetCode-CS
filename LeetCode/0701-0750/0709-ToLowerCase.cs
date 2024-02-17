@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0709_ToLowerCase
     {
-        public string ToLowerCase(string str)
-        {
+        public string ToLowerCase(string str) {
             return str.ToLower();
         }
     }

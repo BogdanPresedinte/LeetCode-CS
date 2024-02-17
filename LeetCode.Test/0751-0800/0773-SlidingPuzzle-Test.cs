@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0773_SlidingPuzzle_Test
     {
-        [TestMethod]
-        public void SlidingPuzzle_1()
-        {
+        [Test]
+        public void SlidingPuzzle_1() {
             var solution = new _0773_SlidingPuzzle();
             var result = solution.SlidingPuzzle(new int[][] {
                 new int[] { 1, 2, 3 },
@@ -16,9 +12,8 @@ namespace LeetCode.Test
             Assert.AreEqual(1, result);
         }
 
-        [TestMethod]
-        public void SlidingPuzzle_2()
-        {
+        [Test]
+        public void SlidingPuzzle_2() {
             var solution = new _0773_SlidingPuzzle();
             var result = solution.SlidingPuzzle(new int[][] {
                 new int[] { 1, 2, 3 },
@@ -27,9 +22,8 @@ namespace LeetCode.Test
             Assert.AreEqual(-1, result);
         }
 
-        [TestMethod]
-        public void SlidingPuzzle_3()
-        {
+        [Test]
+        public void SlidingPuzzle_3() {
             var solution = new _0773_SlidingPuzzle();
             var result = solution.SlidingPuzzle(new int[][] {
                 new int[] { 4, 1, 2 },
@@ -38,9 +32,8 @@ namespace LeetCode.Test
             Assert.AreEqual(5, result);
         }
 
-        [TestMethod]
-        public void SlidingPuzzle_4()
-        {
+        [Test]
+        public void SlidingPuzzle_4() {
             var solution = new _0773_SlidingPuzzle();
             var result = solution.SlidingPuzzle(new int[][] {
                 new int[] { 3, 2, 4 },

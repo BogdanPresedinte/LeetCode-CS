@@ -23,10 +23,8 @@ namespace LeetCode
     {
         private int sum = 0;
 
-        public TreeNode BstToGst(TreeNode root)
-        {
-            if (root != null)
-            {
+        public TreeNode BstToGst(TreeNode root) {
+            if (root != null) {
                 BstToGst(root.right);
                 sum += root.val;
                 root.val = sum;

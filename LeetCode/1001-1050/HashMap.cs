@@ -8,8 +8,7 @@ namespace LeetCode
 {
     internal class HashMap<T1, T2>
     {
-        public HashMap()
-        {
+        public HashMap() {
         }
     }
 }

@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0883_ProjectionAreaOf3DShapes_Test
     {
-        [TestMethod]
-        public void ProjectionArea_1()
-        {
+        [Test]
+        public void ProjectionArea_1() {
             var solution = new _0883_ProjectionAreaOf3DShapes();
             var result = solution.ProjectionArea(new int[][] {
                 new int[] { 2 },
@@ -15,9 +11,8 @@ namespace LeetCode.Test
             Assert.AreEqual(5, result);
         }
 
-        [TestMethod]
-        public void ProjectionArea_2()
-        {
+        [Test]
+        public void ProjectionArea_2() {
             var solution = new _0883_ProjectionAreaOf3DShapes();
             var result = solution.ProjectionArea(new int[][] {
                 new int[] { 1, 2 },
@@ -26,9 +21,8 @@ namespace LeetCode.Test
             Assert.AreEqual(17, result);
         }
 
-        [TestMethod]
-        public void ProjectionArea_3()
-        {
+        [Test]
+        public void ProjectionArea_3() {
             var solution = new _0883_ProjectionAreaOf3DShapes();
             var result = solution.ProjectionArea(new int[][] {
                 new int[] { 1, 0 },
@@ -37,9 +31,8 @@ namespace LeetCode.Test
             Assert.AreEqual(8, result);
         }
 
-        [TestMethod]
-        public void ProjectionArea_4()
-        {
+        [Test]
+        public void ProjectionArea_4() {
             var solution = new _0883_ProjectionAreaOf3DShapes();
             var result = solution.ProjectionArea(new int[][] {
                 new int[] { 1, 1, 1 },
@@ -49,9 +42,8 @@ namespace LeetCode.Test
             Assert.AreEqual(14, result);
         }
 
-        [TestMethod]
-        public void ProjectionArea_5()
-        {
+        [Test]
+        public void ProjectionArea_5() {
             var solution = new _0883_ProjectionAreaOf3DShapes();
             var result = solution.ProjectionArea(new int[][] {
                 new int[] { 2, 2, 2 },

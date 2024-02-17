@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/380046401/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0212_WordSearchII
     {
-        public IList<string> FindWords(char[][] board, string[] words)
-        {
+        public IList<string> FindWords(char[][] board, string[] words) {
             var result = new List<string>();
             var root = BuildTrie(words);
             var N = board.Length;
@@ -24,13 +21,11 @@ namespace LeetCode
             return result;
         }
 
-        private void BackTracking(char[][] board, int i, int j, int N, int M, TrieNode node, IList<string> results)
-        {
+        private void BackTracking(char[][] board, int i, int j, int N, int M, TrieNode node, IList<string> results) {
             var ch = board[i][j];
             if (ch == '#' || node.Children[ch - 'a'] == null) return;
             node = node.Children[ch - 'a'];
-            if (node.IsFinished)
-            {
+            if (node.IsFinished) {
                 results.Add(node.Word);
                 node.IsFinished = false;
             }
@@ -43,15 +38,12 @@ namespace LeetCode
             board[i][j] = ch;
         }
 
-        private TrieNode BuildTrie(string[] words)
-        {
+        private TrieNode BuildTrie(string[] words) {
             var root = new TrieNode();
 
-            foreach (var word in words)
-            {
+            foreach (var word in words) {
                 var currentNode = root;
-                foreach (var ch in word)
-                {
+                foreach (var ch in word) {
                     if (currentNode.Children[ch - 'a'] == null)
                         currentNode.Children[ch - 'a'] = new TrieNode();
                     currentNode = currentNode.Children[ch - 'a'];

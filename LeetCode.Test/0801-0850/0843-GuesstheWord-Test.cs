@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0843_GuesstheWord_Test
     {
-        [TestMethod]
-        public void FindSecretWordTest()
-        {
+        [Test]
+        public void FindSecretWordTest() {
             var wordlist = new string[] { "acckzz", "ccbazz", "eiowzz", "abcczz" };
             var master = new Master("acckzz", wordlist);
 

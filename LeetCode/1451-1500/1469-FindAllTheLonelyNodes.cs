@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/351039797/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -23,26 +21,22 @@ namespace LeetCode
      */
     public class _1469_FindAllTheLonelyNodes
     {
-        public IList<int> GetLonelyNodes(TreeNode root)
-        {
+        public IList<int> GetLonelyNodes(TreeNode root) {
             var results = new List<int>();
             GetLonelyNodes(root, results);
 
             return results;
         }
 
-        private void GetLonelyNodes(TreeNode node, IList<int> results)
-        {
+        private void GetLonelyNodes(TreeNode node, IList<int> results) {
             if (node.left == null && node.right == null) return;
 
-            if (node.left != null)
-            {
+            if (node.left != null) {
                 if (node.right == null)
                     results.Add(node.left.val);
                 GetLonelyNodes(node.left, results);
             }
-            if (node.right != null)
-            {
+            if (node.right != null) {
                 if (node.left == null)
                     results.Add(node.right.val);
                 GetLonelyNodes(node.right, results);

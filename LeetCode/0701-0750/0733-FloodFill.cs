@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/338156600/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0733_FloodFill
     {
-        public int[][] FloodFill(int[][] image, int sr, int sc, int newColor)
-        {
+        public int[][] FloodFill(int[][] image, int sr, int sc, int newColor) {
             var oldColor = image[sr][sc];
             if (oldColor == newColor) return image;
 
@@ -19,8 +16,7 @@ namespace LeetCode
             var cols = image[0].Length;
             var queue = new Queue<(int row, int col)>();
             queue.Enqueue((sr, sc));
-            while (queue.Count > 0)
-            {
+            while (queue.Count > 0) {
                 (int row, int col) = queue.Dequeue();
                 image[row][col] = newColor;
 

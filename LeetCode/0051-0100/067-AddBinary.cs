@@ -10,8 +10,7 @@ namespace LeetCode
 {
     public class _067_AddBinary
     {
-        public string AddBinary(string a, string b)
-        {
+        public string AddBinary(string a, string b) {
             var carry = 0;
             var builder = new StringBuilder();
 
@@ -19,8 +18,7 @@ namespace LeetCode
             var bLength = b.Length - 1;
 
             int aVal, bVal, val;
-            while (aLength >= 0 || bLength >= 0)
-            {
+            while (aLength >= 0 || bLength >= 0) {
                 aVal = aLength >= 0 ? a[aLength] - '0' : 0;
                 bVal = bLength >= 0 ? b[bLength] - '0' : 0;
 
@@ -33,8 +31,7 @@ namespace LeetCode
                 bLength--;
             }
 
-            if (carry >= 1)
-            {
+            if (carry >= 1) {
                 builder.Insert(0, carry);
             }
 

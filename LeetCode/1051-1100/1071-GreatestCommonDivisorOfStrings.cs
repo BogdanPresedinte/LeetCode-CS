@@ -10,17 +10,14 @@ namespace LeetCode
 {
     public class _1071_GreatestCommonDivisorOfStrings
     {
-        public string GcdOfStrings(string str1, string str2)
-        {
+        public string GcdOfStrings(string str1, string str2) {
             if (str1 == str2) return str1;
             if (str1.Length > str2.Length) return GcdOfStrings(str2, str1);
 
             var i = 1;
-            while (i <= str1.Length)
-            {
+            while (i <= str1.Length) {
                 var length = str1.Length / i;
-                if ((str1.Length % length == 0) && (str2.Length % length == 0))
-                {
+                if ((str1.Length % length == 0) && (str2.Length % length == 0)) {
                     var sb1 = new StringBuilder();
                     var sb2 = new StringBuilder();
 

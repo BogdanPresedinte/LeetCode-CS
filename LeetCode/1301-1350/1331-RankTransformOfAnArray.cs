@@ -4,18 +4,13 @@
 // Link: https://leetcode.com/submissions/detail/337438610/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Linq;
-
 namespace LeetCode
 {
     public class _1331_RankTransformOfAnArray
     {
-        public int[] ArrayRankTransform(int[] arr)
-        {
+        public int[] ArrayRankTransform(int[] arr) {
             var map = new Dictionary<int, int>();
-            foreach (var num in arr)
-            {
+            foreach (var num in arr) {
                 if (!map.ContainsKey(num))
                     map.Add(num, 0);
             }

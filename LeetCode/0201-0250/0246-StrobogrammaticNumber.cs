@@ -8,21 +8,17 @@ namespace LeetCode
 {
     public class _0246_StrobogrammaticNumber
     {
-        public bool IsStrobogrammatic(string num)
-        {
+        public bool IsStrobogrammatic(string num) {
             int i = 0, j = num.Length - 1;
-            while (i <= j)
-            {
+            while (i <= j) {
                 if ((num[i] == '0' && num[j] == '0') ||
                     (num[i] == '1' && num[j] == '1') ||
                     (num[i] == '8' && num[j] == '8') ||
                     (num[i] == '6' && num[j] == '9') ||
-                    (num[i] == '9' && num[j] == '6'))
-                {
+                    (num[i] == '9' && num[j] == '6')) {
                     i++;
                     j--;
-                }
-                else
+                } else
                     return false;
             }
 

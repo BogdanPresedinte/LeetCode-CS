@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/351859220/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     /**
@@ -23,14 +21,12 @@ namespace LeetCode
      */
     public class _0563_BinaryTreeTilt
     {
-        public int FindTilt(TreeNode root)
-        {
+        public int FindTilt(TreeNode root) {
             (_, int tilt) = ComputeSum(root);
             return tilt;
         }
 
-        private (int sum, int tilt) ComputeSum(TreeNode node)
-        {
+        private (int sum, int tilt) ComputeSum(TreeNode node) {
             if (node == null) return (0, 0);
 
             (var leftSum, var leftTilt) = ComputeSum(node.left);

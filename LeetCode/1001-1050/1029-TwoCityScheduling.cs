@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/348826564/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _1029_TwoCityScheduling
     {
-        public int TwoCitySchedCost(int[][] costs)
-        {
+        public int TwoCitySchedCost(int[][] costs) {
             Array.Sort(costs, (a, b) => (a[0] - a[1]) - (b[0] - b[1]));
 
             var n = costs.Length / 2;

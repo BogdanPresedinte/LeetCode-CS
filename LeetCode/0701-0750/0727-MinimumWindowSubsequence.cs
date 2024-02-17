@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0727_MinimumWindowSubsequence
     {
-        public string MinWindow(string S, string T)
-        {
+        public string MinWindow(string S, string T) {
             int m = T.Length, n = S.Length;
             var dp = new int[m + 1, n + 1];
             for (int i = 0; i <= n; i++)
@@ -24,8 +23,7 @@ namespace LeetCode
 
             int start = 0, len = n + 1;
             for (int i = 1; i <= n; i++)
-                if (dp[m, i] != 0 && i - dp[m, i] + 1 < len)
-                {
+                if (dp[m, i] != 0 && i - dp[m, i] + 1 < len) {
                     start = dp[m, i] - 1;
                     len = i - dp[m, i] + 1;
                 }

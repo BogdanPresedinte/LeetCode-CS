@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _1160_FindWordsThatCanBeFormedByCharacters
     {
-        public int CountCharacters(string[] words, string chars)
-        {
+        public int CountCharacters(string[] words, string chars) {
             if (string.IsNullOrWhiteSpace(chars)) return 0;
 
             var charMap = new int[26];
@@ -18,17 +17,14 @@ namespace LeetCode
 
             var result = 0;
             var temp = new int[26];
-            foreach (var word in words)
-            {
+            foreach (var word in words) {
                 charMap.CopyTo(temp, 0);
 
                 var isGood = true;
-                foreach (var ch in word)
-                {
+                foreach (var ch in word) {
                     if (temp[ch - 'a'] > 0)
                         temp[ch - 'a']--;
-                    else
-                    {
+                    else {
                         isGood = false;
                         break;
                     }

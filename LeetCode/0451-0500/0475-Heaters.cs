@@ -4,15 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/359572928/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Linq;
-
 namespace LeetCode
 {
     public class _0475_Heaters
     {
-        public int FindRadius(int[] houses, int[] heaters)
-        {
+        public int FindRadius(int[] houses, int[] heaters) {
             Array.Sort(houses);
             Array.Sort(heaters);
 
@@ -20,25 +16,19 @@ namespace LeetCode
             for (int i = 0; i < houses.Length; i++)
                 distances[i] = int.MaxValue;
 
-            for (int i = 0, h = 0; i < houses.Length && h < heaters.Length;)
-            {
-                if (houses[i] <= heaters[h])
-                {
+            for (int i = 0, h = 0; i < houses.Length && h < heaters.Length;) {
+                if (houses[i] <= heaters[h]) {
                     distances[i] = heaters[h] - houses[i];
                     i++;
-                }
-                else
+                } else
                     h++;
             }
 
-            for (int i = houses.Length - 1, h = heaters.Length - 1; i >= 0 && h >= 0;)
-            {
-                if (houses[i] >= heaters[h])
-                {
+            for (int i = houses.Length - 1, h = heaters.Length - 1; i >= 0 && h >= 0;) {
+                if (houses[i] >= heaters[h]) {
                     distances[i] = Math.Min(distances[i], houses[i] - heaters[h]);
                     i--;
-                }
-                else
+                } else
                     h--;
             }
 

@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0832_FlippingAnImage_Test
     {
-        [TestMethod]
-        public void FlipAndInvertImage_1()
-        {
+        [Test]
+        public void FlipAndInvertImage_1() {
             var solution = new _0832_FlippingAnImage();
             var result = solution.FlipAndInvertImage(new int[][]
                 {
@@ -24,9 +20,8 @@ namespace LeetCode.Test
                 }, result);
         }
 
-        [TestMethod]
-        public void FlipAndInvertImage_2()
-        {
+        [Test]
+        public void FlipAndInvertImage_2() {
             var solution = new _0832_FlippingAnImage();
             var result = solution.FlipAndInvertImage(new int[][]
                 {

@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0867_TransposeMatrix_Test
     {
-        [TestMethod]
-        public void Transpose_1()
-        {
+        [Test]
+        public void Transpose_1() {
             var solution = new _0867_TransposeMatrix();
             var result = solution.Transpose(
                 new int[][]
@@ -25,9 +21,8 @@ namespace LeetCode.Test
                 }, result);
         }
 
-        [TestMethod]
-        public void Transpose_2()
-        {
+        [Test]
+        public void Transpose_2() {
             var solution = new _0867_TransposeMatrix();
             var result = solution.Transpose(
                 new int[][]

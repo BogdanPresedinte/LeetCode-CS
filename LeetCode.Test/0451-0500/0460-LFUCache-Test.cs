@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0460_LFUCache_Test
     {
-        [TestMethod]
-        public void LFUCache_1()
-        {
+        [Test]
+        public void LFUCache_1() {
             _0460_LFUCache cache = new _0460_LFUCache(2);
 
             cache.Put(1, 1);
@@ -22,18 +18,16 @@ namespace LeetCode.Test
             Assert.AreEqual(4, cache.Get(4));
         }
 
-        [TestMethod]
-        public void LFUCache_2()
-        {
+        [Test]
+        public void LFUCache_2() {
             _0460_LFUCache cache = new _0460_LFUCache(2);
 
             cache.Put(2, 1);
             Assert.AreEqual(1, cache.Get(2));
         }
 
-        [TestMethod]
-        public void LFUCache_3()
-        {
+        [Test]
+        public void LFUCache_3() {
             _0460_LFUCache cache = new _0460_LFUCache(2);
 
             cache.Put(3, 1);

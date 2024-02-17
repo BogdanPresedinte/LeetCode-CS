@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/372798558/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0621_TaskScheduler
     {
-        public int LeastInterval(char[] tasks, int n)
-        {
+        public int LeastInterval(char[] tasks, int n) {
             var count = new int[26];
             foreach (var ch in tasks)
                 count[ch - 'A']++;

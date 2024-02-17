@@ -4,9 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/339601732/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Linq;
-
 namespace LeetCode
 {
     /*
@@ -20,14 +17,12 @@ namespace LeetCode
 
     public class _0690_EmployeeImportance
     {
-        public int GetImportance(IList<Employee> employees, int id)
-        {
+        public int GetImportance(IList<Employee> employees, int id) {
             var map = employees.ToDictionary(e => e.id, e => e);
             return DFS(map, id);
         }
 
-        private int DFS(IDictionary<int, Employee> map, int id)
-        {
+        private int DFS(IDictionary<int, Employee> map, int id) {
             var result = map[id].importance;
             foreach (var subId in map[id].subordinates)
                 result += DFS(map, subId);

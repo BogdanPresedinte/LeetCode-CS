@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _112_PathSum
     {
-        public bool HasPathSum(TreeNode root, int sum)
-        {
+        public bool HasPathSum(TreeNode root, int sum) {
             if (root == null) return false;
 
             sum = sum - root.val;

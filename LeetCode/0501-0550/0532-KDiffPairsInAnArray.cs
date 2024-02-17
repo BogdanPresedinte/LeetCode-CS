@@ -4,19 +4,15 @@
 // Link: https://leetcode.com/submissions/detail/359589168/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0532_KDiffPairsInAnArray
     {
-        public int FindPairs(int[] nums, int k)
-        {
+        public int FindPairs(int[] nums, int k) {
             if (k < 0) return 0;
 
             var counts = new SortedDictionary<int, int>();
-            foreach (var num in nums)
-            {
+            foreach (var num in nums) {
                 if (!counts.ContainsKey(num))
                     counts[num] = 1;
                 else
@@ -25,8 +21,7 @@ namespace LeetCode
 
             var count = 0;
             if (k == 0)
-                foreach (var key in counts.Keys)
-                {
+                foreach (var key in counts.Keys) {
                     if (counts[key] > 1) count++;
                 }
             else

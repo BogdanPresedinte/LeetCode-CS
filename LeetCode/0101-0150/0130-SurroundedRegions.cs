@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0130_SurroundedRegions
     {
-        public void Solve(char[][] board)
-        {
+        public void Solve(char[][] board) {
             int m = board.Length;
             if (m < 3) return;
             int n = board[0].Length;
@@ -21,8 +20,7 @@ namespace LeetCode
                     if (board[i][j] == 'O')
                         if (i == 0 || i == m - 1 || j == 0 || j == n - 1)
                             uf.Union(i * n + j, m * n);
-                        else
-                        {
+                        else {
                             if (board[i - 1][j] == 'O')
                                 uf.Union(i * n + j, (i - 1) * n + j);
                             if (board[i + 1][j] == 'O')
@@ -46,8 +44,7 @@ namespace LeetCode
             private int[] parents;
             private int[] ranks;
 
-            public UnionFind(int count)
-            {
+            public UnionFind(int count) {
                 parents = new int[count];
                 ranks = new int[count];
 
@@ -55,27 +52,22 @@ namespace LeetCode
                     parents[i] = i;
             }
 
-            public int Find(int index)
-            {
+            public int Find(int index) {
                 if (parents[index] != index)
                     parents[index] = Find(parents[index]);
 
                 return parents[index];
             }
 
-            public void Union(int index1, int index2)
-            {
+            public void Union(int index1, int index2) {
                 var pIndex1 = Find(index1);
                 var pIndex2 = Find(index2);
 
                 if (pIndex1 == pIndex2) return;
-                if (ranks[pIndex1] >= ranks[pIndex2])
-                {
+                if (ranks[pIndex1] >= ranks[pIndex2]) {
                     parents[pIndex2] = pIndex1;
                     ranks[pIndex2]++;
-                }
-                else
-                {
+                } else {
                     parents[pIndex1] = pIndex2;
                     ranks[pIndex1]++;
                 }

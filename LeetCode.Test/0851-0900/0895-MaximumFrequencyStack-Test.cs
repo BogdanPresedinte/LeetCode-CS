@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0895_MaximumFrequencyStack_Test
     {
-        [TestMethod]
-        public void FreqStackTest()
-        {
+        [Test]
+        public void FreqStackTest() {
             var freqStack = new _0895_MaximumFrequencyStack();
 
             freqStack.Push(5);

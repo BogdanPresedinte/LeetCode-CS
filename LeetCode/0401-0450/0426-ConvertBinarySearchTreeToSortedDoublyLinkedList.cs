@@ -34,8 +34,7 @@ namespace LeetCode
         private Node first;
         private Node last;
 
-        public Node TreeToDoublyList(Node root)
-        {
+        public Node TreeToDoublyList(Node root) {
             if (root == null) return null;
 
             Helper(root);
@@ -45,19 +44,15 @@ namespace LeetCode
             return first;
         }
 
-        private void Helper(Node node)
-        {
+        private void Helper(Node node) {
             if (node == null) return;
 
             Helper(node.left);
 
-            if (last != null)
-            {
+            if (last != null) {
                 last.right = node;
                 node.left = last;
-            }
-            else
-            {
+            } else {
                 first = node;
             }
             last = node;
@@ -73,15 +68,13 @@ namespace LeetCode
 
             public Node() { }
 
-            public Node(int _val)
-            {
+            public Node(int _val) {
                 val = _val;
                 left = null;
                 right = null;
             }
 
-            public Node(int _val, Node _left, Node _right)
-            {
+            public Node(int _val, Node _left, Node _right) {
                 val = _val;
                 left = _left;
                 right = _right;

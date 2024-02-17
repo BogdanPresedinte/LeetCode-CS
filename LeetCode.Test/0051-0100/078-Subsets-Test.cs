@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _078_Subsets_Test
     {
-        [TestMethod]
-        public void SubsetsTest()
-        {
+        [Test]
+        public void SubsetsTest() {
             var solution = new _078_Subsets();
             var result = solution.Subsets(new int[] { 1, 2, 3 });
 
@@ -22,9 +18,8 @@ namespace LeetCode.Test
             AssertHelper.AssertList(new int[] { 1, 2, 3 }, result[7]);
         }
 
-        [TestMethod]
-        public void SubsetsTest_NotOrdered()
-        {
+        [Test]
+        public void SubsetsTest_NotOrdered() {
             var solution = new _078_Subsets();
             var result = solution.Subsets(new int[] { 3, 2, 1 });
 
@@ -39,9 +34,8 @@ namespace LeetCode.Test
             AssertHelper.AssertList(new int[] { 1, 2, 3 }, result[7]);
         }
 
-        [TestMethod]
-        public void SubsetsTest_EmptyNums()
-        {
+        [Test]
+        public void SubsetsTest_EmptyNums() {
             var solution = new _078_Subsets();
             var result = solution.Subsets(new int[] { });
 
@@ -49,9 +43,8 @@ namespace LeetCode.Test
             AssertHelper.AssertList(new int[] { }, result[0]);
         }
 
-        [TestMethod]
-        public void SubsetsTest_OneItem()
-        {
+        [Test]
+        public void SubsetsTest_OneItem() {
             var solution = new _078_Subsets();
             var result = solution.Subsets(new int[] { 1 });
 

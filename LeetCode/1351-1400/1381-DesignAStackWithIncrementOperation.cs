@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/360764155/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _1381_DesignAStackWithIncrementOperation
@@ -13,26 +11,22 @@ namespace LeetCode
         private readonly int[] data;
         private int size;
 
-        public _1381_DesignAStackWithIncrementOperation(int maxSize)
-        {
+        public _1381_DesignAStackWithIncrementOperation(int maxSize) {
             data = new int[maxSize];
             size = 0;
         }
 
-        public void Push(int x)
-        {
+        public void Push(int x) {
             if (size == data.Length) return;
             data[size++] = x;
         }
 
-        public int Pop()
-        {
+        public int Pop() {
             if (size == 0) return -1;
             return data[--size];
         }
 
-        public void Increment(int k, int val)
-        {
+        public void Increment(int k, int val) {
             for (int i = 0; i < Math.Min(k, size); i++)
                 data[i] += val;
         }

@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0352_DataStreamAsDisjointIntervals_Test
     {
-        [TestMethod]
-        public void SummaryRangesTest_1()
-        {
+        [Test]
+        public void SummaryRangesTest_1() {
             var solution = new _0352_DataStreamAsDisjointIntervals();
             solution.AddNum(1);
             AssertHelper.AssertArray(new int[][] {

@@ -8,15 +8,12 @@ namespace LeetCode
 {
     public class _0832_FlippingAnImage
     {
-        public int[][] FlipAndInvertImage(int[][] A)
-        {
+        public int[][] FlipAndInvertImage(int[][] A) {
             var row = A.Length;
             var col = A[0].Length;
 
-            for (int i = 0; i < row; i++)
-            {
-                for (int j = 0; j < col / 2; j++)
-                {
+            for (int i = 0; i < row; i++) {
+                for (int j = 0; j < col / 2; j++) {
                     var left = A[i][j];
                     var right = A[i][col - j - 1];
 

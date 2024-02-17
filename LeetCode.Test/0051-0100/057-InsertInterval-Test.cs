@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _057_InsertInterval_Test
     {
-        [TestMethod]
-        public void InsertTest_NoOverlap_Before()
-        {
+        [Test]
+        public void InsertTest_NoOverlap_Before() {
             var input = new[]
             {
                 new Interval(4, 6),
@@ -26,9 +22,8 @@ namespace LeetCode.Test
             Assert.AreEqual(10, result[2].end);
         }
 
-        [TestMethod]
-        public void InsertTest_NoOverlap_Middle()
-        {
+        [Test]
+        public void InsertTest_NoOverlap_Middle() {
             var input = new[]
             {
                 new Interval(1, 3),
@@ -47,9 +42,8 @@ namespace LeetCode.Test
             Assert.AreEqual(10, result[2].end);
         }
 
-        [TestMethod]
-        public void InsertTest_NoOverlap_Last()
-        {
+        [Test]
+        public void InsertTest_NoOverlap_Last() {
             var input = new[]
             {
                 new Interval(1, 3),
@@ -68,9 +62,8 @@ namespace LeetCode.Test
             Assert.AreEqual(10, result[2].end);
         }
 
-        [TestMethod]
-        public void InsertTest_Overlap()
-        {
+        [Test]
+        public void InsertTest_Overlap() {
             var input = new[]
             {
                 new Interval(1, 3),
@@ -87,9 +80,8 @@ namespace LeetCode.Test
             Assert.AreEqual(9, result[1].end);
         }
 
-        [TestMethod]
-        public void InsertTest_MultipleOverlap()
-        {
+        [Test]
+        public void InsertTest_MultipleOverlap() {
             var input = new[]
             {
                 new Interval(1, 2),
@@ -111,9 +103,8 @@ namespace LeetCode.Test
             Assert.AreEqual(16, result[2].end);
         }
 
-        [TestMethod]
-        public void InsertTest_EmptyIntervals()
-        {
+        [Test]
+        public void InsertTest_EmptyIntervals() {
             var solution = new _057_InsertInterval();
             var result = solution.Insert(new Interval[] { }, new Interval(4, 6));
 

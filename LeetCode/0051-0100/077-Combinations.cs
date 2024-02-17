@@ -4,14 +4,11 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _077_Combinations
     {
-        public IList<IList<int>> Combine(int n, int k)
-        {
+        public IList<IList<int>> Combine(int n, int k) {
             if (n <= 0 || k <= 0 || k > n) { return null; }
 
             var results = new List<IList<int>>();
@@ -21,8 +18,7 @@ namespace LeetCode
             for (i = 0; i < k; i++) { select[i] = true; }
 
             bool hasNext;
-            while (true)
-            {
+            while (true) {
                 var result = new List<int>();
                 for (i = 0; i < n; i++)
                     if (select[i]) { result.Add(i + 1); }
@@ -30,10 +26,8 @@ namespace LeetCode
 
                 hasNext = false;
                 count = 0;
-                for (i = 0; i < n - 1; i++)
-                {
-                    if (select[i] && !select[i + 1])
-                    {
+                for (i = 0; i < n - 1; i++) {
+                    if (select[i] && !select[i + 1]) {
                         select[i + 1] = true;
                         select[i] = false;
                         hasNext = true;

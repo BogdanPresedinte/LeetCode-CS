@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _059_SpiralMatrix2_Test
     {
-        [TestMethod]
-        public void GenerateMatrix_1()
-        {
+        [Test]
+        public void GenerateMatrix_1() {
             var solution = new _059_SpiralMatrix2();
             var result = solution.GenerateMatrix(1);
 
@@ -17,9 +13,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void GenerateMatrix_2()
-        {
+        [Test]
+        public void GenerateMatrix_2() {
             var solution = new _059_SpiralMatrix2();
             var result = solution.GenerateMatrix(2);
 
@@ -30,9 +25,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void GenerateMatrix_3()
-        {
+        [Test]
+        public void GenerateMatrix_3() {
             var solution = new _059_SpiralMatrix2();
             var result = solution.GenerateMatrix(3);
 
@@ -44,9 +38,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void GenerateMatrix_4()
-        {
+        [Test]
+        public void GenerateMatrix_4() {
             var solution = new _059_SpiralMatrix2();
             var result = solution.GenerateMatrix(4);
 

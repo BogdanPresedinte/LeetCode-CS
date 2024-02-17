@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/364019812/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     /**
@@ -23,13 +21,11 @@ namespace LeetCode
      */
     public class _1026_MaximumDifferenceBetweenNodeAndAncestor
     {
-        public int MaxAncestorDiff(TreeNode root)
-        {
+        public int MaxAncestorDiff(TreeNode root) {
             return MaxAncestorDiff(root, root.val, root.val);
         }
 
-        private int MaxAncestorDiff(TreeNode node, int min, int max)
-        {
+        private int MaxAncestorDiff(TreeNode node, int min, int max) {
             if (node == null) return max - min;
 
             if (node.val < min)

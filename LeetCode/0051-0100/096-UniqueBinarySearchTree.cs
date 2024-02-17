@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _096_UniqueBinarySearchTree
     {
-        public int NumTrees(int n)
-        {
+        public int NumTrees(int n) {
             long result = 1;
             for (int i = 0; i < n; i++)
                 result = result * 2 * (2 * i + 1) / (i + 2);

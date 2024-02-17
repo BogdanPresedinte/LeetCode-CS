@@ -4,17 +4,13 @@
 // Link: https://leetcode.com/submissions/detail/328748305/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _1207_UniqueNumberOfOccurrences
     {
-        public bool UniqueOccurrences(int[] arr)
-        {
+        public bool UniqueOccurrences(int[] arr) {
             var map = new Dictionary<int, int>();
-            foreach (var num in arr)
-            {
+            foreach (var num in arr) {
                 if (map.ContainsKey(num))
                     map[num]++;
                 else

@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/370207934/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0931_MinimumFallingPathSum
     {
-        public int MinFallingPathSum(int[][] A)
-        {
+        public int MinFallingPathSum(int[][] A) {
             int N = A.Length;
             if (N == 1) return A[0][0];
 
@@ -21,8 +18,7 @@ namespace LeetCode
 
             var min = int.MaxValue;
             for (int row = 1; row < N; row++)
-                for (int col = 0; col < N; col++)
-                {
+                for (int col = 0; col < N; col++) {
                     var above = path[row - 1, col];
                     if (col > 0)
                         above = Math.Min(above, path[row - 1, col - 1]);
@@ -31,8 +27,7 @@ namespace LeetCode
 
                     path[row, col] = above + A[row][col];
 
-                    if (row == N - 1)
-                    {
+                    if (row == N - 1) {
                         min = Math.Min(min, path[row, col]);
                     }
                 }

@@ -1,22 +1,16 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _118_PascalsTriangle_Test
     {
-        [TestMethod]
-        public void GenerateTest_0()
-        {
+        [Test]
+        public void GenerateTest_0() {
             var solution = new _118_PascalsTriangle();
             var result = solution.Generate(0);
             Assert.AreEqual(0, result.Count);
         }
 
-        [TestMethod]
-        public void GenerateTest_1()
-        {
+        [Test]
+        public void GenerateTest_1() {
             var solution = new _118_PascalsTriangle();
             var result = solution.Generate(1);
             AssertHelper.AssertList(new List<IList<int>>()
@@ -25,9 +19,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void GenerateTest_2()
-        {
+        [Test]
+        public void GenerateTest_2() {
             var solution = new _118_PascalsTriangle();
             var result = solution.Generate(2);
             AssertHelper.AssertList(new List<IList<int>>()
@@ -37,9 +30,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void GenerateTest_3()
-        {
+        [Test]
+        public void GenerateTest_3() {
             var solution = new _118_PascalsTriangle();
             var result = solution.Generate(3);
             AssertHelper.AssertList(new List<IList<int>>()
@@ -50,9 +42,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void GenerateTest_4()
-        {
+        [Test]
+        public void GenerateTest_4() {
             var solution = new _118_PascalsTriangle();
             var result = solution.Generate(4);
             AssertHelper.AssertList(new List<IList<int>>()
@@ -64,9 +55,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void GenerateTest_5()
-        {
+        [Test]
+        public void GenerateTest_5() {
             var solution = new _118_PascalsTriangle();
             var result = solution.Generate(5);
             AssertHelper.AssertList(new List<IList<int>>()
@@ -79,9 +69,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void GenerateTest_6()
-        {
+        [Test]
+        public void GenerateTest_6() {
             var solution = new _118_PascalsTriangle();
             var result = solution.Generate(6);
             AssertHelper.AssertList(new List<IList<int>>()
@@ -95,9 +84,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void GenerateTest_7()
-        {
+        [Test]
+        public void GenerateTest_7() {
             var solution = new _118_PascalsTriangle();
             var result = solution.Generate(7);
             AssertHelper.AssertList(new List<IList<int>>()
@@ -112,9 +100,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void GenerateTest_Negative()
-        {
+        [Test]
+        public void GenerateTest_Negative() {
             var solution = new _118_PascalsTriangle();
             var result = solution.Generate(-1);
             Assert.AreEqual(0, result.Count);

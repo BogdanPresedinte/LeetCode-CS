@@ -10,12 +10,10 @@ namespace LeetCode
     {
         private ListNode head = null;
 
-        public TreeNode SortedListToBST(ListNode head)
-        {
+        public TreeNode SortedListToBST(ListNode head) {
             var p = head;
             var length = 0;
-            while (p != null)
-            {
+            while (p != null) {
                 p = p.next;
                 length++;
             }
@@ -25,8 +23,7 @@ namespace LeetCode
             return SortedListToBST(0, length);
         }
 
-        public TreeNode SortedListToBST(int l, int r)
-        {
+        public TreeNode SortedListToBST(int l, int r) {
             if (l >= r) return null;
             var mid = l + (r - l) / 2;
 

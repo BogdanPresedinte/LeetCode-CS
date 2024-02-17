@@ -8,13 +8,10 @@ namespace LeetCode
 {
     public class _0665_NonDecreasingArray
     {
-        public bool CheckPossibility(int[] nums)
-        {
+        public bool CheckPossibility(int[] nums) {
             var index = -1;
-            for (int i = 0; i < nums.Length - 1; i++)
-            {
-                if (nums[i] > nums[i + 1])
-                {
+            for (int i = 0; i < nums.Length - 1; i++) {
+                if (nums[i] > nums[i + 1]) {
                     if (index != -1) return false;
                     else
                         index = i;

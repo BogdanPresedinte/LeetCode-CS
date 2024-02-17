@@ -1,14 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0332_ReconstructItinerary_Test
     {
-        [TestMethod]
-        public void FindItineraryTest_1()
-        {
+        [Test]
+        public void FindItineraryTest_1() {
             var solution = new _0332_ReconstructItinerary();
             var result = solution.FindItinerary(new List<IList<string>>()
             {
@@ -20,9 +15,8 @@ namespace LeetCode.Test
             AssertHelper.AssertList(new string[] { "JFK", "MUC", "LHR", "SFO", "SJC" }, result);
         }
 
-        [TestMethod]
-        public void FindItineraryTest_2()
-        {
+        [Test]
+        public void FindItineraryTest_2() {
             var solution = new _0332_ReconstructItinerary();
             var result = solution.FindItinerary(new List<IList<string>>()
             {
@@ -35,9 +29,8 @@ namespace LeetCode.Test
             AssertHelper.AssertList(new string[] { "JFK", "ATL", "JFK", "SFO", "ATL", "SFO" }, result);
         }
 
-        [TestMethod]
-        public void FindItineraryTest_3()
-        {
+        [Test]
+        public void FindItineraryTest_3() {
             var solution = new _0332_ReconstructItinerary();
             var result = solution.FindItinerary(new List<IList<string>>()
             {

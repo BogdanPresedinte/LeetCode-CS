@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1310_XORQueriesOfASubarray_Test
     {
-        [TestMethod]
-        public void XorQueries_1()
-        {
+        [Test]
+        public void XorQueries_1() {
             var solution = new _1310_XORQueriesOfASubarray();
             var result = solution.XorQueries(new int[] { 1, 3, 4, 8 }, new int[][] {
                 new int[] { 0, 1 },
@@ -18,9 +14,8 @@ namespace LeetCode.Test
             AssertHelper.AssertArray(new int[] { 2, 7, 14, 8 }, result);
         }
 
-        [TestMethod]
-        public void XorQueries_2()
-        {
+        [Test]
+        public void XorQueries_2() {
             var solution = new _1310_XORQueriesOfASubarray();
             var result = solution.XorQueries(new int[] { 4, 8, 2, 10 }, new int[][] {
                 new int[] { 2, 3 },

@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _010_RegularExpressionMatching_Test
     {
-        [TestMethod]
-        public void IsMatchingTest_CharacterNotMatch()
-        {
+        [Test]
+        public void IsMatchingTest_CharacterNotMatch() {
             var solution = new _010_RegularExpressionMatching();
             var result = solution.IsMatch("aa", "a");
             Assert.IsFalse(result);
@@ -16,9 +12,8 @@ namespace LeetCode.Test
             Assert.IsFalse(result);
         }
 
-        [TestMethod]
-        public void IsMatchingTest_CharacterMatch()
-        {
+        [Test]
+        public void IsMatchingTest_CharacterMatch() {
             var solution = new _010_RegularExpressionMatching();
 
             var result = solution.IsMatch("aa", "aa");
@@ -28,9 +23,8 @@ namespace LeetCode.Test
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void IsMatchingTest_Star_Multiple()
-        {
+        [Test]
+        public void IsMatchingTest_Star_Multiple() {
             var solution = new _010_RegularExpressionMatching();
 
             var result = solution.IsMatch("aa", "a*");
@@ -46,27 +40,24 @@ namespace LeetCode.Test
             Assert.IsFalse(result);
         }
 
-        [TestMethod]
-        public void IsMatchingTest_Star_Zero()
-        {
+        [Test]
+        public void IsMatchingTest_Star_Zero() {
             var solution = new _010_RegularExpressionMatching();
 
             var result = solution.IsMatch("b", "a*b");
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void IsMatchingTest_MultipleStar()
-        {
+        [Test]
+        public void IsMatchingTest_MultipleStar() {
             var solution = new _010_RegularExpressionMatching();
 
             var result = solution.IsMatch("aab", "c*a*b");
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void IsMatchingTest_Dot()
-        {
+        [Test]
+        public void IsMatchingTest_Dot() {
             var solution = new _010_RegularExpressionMatching();
 
             var result = solution.IsMatch("ab", ".b");
@@ -76,9 +67,8 @@ namespace LeetCode.Test
             Assert.IsFalse(result);
         }
 
-        [TestMethod]
-        public void IsMatchingTest_DotWithStar()
-        {
+        [Test]
+        public void IsMatchingTest_DotWithStar() {
             var solution = new _010_RegularExpressionMatching();
 
             var result = solution.IsMatch("aa", ".*");
@@ -97,18 +87,16 @@ namespace LeetCode.Test
             Assert.IsFalse(result);
         }
 
-        [TestMethod]
-        public void IsMatchingTest_MultipleDot()
-        {
+        [Test]
+        public void IsMatchingTest_MultipleDot() {
             var solution = new _010_RegularExpressionMatching();
 
             var result = solution.IsMatch("aa", "..");
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void IsMatchingTest_StringNullOrEmpty()
-        {
+        [Test]
+        public void IsMatchingTest_StringNullOrEmpty() {
             var solution = new _010_RegularExpressionMatching();
 
             var result = solution.IsMatch("", ".");
@@ -118,18 +106,16 @@ namespace LeetCode.Test
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void IsMatchingTest_MatcherNullOrEmpty()
-        {
+        [Test]
+        public void IsMatchingTest_MatcherNullOrEmpty() {
             var solution = new _010_RegularExpressionMatching();
 
             var result = solution.IsMatch("abc", "");
             Assert.IsFalse(result);
         }
 
-        [TestMethod]
-        public void IsMatchingTest_StringAndMatcherBothNullOrEmpty()
-        {
+        [Test]
+        public void IsMatchingTest_StringAndMatcherBothNullOrEmpty() {
             var solution = new _010_RegularExpressionMatching();
 
             var result = solution.IsMatch("", "");

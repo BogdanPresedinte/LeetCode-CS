@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0157_ReadNCharactersGivenRead4_Test
     {
-        [TestMethod]
-        public void Read_1()
-        {
+        [Test]
+        public void Read_1() {
             var buf = new char[4];
 
             var solution = new _0157_ReadNCharactersGivenRead4("abc");
@@ -16,9 +12,8 @@ namespace LeetCode.Test
             AssertHelper.AssertArray("abc".ToCharArray(), buf, true);
         }
 
-        [TestMethod]
-        public void Read_2()
-        {
+        [Test]
+        public void Read_2() {
             var buf = new char[5];
 
             var solution = new _0157_ReadNCharactersGivenRead4("abcde");
@@ -27,9 +22,8 @@ namespace LeetCode.Test
             AssertHelper.AssertArray("abcde".ToCharArray(), buf, true);
         }
 
-        [TestMethod]
-        public void Read_3()
-        {
+        [Test]
+        public void Read_3() {
             var buf = new char[12];
 
             var solution = new _0157_ReadNCharactersGivenRead4("abcdABCD1234");
@@ -38,9 +32,8 @@ namespace LeetCode.Test
             AssertHelper.AssertArray("abcdABCD1234".ToCharArray(), buf, true);
         }
 
-        [TestMethod]
-        public void Read_4()
-        {
+        [Test]
+        public void Read_4() {
             var buf = new char[5];
 
             var solution = new _0157_ReadNCharactersGivenRead4("leetcode");

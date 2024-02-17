@@ -8,11 +8,9 @@ namespace LeetCode
 {
     public class _0169_MajorityElement
     {
-        public int MajorityElement(int[] nums)
-        {
+        public int MajorityElement(int[] nums) {
             int count = 0, candidate = 0;
-            foreach (var num in nums)
-            {
+            foreach (var num in nums) {
                 if (count == 0) candidate = num;
                 count += (num == candidate) ? 1 : -1;
             }

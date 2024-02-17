@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/360342817/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _1476_SubrectangleQueries
@@ -13,21 +11,17 @@ namespace LeetCode
         private int[][] rectangle;
         private IList<(int row1, int col1, int row2, int col2, int value)> updates;
 
-        public _1476_SubrectangleQueries(int[][] rectangle)
-        {
+        public _1476_SubrectangleQueries(int[][] rectangle) {
             this.rectangle = rectangle;
             this.updates = new List<(int row1, int col1, int row2, int col2, int newValue)>();
         }
 
-        public void UpdateSubrectangle(int row1, int col1, int row2, int col2, int newValue)
-        {
+        public void UpdateSubrectangle(int row1, int col1, int row2, int col2, int newValue) {
             updates.Add((row1, col1, row2, col2, newValue));
         }
 
-        public int GetValue(int row, int col)
-        {
-            for (int i = updates.Count - 1; i >= 0; i--)
-            {
+        public int GetValue(int row, int col) {
+            for (int i = updates.Count - 1; i >= 0; i--) {
                 var update = updates[i];
                 if (update.row1 <= row && update.col1 <= col && row <= update.row2 && col <= update.col2)
                     return update.value;

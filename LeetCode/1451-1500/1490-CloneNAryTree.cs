@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/360349158/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /*
@@ -34,8 +32,7 @@ namespace LeetCode
 
     public class _1490_CloneNAryTree
     {
-        public Node CloneTree(Node root)
-        {
+        public Node CloneTree(Node root) {
             if (root == null) return null;
 
             var newRoot = new Node(root.val);
@@ -50,20 +47,17 @@ namespace LeetCode
             public int val;
             public IList<Node> children;
 
-            public Node()
-            {
+            public Node() {
                 val = 0;
                 children = new List<Node>();
             }
 
-            public Node(int _val)
-            {
+            public Node(int _val) {
                 val = _val;
                 children = new List<Node>();
             }
 
-            public Node(int _val, List<Node> _children)
-            {
+            public Node(int _val, List<Node> _children) {
                 val = _val;
                 children = _children;
             }

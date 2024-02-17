@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0836_RectangleOverlap
     {
-        public bool IsRectangleOverlap(int[] rec1, int[] rec2)
-        {
+        public bool IsRectangleOverlap(int[] rec1, int[] rec2) {
             return rec1[2] > rec2[0] &&
                    rec1[3] > rec2[1] &&
                    rec1[0] < rec2[2] &&

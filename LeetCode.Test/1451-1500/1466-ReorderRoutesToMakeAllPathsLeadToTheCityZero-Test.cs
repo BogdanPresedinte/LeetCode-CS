@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1466_ReorderRoutesToMakeAllPathsLeadToTheCityZero_Test
     {
-        [TestMethod]
-        public void MinReorder_1()
-        {
+        [Test]
+        public void MinReorder_1() {
             var solution = new _1466_ReorderRoutesToMakeAllPathsLeadToTheCityZero();
             var result = solution.MinReorder(6, new int[][] {
                 new int[] { 0, 1 },
@@ -19,9 +15,8 @@ namespace LeetCode.Test
             Assert.AreEqual(3, result);
         }
 
-        [TestMethod]
-        public void MinReorder_2()
-        {
+        [Test]
+        public void MinReorder_2() {
             var solution = new _1466_ReorderRoutesToMakeAllPathsLeadToTheCityZero();
             var result = solution.MinReorder(5, new int[][] {
                 new int[] { 1, 0 },
@@ -32,9 +27,8 @@ namespace LeetCode.Test
             Assert.AreEqual(2, result);
         }
 
-        [TestMethod]
-        public void MinReorder_3()
-        {
+        [Test]
+        public void MinReorder_3() {
             var solution = new _1466_ReorderRoutesToMakeAllPathsLeadToTheCityZero();
             var result = solution.MinReorder(3, new int[][] {
                 new int[] { 1, 0 },

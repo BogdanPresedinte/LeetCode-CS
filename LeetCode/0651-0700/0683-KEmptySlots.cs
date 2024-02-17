@@ -4,14 +4,11 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0683_KEmptySlots
     {
-        public int KEmptySlots(int[] bulbs, int K)
-        {
+        public int KEmptySlots(int[] bulbs, int K) {
             var days = new int[bulbs.Length];
             for (int j = 0; j < bulbs.Length; j++)
                 days[bulbs[j] - 1] = j + 1;
@@ -20,10 +17,8 @@ namespace LeetCode
             var right = K + 1;
             var result = int.MaxValue;
             var i = 1;
-            while (right < bulbs.Length)
-            {
-                if (days[left] < days[i] && days[right] < days[i])
-                {
+            while (right < bulbs.Length) {
+                if (days[left] < days[i] && days[right] < days[i]) {
                     i++;
                     continue;
                 }

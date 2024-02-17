@@ -8,11 +8,9 @@ namespace LeetCode
 {
     public class _034_SearchForARange
     {
-        public int[] SearchRange(int[] nums, int target)
-        {
+        public int[] SearchRange(int[] nums, int target) {
             int lo = 0, hi = nums.Length - 1, mid;
-            while (lo <= hi)
-            {
+            while (lo <= hi) {
                 mid = lo + (hi - lo) / 2;
                 if (target > nums[mid])
                     lo = mid + 1;
@@ -26,8 +24,7 @@ namespace LeetCode
             result[0] = lo;
 
             lo = 0; hi = nums.Length - 1;
-            while (lo <= hi)
-            {
+            while (lo <= hi) {
                 mid = lo + (hi - lo) / 2;
                 if (target >= nums[mid])
                     lo = mid + 1;

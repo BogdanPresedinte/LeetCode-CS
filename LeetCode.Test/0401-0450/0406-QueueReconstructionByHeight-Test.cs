@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0406_QueueReconstructionByHeight_Test
     {
-        [TestMethod]
-        public void ReconstructQueueTest()
-        {
+        [Test]
+        public void ReconstructQueueTest() {
             var solution = new _0406_QueueReconstructionByHeight();
             var result = solution.ReconstructQueue(
                 new int[][]

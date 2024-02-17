@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0723_CandyCrush_Test
     {
-        [TestMethod]
-        public void CandyCrush_1()
-        {
+        [Test]
+        public void CandyCrush_1() {
             var solution = new _0723_CandyCrush();
             var result = solution.CandyCrush(new int[][]
             {

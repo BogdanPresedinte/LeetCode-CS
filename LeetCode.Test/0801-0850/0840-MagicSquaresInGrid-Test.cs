@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0840_MagicSquaresInGrid_Test
     {
-        [TestMethod]
-        public void NumMagicSquaresInside_1()
-        {
+        [Test]
+        public void NumMagicSquaresInside_1() {
             var solution = new _0840_MagicSquaresInGrid();
             var result = solution.NumMagicSquaresInside(new int[][] {
                 new int[] { 4, 3, 8, 4 },
@@ -17,9 +13,8 @@ namespace LeetCode.Test
             Assert.AreEqual(1, result);
         }
 
-        [TestMethod]
-        public void NumMagicSquaresInside_2()
-        {
+        [Test]
+        public void NumMagicSquaresInside_2() {
             var solution = new _0840_MagicSquaresInGrid();
             var result = solution.NumMagicSquaresInside(new int[][] {
                 new int[] { 1, 8, 6 },

@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0435_NonOverlappingIntervals_Test
     {
-        [TestMethod]
-        public void EraseOverlapIntervals_1()
-        {
+        [Test]
+        public void EraseOverlapIntervals_1() {
             var solution = new _0435_NonOverlappingIntervals();
             var result = solution.EraseOverlapIntervals(new int[][] {
                 new int[] { 1, 2 },
@@ -18,9 +14,8 @@ namespace LeetCode.Test
             Assert.AreEqual(1, result);
         }
 
-        [TestMethod]
-        public void EraseOverlapIntervals_2()
-        {
+        [Test]
+        public void EraseOverlapIntervals_2() {
             var solution = new _0435_NonOverlappingIntervals();
             var result = solution.EraseOverlapIntervals(new int[][] {
                 new int[] { 1, 2 },
@@ -30,9 +25,8 @@ namespace LeetCode.Test
             Assert.AreEqual(2, result);
         }
 
-        [TestMethod]
-        public void EraseOverlapIntervals_3()
-        {
+        [Test]
+        public void EraseOverlapIntervals_3() {
             var solution = new _0435_NonOverlappingIntervals();
             var result = solution.EraseOverlapIntervals(new int[][] {
                 new int[] { 1, 2 },

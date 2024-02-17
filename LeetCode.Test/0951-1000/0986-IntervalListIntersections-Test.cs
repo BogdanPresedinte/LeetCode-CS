@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0986_IntervalListIntersections_Test
     {
-        [TestMethod]
-        public void IntervalIntersection_1()
-        {
+        [Test]
+        public void IntervalIntersection_1() {
             var solution = new _0986_IntervalListIntersections();
             var result = solution.IntervalIntersection(
                 new int[][]

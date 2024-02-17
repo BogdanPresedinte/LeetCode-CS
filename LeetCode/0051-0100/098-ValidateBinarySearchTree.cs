@@ -8,13 +8,11 @@ namespace LeetCode
 {
     public class _098_ValidateBinarySearchTree
     {
-        public bool IsValidBST(TreeNode root)
-        {
+        public bool IsValidBST(TreeNode root) {
             return IsValidBST(root, long.MinValue, long.MaxValue);
         }
 
-        public bool IsValidBST(TreeNode current, long low, long high)
-        {
+        public bool IsValidBST(TreeNode current, long low, long high) {
             if (current == null) return true;
             if (current.val <= low || current.val >= high) return false;
 

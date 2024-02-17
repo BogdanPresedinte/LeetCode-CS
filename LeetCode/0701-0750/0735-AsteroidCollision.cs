@@ -4,27 +4,20 @@
 // Link: https://leetcode.com/submissions/detail/373718130/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0735_AsteroidCollision
     {
-        public int[] AsteroidCollision(int[] asteroids)
-        {
+        public int[] AsteroidCollision(int[] asteroids) {
             var stack = new Stack<int>();
-            foreach (var asteroid in asteroids)
-            {
+            foreach (var asteroid in asteroids) {
                 var explodeBoth = false;
 
-                while (stack.Count > 0 && asteroid < 0 && stack.Peek() > 0)
-                {
-                    if (stack.Peek() + asteroid < 0)
-                    {
+                while (stack.Count > 0 && asteroid < 0 && stack.Peek() > 0) {
+                    if (stack.Peek() + asteroid < 0) {
                         stack.Pop();
                         continue;
-                    }
-                    else if (stack.Peek() + asteroid == 0)
+                    } else if (stack.Peek() + asteroid == 0)
                         stack.Pop();
 
                     explodeBoth = true;

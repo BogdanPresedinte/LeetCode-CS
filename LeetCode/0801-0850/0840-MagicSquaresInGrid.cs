@@ -8,13 +8,11 @@ namespace LeetCode
 {
     public class _0840_MagicSquaresInGrid
     {
-        public int NumMagicSquaresInside(int[][] grid)
-        {
+        public int NumMagicSquaresInside(int[][] grid) {
             int rows = grid.Length, cols = grid[0].Length;
             int ans = 0;
             for (int r = 1; r < rows - 1; r++)
-                for (int c = 1; c < cols - 1; c++)
-                {
+                for (int c = 1; c < cols - 1; c++) {
                     if (grid[r][c] != 5) continue;
                     if (IsMagic(new int[] { grid[r - 1][c - 1], grid[r - 1][c],     grid[r - 1][c + 1],
                                             grid[r][c - 1],     grid[r][c],         grid[r][c + 1],
@@ -25,8 +23,7 @@ namespace LeetCode
             return ans;
         }
 
-        private bool IsMagic(int[] arr)
-        {
+        private bool IsMagic(int[] arr) {
             var count = new int[16];
             foreach (int val in arr)
                 count[val]++;

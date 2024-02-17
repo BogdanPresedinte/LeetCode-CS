@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0348_DesignTicTacToe_Test
     {
-        [TestMethod]
-        public void TicTacToe_1()
-        {
+        [Test]
+        public void TicTacToe_1() {
             var toe = new _0348_DesignTicTacToe(3);
 
             Assert.AreEqual(0, toe.Move(0, 0, 1));

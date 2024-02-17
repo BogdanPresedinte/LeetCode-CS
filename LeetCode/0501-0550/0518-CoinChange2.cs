@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0518_CoinChange2
     {
-        public int Change(int amount, int[] coins)
-        {
+        public int Change(int amount, int[] coins) {
             var dp = new int[amount + 1];
             dp[0] = 1;
 

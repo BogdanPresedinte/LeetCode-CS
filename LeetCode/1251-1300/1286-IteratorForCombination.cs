@@ -16,8 +16,7 @@ namespace LeetCode
         private readonly int k;
         private bool hasNext;
 
-        public _1286_IteratorForCombination(string characters, int combinationLength)
-        {
+        public _1286_IteratorForCombination(string characters, int combinationLength) {
             str = characters;
             n = characters.Length;
             k = combinationLength;
@@ -28,8 +27,7 @@ namespace LeetCode
                 nums[i] = i;
         }
 
-        public string Next()
-        {
+        public string Next() {
             var sb = new StringBuilder();
             foreach (var index in nums)
                 sb.Append(str[index]);
@@ -38,20 +36,17 @@ namespace LeetCode
             while (j >= 0 && nums[j] == n - k + j)
                 j--;
 
-            if (j >= 0)
-            {
+            if (j >= 0) {
                 nums[j]++;
                 for (int i = j; i < k; i++)
                     nums[i] = nums[j] + i - j;
-            }
-            else
+            } else
                 hasNext = false;
 
             return sb.ToString();
         }
 
-        public bool HasNext()
-        {
+        public bool HasNext() {
             return hasNext;
         }
     }

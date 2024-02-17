@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0981_TimeBasedKeyValueStore_Test
     {
-        [TestMethod]
-        public void TimeMapTest_1()
-        {
+        [Test]
+        public void TimeMapTest_1() {
             var solution = new _0981_TimeBasedKeyValueStore();
             solution.Set("foo", "bar", 1);
             Assert.AreEqual("bar", solution.Get("foo", 1));
@@ -17,9 +13,8 @@ namespace LeetCode.Test
             Assert.AreEqual("bar2", solution.Get("foo", 5));
         }
 
-        [TestMethod]
-        public void TimeMapTest_2()
-        {
+        [Test]
+        public void TimeMapTest_2() {
             var solution = new _0981_TimeBasedKeyValueStore();
             solution.Set("love", "high", 10);
             solution.Set("love", "low", 20);

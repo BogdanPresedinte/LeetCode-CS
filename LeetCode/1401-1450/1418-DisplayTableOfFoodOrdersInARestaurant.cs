@@ -4,21 +4,15 @@
 // Link: https://leetcode.com/submissions/detail/364031746/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace LeetCode
 {
     public class _1418_DisplayTableOfFoodOrdersInARestaurant
     {
-        public IList<IList<string>> DisplayTable(IList<IList<string>> orders)
-        {
+        public IList<IList<string>> DisplayTable(IList<IList<string>> orders) {
             var foods = new HashSet<string>();
             var table = new Dictionary<int, Dictionary<string, int>>();
 
-            foreach (var order in orders)
-            {
+            foreach (var order in orders) {
                 var tableNumber = Convert.ToInt32(order[1]);
                 var food = order[2];
                 foods.Add(food);
@@ -42,14 +36,12 @@ namespace LeetCode
             var tableIndexs = table.Keys.OrderBy(x => x).ToArray();
             const string zeroString = "0";
 
-            foreach (var tableNumber in tableIndexs)
-            {
+            foreach (var tableNumber in tableIndexs) {
                 var currentTable = table[tableNumber];
 
                 var tableRow = new List<string>();
                 tableRow.Add(tableNumber.ToString());
-                foreach (var foodItem in sortedFoodItems)
-                {
+                foreach (var foodItem in sortedFoodItems) {
                     if (currentTable.ContainsKey(foodItem))
                         tableRow.Add(currentTable[foodItem].ToString());
                     else

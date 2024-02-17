@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _034_SearchForARange_Test
     {
-        [TestMethod]
-        public void SearchRangeTest()
-        {
+        [Test]
+        public void SearchRangeTest() {
             var input = new int[] { 5, 7, 7, 8, 8, 10 };
             var solution = new _034_SearchForARange();
 
@@ -20,9 +16,8 @@ namespace LeetCode.Test
             Assert.AreEqual(5, result[1]);
         }
 
-        [TestMethod]
-        public void SearchRangeTest_WithDuplicate()
-        {
+        [Test]
+        public void SearchRangeTest_WithDuplicate() {
             var input = new int[] { 5, 7, 7, 8, 8, 10 };
             var solution = new _034_SearchForARange();
 
@@ -35,9 +30,8 @@ namespace LeetCode.Test
             Assert.AreEqual(2, result[1]);
         }
 
-        [TestMethod]
-        public void SearchRangeTest_NotFound()
-        {
+        [Test]
+        public void SearchRangeTest_NotFound() {
             var input = new int[] { 5, 7, 7, 8, 8, 10 };
             var solution = new _034_SearchForARange();
 
@@ -58,9 +52,8 @@ namespace LeetCode.Test
             Assert.AreEqual(-1, result[1]);
         }
 
-        [TestMethod]
-        public void SearchRangeTest_OneItem_Match()
-        {
+        [Test]
+        public void SearchRangeTest_OneItem_Match() {
             var input = new int[] { 5 };
 
             var solution = new _034_SearchForARange();
@@ -70,9 +63,8 @@ namespace LeetCode.Test
             Assert.AreEqual(0, result[1]);
         }
 
-        [TestMethod]
-        public void SearchRangeTest_OneItem_NotMatch()
-        {
+        [Test]
+        public void SearchRangeTest_OneItem_NotMatch() {
             var input = new int[] { 5 };
 
             var solution = new _034_SearchForARange();
@@ -82,9 +74,8 @@ namespace LeetCode.Test
             Assert.AreEqual(-1, result[1]);
         }
 
-        [TestMethod]
-        public void SearchRangeTest_AllSame()
-        {
+        [Test]
+        public void SearchRangeTest_AllSame() {
             var input = new int[] { 5, 5 };
 
             var solution = new _034_SearchForARange();

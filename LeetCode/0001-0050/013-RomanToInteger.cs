@@ -8,10 +8,8 @@ namespace LeetCode
 {
     public class _013_RomanToInteger
     {
-        int Mapping(char ch)
-        {
-            switch (ch)
-            {
+        int Mapping(char ch) {
+            switch (ch) {
                 case 'I': return 1;
                 case 'V': return 5;
                 case 'X': return 10;
@@ -23,17 +21,12 @@ namespace LeetCode
             }
         }
 
-        public int RomanToInt(string s)
-        {
+        public int RomanToInt(string s) {
             var result = 0;
-            for (int i = 0; i < s.Length; i++)
-            {
-                if (i > 0 && Mapping(s[i]) > Mapping(s[i - 1]))
-                {
+            for (int i = 0; i < s.Length; i++) {
+                if (i > 0 && Mapping(s[i]) > Mapping(s[i - 1])) {
                     result += Mapping(s[i]) - Mapping(s[i - 1]) * 2;
-                }
-                else
-                {
+                } else {
                     result += Mapping(s[i]);
                 }
             }

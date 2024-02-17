@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0158_ReadNCharactersGivenRead4II_Test
     {
-        [TestMethod]
-        public void ReadTest_1()
-        {
+        [Test]
+        public void ReadTest_1() {
             var solution = new _0158_ReadNCharactersGivenRead4II();
             solution.FillData("abc");
 
@@ -27,9 +23,8 @@ namespace LeetCode.Test
             AssertHelper.AssertArray(new char[] { '\0', '\0', '\0' }, buf);
         }
 
-        [TestMethod]
-        public void ReadTest_2()
-        {
+        [Test]
+        public void ReadTest_2() {
             var solution = new _0158_ReadNCharactersGivenRead4II();
             solution.FillData("abc");
 

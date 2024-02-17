@@ -1,14 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _1258_SynonymousSentences_Test
     {
-        [TestMethod]
-        public void GenerateSentences_1()
-        {
+        [Test]
+        public void GenerateSentences_1() {
             var solution = new _1258_SynonymousSentences();
             var result = solution.GenerateSentences(new List<IList<string>>()
             {
@@ -26,9 +21,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void GenerateSentences_2()
-        {
+        [Test]
+        public void GenerateSentences_2() {
             var solution = new _1258_SynonymousSentences();
             var result = solution.GenerateSentences(new List<IList<string>>()
             {

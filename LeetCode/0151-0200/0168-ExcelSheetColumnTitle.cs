@@ -10,12 +10,10 @@ namespace LeetCode
 {
     public class _0168_ExcelSheetColumnTitle
     {
-        public string ConvertToTitle(int n)
-        {
+        public string ConvertToTitle(int n) {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             var sb = new StringBuilder();
-            while (n > 0)
-            {
+            while (n > 0) {
                 n--;
 
                 var d = n % 26;

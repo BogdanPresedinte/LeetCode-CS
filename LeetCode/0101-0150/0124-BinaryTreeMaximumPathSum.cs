@@ -4,22 +4,18 @@
 // Link: https://leetcode.com/submissions/detail/257942576/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0124_BinaryTreeMaximumPathSum
     {
         private int max_sum = int.MinValue;
 
-        public int MaxPathSum(TreeNode root)
-        {
+        public int MaxPathSum(TreeNode root) {
             MaxPathSumCore(root);
             return max_sum;
         }
 
-        public int MaxPathSumCore(TreeNode root)
-        {
+        public int MaxPathSumCore(TreeNode root) {
             if (root == null) return 0;
 
             var leftSum = Math.Max(MaxPathSumCore(root.left), 0);

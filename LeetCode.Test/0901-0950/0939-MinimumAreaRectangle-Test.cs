@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0939_MinimumAreaRectangle_Test
     {
-        [TestMethod]
-        public void MinAreaRectTest_1()
-        {
+        [Test]
+        public void MinAreaRectTest_1() {
             var solution = new _0939_MinimumAreaRectangle();
             var result = solution.MinAreaRect(
                 new int[][] {
@@ -21,9 +17,8 @@ namespace LeetCode.Test
             Assert.AreEqual(4, result);
         }
 
-        [TestMethod]
-        public void MinAreaRectTest_2()
-        {
+        [Test]
+        public void MinAreaRectTest_2() {
             var solution = new _0939_MinimumAreaRectangle();
             var result = solution.MinAreaRect(
                 new int[][] {

@@ -8,16 +8,13 @@ namespace LeetCode
 {
     public class _0806_NumberOfLinesToWriteString
     {
-        public int[] NumberOfLines(int[] widths, string S)
-        {
+        public int[] NumberOfLines(int[] widths, string S) {
             var lines = 1;
             var width = 0;
-            foreach (var ch in S)
-            {
+            foreach (var ch in S) {
                 width += widths[ch - 'a'];
 
-                if (width > 100)
-                {
+                if (width > 100) {
                     lines++;
                     width = widths[ch - 'a'];
                 }

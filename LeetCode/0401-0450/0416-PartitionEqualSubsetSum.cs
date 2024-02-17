@@ -4,17 +4,13 @@
 // Link: https://leetcode.com/submissions/detail/383853905/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0416_PartitionEqualSubsetSum
     {
-        public bool CanPartition(int[] nums)
-        {
+        public bool CanPartition(int[] nums) {
             int sum = 0, max = int.MinValue;
-            foreach (var num in nums)
-            {
+            foreach (var num in nums) {
                 sum += num;
                 max = Math.Max(num, max);
             }
@@ -22,14 +18,12 @@ namespace LeetCode
             return CanPartition(nums, 2, new bool[nums.Length], sum / 2, 0, 0);
         }
 
-        private bool CanPartition(int[] nums, int k, bool[] visited, int target, int current, int index)
-        {
+        private bool CanPartition(int[] nums, int k, bool[] visited, int target, int current, int index) {
             if (k == 1) return true;
             if (target == current)
                 return CanPartition(nums, k - 1, visited, target, 0, 0);
 
-            for (int i = index; i < nums.Length; i++)
-            {
+            for (int i = index; i < nums.Length; i++) {
                 if (visited[i]) continue;
                 if (current + nums[i] > target) continue;
 

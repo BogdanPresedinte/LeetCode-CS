@@ -12,13 +12,11 @@ namespace LeetCode
     {
         public string alphabet = "OI23456789ABCDEF";
 
-        public string ToHexspeak(string num)
-        {
+        public string ToHexspeak(string num) {
             var number = long.Parse(num);
 
             var sb = new StringBuilder();
-            while (number > 0)
-            {
+            while (number > 0) {
                 var curr = (int)(number % 16);
                 if (curr > 1 && curr < 10) return "ERROR";
 

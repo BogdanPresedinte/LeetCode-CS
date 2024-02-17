@@ -4,16 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/263087505/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace LeetCode
 {
     public class _0239_SlidingWindowMaximum
     {
-        public int[] MaxSlidingWindow(int[] nums, int k)
-        {
+        public int[] MaxSlidingWindow(int[] nums, int k) {
             int n = nums.Length;
             if (n * k == 0) return new int[0];
             if (k == 1) return nums;
@@ -23,8 +18,7 @@ namespace LeetCode
             left[0] = nums[0];
             right[n - 1] = nums[n - 1];
 
-            for (int i = 1; i < n; i++)
-            {
+            for (int i = 1; i < n; i++) {
                 if (i % k == 0) left[i] = nums[i];
                 else left[i] = Math.Max(left[i - 1], nums[i]);
 

@@ -8,11 +8,9 @@ namespace LeetCode
 {
     public class _0762_PrimeNumberOfSetBitsInBinaryRepresentation
     {
-        public int CountPrimeSetBits(int L, int R)
-        {
+        public int CountPrimeSetBits(int L, int R) {
             var count = 0;
-            for (int i = L; i <= R; i++)
-            {
+            for (int i = L; i <= R; i++) {
                 var bits = CountBits(i);
                 if (bits == 2 || bits == 3 || bits == 5 || bits == 7 ||
                     bits == 11 || bits == 13 || bits == 17 || bits == 19)
@@ -22,11 +20,9 @@ namespace LeetCode
             return count;
         }
 
-        private int CountBits(int num)
-        {
+        private int CountBits(int num) {
             var count = 0;
-            while (num > 0)
-            {
+            while (num > 0) {
                 num &= num - 1;
                 count++;
             }

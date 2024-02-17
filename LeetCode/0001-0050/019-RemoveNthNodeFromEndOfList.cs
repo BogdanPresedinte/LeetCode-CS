@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _019_RemoveNthNodeFromEndOfList
     {
-        public ListNode RemoveNthFromEnd(ListNode head, int n)
-        {
+        public ListNode RemoveNthFromEnd(ListNode head, int n) {
             if (head == null || n <= 0) { return null; }
 
             ListNode fakeHead, node1, node2;
@@ -17,16 +16,13 @@ namespace LeetCode
             fakeHead.next = head;
 
             node1 = node2 = fakeHead;
-            for (int i = 0; i < n; i++)
-            {
+            for (int i = 0; i < n; i++) {
                 if (node1 == null) { return null; }
                 node1 = node1.next;
             }
 
-            if (node1 != null)
-            {
-                while (node1.next != null)
-                {
+            if (node1 != null) {
+                while (node1.next != null) {
                     node1 = node1.next;
                     node2 = node2.next;
                 }

@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _035_SearchInsertPosition_Test
     {
-        [TestMethod]
-        public void SearchInsertTest_Exist()
-        {
+        [Test]
+        public void SearchInsertTest_Exist() {
             var input = new int[] { 1, 3, 5, 6 };
             var solution = new _035_SearchInsertPosition();
 
@@ -24,9 +20,8 @@ namespace LeetCode.Test
             Assert.AreEqual(3, result);
         }
 
-        [TestMethod]
-        public void SearchInsertTest_NotExist_Inside()
-        {
+        [Test]
+        public void SearchInsertTest_NotExist_Inside() {
             var input = new int[] { 1, 3, 5, 6 };
             var solution = new _035_SearchInsertPosition();
 
@@ -37,9 +32,8 @@ namespace LeetCode.Test
             Assert.AreEqual(2, result);
         }
 
-        [TestMethod]
-        public void SearchInsertTest_NotExist_LessThanMininum()
-        {
+        [Test]
+        public void SearchInsertTest_NotExist_LessThanMininum() {
             var input = new int[] { 1, 3, 5, 6 };
             var solution = new _035_SearchInsertPosition();
 
@@ -47,9 +41,8 @@ namespace LeetCode.Test
             Assert.AreEqual(0, result);
         }
 
-        [TestMethod]
-        public void SearchInsertTest_NotExist_LargerThanMaxium()
-        {
+        [Test]
+        public void SearchInsertTest_NotExist_LargerThanMaxium() {
             var input = new int[] { 1, 3, 5, 6 };
             var solution = new _035_SearchInsertPosition();
 
@@ -57,9 +50,8 @@ namespace LeetCode.Test
             Assert.AreEqual(4, result);
         }
 
-        [TestMethod]
-        public void SearchInsertTest_OneItem_Exist()
-        {
+        [Test]
+        public void SearchInsertTest_OneItem_Exist() {
             var input = new int[] { 3 };
             var solution = new _035_SearchInsertPosition();
 
@@ -67,9 +59,8 @@ namespace LeetCode.Test
             Assert.AreEqual(0, result);
         }
 
-        [TestMethod]
-        public void SearchInsertTest_OneItem_NotExist()
-        {
+        [Test]
+        public void SearchInsertTest_OneItem_NotExist() {
             var input = new int[] { 3 };
             var solution = new _035_SearchInsertPosition();
 
@@ -80,9 +71,8 @@ namespace LeetCode.Test
             Assert.AreEqual(1, result);
         }
 
-        [TestMethod]
-        public void SearchInsertTest_EmptyInput()
-        {
+        [Test]
+        public void SearchInsertTest_EmptyInput() {
             var solution = new _035_SearchInsertPosition();
 
             var result = solution.SearchInsert(new int[] { }, 2);

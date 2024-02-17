@@ -4,9 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/333024631/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Linq;
-
 namespace LeetCode
 {
     /**
@@ -24,8 +21,7 @@ namespace LeetCode
      */
     public class _0872_LeafSimilarTrees
     {
-        public bool LeafSimilar(TreeNode root1, TreeNode root2)
-        {
+        public bool LeafSimilar(TreeNode root1, TreeNode root2) {
             var leaves1 = new List<int>();
             var leaves2 = new List<int>();
 
@@ -35,11 +31,9 @@ namespace LeetCode
             return leaves1.SequenceEqual(leaves2);
         }
 
-        private void InOrder(TreeNode node, IList<int> leaves)
-        {
+        private void InOrder(TreeNode node, IList<int> leaves) {
             if (node == null) return;
-            if (node.left == null && node.right == null)
-            {
+            if (node.left == null && node.right == null) {
                 leaves.Add(node.val);
                 return;
             }

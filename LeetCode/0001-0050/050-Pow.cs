@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _050_Pow
     {
-        public double MyPow(double x, int n)
-        {
+        public double MyPow(double x, int n) {
             if (x == 0 || x == 1) return x;
             if (n == 0) return 1;
 

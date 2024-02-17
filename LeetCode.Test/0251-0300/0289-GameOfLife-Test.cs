@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0289_GameOfLife_Test
     {
-        [TestMethod]
-        public void GameOfLifeTest()
-        {
+        [Test]
+        public void GameOfLifeTest() {
             var input = new int[][]
             {
                 new int[] { 0, 1, 0 },

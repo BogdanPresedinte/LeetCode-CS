@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0529_Minesweeper_Test
     {
-        [TestMethod]
-        public void UpdateBoard_1()
-        {
+        [Test]
+        public void UpdateBoard_1() {
             var solution = new _0529_Minesweeper();
             var result = solution.UpdateBoard(new char[][] {
                 new char[] { 'E', 'E', 'E', 'E', 'E' },
@@ -23,9 +19,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void UpdateBoard_2()
-        {
+        [Test]
+        public void UpdateBoard_2() {
             var solution = new _0529_Minesweeper();
             var result = solution.UpdateBoard(new char[][] {
                 new char[] { 'B', '1', 'E', '1', 'B' },

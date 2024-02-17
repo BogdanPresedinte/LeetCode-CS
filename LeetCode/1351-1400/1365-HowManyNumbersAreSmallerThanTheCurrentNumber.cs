@@ -8,15 +8,13 @@ namespace LeetCode
 {
     public class _1365_HowManyNumbersAreSmallerThanTheCurrentNumber
     {
-        public int[] SmallerNumbersThanCurrent(int[] nums)
-        {
+        public int[] SmallerNumbersThanCurrent(int[] nums) {
             var rank = new int[101];
             foreach (var num in nums)
                 rank[num]++;
 
             var count = 0;
-            for (int i = 0; i < 101; i++)
-            {
+            for (int i = 0; i < 101; i++) {
                 var temp = rank[i];
                 rank[i] = count;
                 count += temp;

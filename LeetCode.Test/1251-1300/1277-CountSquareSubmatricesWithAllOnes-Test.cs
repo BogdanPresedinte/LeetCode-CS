@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1277_CountSquareSubmatricesWithAllOnes_Test
     {
-        [TestMethod]
-        public void CountSquares_1()
-        {
+        [Test]
+        public void CountSquares_1() {
             var solution = new _1277_CountSquareSubmatricesWithAllOnes();
             var result = solution.CountSquares(new int[][] {
                 new int[] { 0, 1, 1, 1 },
@@ -17,9 +13,8 @@ namespace LeetCode.Test
             Assert.AreEqual(15, result);
         }
 
-        [TestMethod]
-        public void CountSquares_2()
-        {
+        [Test]
+        public void CountSquares_2() {
             var solution = new _1277_CountSquareSubmatricesWithAllOnes();
             var result = solution.CountSquares(new int[][] {
                 new int[] { 1, 0, 1 },

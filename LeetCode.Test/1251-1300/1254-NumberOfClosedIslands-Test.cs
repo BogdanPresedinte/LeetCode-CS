@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1254_NumberOfClosedIslands_Test
     {
-        [TestMethod]
-        public void ClosedIsland_1()
-        {
+        [Test]
+        public void ClosedIsland_1() {
             var solution = new _1254_NumberOfClosedIslands();
             var result = solution.ClosedIsland(new int[][] {
                 new int[] { 1, 1, 1, 1, 1, 1, 1, 0 },
@@ -19,9 +15,8 @@ namespace LeetCode.Test
             Assert.AreEqual(2, result);
         }
 
-        [TestMethod]
-        public void ClosedIsland_2()
-        {
+        [Test]
+        public void ClosedIsland_2() {
             var solution = new _1254_NumberOfClosedIslands();
             var result = solution.ClosedIsland(new int[][] {
                 new int[] { 0, 0, 1, 0, 0 },
@@ -31,9 +26,8 @@ namespace LeetCode.Test
             Assert.AreEqual(1, result);
         }
 
-        [TestMethod]
-        public void ClosedIsland_3()
-        {
+        [Test]
+        public void ClosedIsland_3() {
             var solution = new _1254_NumberOfClosedIslands();
             var result = solution.ClosedIsland(new int[][] {
                 new int[] { 1, 1, 1, 1, 1, 1, 1 },

@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/343714695/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     /**
@@ -26,16 +24,14 @@ namespace LeetCode
         private int answer;
         private int prev;
 
-        public int MinDiffInBST(TreeNode root)
-        {
+        public int MinDiffInBST(TreeNode root) {
             answer = int.MaxValue;
             prev = int.MaxValue;
             DFS(root);
             return answer;
         }
 
-        private void DFS(TreeNode node)
-        {
+        private void DFS(TreeNode node) {
             if (node == null) return;
 
             DFS(node.left);

@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1472_DesignBrowserHistory_Test
     {
-        [TestMethod]
-        public void BrowserHistoryTest_1()
-        {
+        [Test]
+        public void BrowserHistoryTest_1() {
             var browserHistory = new _1472_DesignBrowserHistory("leetcode.com");
 
             browserHistory.Visit("google.com");       // You are in "leetcode.com". Visit "google.com"

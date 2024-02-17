@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/328774038/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0346_MovingAverageFromDataStream
@@ -15,15 +13,13 @@ namespace LeetCode
         private double sum;
 
         /** Initialize your data structure here. */
-        public _0346_MovingAverageFromDataStream(int size)
-        {
+        public _0346_MovingAverageFromDataStream(int size) {
             queue = new Queue<int>(size);
             windowSize = size;
             sum = 0.0;
         }
 
-        public double Next(int val)
-        {
+        public double Next(int val) {
             if (queue.Count == windowSize)
                 sum -= queue.Dequeue();
 

@@ -4,20 +4,15 @@
 // Link: https://leetcode.com/submissions/detail/337419741/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _1441_BuildAnArrayWithStackOperations
     {
-        public IList<string> BuildArray(int[] target, int n)
-        {
+        public IList<string> BuildArray(int[] target, int n) {
             var result = new List<string>();
             var currentValue = 1;
-            for (int i = 0; i < target.Length; i++, currentValue++)
-            {
-                while (target[i] != currentValue)
-                {
+            for (int i = 0; i < target.Length; i++, currentValue++) {
+                while (target[i] != currentValue) {
                     result.Add("Push");
                     result.Add("Pop");
                     currentValue++;

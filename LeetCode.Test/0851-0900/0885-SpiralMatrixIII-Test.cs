@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0885_SpiralMatrixIII_Test
     {
-        [TestMethod]
-        public void SpiralMatrixIII_1()
-        {
+        [Test]
+        public void SpiralMatrixIII_1() {
             var solution = new _0885_SpiralMatrixIII();
             var result = solution.SpiralMatrixIII(1, 4, 0, 0);
             AssertHelper.AssertArray(
@@ -20,9 +16,8 @@ namespace LeetCode.Test
                 }, result);
         }
 
-        [TestMethod]
-        public void SpiralMatrixIII_2()
-        {
+        [Test]
+        public void SpiralMatrixIII_2() {
             var solution = new _0885_SpiralMatrixIII();
             var result = solution.SpiralMatrixIII(5, 6, 1, 4);
             AssertHelper.AssertArray(
@@ -60,5 +55,5 @@ namespace LeetCode.Test
                     new int[] { 0, 0 },
                 }, result);
         }
-}
+    }
 }

@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0814_BinaryTreePruning_Test
     {
-        [TestMethod]
-        public void PruneTree_1()
-        {
+        [Test]
+        public void PruneTree_1() {
             var root = TestHelper.GenerateTree(new int?[] { 1, null, 0, 0, 1 });
 
             var solution = new _0814_BinaryTreePruning();
@@ -15,9 +11,8 @@ namespace LeetCode.Test
             AssertHelper.AssertTree(new int?[] { 1, null, 0, null, 1 }, result);
         }
 
-        [TestMethod]
-        public void PruneTree_2()
-        {
+        [Test]
+        public void PruneTree_2() {
             var root = TestHelper.GenerateTree(new int?[] { 1, 0, 1, 0, 0, 0, 1 });
 
             var solution = new _0814_BinaryTreePruning();
@@ -25,9 +20,8 @@ namespace LeetCode.Test
             AssertHelper.AssertTree(new int?[] { 1, null, 1, null, 1 }, result);
         }
 
-        [TestMethod]
-        public void PruneTree_3()
-        {
+        [Test]
+        public void PruneTree_3() {
             var root = TestHelper.GenerateTree(new int?[] { 1, 1, 0, 1, 1, 0, 1, 0 });
 
             var solution = new _0814_BinaryTreePruning();

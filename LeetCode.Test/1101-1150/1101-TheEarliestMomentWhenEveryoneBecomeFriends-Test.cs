@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1101_TheEarliestMomentWhenEveryoneBecomeFriends_Test
     {
-        [TestMethod]
-        public void EarliestAcq_1()
-        {
+        [Test]
+        public void EarliestAcq_1() {
             var solution = new _1101_TheEarliestMomentWhenEveryoneBecomeFriends();
             var result = solution.EarliestAcq(new int[][] {
                 new int[] { 20190101, 0, 1 },
@@ -22,9 +18,8 @@ namespace LeetCode.Test
             Assert.AreEqual(20190301, result);
         }
 
-        [TestMethod]
-        public void EarliestAcq_2()
-        {
+        [Test]
+        public void EarliestAcq_2() {
             var solution = new _1101_TheEarliestMomentWhenEveryoneBecomeFriends();
             var result = solution.EarliestAcq(new int[][] {
                 new int[] { 3, 0, 3 },

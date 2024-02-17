@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1396_DesignUndergroundSystem_Test
     {
-        [TestMethod]
-        public void UndergroundSystemTest_1()
-        {
+        [Test]
+        public void UndergroundSystemTest_1() {
             var undergroundSystem = new _1396_DesignUndergroundSystem();
 
             undergroundSystem.CheckIn(45, "Leyton", 3);
@@ -24,9 +20,8 @@ namespace LeetCode.Test
             Assert.AreEqual(12.0, undergroundSystem.GetAverageTime("Leyton", "Waterloo"));
         }
 
-        [TestMethod]
-        public void UndergroundSystemTest_2()
-        {
+        [Test]
+        public void UndergroundSystemTest_2() {
             var undergroundSystem = new _1396_DesignUndergroundSystem();
 
             undergroundSystem.CheckIn(10, "Leyton", 3);

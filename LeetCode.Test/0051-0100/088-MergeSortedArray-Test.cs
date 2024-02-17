@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _088_MergeSortedArray_Test
     {
-        [TestMethod]
-        public void MergeTest()
-        {
+        [Test]
+        public void MergeTest() {
             var nums1 = new int[] { 1, 2, 3, 0, 0, 0 };
             var nums2 = new int[] { 2, 5, 6 };
 
@@ -16,9 +12,8 @@ namespace LeetCode.Test
             AssertHelper.AssertArray(new int[] { 1, 2, 2, 3, 5, 6 }, nums1);
         }
 
-        [TestMethod]
-        public void MergeTest_Nums1Empty()
-        {
+        [Test]
+        public void MergeTest_Nums1Empty() {
             var nums1 = new int[] { 0, 0, 0 };
             var nums2 = new int[] { 2, 5, 6 };
 
@@ -27,9 +22,8 @@ namespace LeetCode.Test
             AssertHelper.AssertArray(new int[] { 2, 5, 6 }, nums1);
         }
 
-        [TestMethod]
-        public void MergeTest_Nums2Empty()
-        {
+        [Test]
+        public void MergeTest_Nums2Empty() {
             var nums1 = new int[] { 1, 2, 3, 0, 0, 0 };
             var nums2 = new int[] { };
 

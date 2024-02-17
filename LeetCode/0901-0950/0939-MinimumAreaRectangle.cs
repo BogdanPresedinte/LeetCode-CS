@@ -4,15 +4,11 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0939_MinimumAreaRectangle
     {
-        public int MinAreaRect(int[][] points)
-        {
+        public int MinAreaRect(int[][] points) {
             var pointSet = new HashSet<int>();
             foreach (var point in points)
                 pointSet.Add(40001 * point[0] + point[1]);

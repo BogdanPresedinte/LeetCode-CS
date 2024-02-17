@@ -8,14 +8,12 @@ namespace LeetCode
 {
     public class _101_SymmetricTree
     {
-        public bool IsSymmetric(TreeNode root)
-        {
+        public bool IsSymmetric(TreeNode root) {
             if (root == null) return true;
             return isMirror(root.left, root.right);
         }
 
-        private bool isMirror(TreeNode root1, TreeNode root2)
-        {
+        private bool isMirror(TreeNode root1, TreeNode root2) {
             if (root1 == null && root2 == null) return true;
             if (root1 == null || root2 == null) return false;
             if (root1.val != root2.val) return false;

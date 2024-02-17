@@ -8,17 +8,14 @@ namespace LeetCode
 {
     public class _0921_MinimumAddToMakeParenthesesValid
     {
-        public int MinAddToMakeValid(string S)
-        {
+        public int MinAddToMakeValid(string S) {
             var count = 0;
             var result = 0;
 
-            foreach (var ch in S)
-            {
+            foreach (var ch in S) {
                 if (ch == '(')
                     count++;
-                else
-                {
+                else {
                     if (count == 0) result++;
                     else count--;
                 }

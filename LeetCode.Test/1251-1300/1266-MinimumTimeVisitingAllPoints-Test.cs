@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1266_MinimumTimeVisitingAllPoints_Test
     {
-        [TestMethod]
-        public void MinTimeToVisitAllPoints_1()
-        {
+        [Test]
+        public void MinTimeToVisitAllPoints_1() {
             var solution = new _1266_MinimumTimeVisitingAllPoints();
             var result = solution.MinTimeToVisitAllPoints(new int[][]
             {
@@ -18,9 +14,8 @@ namespace LeetCode.Test
             Assert.AreEqual(7, result);
         }
 
-        [TestMethod]
-        public void MinTimeToVisitAllPoints_2()
-        {
+        [Test]
+        public void MinTimeToVisitAllPoints_2() {
             var solution = new _1266_MinimumTimeVisitingAllPoints();
             var result = solution.MinTimeToVisitAllPoints(new int[][]
             {

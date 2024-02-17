@@ -4,9 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/372507907/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Linq;
-
 namespace LeetCode
 {
     public class _0432_AllOOneDataStructure
@@ -15,8 +12,7 @@ namespace LeetCode
         private Dictionary<string, Node> map;
 
         /** Initialize your data structure here. */
-        public _0432_AllOOneDataStructure()
-        {
+        public _0432_AllOOneDataStructure() {
             head = new Node();
             tail = new Node();
             head.next = tail;
@@ -26,8 +22,7 @@ namespace LeetCode
         }
 
         /** Inserts a new key <Key> with value 1. Or increments an existing key by 1. */
-        public void Inc(string key)
-        {
+        public void Inc(string key) {
             Node node = null;
             if (map.ContainsKey(key))
                 node = map[key];
@@ -35,8 +30,7 @@ namespace LeetCode
                 node = head;
 
             var next = node.next;
-            if (next.val != node.val + 1)
-            {
+            if (next.val != node.val + 1) {
                 next = new Node(node.val + 1);
                 AddNode(node, next);
             }
@@ -45,21 +39,18 @@ namespace LeetCode
         }
 
         /** Decrements an existing key by 1. If Key's value is 1, remove it from the data structure. */
-        public void Dec(string key)
-        {
+        public void Dec(string key) {
             if (!map.ContainsKey(key)) return;
 
             var node = map[key];
-            if (node.val == 1)
-            {
+            if (node.val == 1) {
                 map.Remove(key);
                 RemoveKey(key, node);
                 return;
             }
 
             var prev = node.prev;
-            if (prev.val != node.val - 1)
-            {
+            if (prev.val != node.val - 1) {
                 prev = new Node(node.val - 1);
                 AddNode(node.prev, prev);
             }
@@ -69,23 +60,20 @@ namespace LeetCode
         }
 
         /** Returns one of the keys with maximal value. */
-        public string GetMaxKey()
-        {
+        public string GetMaxKey() {
             if (tail.prev == head) return string.Empty;
 
             return tail.prev.keys.First();
         }
 
         /** Returns one of the keys with Minimal value. */
-        public string GetMinKey()
-        {
+        public string GetMinKey() {
             if (head.next == tail) return string.Empty;
 
             return head.next.keys.First();
         }
 
-        private void AddNode(Node node, Node next)
-        {
+        private void AddNode(Node node, Node next) {
             next.next = node.next;
             node.next.prev = next;
 
@@ -93,20 +81,17 @@ namespace LeetCode
             node.next = next;
         }
 
-        private void RemoveNode(Node node)
-        {
+        private void RemoveNode(Node node) {
             node.prev.next = node.next;
             node.next.prev = node.prev;
         }
 
-        private void AddKey(string key, Node node)
-        {
+        private void AddKey(string key, Node node) {
             map.Add(key, node);
             node.keys.Add(key);
         }
 
-        private void RemoveKey(string key, Node node)
-        {
+        private void RemoveKey(string key, Node node) {
             if (node == head) return;
             node.keys.Remove(key);
             map.Remove(key);
@@ -121,8 +106,7 @@ namespace LeetCode
             public Node next, prev;
             public int val;
 
-            public Node(int val = 0)
-            {
+            public Node(int val = 0) {
                 this.val = val;
                 next = null;
                 prev = null;

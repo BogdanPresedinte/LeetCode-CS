@@ -1,14 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1110_DeleteNodesAndReturnForest_Test
     {
-        [TestMethod]
-        public void DelNodes_1()
-        {
+        [Test]
+        public void DelNodes_1() {
             var root = TestHelper.GenerateTree(new int?[] { 1, 2, 3, 4, 5, 6, 7 });
 
             var solution = new _1110_DeleteNodesAndReturnForest();
@@ -20,9 +15,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void DelNodes_2()
-        {
+        [Test]
+        public void DelNodes_2() {
             var root = TestHelper.GenerateTree(new int?[] { 1, 2, 3, 4, 5, 6, 7 });
 
             var solution = new _1110_DeleteNodesAndReturnForest();

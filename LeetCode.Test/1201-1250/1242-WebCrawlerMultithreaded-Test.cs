@@ -1,22 +1,18 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 using static LeetCode._1242_WebCrawlerMultithreaded;
 
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1242_WebCrawlerMultithreaded_Test
     {
-        [TestMethod]
-        public void CrawlTest_1()
-        {
-            var parser = new HtmlParser(new List<string>() { 
+        [Test]
+        public void CrawlTest_1() {
+            var parser = new HtmlParser(new List<string>() {
                 "http://news.yahoo.com",
                 "http://news.yahoo.com/news",
                 "http://news.yahoo.com/news/topics/",
                 "http://news.google.com",
                 "http://news.yahoo.com/us"
-            }, new List<int[]>() { 
+            }, new List<int[]>() {
                 new int[] { 2, 0 },
                 new int[] { 2, 1 },
                 new int[] { 3, 2 },
@@ -34,9 +30,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void CrawlTest_2()
-        {
+        [Test]
+        public void CrawlTest_2() {
             var parser = new HtmlParser(new List<string>() {
                 "http://news.yahoo.com",
                 "http://news.yahoo.com/news",

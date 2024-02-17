@@ -4,19 +4,15 @@
 // Link: https://leetcode.com/submissions/detail/329247369/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _1385_FindTheDistanceValueBetweenTwoArrays
     {
-        public int FindTheDistanceValue(int[] arr1, int[] arr2, int d)
-        {
+        public int FindTheDistanceValue(int[] arr1, int[] arr2, int d) {
             Array.Sort(arr2);
 
             var result = 0;
-            foreach (var num in arr1)
-            {
+            foreach (var num in arr1) {
                 var index1 = Array.BinarySearch(arr2, num - d);
                 var index2 = Array.BinarySearch(arr2, num + d);
 

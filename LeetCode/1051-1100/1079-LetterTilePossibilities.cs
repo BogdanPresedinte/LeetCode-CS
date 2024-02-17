@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _1079_LetterTilePossibilities
     {
-        public int NumTilePossibilities(string tiles)
-        {
+        public int NumTilePossibilities(string tiles) {
             var counts = new int[26];
             foreach (var ch in tiles)
                 counts[ch - 'A']++;
@@ -17,11 +16,9 @@ namespace LeetCode
             return DFS(counts);
         }
 
-        private int DFS(int[] counts)
-        {
+        private int DFS(int[] counts) {
             var sum = 0;
-            for (int i = 0; i < 26; i++)
-            {
+            for (int i = 0; i < 26; i++) {
                 if (counts[i] == 0) continue;
 
                 sum++;

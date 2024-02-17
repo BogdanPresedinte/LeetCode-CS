@@ -8,15 +8,12 @@ namespace LeetCode
 {
     public class _045_JumpGame2
     {
-        public int Jump(int[] nums)
-        {
+        public int Jump(int[] nums) {
             int maxRight = 0, currentRight = 0, count = 0;
 
-            for (int i = 0; i < nums.Length; i++)
-            {
+            for (int i = 0; i < nums.Length; i++) {
                 if (i > maxRight) { return 0; }
-                if (i > currentRight)
-                {
+                if (i > currentRight) {
                     count++;
                     currentRight = maxRight;
 

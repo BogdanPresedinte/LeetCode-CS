@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/352843520/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -26,14 +24,12 @@ namespace LeetCode
         private List<int> result = new List<int>();
         private int count, modelCount, prevValue;
 
-        public int[] FindMode(TreeNode root)
-        {
+        public int[] FindMode(TreeNode root) {
             InOrder(root);
             return result.ToArray();
         }
 
-        private void InOrder(TreeNode node)
-        {
+        private void InOrder(TreeNode node) {
             if (node == null) return;
 
             InOrder(node.left);
@@ -41,13 +37,11 @@ namespace LeetCode
             if (prevValue != node.val) count = 1;
             else count++;
 
-            if (count > modelCount)
-            {
+            if (count > modelCount) {
                 result.Clear();
                 result.Add(node.val);
                 modelCount = count;
-            }
-            else if (count == modelCount)
+            } else if (count == modelCount)
                 result.Add(node.val);
 
             prevValue = node.val;

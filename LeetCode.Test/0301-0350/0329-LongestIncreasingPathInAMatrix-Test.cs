@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0329_LongestIncreasingPathInAMatrix_Test
     {
-        [TestMethod]
-        public void LongestIncreasingPathTest_1()
-        {
+        [Test]
+        public void LongestIncreasingPathTest_1() {
             var solution = new _0329_LongestIncreasingPathInAMatrix();
             var result = solution.LongestIncreasingPath(new int[][]
             {
@@ -18,9 +14,8 @@ namespace LeetCode.Test
             Assert.AreEqual(4, result);
         }
 
-        [TestMethod]
-        public void LongestIncreasingPathTest_2()
-        {
+        [Test]
+        public void LongestIncreasingPathTest_2() {
             var solution = new _0329_LongestIncreasingPathInAMatrix();
             var result = solution.LongestIncreasingPath(new int[][]
             {

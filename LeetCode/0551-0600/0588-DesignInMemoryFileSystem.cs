@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/365341536/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace LeetCode
@@ -14,38 +12,31 @@ namespace LeetCode
     {
         private readonly FileNode root;
 
-        public _0588_DesignInMemoryFileSystem()
-        {
+        public _0588_DesignInMemoryFileSystem() {
             root = new FileNode("");
         }
 
-        public IList<string> Ls(string path)
-        {
+        public IList<string> Ls(string path) {
             return FindNode(path).GetList();
         }
 
-        public void Mkdir(string path)
-        {
+        public void Mkdir(string path) {
             FindNode(path);
         }
 
-        public void AddContentToFile(string filePath, string content)
-        {
+        public void AddContentToFile(string filePath, string content) {
             FindNode(filePath).AddContent(content);
         }
 
-        public string ReadContentFromFile(string filePath)
-        {
+        public string ReadContentFromFile(string filePath) {
             return FindNode(filePath).Content;
         }
 
-        private FileNode FindNode(string path)
-        {
+        private FileNode FindNode(string path) {
             var levels = path.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
 
             var curr = root;
-            foreach (var level in levels)
-            {
+            foreach (var level in levels) {
                 if (level.Length == 0) continue;
 
                 if (!curr.Children.ContainsKey(level))
@@ -63,8 +54,7 @@ namespace LeetCode
             private readonly SortedDictionary<string, FileNode> children;
             private readonly StringBuilder file;
 
-            public FileNode(string name)
-            {
+            public FileNode(string name) {
                 children = new SortedDictionary<string, FileNode>();
                 file = new StringBuilder();
                 Name = name;
@@ -80,8 +70,7 @@ namespace LeetCode
 
             public bool IsFile => file.Length > 0;
 
-            public List<string> GetList()
-            {
+            public List<string> GetList() {
                 var list = new List<string>(); ;
                 if (IsFile)
                     list.Add(Name);

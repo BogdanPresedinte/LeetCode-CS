@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/361218762/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -23,27 +21,23 @@ namespace LeetCode
      */
     public class _1161_MaximumLevelSumOfABinaryTree
     {
-        public int MaxLevelSum(TreeNode root)
-        {
+        public int MaxLevelSum(TreeNode root) {
             var currentLevel = 1;
             int maxSum = int.MinValue, maxLevel = 1;
 
             var queue = new Queue<TreeNode>();
             queue.Enqueue(root);
-            while (queue.Count > 0)
-            {
+            while (queue.Count > 0) {
                 var sum = 0;
                 var size = queue.Count;
-                for (int i = 0; i < size; i++)
-                {
+                for (int i = 0; i < size; i++) {
                     var node = queue.Dequeue();
                     sum += node.val;
                     if (node.left != null) queue.Enqueue(node.left);
                     if (node.right != null) queue.Enqueue(node.right);
                 }
 
-                if (sum > maxSum)
-                {
+                if (sum > maxSum) {
                     maxLevel = currentLevel;
                     maxSum = sum;
                 }

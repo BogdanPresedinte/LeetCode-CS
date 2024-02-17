@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/342509501/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -23,14 +21,12 @@ namespace LeetCode
      */
     public class _0653_TwoSumIVInputIsABST
     {
-        public bool FindTarget(TreeNode root, int k)
-        {
+        public bool FindTarget(TreeNode root, int k) {
             var set = new HashSet<int>();
             return InOrder(root, k, set);
         }
 
-        public bool InOrder(TreeNode node, int k, HashSet<int> set)
-        {
+        public bool InOrder(TreeNode node, int k, HashSet<int> set) {
             if (node == null) return false;
             if (set.Contains(k - node.val)) return true;
 

@@ -21,13 +21,11 @@ namespace LeetCode
      */
     public class _1430_CheckIfAStringIsAValidSequenceFromRootToLeavesPathInABinaryTree
     {
-        public bool IsValidSequence(TreeNode root, int[] arr)
-        {
+        public bool IsValidSequence(TreeNode root, int[] arr) {
             return IsValidSequence(root, arr, 0);
         }
 
-        private bool IsValidSequence(TreeNode root, int[] arr, int currentIndex)
-        {
+        private bool IsValidSequence(TreeNode root, int[] arr, int currentIndex) {
             if (root == null && currentIndex < arr.Length) return false;
             if (root.val != arr[currentIndex]) return false;
 

@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0931_MinimumFallingPathSum_Test
     {
-        [TestMethod]
-        public void MinFallingPathSum_1()
-        {
+        [Test]
+        public void MinFallingPathSum_1() {
             var solution = new _0931_MinimumFallingPathSum();
             var result = solution.MinFallingPathSum(new int[][] {
                 new int[] { 1, 2, 3 },

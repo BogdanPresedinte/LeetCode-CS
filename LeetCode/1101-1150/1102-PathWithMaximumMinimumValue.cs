@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/383932927/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _1102_PathWithMaximumMinimumValue
     {
-        public int MaximumMinimumPath(int[][] A)
-        {
+        public int MaximumMinimumPath(int[][] A) {
             int N = A.Length;
             int M = A[0].Length;
 
@@ -25,11 +22,9 @@ namespace LeetCode
                     points.Add((i, j, A[i][j]));
             points.Sort((a, b) => b.val.CompareTo(a.val));
 
-            foreach ((int r, int c, int val) in points)
-            {
+            foreach ((int r, int c, int val) in points) {
                 visited[r, c] = true;
-                foreach ((int dr, int dc) in directions)
-                {
+                foreach ((int dr, int dc) in directions) {
                     int newR = r + dr, newC = c + dc;
                     if (newR >= 0 && newR < N && newC >= 0 && newC < M && visited[newR, newC])
                         uf.Union(r * M + c, newR * M + newC);
@@ -46,8 +41,7 @@ namespace LeetCode
             private int[] parents;
             private int[] ranks;
 
-            public UnionFind(int count)
-            {
+            public UnionFind(int count) {
                 parents = new int[count];
                 ranks = new int[count];
 
@@ -55,27 +49,22 @@ namespace LeetCode
                     parents[i] = i;
             }
 
-            public int Find(int index)
-            {
+            public int Find(int index) {
                 if (parents[index] != index)
                     parents[index] = Find(parents[index]);
 
                 return parents[index];
             }
 
-            public void Union(int index1, int index2)
-            {
+            public void Union(int index1, int index2) {
                 var pIndex1 = Find(index1);
                 var pIndex2 = Find(index2);
 
                 if (pIndex1 == pIndex2) return;
-                if (ranks[pIndex1] >= ranks[pIndex2])
-                {
+                if (ranks[pIndex1] >= ranks[pIndex2]) {
                     parents[pIndex2] = pIndex1;
                     ranks[pIndex2]++;
-                }
-                else
-                {
+                } else {
                     parents[pIndex1] = pIndex2;
                     ranks[pIndex1]++;
                 }

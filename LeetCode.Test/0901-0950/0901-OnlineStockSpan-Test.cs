@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0901_OnlineStockSpan_Test
     {
-        [TestMethod]
-        public void OnlineStockSpanTest_1()
-        {
+        [Test]
+        public void OnlineStockSpanTest_1() {
             var solution = new _0901_OnlineStockSpan();
             Assert.AreEqual(1, solution.Next(100));
             Assert.AreEqual(1, solution.Next(80));

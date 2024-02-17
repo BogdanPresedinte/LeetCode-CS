@@ -1,14 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0314_BinaryTreeVerticalOrderTraversal_Test
     {
-        [TestMethod]
-        public void VerticalOrder_1()
-        {
+        [Test]
+        public void VerticalOrder_1() {
             var root = TestHelper.GenerateTree(new int?[] { 3, 9, 20, null, null, 15, 7 });
 
             var solution = new _0314_BinaryTreeVerticalOrderTraversal();
@@ -22,9 +17,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void VerticalOrder_2()
-        {
+        [Test]
+        public void VerticalOrder_2() {
             var root = TestHelper.GenerateTree(new int?[] { 3, 9, 8, 4, 0, 1, 7 });
 
             var solution = new _0314_BinaryTreeVerticalOrderTraversal();
@@ -39,9 +33,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void VerticalOrder_3()
-        {
+        [Test]
+        public void VerticalOrder_3() {
             var root = TestHelper.GenerateTree(new int?[] { 3, 9, 8, 4, 0, 1, 7, null, null, null, 2, 5 });
 
             var solution = new _0314_BinaryTreeVerticalOrderTraversal();

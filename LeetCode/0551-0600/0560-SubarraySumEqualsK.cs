@@ -4,21 +4,17 @@
 // Link: https://leetcode.com/submissions/detail/260821531/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0560_SubarraySumEqualsK
     {
-        public int SubarraySum(int[] nums, int k)
-        {
+        public int SubarraySum(int[] nums, int k) {
             var map = new Dictionary<int, int>();
             map.Add(0, 1);
 
             var sum = 0;
             var count = 0;
-            for (int i = 0; i < nums.Length; i++)
-            {
+            for (int i = 0; i < nums.Length; i++) {
                 sum += nums[i];
                 if (map.ContainsKey(sum - k))
                     count += map[sum - k];

@@ -1,15 +1,11 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 using static LeetCode._0429_NAryTreeLevelOrderTraversal;
 
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0429_NAryTreeLevelOrderTraversal_Test
     {
-        [TestMethod]
-        public void LevelOrder_1()
-        {
+        [Test]
+        public void LevelOrder_1() {
             var root = new Node(1, new List<Node>()
             {
                 new Node(3, new List<Node>()
@@ -31,9 +27,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void LevelOrder_2()
-        {
+        [Test]
+        public void LevelOrder_2() {
             var root = new Node(1, new List<Node>()
             {
                 new Node(2),

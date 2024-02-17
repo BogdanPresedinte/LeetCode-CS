@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/328332615/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0561_ArrayPartitionI
     {
-        public int ArrayPairSum(int[] nums)
-        {
+        public int ArrayPairSum(int[] nums) {
             Array.Sort(nums);
 
             int sum = 0;

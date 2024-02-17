@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0238_ProductOfArrayExceptSelf
     {
-        public int[] ProductExceptSelf(int[] nums)
-        {
+        public int[] ProductExceptSelf(int[] nums) {
             var result = new int[nums.Length];
             result[0] = 1;
 
@@ -17,8 +16,7 @@ namespace LeetCode
                 result[i] = result[i - 1] * nums[i - 1];
 
             int rightSide = 1;
-            for (int i = nums.Length - 1; i >= 0; i--)
-            {
+            for (int i = nums.Length - 1; i >= 0; i--) {
                 result[i] = result[i] * rightSide;
                 rightSide *= nums[i];
             }

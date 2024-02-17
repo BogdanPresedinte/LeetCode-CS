@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0715_RangeModule_Test
     {
-        [TestMethod]
-        public void RangeModuleTest_1()
-        {
+        [Test]
+        public void RangeModuleTest_1() {
             var solution = new _0715_RangeModule();
 
             solution.AddRange(10, 20);

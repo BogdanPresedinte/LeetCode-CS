@@ -4,21 +4,16 @@
 // Link: https://leetcode.com/submissions/detail/358336005/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _020_ValidParentheses
     {
-        public bool IsValid(string s)
-        {
+        public bool IsValid(string s) {
             var stack = new Stack<char>();
-            foreach (var ch in s)
-            {
+            foreach (var ch in s) {
                 if (ch == '(' || ch == '[' || ch == '{')
                     stack.Push(ch);
-                else if (ch == ')' || ch == ']' || ch == '}')
-                {
+                else if (ch == ')' || ch == ']' || ch == '}') {
                     if (stack.Count <= 0) return false;
                     var lastCh = stack.Peek();
 

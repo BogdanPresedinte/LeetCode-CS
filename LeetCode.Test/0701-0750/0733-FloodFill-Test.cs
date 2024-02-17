@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0733_FloodFill_Test
     {
-        [TestMethod]
-        public void FloodFill_1()
-        {
+        [Test]
+        public void FloodFill_1() {
             var solution = new _0733_FloodFill();
             var result = solution.FloodFill(new int[][]
                 {

@@ -10,19 +10,16 @@ namespace LeetCode
 {
     public class _1021_RemoveOutermostParentheses
     {
-        public string RemoveOuterParentheses(string S)
-        {
+        public string RemoveOuterParentheses(string S) {
             if (S.Length <= 2) return string.Empty;
 
             var sb = new StringBuilder();
             var count = 0;
             var start = 0;
 
-            for (int i = 0; i < S.Length; i++)
-            {
+            for (int i = 0; i < S.Length; i++) {
                 count += S[i] == '(' ? 1 : -1;
-                if (count == 0)
-                {
+                if (count == 0) {
                     if (i - start - 1 > 0)
                         sb.Append(S.Substring(start + 1, i - start - 1));
                     start = i + 1;

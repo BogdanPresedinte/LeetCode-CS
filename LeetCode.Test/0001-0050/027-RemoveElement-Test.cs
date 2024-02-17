@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _027_RemoveElement_Test
     {
-        [TestMethod]
-        public void RemoveElementTest()
-        {
+        [Test]
+        public void RemoveElementTest() {
             var input = new int[] { 1, 2, 3, 4, 5 };
 
             var solution = new _027_RemoveElement();
@@ -17,18 +13,16 @@ namespace LeetCode.Test
             AssertHelper.AssertArray(new int[] { 1, 2, 5, 4 }, input, true);
         }
 
-        [TestMethod]
-        public void RemoveElementTest_EmptyInput()
-        {
+        [Test]
+        public void RemoveElementTest_EmptyInput() {
             var solution = new _027_RemoveElement();
             var result = solution.RemoveElement(new int[] { }, 3);
 
             Assert.AreEqual(0, result);
         }
 
-        [TestMethod]
-        public void RemoveElementTest_OnlyOneItem_NotSame()
-        {
+        [Test]
+        public void RemoveElementTest_OnlyOneItem_NotSame() {
             var input = new int[] { 1 };
 
             var solution = new _027_RemoveElement();
@@ -38,9 +32,8 @@ namespace LeetCode.Test
             AssertHelper.AssertArray(new int[] { 1 }, input);
         }
 
-        [TestMethod]
-        public void RemoveElementTest_OnlyOneItem_Same()
-        {
+        [Test]
+        public void RemoveElementTest_OnlyOneItem_Same() {
             var input = new int[] { 1 };
 
             var solution = new _027_RemoveElement();
@@ -49,9 +42,8 @@ namespace LeetCode.Test
             Assert.AreEqual(0, result);
         }
 
-        [TestMethod]
-        public void RemoveElementTest_HaveMultipleValue()
-        {
+        [Test]
+        public void RemoveElementTest_HaveMultipleValue() {
             var input = new int[] { 1, 2, 3, 3, 4, 5 };
 
             var solution = new _027_RemoveElement();
@@ -61,9 +53,8 @@ namespace LeetCode.Test
             AssertHelper.AssertArray(new int[] { 1, 2, 5, 4 }, input, true);
         }
 
-        [TestMethod]
-        public void RemoveElementTest_AllValue()
-        {
+        [Test]
+        public void RemoveElementTest_AllValue() {
             var input = new int[] { 3, 3, 3, 3, 3, 3 };
 
             var solution = new _027_RemoveElement();

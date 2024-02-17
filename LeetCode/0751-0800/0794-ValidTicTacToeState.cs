@@ -8,12 +8,10 @@ namespace LeetCode
 {
     public class _0794_ValidTicTacToeState
     {
-        public bool ValidTicTacToe(string[] board)
-        {
+        public bool ValidTicTacToe(string[] board) {
             int xCount = 0, oCount = 0;
             foreach (string row in board)
-                foreach (char ch in row)
-                {
+                foreach (char ch in row) {
                     if (ch == 'X') xCount++;
                     if (ch == 'O') oCount++;
                 }
@@ -24,10 +22,8 @@ namespace LeetCode
             return true;
         }
 
-        private bool Win(string[] board, char ch)
-        {
-            for (int i = 0; i < 3; ++i)
-            {
+        private bool Win(string[] board, char ch) {
+            for (int i = 0; i < 3; ++i) {
                 if (ch == board[0][i] && ch == board[1][i] && ch == board[2][i])
                     return true;
                 if (ch == board[i][0] && ch == board[i][1] && ch == board[i][2])

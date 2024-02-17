@@ -11,24 +11,20 @@ namespace LeetCode
         private bool[] flags = new bool[1000001];
 
         /** Initialize your data structure here. */
-        public _0705_DesignHashset()
-        {
+        public _0705_DesignHashset() {
 
         }
 
-        public void Add(int key)
-        {
+        public void Add(int key) {
             flags[key] = true;
         }
 
-        public void Remove(int key)
-        {
+        public void Remove(int key) {
             flags[key] = false;
         }
 
         /** Returns true if this set contains the specified element */
-        public bool Contains(int key)
-        {
+        public bool Contains(int key) {
             return flags[key];
         }
     }

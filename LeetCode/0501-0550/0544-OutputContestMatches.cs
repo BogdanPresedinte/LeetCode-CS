@@ -8,14 +8,12 @@ namespace LeetCode
 {
     public class _0544_OutputContestMatches
     {
-        public string FindContestMatch(int n)
-        {
+        public string FindContestMatch(int n) {
             var team = new string[n];
             for (int i = 0; i < n; i++)
                 team[i] = (i + 1).ToString();
 
-            while (n > 1)
-            {
+            while (n > 1) {
                 for (int i = 0; i < n / 2; i++)
                     team[i] = $"({team[i]},{team[n - 1 - i]})";
 

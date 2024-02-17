@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/379101868/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0767_ReorganizeString
     {
-        public string ReorganizeString(string S)
-        {
+        public string ReorganizeString(string S) {
             var counts = new int[26];
             foreach (var ch in S)
                 counts[ch - 'a']++;
@@ -25,12 +22,10 @@ namespace LeetCode
 
             var result = new char[S.Length];
             var index = 0;
-            foreach ((var ch, var count) in pairs)
-            {
+            foreach ((var ch, var count) in pairs) {
                 if (count == 0) break;
 
-                for (int i = 0; i < count; i++)
-                {
+                for (int i = 0; i < count; i++) {
                     result[index] = ch;
                     index += 2;
                     if (index >= S.Length) index = 1;

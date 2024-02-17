@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0642_DesignSearchAutocompleteSystem_Test
     {
-        [TestMethod]
-        public void InputTest()
-        {
+        [Test]
+        public void InputTest() {
             var solution = new _0642_DesignSearchAutocompleteSystem(new string[] { "i love you", "island", "ironman", "i love leetcode" }, new int[] { 5, 3, 2, 2 });
 
             // Round 1

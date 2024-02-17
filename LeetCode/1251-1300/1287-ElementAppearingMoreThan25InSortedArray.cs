@@ -8,22 +8,17 @@ namespace LeetCode
 {
     public class _1287_ElementAppearingMoreThan25InSortedArray
     {
-        public int FindSpecialInteger(int[] arr)
-        {
+        public int FindSpecialInteger(int[] arr) {
             var len = arr.Length / 4;
 
             var count = 1;
             var current = arr[0];
-            for (int i = 1; i < arr.Length; i++)
-            {
-                if (arr[i] == current)
-                {
+            for (int i = 1; i < arr.Length; i++) {
+                if (arr[i] == current) {
                     count++;
                     if (count > len)
                         return current;
-                }
-                else
-                {
+                } else {
                     count = 0;
                     current = arr[i];
                 }

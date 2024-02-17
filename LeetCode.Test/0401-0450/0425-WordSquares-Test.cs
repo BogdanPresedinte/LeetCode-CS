@@ -1,14 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0425_WordSquares_Test
     {
-        [TestMethod]
-        public void WordSquares_1()
-        {
+        [Test]
+        public void WordSquares_1() {
             var solution = new _0425_WordSquares();
             var result = solution.WordSquares(new string[] { "area", "lead", "wall", "lady", "ball" });
             AssertHelper.AssertList(new List<IList<string>>() {
@@ -17,9 +12,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void WordSquares_2()
-        {
+        [Test]
+        public void WordSquares_2() {
             var solution = new _0425_WordSquares();
             var result = solution.WordSquares(new string[] { "abat", "baba", "atan", "atal" });
             AssertHelper.AssertList(new List<IList<string>>() {

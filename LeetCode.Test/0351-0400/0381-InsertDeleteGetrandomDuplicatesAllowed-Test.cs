@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0381_InsertDeleteGetrandomDuplicatesAllowed_Test
     {
-        [TestMethod]
-        public void RandomizedCollectionTest_1()
-        {
+        [Test]
+        public void RandomizedCollectionTest_1() {
             var solution = new _0381_InsertDeleteGetrandomDuplicatesAllowed();
 
             // Inserts 1 to the collection. Returns true as the collection did not contain 1.
@@ -43,9 +39,8 @@ namespace LeetCode.Test
             Assert.IsTrue(number == 1 || number == 2);
         }
 
-        [TestMethod]
-        public void RandomizedCollectionTest_2()
-        {
+        [Test]
+        public void RandomizedCollectionTest_2() {
             var solution = new _0381_InsertDeleteGetrandomDuplicatesAllowed();
 
             var result = solution.Insert(4);
@@ -69,9 +64,8 @@ namespace LeetCode.Test
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void RandomizedCollectionTest_3()
-        {
+        [Test]
+        public void RandomizedCollectionTest_3() {
             var solution = new _0381_InsertDeleteGetrandomDuplicatesAllowed();
 
             var result = solution.Insert(0);

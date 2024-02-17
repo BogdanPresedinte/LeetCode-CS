@@ -19,8 +19,7 @@ namespace LeetCode
      */
     public class _0234_PalindromeLinkedList
     {
-        public bool IsPalindrome(ListNode head)
-        {
+        public bool IsPalindrome(ListNode head) {
             if (head == null) return true;
 
             var endOfFirstHalf = EndOfFirstHalf(head);
@@ -28,10 +27,8 @@ namespace LeetCode
 
             ListNode p1 = head, p2 = secondHalf;
             var result = true;
-            while (p2 != null)
-            {
-                if (p1.val != p2.val)
-                {
+            while (p2 != null) {
+                if (p1.val != p2.val) {
                     result = false;
                     break;
                 }
@@ -43,11 +40,9 @@ namespace LeetCode
             return result;
         }
 
-        private ListNode EndOfFirstHalf(ListNode head)
-        {
+        private ListNode EndOfFirstHalf(ListNode head) {
             ListNode slow = head, fast = head;
-            while (fast.next != null && fast.next.next != null)
-            {
+            while (fast.next != null && fast.next.next != null) {
                 slow = slow.next;
                 fast = fast.next.next;
             }
@@ -55,11 +50,9 @@ namespace LeetCode
             return slow;
         }
 
-        private ListNode ReverseList(ListNode head)
-        {
+        private ListNode ReverseList(ListNode head) {
             ListNode prev = null, curr = head;
-            while (curr != null)
-            {
+            while (curr != null) {
                 var next = curr.next;
                 curr.next = prev;
                 prev = curr;

@@ -8,17 +8,13 @@ namespace LeetCode
 {
     public class _0117_PopulatingNextRightPointersInEachNode2
     {
-        public TreeLinkNode Connect(TreeLinkNode root)
-        {
+        public TreeLinkNode Connect(TreeLinkNode root) {
             TreeLinkNode cur = root;
-            while (cur != null)
-            {
+            while (cur != null) {
                 TreeLinkNode nextHead = null;
                 TreeLinkNode nextPrevious = null;
-                while (cur != null)
-                {
-                    if (cur.left != null)
-                    {
+                while (cur != null) {
+                    if (cur.left != null) {
                         if (nextPrevious != null)
                             nextPrevious.next = cur.left;
                         else
@@ -26,8 +22,7 @@ namespace LeetCode
                         nextPrevious = cur.left;
                     }
 
-                    if (cur.right != null)
-                    {
+                    if (cur.right != null) {
                         if (nextPrevious != null)
                             nextPrevious.next = cur.right;
                         else

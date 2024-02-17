@@ -4,23 +4,18 @@
 // Link: https://leetcode.com/submissions/detail/338608246/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0892_SurfaceAreaOf3DShapes
     {
-        public int SurfaceArea(int[][] grid)
-        {
+        public int SurfaceArea(int[][] grid) {
             var rows = grid.Length;
             var cols = grid[0].Length;
 
             var result = 0;
             for (int i = 0; i < rows; i++)
-                for (int j = 0; j < cols; j++)
-                {
-                    if (grid[i][j] > 0)
-                    {
+                for (int j = 0; j < cols; j++) {
+                    if (grid[i][j] > 0) {
                         result += 2 + grid[i][j] * 4;
                         if (i > 0 && grid[i - 1][j] > 0)
                             result -= 2 * Math.Min(grid[i - 1][j], grid[i][j]);

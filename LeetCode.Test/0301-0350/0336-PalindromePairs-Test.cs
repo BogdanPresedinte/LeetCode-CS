@@ -1,14 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0336_PalindromePairs_Test
     {
-        [TestMethod]
-        public void PalindromePairsTest_1()
-        {
+        [Test]
+        public void PalindromePairsTest_1() {
             var solution = new _0336_PalindromePairs();
             var result = solution.PalindromePairs(new string[] { "abcd", "dcba", "lls", "s", "sssll" });
             AssertHelper.AssertList(
@@ -21,9 +16,8 @@ namespace LeetCode.Test
                 }, result);
         }
 
-        [TestMethod]
-        public void PalindromePairsTest_2()
-        {
+        [Test]
+        public void PalindromePairsTest_2() {
             var solution = new _0336_PalindromePairs();
             var result = solution.PalindromePairs(new string[] { "bat", "tab", "cat" });
             AssertHelper.AssertList(
@@ -34,9 +28,8 @@ namespace LeetCode.Test
                 }, result);
         }
 
-        [TestMethod]
-        public void PalindromePairsTest_3()
-        {
+        [Test]
+        public void PalindromePairsTest_3() {
             var solution = new _0336_PalindromePairs();
             var result = solution.PalindromePairs(new string[] { "a", "" });
             AssertHelper.AssertList(

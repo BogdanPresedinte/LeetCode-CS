@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/352343867/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -25,8 +23,7 @@ namespace LeetCode
     {
         public int result;
 
-        public int PathSum(TreeNode root, int sum)
-        {
+        public int PathSum(TreeNode root, int sum) {
             if (root == null) return 0;
 
             Dictionary<int, int> cache = new Dictionary<int, int>() { { 0, 1 } };
@@ -35,8 +32,7 @@ namespace LeetCode
             return result;
         }
 
-        public void DFS(TreeNode root, int target, int currPathSum, Dictionary<int, int> cache)
-        {
+        public void DFS(TreeNode root, int target, int currPathSum, Dictionary<int, int> cache) {
             if (root == null) return;
 
             currPathSum += root.val;

@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0173_BinarySearchTreeIterator_Test
     {
-        [TestMethod]
-        public void BSTIteratorTest()
-        {
+        [Test]
+        public void BSTIteratorTest() {
             var root = TestHelper.GenerateTree(new int?[] { 7, 3, 15, null, null, 9, 20 });
 
             var iterator = new _0173_BinarySearchTreeIterator(root);

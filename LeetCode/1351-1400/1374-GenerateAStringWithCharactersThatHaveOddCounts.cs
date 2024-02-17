@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _1374_GenerateAStringWithCharactersThatHaveOddCounts
     {
-        public string GenerateTheString(int n)
-        {
+        public string GenerateTheString(int n) {
             return n % 2 == 1 ?
                 new string('a', n) :
                 new string('a', n - 1) + 'b';

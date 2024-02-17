@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/352421862/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0225_ImplementStackUsingQueues
@@ -13,14 +11,12 @@ namespace LeetCode
         private readonly Queue<int> queue;
 
         /** Initialize your data structure here. */
-        public _0225_ImplementStackUsingQueues()
-        {
+        public _0225_ImplementStackUsingQueues() {
             queue = new Queue<int>();
         }
 
         /** Push element x onto stack. */
-        public void Push(int x)
-        {
+        public void Push(int x) {
             queue.Enqueue(x);
             var i = queue.Count - 1;
             while (i-- > 0)
@@ -28,20 +24,17 @@ namespace LeetCode
         }
 
         /** Removes the element on top of the stack and returns that element. */
-        public int Pop()
-        {
+        public int Pop() {
             return queue.Dequeue();
         }
 
         /** Get the top element. */
-        public int Top()
-        {
+        public int Top() {
             return queue.Peek();
         }
 
         /** Returns whether the stack is empty. */
-        public bool Empty()
-        {
+        public bool Empty() {
             return queue.Count == 0;
         }
     }

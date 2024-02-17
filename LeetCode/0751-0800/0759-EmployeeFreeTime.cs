@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/368876357/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /*
@@ -24,8 +22,7 @@ namespace LeetCode
 
     public class _0759_EmployeeFreeTime
     {
-        public IList<Interval> EmployeeFreeTime(IList<IList<Interval>> schedule)
-        {
+        public IList<Interval> EmployeeFreeTime(IList<IList<Interval>> schedule) {
             var events = new List<Interval>();
             foreach (var s in schedule)
                 foreach (var i in s)
@@ -35,12 +32,10 @@ namespace LeetCode
 
             var result = new List<Interval>();
             var pre = events[0];
-            for (int i = 1; i < events.Count; i++)
-            {
+            for (int i = 1; i < events.Count; i++) {
                 if (events[i].start <= pre.end && events[i].end > pre.end)
                     pre.end = events[i].end;
-                else if (events[i].start > pre.end)
-                {
+                else if (events[i].start > pre.end) {
                     result.Add(new Interval(pre.end, events[i].start));
                     pre = events[i];
                 }

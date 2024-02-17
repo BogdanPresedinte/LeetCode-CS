@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _037_SudokuSolver_Test
     {
-        [TestMethod]
-        public void SolveSudokuTest()
-        {
+        [Test]
+        public void SolveSudokuTest() {
             var input = new char[9, 9]
             {
                 { '5','3','.','.','7','.','.','.','.'},
@@ -37,9 +33,8 @@ namespace LeetCode.Test
             }, input);
         }
 
-        [TestMethod]
-        public void SolveSudokuTest_ColumnNotValid()
-        {
+        [Test]
+        public void SolveSudokuTest_ColumnNotValid() {
             var input = new char[9, 9]
             {
                 { '5','3','.','.','7','.','.','.','.'},
@@ -69,9 +64,8 @@ namespace LeetCode.Test
             }, input);
         }
 
-        [TestMethod]
-        public void SolveSudokuTest_RowNotValid()
-        {
+        [Test]
+        public void SolveSudokuTest_RowNotValid() {
             var input = new char[9, 9]
             {
                 { '5','3','.','.','7','.','.','.','.'},
@@ -101,9 +95,8 @@ namespace LeetCode.Test
             }, input);
         }
 
-        [TestMethod]
-        public void SolveSudokuTest_SqureNotValid()
-        {
+        [Test]
+        public void SolveSudokuTest_SqureNotValid() {
             var input = new char[9, 9]
             {
                 { '5','3','.','.','7','.','.','.','.'},

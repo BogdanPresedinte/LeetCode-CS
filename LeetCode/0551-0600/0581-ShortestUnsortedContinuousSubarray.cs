@@ -4,26 +4,21 @@
 // Link: https://leetcode.com/submissions/detail/359594641/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0581_ShortestUnsortedContinuousSubarray
     {
-        public int FindUnsortedSubarray(int[] nums)
-        {
+        public int FindUnsortedSubarray(int[] nums) {
             int min = int.MaxValue, max = int.MinValue;
             var flag = false;
-            for (int i = 1; i < nums.Length; i++)
-            {
+            for (int i = 1; i < nums.Length; i++) {
                 if (nums[i] < nums[i - 1])
                     flag = true;
                 if (flag)
                     min = Math.Min(min, nums[i]);
             }
             flag = false;
-            for (int i = nums.Length - 2; i >= 0; i--)
-            {
+            for (int i = nums.Length - 2; i >= 0; i--) {
                 if (nums[i] > nums[i + 1])
                     flag = true;
                 if (flag)

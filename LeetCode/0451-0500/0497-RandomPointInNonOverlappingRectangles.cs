@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/384877520/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0497_RandomPointInNonOverlappingRectangles
@@ -15,12 +13,10 @@ namespace LeetCode
         private readonly int[] points;
         private readonly Random random;
 
-        public _0497_RandomPointInNonOverlappingRectangles(int[][] rects)
-        {
+        public _0497_RandomPointInNonOverlappingRectangles(int[][] rects) {
             this.rects = rects;
             points = new int[rects.Length];
-            for (int i = 0; i < rects.Length; i++)
-            {
+            for (int i = 0; i < rects.Length; i++) {
                 var rect = rects[i];
                 totalPointCount += (rect[2] - rect[0] + 1) * (rect[3] - rect[1] + 1);
                 points[i] = totalPointCount;
@@ -29,8 +25,7 @@ namespace LeetCode
             random = new Random();
         }
 
-        public int[] Pick()
-        {
+        public int[] Pick() {
             var target = random.Next(totalPointCount);
             var index = Array.BinarySearch(points, target);
             if (index < 0)

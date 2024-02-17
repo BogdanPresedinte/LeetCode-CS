@@ -8,11 +8,9 @@ namespace LeetCode
 {
     public class _1491_AverageSalaryExcludingTheMinimumAndMaximumSalary
     {
-        public double Average(int[] salary)
-        {
+        public double Average(int[] salary) {
             int sum = 0, min = int.MaxValue, max = int.MinValue;
-            foreach (var num in salary)
-            {
+            foreach (var num in salary) {
                 if (num < min) min = num;
                 if (num > max) max = num;
 

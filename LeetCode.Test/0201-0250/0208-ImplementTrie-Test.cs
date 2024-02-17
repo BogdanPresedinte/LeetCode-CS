@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0208_ImplementTrie_Test
     {
-        [TestMethod]
-        public void TrieTest()
-        {
+        [Test]
+        public void TrieTest() {
             var trie = new _0208_ImplementTrie();
 
             trie.Insert("apple");

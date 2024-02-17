@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/364017009/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _1357_ApplyDiscountEveryNOrders
@@ -15,8 +13,7 @@ namespace LeetCode
         private readonly int discountCustomer;
         private int currentCustomerCount;
 
-        public _1357_ApplyDiscountEveryNOrders(int n, int discount, int[] products, int[] prices)
-        {
+        public _1357_ApplyDiscountEveryNOrders(int n, int discount, int[] products, int[] prices) {
             this.discount = discount;
             this.discountCustomer = n;
             this.currentCustomerCount = 0;
@@ -26,16 +23,14 @@ namespace LeetCode
                 productsPrice[products[i]] = prices[i];
         }
 
-        public double GetBill(int[] product, int[] amount)
-        {
+        public double GetBill(int[] product, int[] amount) {
             var total = 0.0;
 
             for (int i = 0; i < product.Length; i++)
                 total += productsPrice[product[i]] * amount[i];
 
             currentCustomerCount++;
-            if (currentCustomerCount == discountCustomer)
-            {
+            if (currentCustomerCount == discountCustomer) {
                 currentCustomerCount = 0;
                 total -= discount / 100.0 * total;
             }

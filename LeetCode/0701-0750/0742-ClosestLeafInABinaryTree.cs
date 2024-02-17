@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/368912698/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -23,32 +21,26 @@ namespace LeetCode
      */
     public class _0742_ClosestLeafInABinaryTree
     {
-        public int FindClosestLeaf(TreeNode root, int k)
-        {
+        public int FindClosestLeaf(TreeNode root, int k) {
             var graph = new Dictionary<TreeNode, IList<TreeNode>>();
             BuildGraph(graph, null, root);
 
             var queue = new Queue<TreeNode>();
             var seen = new HashSet<TreeNode>();
-            foreach (var node in graph.Keys)
-            {
-                if (node.val == k)
-                {
+            foreach (var node in graph.Keys) {
+                if (node.val == k) {
                     queue.Enqueue(node);
                     seen.Add(node);
                     break;
                 }
             }
 
-            while (queue.Count > 0)
-            {
+            while (queue.Count > 0) {
                 var node = queue.Dequeue();
                 if (node == null) continue;
                 if (graph[node].Count <= 1) return node.val;
-                foreach (var next in graph[node])
-                {
-                    if (!seen.Contains(next))
-                    {
+                foreach (var next in graph[node]) {
+                    if (!seen.Contains(next)) {
                         seen.Add(next);
                         queue.Enqueue(next);
                     }
@@ -58,11 +50,9 @@ namespace LeetCode
             return -1;
         }
 
-        private void BuildGraph(Dictionary<TreeNode, IList<TreeNode>> graph, TreeNode parent, TreeNode node)
-        {
+        private void BuildGraph(Dictionary<TreeNode, IList<TreeNode>> graph, TreeNode parent, TreeNode node) {
             if (node == null) return;
-            if (parent != null)
-            {
+            if (parent != null) {
                 if (!graph.ContainsKey(parent)) graph[parent] = new List<TreeNode>();
                 graph[parent].Add(node);
             }

@@ -4,8 +4,6 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace LeetCode
@@ -16,14 +14,11 @@ namespace LeetCode
         private Trie currentNode;
         private StringBuilder currentString;
 
-        public _0642_DesignSearchAutocompleteSystem(string[] sentences, int[] times)
-        {
-            for (int i = 0; i < sentences.Length; i++)
-            {
+        public _0642_DesignSearchAutocompleteSystem(string[] sentences, int[] times) {
+            for (int i = 0; i < sentences.Length; i++) {
                 var node = dummyHeader;
 
-                foreach (var ch in sentences[i])
-                {
+                foreach (var ch in sentences[i]) {
                     var index = ch == ' ' ? 26 : ch - 'a';
                     if (node.Children[index] == null)
                         node.Children[index] = new Trie(node);
@@ -38,19 +33,15 @@ namespace LeetCode
             currentString = new StringBuilder();
         }
 
-        public IList<string> Input(char c)
-        {
+        public IList<string> Input(char c) {
             IList<string> result = null;
 
-            if (c == '#')
-            {
+            if (c == '#') {
                 result = new List<string>();
                 UpdateSentenceCount(currentNode, currentString.ToString());
                 currentNode = dummyHeader;
                 currentString.Clear();
-            }
-            else
-            {
+            } else {
                 currentString.Append(c);
 
                 var index = c == ' ' ? 26 : c - 'a';
@@ -64,10 +55,8 @@ namespace LeetCode
             return result;
         }
 
-        private void UpdateSentenceCount(Trie node, string sentence, int count = 1)
-        {
-            while (node != null)
-            {
+        private void UpdateSentenceCount(Trie node, string sentence, int count = 1) {
+            while (node != null) {
                 if (node.SentenceMap.ContainsKey(sentence))
                     node.SentenceMap[sentence] += count;
                 else
@@ -78,8 +67,7 @@ namespace LeetCode
         }
         public class Trie
         {
-            public Trie(Trie parent = null)
-            {
+            public Trie(Trie parent = null) {
                 Children = new Trie[27];
                 Parent = parent;
                 SentenceMap = new Dictionary<string, int>();

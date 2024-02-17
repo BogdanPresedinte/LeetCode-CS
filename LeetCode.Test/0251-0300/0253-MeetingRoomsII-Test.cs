@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0253_MeetingRoomsII_Test
     {
-        [TestMethod]
-        public void MinMeetingRoomsTest_1()
-        {
+        [Test]
+        public void MinMeetingRoomsTest_1() {
             var solution = new _0253_MeetingRoomsII();
             var result = solution.MinMeetingRooms(
                 new int[][]
@@ -20,9 +16,8 @@ namespace LeetCode.Test
             Assert.AreEqual(2, result);
         }
 
-        [TestMethod]
-        public void MinMeetingRoomsTest_2()
-        {
+        [Test]
+        public void MinMeetingRoomsTest_2() {
             var solution = new _0253_MeetingRoomsII();
             var result = solution.MinMeetingRooms(
                 new int[][]
@@ -34,9 +29,8 @@ namespace LeetCode.Test
             Assert.AreEqual(1, result);
         }
 
-        [TestMethod]
-        public void MinMeetingRoomsTest_3()
-        {
+        [Test]
+        public void MinMeetingRoomsTest_3() {
             var solution = new _0253_MeetingRoomsII();
             var result = solution.MinMeetingRooms(
                 new int[][]
@@ -52,9 +46,8 @@ namespace LeetCode.Test
             Assert.AreEqual(3, result);
         }
 
-        [TestMethod]
-        public void MinMeetingRoomsTest_4()
-        {
+        [Test]
+        public void MinMeetingRoomsTest_4() {
             var solution = new _0253_MeetingRoomsII();
             var result = solution.MinMeetingRooms(
                 new int[][]

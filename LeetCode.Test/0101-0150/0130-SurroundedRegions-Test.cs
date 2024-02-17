@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0130_SurroundedRegions_Test
     {
-        [TestMethod]
-        public void SolveTest_1()
-        {
+        [Test]
+        public void SolveTest_1() {
             var board = new char[][]
             {
                 new char [] { 'X', 'X', 'X', 'X' },
@@ -27,9 +23,8 @@ namespace LeetCode.Test
             }, board);
         }
 
-        [TestMethod]
-        public void SolveTest_2()
-        {
+        [Test]
+        public void SolveTest_2() {
             var board = new char[][]
             {
                 new char [] { 'X', 'X', 'X', 'X' },
@@ -44,10 +39,9 @@ namespace LeetCode.Test
                 new char [] { 'X', 'O', 'O', 'X' },
             }, board);
         }
-        
-        [TestMethod]
-        public void SolveTest_3()
-        {
+
+        [Test]
+        public void SolveTest_3() {
             var board = new char[][]
             {
                 new char [] { 'X', 'X' },

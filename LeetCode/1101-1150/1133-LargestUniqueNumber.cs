@@ -4,19 +4,15 @@
 // Link: https://leetcode.com/submissions/detail/330730484/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _1133_LargestUniqueNumber
     {
-        public int LargestUniqueNumber(int[] A)
-        {
+        public int LargestUniqueNumber(int[] A) {
             if (A.Length == 1) return A[0];
 
             var list = new Dictionary<int, int>();
-            foreach (var num in A)
-            {
+            foreach (var num in A) {
                 if (list.ContainsKey(num))
                     list[num]++;
                 else
@@ -24,8 +20,7 @@ namespace LeetCode
             }
 
             int max = -1;
-            foreach (var key in list.Keys)
-            {
+            foreach (var key in list.Keys) {
                 if (list[key] == 1 && max < key)
                     max = key;
             }

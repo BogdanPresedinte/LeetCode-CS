@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/322878007/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0155_MinStack
@@ -13,38 +11,32 @@ namespace LeetCode
         private Node head;
 
         /** initialize your data structure here. */
-        public _0155_MinStack()
-        {
+        public _0155_MinStack() {
             head = null;
         }
 
-        public void Push(int x)
-        {
+        public void Push(int x) {
             if (head == null)
                 head = new Node(x, x);
             else
                 head = new Node(x, Math.Min(x, head.MinValue), head);
         }
 
-        public void Pop()
-        {
+        public void Pop() {
             head = head.Next;
         }
 
-        public int Top()
-        {
+        public int Top() {
             return head.Value;
         }
 
-        public int GetMin()
-        {
+        public int GetMin() {
             return head.MinValue;
         }
 
         private class Node
         {
-            public Node(int value, int minValue, Node next = null)
-            {
+            public Node(int value, int minValue, Node next = null) {
                 Value = value;
                 MinValue = minValue;
                 Next = next;

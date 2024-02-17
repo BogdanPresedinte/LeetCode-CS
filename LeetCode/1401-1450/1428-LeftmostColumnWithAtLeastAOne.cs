@@ -4,9 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/328251880/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -20,15 +17,13 @@ namespace LeetCode
 
     public class _1428_LeftmostColumnWithAtLeastAOne
     {
-        public int LeftMostColumnWithOne(BinaryMatrix binaryMatrix)
-        {
+        public int LeftMostColumnWithOne(BinaryMatrix binaryMatrix) {
             var dimensions = binaryMatrix.Dimensions();
 
             var row = 0;
             var col = dimensions[1] - 1;
 
-            while (row < dimensions[0])
-            {
+            while (row < dimensions[0]) {
                 while (col >= 0 && binaryMatrix.Get(row, col) == 1) col--;
                 row++;
             }
@@ -43,8 +38,7 @@ namespace LeetCode
             private int n = 0;
             private int m = 0;
 
-            public BinaryMatrix(int[][] num)
-            {
+            public BinaryMatrix(int[][] num) {
                 numbers = num;
                 getCounts = 0;
 
@@ -52,8 +46,7 @@ namespace LeetCode
                 m = num[0].Length;
             }
 
-            public int Get(int x, int y)
-            {
+            public int Get(int x, int y) {
                 if (x < 0 || x >= n) throw new ArgumentException(nameof(x));
                 if (y < 0 || y >= m) throw new ArgumentException(nameof(y));
                 if (getCounts > 1000) throw new NotSupportedException("Wrong Anser");
@@ -61,8 +54,7 @@ namespace LeetCode
                 return numbers[x][y];
             }
 
-            public IList<int> Dimensions()
-            {
+            public IList<int> Dimensions() {
                 return new List<int>() { n, m };
             }
         }

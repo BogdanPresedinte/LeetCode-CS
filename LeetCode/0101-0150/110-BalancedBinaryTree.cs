@@ -4,19 +4,15 @@
 // Link: https://leetcode.com/submissions/detail/352794483/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _110_BalancedBinaryTree
     {
-        public bool IsBalanced(TreeNode root)
-        {
+        public bool IsBalanced(TreeNode root) {
             return GetHeight(root) != -1;
         }
 
-        private int GetHeight(TreeNode current)
-        {
+        private int GetHeight(TreeNode current) {
             if (current == null) return 0;
             var leftHeight = GetHeight(current.left);
             if (leftHeight == -1) return -1;

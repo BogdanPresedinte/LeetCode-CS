@@ -8,17 +8,14 @@ namespace LeetCode
 {
     public class _0997_FindTheTownJudge
     {
-        public int FindJudge(int N, int[][] trust)
-        {
+        public int FindJudge(int N, int[][] trust) {
             var score = new int[N + 1];
-            foreach (var pair in trust)
-            {
+            foreach (var pair in trust) {
                 score[pair[0]]--;
                 score[pair[1]]++;
             }
 
-            for (int i = 1; i < N + 1; i++)
-            {
+            for (int i = 1; i < N + 1; i++) {
                 if (score[i] == N - 1)
                     return i;
             }

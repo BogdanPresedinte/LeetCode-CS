@@ -8,16 +8,13 @@ namespace LeetCode
 {
     public class _0856_ScoreOfParentheses
     {
-        public int ScoreOfParentheses(string S)
-        {
+        public int ScoreOfParentheses(string S) {
             var balance = 0;
             var result = 0;
 
-            for (int i = 0; i < S.Length; i++)
-            {
+            for (int i = 0; i < S.Length; i++) {
                 if (S[i] == '(') balance++;
-                else
-                {
+                else {
                     balance--;
                     if (S[i - 1] == '(')
                         result += 1 << balance;

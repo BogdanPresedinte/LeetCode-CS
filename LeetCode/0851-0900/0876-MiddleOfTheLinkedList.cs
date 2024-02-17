@@ -8,13 +8,11 @@ namespace LeetCode
 {
     public class _0876_MiddleOfTheLinkedList
     {
-        public ListNode MiddleNode(ListNode head)
-        {
+        public ListNode MiddleNode(ListNode head) {
             var fast = head;
             var slow = head;
 
-            while (fast != null && fast.next != null)
-            {
+            while (fast != null && fast.next != null) {
                 fast = fast.next.next;
                 slow = slow.next;
             }

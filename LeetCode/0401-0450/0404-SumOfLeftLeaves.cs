@@ -21,13 +21,11 @@ namespace LeetCode
      */
     public class _0404_SumOfLeftLeaves
     {
-        public int SumOfLeftLeaves(TreeNode root)
-        {
+        public int SumOfLeftLeaves(TreeNode root) {
             return Compute(root, false);
         }
 
-        private int Compute(TreeNode node, bool left)
-        {
+        private int Compute(TreeNode node, bool left) {
             if (node == null) return 0;
             if (node.left == null && node.right == null)
                 return left ? node.val : 0;

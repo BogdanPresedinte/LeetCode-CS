@@ -12,28 +12,24 @@ namespace LeetCode
         private int current;
         private int size;
 
-        public _1472_DesignBrowserHistory(string homepage)
-        {
+        public _1472_DesignBrowserHistory(string homepage) {
             current = 0;
             size = 1;
             urls[current] = homepage;
         }
 
-        public void Visit(string url)
-        {
+        public void Visit(string url) {
             urls[++current] = url;
             size = current + 1;
         }
 
-        public string Back(int steps)
-        {
+        public string Back(int steps) {
             current -= steps;
             if (current < 0) current = 0;
             return urls[current];
         }
 
-        public string Forward(int steps)
-        {
+        public string Forward(int steps) {
             current += steps;
             if (current >= size) current = size - 1;
             return urls[current];

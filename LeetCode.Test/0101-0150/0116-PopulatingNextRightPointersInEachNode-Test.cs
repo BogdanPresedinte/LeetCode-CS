@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0116_PopulatingNextRightPointersInEachNode_Test
     {
-        [TestMethod]
-        public void ConnectTest()
-        {
+        [Test]
+        public void ConnectTest() {
             var solution = new _0116_PopulatingNextRightPointersInEachNode();
             var root = TestHelper.GenerateLinkTree(new int?[] { 1, 2, 3, 4, 5, 6, 7 });
             var newRoot = solution.Connect(root);

@@ -1,14 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0422_ValidWordSquare_Test
     {
-        [TestMethod]
-        public void ValidWordSquare_1()
-        {
+        [Test]
+        public void ValidWordSquare_1() {
             var solution = new _0422_ValidWordSquare();
             var result = solution.ValidWordSquare(new List<string>()
             {
@@ -20,9 +15,8 @@ namespace LeetCode.Test
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void ValidWordSquare_2()
-        {
+        [Test]
+        public void ValidWordSquare_2() {
             var solution = new _0422_ValidWordSquare();
             var result = solution.ValidWordSquare(new List<string>()
             {
@@ -34,9 +28,8 @@ namespace LeetCode.Test
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void ValidWordSquare_3()
-        {
+        [Test]
+        public void ValidWordSquare_3() {
             var solution = new _0422_ValidWordSquare();
             var result = solution.ValidWordSquare(new List<string>()
             {
@@ -48,9 +41,8 @@ namespace LeetCode.Test
             Assert.IsFalse(result);
         }
 
-        [TestMethod]
-        public void ValidWordSquare_4()
-        {
+        [Test]
+        public void ValidWordSquare_4() {
             var solution = new _0422_ValidWordSquare();
             var result = solution.ValidWordSquare(new List<string>()
             {
@@ -62,9 +54,8 @@ namespace LeetCode.Test
             Assert.IsFalse(result);
         }
 
-        [TestMethod]
-        public void ValidWordSquare_5()
-        {
+        [Test]
+        public void ValidWordSquare_5() {
             var solution = new _0422_ValidWordSquare();
             var result = solution.ValidWordSquare(new List<string>()
             {

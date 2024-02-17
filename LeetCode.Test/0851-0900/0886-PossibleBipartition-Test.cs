@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0886_PossibleBipartition_Test
     {
-        [TestMethod]
-        public void PossibleBipartition_1()
-        {
+        [Test]
+        public void PossibleBipartition_1() {
             var solution = new _0886_PossibleBipartition();
             var result = solution.PossibleBipartition(4, new int[][] {
                 new int[] { 1, 2 },
@@ -17,9 +13,8 @@ namespace LeetCode.Test
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void PossibleBipartition_2()
-        {
+        [Test]
+        public void PossibleBipartition_2() {
             var solution = new _0886_PossibleBipartition();
             var result = solution.PossibleBipartition(3, new int[][] {
                 new int[] { 1, 2 },
@@ -29,9 +24,8 @@ namespace LeetCode.Test
             Assert.IsFalse(result);
         }
 
-        [TestMethod]
-        public void PossibleBipartition_3()
-        {
+        [Test]
+        public void PossibleBipartition_3() {
             var solution = new _0886_PossibleBipartition();
             var result = solution.PossibleBipartition(5, new int[][] {
                 new int[] { 1, 2 },

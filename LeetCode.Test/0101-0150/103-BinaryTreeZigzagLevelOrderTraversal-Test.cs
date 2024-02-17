@@ -1,14 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _103_BinaryTreeZigzagLevelOrderTraversal_Test
     {
-        [TestMethod]
-        public void ZigzagLevelOrder()
-        {
+        [Test]
+        public void ZigzagLevelOrder() {
             var solution = new _103_BinaryTreeZigzagLevelOrderTraversal();
             var result = solution.ZigzagLevelOrder(TestHelper.GenerateTree(new int?[] { 3, 9, 20, null, null, 15, 7 }));
             AssertHelper.AssertList(new List<IList<int>>()
@@ -19,9 +14,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void ZigzagLevelOrder_Null()
-        {
+        [Test]
+        public void ZigzagLevelOrder_Null() {
             var solution = new _103_BinaryTreeZigzagLevelOrderTraversal();
             var result = solution.ZigzagLevelOrder(null);
             AssertHelper.AssertList(new List<IList<int>>(), result);

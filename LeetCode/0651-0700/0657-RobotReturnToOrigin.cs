@@ -8,13 +8,11 @@ namespace LeetCode
 {
     public class _0657_RobotReturnToOrigin
     {
-        public bool JudgeCircle(string moves)
-        {
+        public bool JudgeCircle(string moves) {
             var x = 0;
             var y = 0;
 
-            foreach (var ch in moves)
-            {
+            foreach (var ch in moves) {
                 if (ch == 'U')
                     x++;
                 if (ch == 'D')

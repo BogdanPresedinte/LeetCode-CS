@@ -21,18 +21,15 @@ namespace LeetCode
      */
     public class _0572_SubtreeOfAnotherTree
     {
-        public bool IsSubtree(TreeNode s, TreeNode t)
-        {
+        public bool IsSubtree(TreeNode s, TreeNode t) {
             return Traverse(s, t);
         }
 
-        private bool Traverse(TreeNode s, TreeNode t)
-        {
+        private bool Traverse(TreeNode s, TreeNode t) {
             return s != null && (EqualTree(s, t) || Traverse(s.left, t) || Traverse(s.right, t));
         }
 
-        private bool EqualTree(TreeNode s, TreeNode t)
-        {
+        private bool EqualTree(TreeNode s, TreeNode t) {
             if (s == null && t == null) return true;
             if (s == null || t == null) return false;
             return s.val == t.val && EqualTree(s.left, t.left) && EqualTree(s.right, t.right);

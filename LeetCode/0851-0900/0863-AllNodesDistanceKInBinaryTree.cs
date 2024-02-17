@@ -4,9 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/366243160/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Linq;
-
 namespace LeetCode
 {
     /**
@@ -20,8 +17,7 @@ namespace LeetCode
      */
     public class _0863_AllNodesDistanceKInBinaryTree
     {
-        public IList<int> DistanceK(TreeNode root, TreeNode target, int K)
-        {
+        public IList<int> DistanceK(TreeNode root, TreeNode target, int K) {
             var connections = new Dictionary<TreeNode, IList<TreeNode>>();
             BuildGraph(null, root, connections);
 
@@ -29,17 +25,13 @@ namespace LeetCode
             var queue = new Queue<TreeNode>();
             seen.Add(target);
             queue.Enqueue(target);
-            while (queue.Count > 0 && K > 0)
-            {
+            while (queue.Count > 0 && K > 0) {
                 var size = queue.Count;
-                for (int i = 0; i < size; i++)
-                {
+                for (int i = 0; i < size; i++) {
                     var node = queue.Dequeue();
                     if (!connections.ContainsKey(node)) continue;
-                    foreach (var neighbor in connections[node])
-                    {
-                        if (!seen.Contains(neighbor))
-                        {
+                    foreach (var neighbor in connections[node]) {
+                        if (!seen.Contains(neighbor)) {
                             seen.Add(neighbor);
                             queue.Enqueue(neighbor);
                         }
@@ -52,10 +44,8 @@ namespace LeetCode
             return queue.Select(node => node.val).ToList();
         }
 
-        private void BuildGraph(TreeNode parent, TreeNode child, Dictionary<TreeNode, IList<TreeNode>> connection)
-        {
-            if (parent != null && child != null)
-            {
+        private void BuildGraph(TreeNode parent, TreeNode child, Dictionary<TreeNode, IList<TreeNode>> connection) {
+            if (parent != null && child != null) {
                 if (!connection.ContainsKey(parent))
                     connection[parent] = new List<TreeNode>();
                 if (!connection.ContainsKey(child))

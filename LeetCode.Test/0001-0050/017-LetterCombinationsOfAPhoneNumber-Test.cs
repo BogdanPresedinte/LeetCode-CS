@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _017_LetterCombinationsOfAPhoneNumber_Test
     {
-        [TestMethod]
-        public void LetterCombinationsTest()
-        {
+        [Test]
+        public void LetterCombinationsTest() {
             var solution = new _017_LetterCombinationsOfAPhoneNumber();
             var result = solution.LetterCombinations("23");
 
@@ -23,27 +19,24 @@ namespace LeetCode.Test
             Assert.IsTrue(result.Contains("cf"));
         }
 
-        [TestMethod]
-        public void LetterCombinationsTest_2()
-        {
+        [Test]
+        public void LetterCombinationsTest_2() {
             var solution = new _017_LetterCombinationsOfAPhoneNumber();
             var result = solution.LetterCombinations("234");
 
             Assert.AreEqual(27, result.Count);
         }
 
-        [TestMethod]
-        public void LetterCombinationsTest_EmptyString()
-        {
+        [Test]
+        public void LetterCombinationsTest_EmptyString() {
             var solution = new _017_LetterCombinationsOfAPhoneNumber();
             var result = solution.LetterCombinations("");
 
             Assert.AreEqual(0, result.Count);
         }
 
-        [TestMethod]
-        public void LetterCombinationsTest_WithZero()
-        {
+        [Test]
+        public void LetterCombinationsTest_WithZero() {
             var solution = new _017_LetterCombinationsOfAPhoneNumber();
             var result = solution.LetterCombinations("20");
 
@@ -53,9 +46,8 @@ namespace LeetCode.Test
             Assert.IsTrue(result.Contains("c "));
         }
 
-        [TestMethod]
-        public void LetterCombinationsTest_OnlyHaveZero()
-        {
+        [Test]
+        public void LetterCombinationsTest_OnlyHaveZero() {
             var solution = new _017_LetterCombinationsOfAPhoneNumber();
 
             var result = solution.LetterCombinations("0000");
@@ -63,9 +55,8 @@ namespace LeetCode.Test
             Assert.IsTrue(result.Contains("    "));
         }
 
-        [TestMethod]
-        public void LetterCombinationsTest_WithOne()
-        {
+        [Test]
+        public void LetterCombinationsTest_WithOne() {
             var solution = new _017_LetterCombinationsOfAPhoneNumber();
 
             var result = solution.LetterCombinations("21");
@@ -87,18 +78,16 @@ namespace LeetCode.Test
             Assert.IsTrue(result.Contains("cf"));
         }
 
-        [TestMethod]
-        public void LetterCombinationsTest_OnlyHaveOne()
-        {
+        [Test]
+        public void LetterCombinationsTest_OnlyHaveOne() {
             var solution = new _017_LetterCombinationsOfAPhoneNumber();
 
             var result = solution.LetterCombinations("111");
             Assert.AreEqual(0, result.Count);
         }
 
-        [TestMethod]
-        public void LetterCombinationsTest_WithSeven()
-        {
+        [Test]
+        public void LetterCombinationsTest_WithSeven() {
             var solution = new _017_LetterCombinationsOfAPhoneNumber();
             var result = solution.LetterCombinations("27");
 
@@ -117,9 +106,8 @@ namespace LeetCode.Test
             Assert.IsTrue(result.Contains("cs"));
         }
 
-        [TestMethod]
-        public void LetterCombinationsTest_WithNine()
-        {
+        [Test]
+        public void LetterCombinationsTest_WithNine() {
             var solution = new _017_LetterCombinationsOfAPhoneNumber();
 
             var result = solution.LetterCombinations("9");

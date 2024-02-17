@@ -8,17 +8,14 @@ namespace LeetCode
 {
     public class _0189_RotateArray
     {
-        public void Rotate(int[] nums, int k)
-        {
+        public void Rotate(int[] nums, int k) {
             if (k >= nums.Length)
                 k %= nums.Length;
 
-            for (int start = 0, count = 0; start < k && count < nums.Length; start++)
-            {
+            for (int start = 0, count = 0; start < k && count < nums.Length; start++) {
                 int curr = start;
                 var prev = nums[curr];
-                do
-                {
+                do {
                     var next = curr + k;
                     if (next >= nums.Length)
                         next -= nums.Length;

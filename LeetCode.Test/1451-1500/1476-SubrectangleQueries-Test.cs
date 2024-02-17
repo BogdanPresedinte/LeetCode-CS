@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1476_SubrectangleQueries_Test
     {
-        [TestMethod]
-        public void SubrectangleQueries_1()
-        {
+        [Test]
+        public void SubrectangleQueries_1() {
             var solution = new _1476_SubrectangleQueries(new int[][] {
                 new int[] { 1, 2, 1 },
                 new int[] { 4, 3, 4 },
@@ -24,9 +20,8 @@ namespace LeetCode.Test
             Assert.AreEqual(5, solution.GetValue(0, 2)); // return 5
         }
 
-        [TestMethod]
-        public void SubrectangleQueries_2()
-        {
+        [Test]
+        public void SubrectangleQueries_2() {
             var solution = new _1476_SubrectangleQueries(new int[][] {
                 new int[] { 1, 1, 1 },
                 new int[] { 2, 2, 2 },

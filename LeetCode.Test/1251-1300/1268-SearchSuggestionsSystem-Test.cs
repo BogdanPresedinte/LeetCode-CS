@@ -1,14 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1268_SearchSuggestionsSystem_Test
     {
-        [TestMethod]
-        public void SuggestedProducts_1()
-        {
+        [Test]
+        public void SuggestedProducts_1() {
             var solution = new _1268_SearchSuggestionsSystem();
             var result = solution.SuggestedProducts(new string[] { "mobile", "mouse", "moneypot", "monitor", "mousepad" }, "mouse");
             AssertHelper.AssertList(new List<IList<string>>() {
@@ -20,9 +15,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void SuggestedProducts_2()
-        {
+        [Test]
+        public void SuggestedProducts_2() {
             var solution = new _1268_SearchSuggestionsSystem();
             var result = solution.SuggestedProducts(new string[] { "havana" }, "havana");
             AssertHelper.AssertList(new List<IList<string>>() {
@@ -35,9 +29,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void SuggestedProducts_3()
-        {
+        [Test]
+        public void SuggestedProducts_3() {
             var solution = new _1268_SearchSuggestionsSystem();
             var result = solution.SuggestedProducts(new string[] { "bags", "baggage", "banner", "box", "cloths" }, "bags");
             AssertHelper.AssertList(new List<IList<string>>() {
@@ -48,9 +41,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void SuggestedProducts_4()
-        {
+        [Test]
+        public void SuggestedProducts_4() {
             var solution = new _1268_SearchSuggestionsSystem();
             var result = solution.SuggestedProducts(new string[] { "havana" }, "tatiana");
             AssertHelper.AssertList(new List<IList<string>>() {

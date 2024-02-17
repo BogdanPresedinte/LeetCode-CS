@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _1009_ComplementOfBase10Integer
     {
-        public int BitwiseComplement(int N)
-        {
+        public int BitwiseComplement(int N) {
             int mask = 1;
             while (mask < N)
                 mask = (mask << 1) | 1;

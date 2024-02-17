@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0222_CountCompleteTreeNodes_Test
     {
-        [TestMethod]
-        public void CountNodesTest()
-        {
+        [Test]
+        public void CountNodesTest() {
             var solution = new _0222_CountCompleteTreeNodes();
             Assert.AreEqual(2, solution.CountNodes(TestHelper.GenerateTree(new int?[] { 1, 2 })));
             Assert.AreEqual(3, solution.CountNodes(TestHelper.GenerateTree(new int?[] { 1, 2, 3 })));
@@ -17,16 +13,14 @@ namespace LeetCode.Test
             Assert.AreEqual(7, solution.CountNodes(TestHelper.GenerateTree(new int?[] { 1, 2, 3, 4, 5, 6, 7 })));
         }
 
-        [TestMethod]
-        public void CountNodesTest_Null()
-        {
+        [Test]
+        public void CountNodesTest_Null() {
             var solution = new _0222_CountCompleteTreeNodes();
             Assert.AreEqual(0, solution.CountNodes(null));
         }
 
-        [TestMethod]
-        public void CountNodesTest_JustRoot()
-        {
+        [Test]
+        public void CountNodesTest_JustRoot() {
             var solution = new _0222_CountCompleteTreeNodes();
             Assert.AreEqual(1, solution.CountNodes(TestHelper.GenerateTree(new int?[] { 1 })));
         }

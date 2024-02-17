@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0959_RegionsCutBySlashes_Test
     {
-        [TestMethod]
-        public void RegionsBySlashesTest_1()
-        {
+        [Test]
+        public void RegionsBySlashesTest_1() {
             var input = new string[] { " /", "/ " };
 
             var solution = new _0959_RegionsCutBySlashes();
@@ -15,9 +11,8 @@ namespace LeetCode.Test
             Assert.AreEqual(2, result);
         }
 
-        [TestMethod]
-        public void RegionsBySlashesTest_2()
-        {
+        [Test]
+        public void RegionsBySlashesTest_2() {
             var input = new string[] { " /", "  " };
 
             var solution = new _0959_RegionsCutBySlashes();
@@ -25,9 +20,8 @@ namespace LeetCode.Test
             Assert.AreEqual(1, result);
         }
 
-        [TestMethod]
-        public void RegionsBySlashesTest_3()
-        {
+        [Test]
+        public void RegionsBySlashesTest_3() {
             var input = new string[] { "\\/", "/\\" };
 
             var solution = new _0959_RegionsCutBySlashes();
@@ -35,9 +29,8 @@ namespace LeetCode.Test
             Assert.AreEqual(4, result);
         }
 
-        [TestMethod]
-        public void RegionsBySlashesTest_4()
-        {
+        [Test]
+        public void RegionsBySlashesTest_4() {
             var input = new string[] { "/\\", "\\/" };
 
             var solution = new _0959_RegionsCutBySlashes();
@@ -45,9 +38,8 @@ namespace LeetCode.Test
             Assert.AreEqual(5, result);
         }
 
-        [TestMethod]
-        public void RegionsBySlashesTest_5()
-        {
+        [Test]
+        public void RegionsBySlashesTest_5() {
             var input = new string[] { "//", "/ " };
 
             var solution = new _0959_RegionsCutBySlashes();

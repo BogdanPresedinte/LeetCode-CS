@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0743_NetworkDelayTime_Test
     {
-        [TestMethod]
-        public void NetworkDelayTimeTest()
-        {
+        [Test]
+        public void NetworkDelayTimeTest() {
             var solution = new _0743_NetworkDelayTime();
             var result = solution.NetworkDelayTime(new int[][]
             {

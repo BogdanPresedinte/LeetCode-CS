@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0226_InvertBinaryTree
     {
-        public TreeNode InvertTree(TreeNode root)
-        {
+        public TreeNode InvertTree(TreeNode root) {
             if (root == null) return null;
 
             var left = root.left;

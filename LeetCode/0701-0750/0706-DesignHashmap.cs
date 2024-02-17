@@ -13,23 +13,19 @@ namespace LeetCode
         private int[] valTable;
 
         /** Initialize your data structure here. */
-        public _0706_DesignHashmap()
-        {
+        public _0706_DesignHashmap() {
             keyTable = new int[size];
             valTable = new int[size];
-            for (int i = 0; i < size; i++)
-            {
+            for (int i = 0; i < size; i++) {
                 keyTable[i] = -1;
                 valTable[i] = -1;
             }
         }
 
         /** value will always be non-negative. */
-        public void Put(int key, int value)
-        {
+        public void Put(int key, int value) {
             var i = Hash(key);
-            while (keyTable[i] != -1 && keyTable[i] != key)
-            {
+            while (keyTable[i] != -1 && keyTable[i] != key) {
                 if (i == size - 1)
                     i = 0;
                 else
@@ -41,11 +37,9 @@ namespace LeetCode
         }
 
         /** Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key */
-        public int Get(int key)
-        {
+        public int Get(int key) {
             var i = Hash(key);
-            while (keyTable[i] != -1 && keyTable[i] != key)
-            {
+            while (keyTable[i] != -1 && keyTable[i] != key) {
                 if (i == size - 1)
                     i = 0;
                 else
@@ -56,11 +50,9 @@ namespace LeetCode
         }
 
         /** Removes the mapping of the specified value key if this map contains a mapping for the key */
-        public void Remove(int key)
-        {
+        public void Remove(int key) {
             var i = Hash(key);
-            while (keyTable[i] != -1 && keyTable[i] != key)
-            {
+            while (keyTable[i] != -1 && keyTable[i] != key) {
                 if (i == size - 1)
                     i = 0;
                 else
@@ -72,8 +64,7 @@ namespace LeetCode
             valTable[i] = -2;
         }
 
-        private int Hash(int key)
-        {
+        private int Hash(int key) {
             return key % size;
         }
     }

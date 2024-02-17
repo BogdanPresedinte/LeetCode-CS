@@ -1,30 +1,23 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _095_UniqueBinarySearchTree2_Test
     {
-        [TestMethod]
-        public void GenerateTreesTest_Zero()
-        {
+        [Test]
+        public void GenerateTreesTest_Zero() {
             var solution = new _095_UniqueBinarySearchTree2();
             var result = solution.GenerateTrees(0);
             Assert.AreEqual(0, result.Count);
         }
 
-        [TestMethod]
-        public void GenerateTreesTest_One()
-        {
+        [Test]
+        public void GenerateTreesTest_One() {
             var solution = new _095_UniqueBinarySearchTree2();
             var result = solution.GenerateTrees(1);
             AssertHelper.AssertTrees(new List<int?[]>() { new int?[] { 1 } }, result);
         }
 
-        [TestMethod]
-        public void GenerateTreesTest_Two()
-        {
+        [Test]
+        public void GenerateTreesTest_Two() {
             var solution = new _095_UniqueBinarySearchTree2();
             var result = solution.GenerateTrees(2);
             AssertHelper.AssertTrees(new List<int?[]>() {
@@ -33,9 +26,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void GenerateTreesTest_Three()
-        {
+        [Test]
+        public void GenerateTreesTest_Three() {
             var solution = new _095_UniqueBinarySearchTree2();
             var result = solution.GenerateTrees(3);
             AssertHelper.AssertTrees(new List<int?[]>() {

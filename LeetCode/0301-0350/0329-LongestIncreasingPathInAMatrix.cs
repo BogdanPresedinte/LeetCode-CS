@@ -4,16 +4,13 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0329_LongestIncreasingPathInAMatrix
     {
         private readonly static int[][] dirs = new int[][] { new int[] { 0, 1 }, new int[] { 1, 0 }, new int[] { 0, -1 }, new int[] { -1, 0 } };
 
-        public int LongestIncreasingPath(int[][] matrix)
-        {
+        public int LongestIncreasingPath(int[][] matrix) {
             if (matrix.Length == 0) return 0;
             int M = matrix.Length, N = matrix[0].Length;
             var cache = new int[M, N];
@@ -25,11 +22,9 @@ namespace LeetCode
             return maxValue + 1;
         }
 
-        private int DFS(int[,] cache, int[][] matrix, int M, int N, int i, int j)
-        {
+        private int DFS(int[,] cache, int[][] matrix, int M, int N, int i, int j) {
             if (cache[i, j] != 0) return cache[i, j];
-            foreach (var dir in dirs)
-            {
+            foreach (var dir in dirs) {
                 int x = i + dir[0], y = j + dir[1];
                 if (0 <= x && x < M && 0 <= y && y < N)
                     if (matrix[x][y] > matrix[i][j])

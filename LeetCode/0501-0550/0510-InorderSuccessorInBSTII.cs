@@ -18,10 +18,8 @@ namespace LeetCode
 
     public class _0510_InorderSuccessorInBSTII
     {
-        public Node InorderSuccessor(Node x)
-        {
-            if (x.right != null)
-            {
+        public Node InorderSuccessor(Node x) {
+            if (x.right != null) {
                 x = x.right;
                 while (x.left != null)
                     x = x.left;

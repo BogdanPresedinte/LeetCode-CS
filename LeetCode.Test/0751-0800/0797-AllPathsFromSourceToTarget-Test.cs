@@ -1,14 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0797_AllPathsFromSourceToTarget_Test
     {
-        [TestMethod]
-        public void AllPathsSourceTarget_1()
-        {
+        [Test]
+        public void AllPathsSourceTarget_1() {
             var solution = new _0797_AllPathsFromSourceToTarget();
             var result = solution.AllPathsSourceTarget(new int[][] {
                 new int[] { 1, 2 },
@@ -22,9 +17,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void AllPathsSourceTarget_2()
-        {
+        [Test]
+        public void AllPathsSourceTarget_2() {
             var solution = new _0797_AllPathsFromSourceToTarget();
             var result = solution.AllPathsSourceTarget(new int[][] {
                 new int[] { 1, 2 },
@@ -39,9 +33,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void AllPathsSourceTarget_3()
-        {
+        [Test]
+        public void AllPathsSourceTarget_3() {
             var solution = new _0797_AllPathsFromSourceToTarget();
             var result = solution.AllPathsSourceTarget(new int[][] {
                 new int[] { 4, 3, 1 },

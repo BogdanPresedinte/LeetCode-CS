@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0617_MergeTwoBinaryTrees
     {
-        public TreeNode MergeTrees(TreeNode t1, TreeNode t2)
-        {
+        public TreeNode MergeTrees(TreeNode t1, TreeNode t2) {
             if (t1 == null) return t2;
             if (t2 == null) return t1;
 

@@ -1,14 +1,11 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static LeetCode._0510_InorderSuccessorInBSTII;
 
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0510_InorderSuccessorInBSTII_Test
     {
-        [TestMethod]
-        public void InorderSuccessor_1()
-        {
+        [Test]
+        public void InorderSuccessor_1() {
             var node1 = new Node() { val = 1 };
             var node2 = new Node() { val = 2 };
             var node3 = new Node() { val = 3 };
@@ -23,9 +20,8 @@ namespace LeetCode.Test
             Assert.AreEqual(2, result.val);
         }
 
-        [TestMethod]
-        public void InorderSuccessor_2()
-        {
+        [Test]
+        public void InorderSuccessor_2() {
             var node1 = new Node() { val = 1 };
             var node2 = new Node() { val = 2 };
             var node3 = new Node() { val = 3 };
@@ -51,9 +47,8 @@ namespace LeetCode.Test
             Assert.IsNull(result);
         }
 
-        [TestMethod]
-        public void InorderSuccessor_3()
-        {
+        [Test]
+        public void InorderSuccessor_3() {
             var node2 = new Node() { val = 2 };
             var node3 = new Node() { val = 3 };
             var node4 = new Node() { val = 4 };
@@ -97,9 +92,8 @@ namespace LeetCode.Test
             Assert.AreEqual(17, result.val);
         }
 
-        [TestMethod]
-        public void InorderSuccessor_4()
-        {
+        [Test]
+        public void InorderSuccessor_4() {
             var node2 = new Node() { val = 2 };
             var node3 = new Node() { val = 3 };
             var node4 = new Node() { val = 4 };
@@ -143,9 +137,8 @@ namespace LeetCode.Test
             Assert.AreEqual(15, result.val);
         }
 
-        [TestMethod]
-        public void InorderSuccessor_5()
-        {
+        [Test]
+        public void InorderSuccessor_5() {
             var node0 = new Node() { val = 0 };
 
             var solution = new _0510_InorderSuccessorInBSTII();

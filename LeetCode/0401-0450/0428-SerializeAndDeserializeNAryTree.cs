@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/378975764/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace LeetCode
@@ -35,8 +33,7 @@ namespace LeetCode
         private readonly string NULL = "null";
 
         // Encodes a tree to a single string.
-        public string serialize(Node root)
-        {
+        public string serialize(Node root) {
             if (root == null) return NULL;
 
             var dummy = new Node(-1, new List<Node>());
@@ -46,14 +43,11 @@ namespace LeetCode
             queue.Enqueue(dummy);
 
             var sb = new StringBuilder();
-            while (queue.Count > 0)
-            {
+            while (queue.Count > 0) {
                 var size = queue.Count;
-                for (int i = 0; i < size; i++)
-                {
+                for (int i = 0; i < size; i++) {
                     var node = queue.Dequeue();
-                    foreach (var child in node.children)
-                    {
+                    foreach (var child in node.children) {
                         sb.Append(child.val);
                         sb.Append(SPLITTER);
                         queue.Enqueue(child);
@@ -66,18 +60,15 @@ namespace LeetCode
         }
 
         // Decodes your encoded data to tree.
-        public Node deserialize(string data)
-        {
+        public Node deserialize(string data) {
             var split = data.Split(new string[] { SPLITTER }, StringSplitOptions.RemoveEmptyEntries);
             if (split.Length == 1 && split[0] == NULL) return null;
 
             var dummy = new Node(-1, new List<Node>());
             var queue = new Queue<Node>();
             queue.Enqueue(dummy);
-            foreach (var value in split)
-            {
-                if (value == NULL)
-                {
+            foreach (var value in split) {
+                if (value == NULL) {
                     queue.Dequeue();
                     continue;
                 }
@@ -95,8 +86,7 @@ namespace LeetCode
 
             public Node() { }
 
-            public Node(int _val, IList<Node> _children)
-            {
+            public Node(int _val, IList<Node> _children) {
                 val = _val;
                 children = _children;
             }

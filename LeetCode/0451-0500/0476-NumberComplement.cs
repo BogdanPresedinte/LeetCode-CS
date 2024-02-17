@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0476_NumberComplement
     {
-        public int FindComplement(int num)
-        {
+        public int FindComplement(int num) {
             int mask = 1;
             while (mask < num)
                 mask = (mask << 1) | 1;

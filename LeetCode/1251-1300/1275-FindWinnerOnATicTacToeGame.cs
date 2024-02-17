@@ -4,21 +4,17 @@
 // Link: https://leetcode.com/submissions/detail/343728241/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _1275_FindWinnerOnATicTacToeGame
     {
-        public string Tictactoe(int[][] moves)
-        {
+        public string Tictactoe(int[][] moves) {
             int d1 = 0, d2 = 0;
             var rows = new int[3];
             var cols = new int[3];
 
             int turn = 1;
-            foreach (var move in moves)
-            {
+            foreach (var move in moves) {
                 int r = move[0];
                 int c = move[1];
 

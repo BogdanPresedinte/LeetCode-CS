@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/361292724/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     /**
@@ -23,13 +21,11 @@ namespace LeetCode
      */
     public class _1448_CountGoodNodesInBinaryTree
     {
-        public int GoodNodes(TreeNode root)
-        {
+        public int GoodNodes(TreeNode root) {
             return GoodNodes(root, int.MinValue);
         }
 
-        private int GoodNodes(TreeNode root, int maxValue)
-        {
+        private int GoodNodes(TreeNode root, int maxValue) {
             if (root == null) return 0;
 
             var left = GoodNodes(root.left, Math.Max(root.val, maxValue));

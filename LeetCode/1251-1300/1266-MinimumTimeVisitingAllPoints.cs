@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/326872389/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _1266_MinimumTimeVisitingAllPoints
     {
-        public int MinTimeToVisitAllPoints(int[][] points)
-        {
+        public int MinTimeToVisitAllPoints(int[][] points) {
             var result = 0;
             for (int i = 1; i < points.Length; i++)
                 result += Math.Max(

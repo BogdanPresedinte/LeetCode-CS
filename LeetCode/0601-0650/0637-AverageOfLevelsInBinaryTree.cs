@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/335608120/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -23,19 +21,16 @@ namespace LeetCode
      */
     public class _0637_AverageOfLevelsInBinaryTree
     {
-        public IList<double> AverageOfLevels(TreeNode root)
-        {
+        public IList<double> AverageOfLevels(TreeNode root) {
             var result = new List<double>();
             if (root == null) return result;
 
             var queue = new Queue<TreeNode>();
             queue.Enqueue(root);
-            while (queue.Count > 0)
-            {
+            while (queue.Count > 0) {
                 var levelCount = queue.Count;
                 double sum = 0.0;
-                for (int i = 0; i < levelCount; i++)
-                {
+                for (int i = 0; i < levelCount; i++) {
                     var node = queue.Dequeue();
                     sum += node.val;
                     if (node.left != null) queue.Enqueue(node.left);

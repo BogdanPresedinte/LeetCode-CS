@@ -8,11 +8,9 @@ namespace LeetCode
 {
     public class _0852_PeakIndexInAMountainArray
     {
-        public int PeakIndexInMountainArray(int[] A)
-        {
+        public int PeakIndexInMountainArray(int[] A) {
             int lo = 0, hi = A.Length - 1;
-            while (lo < hi)
-            {
+            while (lo < hi) {
                 var mid = lo + (hi - lo) / 2;
                 if (A[mid] < A[mid + 1])
                     lo = mid + 1;

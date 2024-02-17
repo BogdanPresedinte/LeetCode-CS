@@ -8,14 +8,11 @@ namespace LeetCode
 {
     public class _0717_1BitAnd2BitCharacters
     {
-        public bool IsOneBitCharacter(int[] bits)
-        {
+        public bool IsOneBitCharacter(int[] bits) {
             int i = 0;
-            for (; i < bits.Length; i++)
-            {
+            for (; i < bits.Length; i++) {
                 if (bits[i] == 1) i++;
-                else
-                {
+                else {
                     if (i == bits.Length - 1)
                         return true;
                 }

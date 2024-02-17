@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _019_RemoveNthNodeFromEndOfList_Test
     {
-        [TestMethod]
-        public void RemoveNthFromEndTest()
-        {
+        [Test]
+        public void RemoveNthFromEndTest() {
             var input = TestHelper.GenerateList(new int[] { 1, 2, 3, 4, 5 });
 
             var solution = new _019_RemoveNthNodeFromEndOfList();
@@ -16,18 +12,16 @@ namespace LeetCode.Test
             AssertHelper.AssertLinkList(new int[] { 1, 2, 3, 5 }, result);
         }
 
-        [TestMethod]
-        public void RemoveNthFromEndTest_ListNull()
-        {
+        [Test]
+        public void RemoveNthFromEndTest_ListNull() {
             var solution = new _019_RemoveNthNodeFromEndOfList();
             var result = solution.RemoveNthFromEnd(null, 2);
 
             Assert.IsNull(result);
         }
 
-        [TestMethod]
-        public void RemoveNthFromEndTest_NEqualZero()
-        {
+        [Test]
+        public void RemoveNthFromEndTest_NEqualZero() {
             var input = TestHelper.GenerateList(new int[] { 1, 2, 3, 4, 5 });
 
             var solution = new _019_RemoveNthNodeFromEndOfList();
@@ -36,9 +30,8 @@ namespace LeetCode.Test
             Assert.IsNull(result);
         }
 
-        [TestMethod]
-        public void RemoveNthFromEndTest_NLessThanZero()
-        {
+        [Test]
+        public void RemoveNthFromEndTest_NLessThanZero() {
             var input = TestHelper.GenerateList(new int[] { 1, 2, 3, 4, 5 });
 
             var solution = new _019_RemoveNthNodeFromEndOfList();
@@ -47,9 +40,8 @@ namespace LeetCode.Test
             Assert.IsNull(result);
         }
 
-        [TestMethod]
-        public void RemoveNthFromEndTest_LargerThanList()
-        {
+        [Test]
+        public void RemoveNthFromEndTest_LargerThanList() {
             var input = TestHelper.GenerateList(new int[] { 1, 2, 3, 4, 5 });
 
             var solution = new _019_RemoveNthNodeFromEndOfList();
@@ -58,9 +50,8 @@ namespace LeetCode.Test
             AssertHelper.AssertLinkList(new int[] { 1, 2, 3, 4, 5 }, result);
         }
 
-        [TestMethod]
-        public void RemoveNthFromEndTest_FirstOne()
-        {
+        [Test]
+        public void RemoveNthFromEndTest_FirstOne() {
             var input = TestHelper.GenerateList(new int[] { 1, 2, 3, 4, 5 });
 
             var solution = new _019_RemoveNthNodeFromEndOfList();
@@ -69,9 +60,8 @@ namespace LeetCode.Test
             AssertHelper.AssertLinkList(new int[] { 2, 3, 4, 5 }, result);
         }
 
-        [TestMethod]
-        public void RemoveNthFromEndTest_LastOne()
-        {
+        [Test]
+        public void RemoveNthFromEndTest_LastOne() {
             var input = TestHelper.GenerateList(new int[] { 1, 2, 3, 4, 5 });
 
             var solution = new _019_RemoveNthNodeFromEndOfList();

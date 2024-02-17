@@ -8,15 +8,13 @@ namespace LeetCode
 {
     public class _0867_TransposeMatrix
     {
-        public int[][] Transpose(int[][] A)
-        {
+        public int[][] Transpose(int[][] A) {
             var row = A.Length;
             var col = A[0].Length;
 
             var result = new int[col][];
             for (int i = 0; i < row; i++)
-                for (int j = 0; j < col; j++)
-                {
+                for (int j = 0; j < col; j++) {
                     if (i == 0)
                         result[j] = new int[row];
                     result[j][i] = A[i][j];

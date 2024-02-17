@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1128_NumberOfEquivalentDominoPairs_Test
     {
-        [TestMethod]
-        public void NumEquivDominoPairs_1()
-        {
+        [Test]
+        public void NumEquivDominoPairs_1() {
             var solution = new _1128_NumberOfEquivalentDominoPairs();
             var result = solution.NumEquivDominoPairs(new int[][] {
                 new int[] { 1, 2 },

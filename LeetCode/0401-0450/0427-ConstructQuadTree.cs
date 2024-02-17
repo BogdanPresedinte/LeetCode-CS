@@ -47,8 +47,7 @@ namespace LeetCode
 
     public class _0427_ConstructQuadTree
     {
-        public Node Construct(int[][] grid)
-        {
+        public Node Construct(int[][] grid) {
             var N = grid.Length;
             if (N == 0) return new Node(true, true);
             if (N == 1) return new Node(grid[0][0] == 1, true);
@@ -56,14 +55,11 @@ namespace LeetCode
             return DFS(grid, 0, N, 0, N);
         }
 
-        private Node DFS(int[][] grid, int xMin, int xMax, int yMin, int yMax)
-        {
+        private Node DFS(int[][] grid, int xMin, int xMax, int yMin, int yMax) {
             var same = true;
-            for (int i = xMin; i < xMax; i++)
-            {
+            for (int i = xMin; i < xMax; i++) {
                 for (int j = yMin; j < yMax; j++)
-                    if (grid[i][j] != grid[xMin][yMin])
-                    {
+                    if (grid[i][j] != grid[xMin][yMin]) {
                         same = false;
                         break;
                     }
@@ -93,8 +89,7 @@ namespace LeetCode
             public Node bottomLeft;
             public Node bottomRight;
 
-            public Node()
-            {
+            public Node() {
                 val = false;
                 isLeaf = false;
                 topLeft = null;
@@ -103,8 +98,7 @@ namespace LeetCode
                 bottomRight = null;
             }
 
-            public Node(bool _val, bool _isLeaf)
-            {
+            public Node(bool _val, bool _isLeaf) {
                 val = _val;
                 isLeaf = _isLeaf;
                 topLeft = null;
@@ -113,8 +107,7 @@ namespace LeetCode
                 bottomRight = null;
             }
 
-            public Node(bool _val, bool _isLeaf, Node _topLeft, Node _topRight, Node _bottomLeft, Node _bottomRight)
-            {
+            public Node(bool _val, bool _isLeaf, Node _topLeft, Node _topRight, Node _bottomLeft, Node _bottomRight) {
                 val = _val;
                 isLeaf = _isLeaf;
                 topLeft = _topLeft;

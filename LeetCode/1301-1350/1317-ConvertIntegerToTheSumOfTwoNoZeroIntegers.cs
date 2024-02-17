@@ -8,12 +8,10 @@ namespace LeetCode
 {
     public class _1317_ConvertIntegerToTheSumOfTwoNoZeroIntegers
     {
-        public int[] GetNoZeroIntegers(int n)
-        {
+        public int[] GetNoZeroIntegers(int n) {
             int p1 = 1, p2 = n - 1;
 
-            while (p1.ToString().Contains("0") || p2.ToString().Contains("0"))
-            {
+            while (p1.ToString().Contains("0") || p2.ToString().Contains("0")) {
                 p1++;
                 p2--;
             }

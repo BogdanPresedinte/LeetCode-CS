@@ -4,29 +4,22 @@
 // Link: https://leetcode.com/submissions/detail/351839198/
 //-----------------------------------------------------------------------------
 
-using System.Linq;
-
 namespace LeetCode
 {
     public class _1154_DayOfTheYear
     {
-        public int DayOfYear(string date)
-        {
+        public int DayOfYear(string date) {
             var days = new int[] { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
             var split = date.Split('-').Select(s => int.Parse(s)).ToArray();
             var year = split[0];
             var count = 0;
 
-            for (int i = 0; i < 12; i++)
-            {
-                if (split[1] == i + 1)
-                {
+            for (int i = 0; i < 12; i++) {
+                if (split[1] == i + 1) {
                     count += split[2];
                     break;
-                }
-                else
-                {
+                } else {
                     count += days[i];
                 }
             }

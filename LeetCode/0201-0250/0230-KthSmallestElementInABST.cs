@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/342499617/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -23,15 +21,13 @@ namespace LeetCode
      */
     public class _0230_KthSmallestElementInABST
     {
-        public int KthSmallest(TreeNode root, int k)
-        {
+        public int KthSmallest(TreeNode root, int k) {
             var list = new List<int>();
             InOrder(root, k, list);
             return list[k - 1];
         }
 
-        public void InOrder(TreeNode node, int k, IList<int> values)
-        {
+        public void InOrder(TreeNode node, int k, IList<int> values) {
             if (values.Count >= k) return;
             if (node == null) return;
 

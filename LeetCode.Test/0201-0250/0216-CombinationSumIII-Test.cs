@@ -1,14 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0216_CombinationSumIII_Test
     {
-        [TestMethod]
-        public void CombinationSum3_1()
-        {
+        [Test]
+        public void CombinationSum3_1() {
             var solution = new _0216_CombinationSumIII();
             var result = solution.CombinationSum3(3, 7);
             AssertHelper.AssertList(new List<IList<int>>()
@@ -17,9 +12,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void CombinationSum3_2()
-        {
+        [Test]
+        public void CombinationSum3_2() {
             var solution = new _0216_CombinationSumIII();
             var result = solution.CombinationSum3(3, 9);
             AssertHelper.AssertList(new List<IList<int>>()
@@ -30,29 +24,24 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void CombinationSum3_3()
-        {
+        [Test]
+        public void CombinationSum3_3() {
             var solution = new _0216_CombinationSumIII();
             var result = solution.CombinationSum3(4, 1);
-            AssertHelper.AssertList(new List<IList<int>>()
-            {
+            AssertHelper.AssertList(new List<IList<int>>() {
             }, result);
         }
 
-        [TestMethod]
-        public void CombinationSum3_4()
-        {
+        [Test]
+        public void CombinationSum3_4() {
             var solution = new _0216_CombinationSumIII();
             var result = solution.CombinationSum3(3, 2);
-            AssertHelper.AssertList(new List<IList<int>>()
-            {
+            AssertHelper.AssertList(new List<IList<int>>() {
             }, result);
         }
 
-        [TestMethod]
-        public void CombinationSum3_5()
-        {
+        [Test]
+        public void CombinationSum3_5() {
             var solution = new _0216_CombinationSumIII();
             var result = solution.CombinationSum3(9, 45);
             AssertHelper.AssertList(new List<IList<int>>()

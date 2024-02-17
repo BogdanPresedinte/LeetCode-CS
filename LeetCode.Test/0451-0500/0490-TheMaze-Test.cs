@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0490_TheMaze_Test
     {
-        [TestMethod]
-        public void HasPath_1()
-        {
+        [Test]
+        public void HasPath_1() {
             var solution = new _0490_TheMaze();
             var result = solution.HasPath(new int[][] {
                 new int[] { 0, 0, 1, 0, 0 },
@@ -19,9 +15,8 @@ namespace LeetCode.Test
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void HasPath_2()
-        {
+        [Test]
+        public void HasPath_2() {
             var solution = new _0490_TheMaze();
             var result = solution.HasPath(new int[][] {
                 new int[] { 0, 0, 1, 0, 0 },

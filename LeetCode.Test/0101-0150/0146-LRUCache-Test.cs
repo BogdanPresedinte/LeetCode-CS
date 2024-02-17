@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0146_LRUCache_Test
     {
-        [TestMethod]
-        public void LRUCacheTest()
-        {
+        [Test]
+        public void LRUCacheTest() {
             var cache = new _0146_LRUCache(2 /* capacity */ );
 
             cache.Put(1, 1);

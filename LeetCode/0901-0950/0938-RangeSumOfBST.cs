@@ -17,8 +17,7 @@ namespace LeetCode
      */
     public class _0938_RangeSumOfBST
     {
-        public int RangeSumBST(TreeNode root, int L, int R)
-        {
+        public int RangeSumBST(TreeNode root, int L, int R) {
             if (root == null)
                 return 0;
             else if (root.val < L)

@@ -1,14 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0759_EmployeeFreeTime_Test
     {
-        [TestMethod]
-        public void EmployeeFreeTime_1()
-        {
+        [Test]
+        public void EmployeeFreeTime_1() {
             var schedule = new List<IList<Interval>>()
             {
                 new List<Interval>() { new Interval(1, 2), new Interval(5, 6) },
@@ -23,9 +18,8 @@ namespace LeetCode.Test
             Assert.AreEqual(4, result[0].end);
         }
 
-        [TestMethod]
-        public void EmployeeFreeTime_2()
-        {
+        [Test]
+        public void EmployeeFreeTime_2() {
             var schedule = new List<IList<Interval>>()
             {
                 new List<Interval>() { new Interval(1, 3), new Interval(6, 7) },

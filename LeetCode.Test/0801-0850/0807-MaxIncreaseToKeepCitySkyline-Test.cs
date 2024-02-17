@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0807_MaxIncreaseToKeepCitySkyline_Test
     {
-        [TestMethod]
-        public void MaxIncreaseKeepingSkyline_1()
-        {
+        [Test]
+        public void MaxIncreaseKeepingSkyline_1() {
             var solution = new _0807_MaxIncreaseToKeepCitySkyline();
             var result = solution.MaxIncreaseKeepingSkyline(new int[][] {
                 new int[] { 3, 0, 8, 4 },

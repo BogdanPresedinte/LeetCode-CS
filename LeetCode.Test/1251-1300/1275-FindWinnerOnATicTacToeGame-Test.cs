@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1275_FindWinnerOnATicTacToeGame_Test
     {
-        [TestMethod]
-        public void Tictactoe_1()
-        {
+        [Test]
+        public void Tictactoe_1() {
             var solution = new _1275_FindWinnerOnATicTacToeGame();
             var result = solution.Tictactoe(new int[][] {
                 new int[] { 0, 0 },
@@ -19,9 +15,8 @@ namespace LeetCode.Test
             Assert.AreEqual("A", result);
         }
 
-        [TestMethod]
-        public void Tictactoe_2()
-        {
+        [Test]
+        public void Tictactoe_2() {
             var solution = new _1275_FindWinnerOnATicTacToeGame();
             var result = solution.Tictactoe(new int[][] {
                 new int[] { 0, 0 },
@@ -34,9 +29,8 @@ namespace LeetCode.Test
             Assert.AreEqual("B", result);
         }
 
-        [TestMethod]
-        public void Tictactoe_3()
-        {
+        [Test]
+        public void Tictactoe_3() {
             var solution = new _1275_FindWinnerOnATicTacToeGame();
             var result = solution.Tictactoe(new int[][] {
                 new int[] { 0, 0 },
@@ -52,9 +46,8 @@ namespace LeetCode.Test
             Assert.AreEqual("Draw", result);
         }
 
-        [TestMethod]
-        public void Tictactoe_4()
-        {
+        [Test]
+        public void Tictactoe_4() {
             var solution = new _1275_FindWinnerOnATicTacToeGame();
             var result = solution.Tictactoe(new int[][] {
                 new int[] { 0, 0 },

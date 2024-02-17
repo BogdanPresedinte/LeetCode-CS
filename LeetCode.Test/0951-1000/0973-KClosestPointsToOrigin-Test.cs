@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0973_KClosestPointsToOrigin_Test
     {
-        [TestMethod]
-        public void KClosest_1()
-        {
+        [Test]
+        public void KClosest_1() {
             var solution = new _0973_KClosestPointsToOrigin();
             var result = solution.KClosest(
                 new int[][]
@@ -22,9 +18,8 @@ namespace LeetCode.Test
                 }, result);
         }
 
-        [TestMethod]
-        public void KClosest_2()
-        {
+        [Test]
+        public void KClosest_2() {
             var solution = new _0973_KClosestPointsToOrigin();
             var result = solution.KClosest(
                 new int[][]

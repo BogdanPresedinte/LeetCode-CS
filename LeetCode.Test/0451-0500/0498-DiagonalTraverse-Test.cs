@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0498_DiagonalTraverse_Test
     {
-        [TestMethod]
-        public void FindDiagonalOrder_1()
-        {
+        [Test]
+        public void FindDiagonalOrder_1() {
             var solution = new _0498_DiagonalTraverse();
             var result = solution.FindDiagonalOrder(new int[][]
             {

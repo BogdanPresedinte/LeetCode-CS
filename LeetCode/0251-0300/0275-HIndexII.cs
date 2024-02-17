@@ -8,13 +8,11 @@ namespace LeetCode
 {
     public class _0275_HIndexII
     {
-        public int HIndex(int[] citations)
-        {
+        public int HIndex(int[] citations) {
             int n = citations.Length;
             int left = 0, right = n - 1;
 
-            while (left <= right)
-            {
+            while (left <= right) {
                 var mid = left + (right - left) / 2;
                 if (citations[mid] == n - mid) return n - mid;
                 else if (citations[mid] < n - mid) left = mid + 1;

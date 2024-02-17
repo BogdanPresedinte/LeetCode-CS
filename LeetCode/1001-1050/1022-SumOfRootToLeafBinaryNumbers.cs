@@ -21,20 +21,17 @@ namespace LeetCode
      */
     public class _1022_SumOfRootToLeafBinaryNumbers
     {
-        public int SumRootToLeaf(TreeNode root)
-        {
+        public int SumRootToLeaf(TreeNode root) {
             var sum = 0;
             Helper(root, 0, ref sum);
             return sum;
         }
 
-        private void Helper(TreeNode node, int current, ref int sum)
-        {
+        private void Helper(TreeNode node, int current, ref int sum) {
             if (node == null) return;
 
             current = current * 2 + node.val;
-            if (node.left == null && node.right == null)
-            {
+            if (node.left == null && node.right == null) {
                 sum += current;
                 return;
             }

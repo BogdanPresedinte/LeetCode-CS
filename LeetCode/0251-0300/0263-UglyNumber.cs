@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0263_UglyNumber
     {
-        public bool IsUgly(int num)
-        {
+        public bool IsUgly(int num) {
             if (num <= 0) return false;
 
             while (num > 1 && (num % 2 == 0))

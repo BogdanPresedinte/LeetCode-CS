@@ -1,14 +1,11 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static LeetCode._0138_CopyListWithRandomPointer;
 
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0138_CopyListWithRandomPointer_Test
     {
-        [TestMethod]
-        public void CopyRandomList_1()
-        {
+        [Test]
+        public void CopyRandomList_1() {
             var node1 = new Node(7);
             var node2 = new Node(13);
             var node3 = new Node(11);
@@ -50,9 +47,8 @@ namespace LeetCode.Test
             Assert.AreEqual(7, resultNode5.random.val);
         }
 
-        [TestMethod]
-        public void CopyRandomList_2()
-        {
+        [Test]
+        public void CopyRandomList_2() {
             var node1 = new Node(1);
             var node2 = new Node(2);
             node1.next = node2;
@@ -71,9 +67,8 @@ namespace LeetCode.Test
             Assert.AreEqual(2, resultNode2.random.val);
         }
 
-        [TestMethod]
-        public void CopyRandomList_3()
-        {
+        [Test]
+        public void CopyRandomList_3() {
             var node1 = new Node(3);
             var node2 = new Node(3);
             var node3 = new Node(3);
@@ -98,9 +93,8 @@ namespace LeetCode.Test
             Assert.IsNull(resultNode3.random);
         }
 
-        [TestMethod]
-        public void CopyRandomList_4()
-        {
+        [Test]
+        public void CopyRandomList_4() {
             var solution = new _0138_CopyListWithRandomPointer();
             var resultNode1 = solution.CopyRandomList(null);
             Assert.IsNull(resultNode1);

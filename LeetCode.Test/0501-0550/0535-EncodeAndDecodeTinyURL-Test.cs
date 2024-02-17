@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0535_EncodeAndDecodeTinyURL_Test
     {
-        [TestMethod]
-        public void EncodeAndDecodeTinyURLTest()
-        {
+        [Test]
+        public void EncodeAndDecodeTinyURLTest() {
             var input = "https://leetcode.com/problems/design-tinyurl";
 
             var solution = new _0535_EncodeAndDecodeTinyURL();

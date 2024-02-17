@@ -4,23 +4,20 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System;
 using System.Text;
 
 namespace LeetCode
 {
     public class _071_SimplifyPath
     {
-        public string SimplifyPath(string path)
-        {
+        public string SimplifyPath(string path) {
             if (string.IsNullOrEmpty(path)) { return "/"; }
 
             var folders = path.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
             var folder = string.Empty;
             var builder = new StringBuilder();
             var ignore = 0;
-            for (int i = folders.Length - 1; i >= 0; i--)
-            {
+            for (int i = folders.Length - 1; i >= 0; i--) {
                 folder = folders[i];
 
                 if (folder.Equals(".")) { continue; }

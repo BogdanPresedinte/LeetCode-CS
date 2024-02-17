@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/334979343/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0500_KeyboardRow
     {
-        public string[] FindWords(string[] words)
-        {
+        public string[] FindWords(string[] words) {
             if (words.Length == 0) return words;
 
             var map = new Dictionary<char, int>();
@@ -26,14 +23,11 @@ namespace LeetCode
                 map[ch] = 3;
 
             var result = new List<string>();
-            foreach (var word in words)
-            {
+            foreach (var word in words) {
                 var flag = map[word[0]];
                 var valid = true;
-                foreach (var ch in word)
-                {
-                    if (flag != map[ch])
-                    {
+                foreach (var ch in word) {
+                    if (flag != map[ch]) {
                         valid = false;
                         break;
                     }

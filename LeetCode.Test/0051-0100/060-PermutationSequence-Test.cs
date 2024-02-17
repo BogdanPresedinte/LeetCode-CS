@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _060_PermutationSequence_Test
     {
-        [TestMethod]
-        public void GetPermutationTest_1()
-        {
+        [Test]
+        public void GetPermutationTest_1() {
             var solution = new _060_PermutationSequence();
 
             var result = solution.GetPermutation(1, 1);
@@ -23,9 +19,8 @@ namespace LeetCode.Test
             Assert.AreEqual("", result);
         }
 
-        [TestMethod]
-        public void GetPermutationTest_2()
-        {
+        [Test]
+        public void GetPermutationTest_2() {
             var solution = new _060_PermutationSequence();
 
             var result = solution.GetPermutation(2, 1);
@@ -44,9 +39,8 @@ namespace LeetCode.Test
             Assert.AreEqual("", result);
         }
 
-        [TestMethod]
-        public void GetPermutationTest_4()
-        {
+        [Test]
+        public void GetPermutationTest_4() {
             var solution = new _060_PermutationSequence();
 
             var result = solution.GetPermutation(4, 1);

@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0292_NimGame_Test
     {
-        [TestMethod]
-        public void CanWinNimTest()
-        {
+        [Test]
+        public void CanWinNimTest() {
             var solution = new _0292_NimGame();
             Assert.IsTrue(solution.CanWinNim(1));
             Assert.IsTrue(solution.CanWinNim(2));

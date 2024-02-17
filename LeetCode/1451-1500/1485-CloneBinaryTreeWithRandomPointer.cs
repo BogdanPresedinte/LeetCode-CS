@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/360429492/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -26,14 +24,12 @@ namespace LeetCode
 
     public class _1485_CloneBinaryTreeWithRandomPointer
     {
-        public NodeCopy CopyRandomBinaryTree(Node root)
-        {
+        public NodeCopy CopyRandomBinaryTree(Node root) {
             var map = new Dictionary<Node, NodeCopy>();
             return CopyRandomBinaryTree(root, map);
         }
 
-        private NodeCopy CopyRandomBinaryTree(Node node, Dictionary<Node, NodeCopy> map)
-        {
+        private NodeCopy CopyRandomBinaryTree(Node node, Dictionary<Node, NodeCopy> map) {
             if (node == null) return null;
             if (map.ContainsKey(node)) return map[node];
 
@@ -54,8 +50,7 @@ namespace LeetCode
             public Node left;
             public Node right;
             public Node random;
-            public Node(int val = 0, Node left = null, Node right = null, Node random = null)
-            {
+            public Node(int val = 0, Node left = null, Node right = null, Node random = null) {
                 this.val = val;
                 this.left = left;
                 this.right = right;
@@ -69,8 +64,7 @@ namespace LeetCode
             public NodeCopy left;
             public NodeCopy right;
             public NodeCopy random;
-            public NodeCopy(int val = 0, NodeCopy left = null, NodeCopy right = null, NodeCopy random = null)
-            {
+            public NodeCopy(int val = 0, NodeCopy left = null, NodeCopy right = null, NodeCopy random = null) {
                 this.val = val;
                 this.left = left;
                 this.right = right;

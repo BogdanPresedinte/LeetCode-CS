@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/360509218/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -23,16 +21,14 @@ namespace LeetCode
      */
     public class _1382_BalanceABinarySearchTree
     {
-        public TreeNode BalanceBST(TreeNode root)
-        {
+        public TreeNode BalanceBST(TreeNode root) {
             var list = new List<int>();
             InOrder(root, list);
 
             return BuildBalanceBST(list, 0, list.Count);
         }
 
-        private TreeNode BuildBalanceBST(List<int> list, int left, int right)
-        {
+        private TreeNode BuildBalanceBST(List<int> list, int left, int right) {
             if (left >= right) return null;
             var mid = left + (right - left) / 2;
 
@@ -42,8 +38,7 @@ namespace LeetCode
             return root;
         }
 
-        private void InOrder(TreeNode node, IList<int> list)
-        {
+        private void InOrder(TreeNode node, IList<int> list) {
             if (node == null) return;
 
             InOrder(node.left, list);

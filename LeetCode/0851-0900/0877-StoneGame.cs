@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/364462771/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0877_StoneGame
     {
-        public bool StoneGame(int[] piles)
-        {
+        public bool StoneGame(int[] piles) {
             int[] dp = new int[piles.Length];
             Array.Copy(piles, dp, piles.Length);
 

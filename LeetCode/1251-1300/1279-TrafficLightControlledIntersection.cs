@@ -4,16 +4,13 @@
 // Link: https://leetcode.com/submissions/detail/327830218/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class TrafficLight
     {
         private int currentRoadId = 1;
 
-        public TrafficLight()
-        {
+        public TrafficLight() {
 
         }
 
@@ -23,10 +20,8 @@ namespace LeetCode
             int direction,     // Direction of the car
             Action turnGreen,  // Use turnGreen() to turn light to green on current road
             Action crossCar    // Use crossCar() to make car cross the intersection
-        )
-        {
-            if (roadId != currentRoadId)
-            {
+        ) {
+            if (roadId != currentRoadId) {
                 turnGreen();
                 currentRoadId = roadId;
             }

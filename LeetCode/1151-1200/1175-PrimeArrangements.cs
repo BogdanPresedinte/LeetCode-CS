@@ -4,16 +4,13 @@
 // Link: https://leetcode.com/submissions/detail/344247885/
 //-----------------------------------------------------------------------------
 
-using System.Linq;
-
 namespace LeetCode
 {
     public class _1175_PrimeArrangements
     {
         private readonly int MOD = 1000000007;
 
-        public int NumPrimeArrangements(int n)
-        {
+        public int NumPrimeArrangements(int n) {
             var primes = new bool[n + 1];
             for (int i = 2; i <= n; i++)
                 primes[i] = true;

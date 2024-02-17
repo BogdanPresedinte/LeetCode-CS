@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0143_ReorderList_Test
     {
-        [TestMethod]
-        public void ReorderList_1()
-        {
+        [Test]
+        public void ReorderList_1() {
             var head = TestHelper.GenerateList(new int[] { 1, 2, 3, 4 });
 
             var solution = new _0143_ReorderList();
@@ -15,9 +11,8 @@ namespace LeetCode.Test
             AssertHelper.AssertLinkList(new int[] { 1, 4, 2, 3 }, head);
         }
 
-        [TestMethod]
-        public void ReorderList_2()
-        {
+        [Test]
+        public void ReorderList_2() {
             var head = TestHelper.GenerateList(new int[] { 1, 2, 3, 4, 5 });
 
             var solution = new _0143_ReorderList();

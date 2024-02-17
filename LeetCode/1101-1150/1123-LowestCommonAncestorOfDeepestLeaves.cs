@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/363101945/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     /**
@@ -26,22 +24,19 @@ namespace LeetCode
         private int maxDepth = 0;
         private TreeNode result = null;
 
-        public TreeNode LcaDeepestLeaves(TreeNode root)
-        {
+        public TreeNode LcaDeepestLeaves(TreeNode root) {
             Helper(root, 0);
             return result;
         }
 
-        public int Helper(TreeNode node, int level)
-        {
+        public int Helper(TreeNode node, int level) {
             if (node == null)
                 return 0;
 
             int left = Helper(node.left, level + 1);
             int right = Helper(node.right, level + 1);
 
-            if (left == right && level + left >= maxDepth)
-            {
+            if (left == right && level + left >= maxDepth) {
                 maxDepth = level + left;
                 result = node;
             }

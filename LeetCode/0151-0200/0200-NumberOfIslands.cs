@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0200_NumberOfIslands
     {
-        public int NumIslands(char[][] grid)
-        {
+        public int NumIslands(char[][] grid) {
             if (grid == null || grid.Length == 0 || grid[0].Length == 0)
                 return 0;
 
@@ -18,8 +17,7 @@ namespace LeetCode
             int n = grid[0].Length;
             for (int i = 0; i < m; i++)
                 for (int j = 0; j < n; j++)
-                    if (grid[i][j] == '1')
-                    {
+                    if (grid[i][j] == '1') {
                         if (i - 1 >= 0 && grid[i - 1][j] == '1')
                             uf.Union(i * n + j, (i - 1) * n + j);
                         if (i + 1 < m && grid[i + 1][j] == '1')
@@ -38,8 +36,7 @@ namespace LeetCode
             private int[] parents;
             private int[] ranks;
 
-            public UnionFind(char[][] grid)
-            {
+            public UnionFind(char[][] grid) {
                 count = 0;
                 int m = grid.Length;
                 int n = grid[0].Length;
@@ -47,10 +44,8 @@ namespace LeetCode
                 parents = new int[m * n];
                 ranks = new int[m * n];
                 for (int i = 0; i < m; i++)
-                    for (int j = 0; j < n; j++)
-                    {
-                        if (grid[i][j] == '1')
-                        {
+                    for (int j = 0; j < n; j++) {
+                        if (grid[i][j] == '1') {
                             parents[i * n + j] = i * n + j;
                             count++;
                         }
@@ -58,28 +53,22 @@ namespace LeetCode
                     }
             }
 
-            public int Find(int index)
-            {
+            public int Find(int index) {
                 if (parents[index] != index)
                     parents[index] = Find(parents[index]);
 
                 return parents[index];
             }
 
-            public void Union(int index1, int index2)
-            {
+            public void Union(int index1, int index2) {
                 var pIndex1 = Find(index1);
                 var pIndex2 = Find(index2);
 
-                if (pIndex1 != pIndex2)
-                {
-                    if (ranks[pIndex1] >= ranks[pIndex2])
-                    {
+                if (pIndex1 != pIndex2) {
+                    if (ranks[pIndex1] >= ranks[pIndex2]) {
                         parents[pIndex2] = pIndex1;
                         ranks[pIndex1]++;
-                    }
-                    else
-                    {
+                    } else {
                         parents[pIndex1] = pIndex2;
                         ranks[pIndex2]++;
                     }
@@ -87,8 +76,7 @@ namespace LeetCode
                 }
             }
 
-            public int Count()
-            {
+            public int Count() {
                 return count;
             }
         }

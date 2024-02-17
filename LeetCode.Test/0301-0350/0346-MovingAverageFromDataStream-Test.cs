@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0346_MovingAverageFromDataStream_Test
     {
-        [TestMethod]
-        public void Next_1()
-        {
+        [Test]
+        public void Next_1() {
             var solution = new _0346_MovingAverageFromDataStream(3);
             var result = solution.Next(1);
             Assert.AreEqual(1, result);

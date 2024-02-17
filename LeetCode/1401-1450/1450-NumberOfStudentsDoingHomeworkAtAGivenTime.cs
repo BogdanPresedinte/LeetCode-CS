@@ -8,13 +8,11 @@ namespace LeetCode
 {
     public class _1450_NumberOfStudentsDoingHomeworkAtAGivenTime
     {
-        public int BusyStudent(int[] startTime, int[] endTime, int queryTime)
-        {
+        public int BusyStudent(int[] startTime, int[] endTime, int queryTime) {
             var n = startTime.Length;
 
             var result = 0;
-            for (int i = 0; i < n; i++)
-            {
+            for (int i = 0; i < n; i++) {
                 if (startTime[i] <= queryTime && endTime[i] >= queryTime)
                     result++;
             }

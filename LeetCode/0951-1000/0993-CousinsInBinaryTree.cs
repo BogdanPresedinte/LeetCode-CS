@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/336107118/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -23,23 +21,19 @@ namespace LeetCode
      */
     public class _0993_CousinsInBinaryTree
     {
-        public bool IsCousins(TreeNode root, int x, int y)
-        {
+        public bool IsCousins(TreeNode root, int x, int y) {
             var queue = new Queue<TreeNode>();
             queue.Enqueue(root);
 
-            while (queue.Count > 0)
-            {
+            while (queue.Count > 0) {
                 var size = queue.Count;
                 bool siblings = false, cousins = false;
 
-                for (int i = 0; i < size; i++)
-                {
+                for (int i = 0; i < size; i++) {
                     var node = queue.Dequeue();
                     if (node == null)
                         siblings = false;
-                    else
-                    {
+                    else {
                         if (node.val == x || node.val == y)
                             if (!cousins)
                                 siblings = cousins = true;

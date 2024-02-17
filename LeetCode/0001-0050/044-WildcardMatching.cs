@@ -8,26 +8,19 @@ namespace LeetCode
 {
     public class _044_WildcardMatching
     {
-        public bool IsMatch(string s, string p)
-        {
+        public bool IsMatch(string s, string p) {
             int sIndex = 0, pIndex = 0;
             int lastSIndex = -1, lastPIndex = -1;
-            while (sIndex < s.Length)
-            {
-                if (pIndex < p.Length && (p[pIndex] == '?' || p[pIndex] == s[sIndex]))
-                {
+            while (sIndex < s.Length) {
+                if (pIndex < p.Length && (p[pIndex] == '?' || p[pIndex] == s[sIndex])) {
                     sIndex++;
                     pIndex++;
-                }
-                else if (pIndex < p.Length && p[pIndex] == '*')
-                {
+                } else if (pIndex < p.Length && p[pIndex] == '*') {
                     pIndex++;
                     if (pIndex == p.Length) { return true; }
                     lastSIndex = sIndex;
                     lastPIndex = pIndex;
-                }
-                else
-                {
+                } else {
                     if (lastSIndex == -1) { return false; }
                     sIndex = ++lastSIndex;
                     pIndex = lastPIndex;

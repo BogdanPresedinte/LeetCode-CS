@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/363109065/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -23,8 +21,7 @@ namespace LeetCode
      */
     public class _1110_DeleteNodesAndReturnForest
     {
-        public IList<TreeNode> DelNodes(TreeNode root, int[] to_delete)
-        {
+        public IList<TreeNode> DelNodes(TreeNode root, int[] to_delete) {
             var set = new HashSet<int>(to_delete);
             var results = new List<TreeNode>();
 
@@ -38,14 +35,12 @@ namespace LeetCode
             return results;
         }
 
-        private void DeleteRoot(TreeNode node, TreeNode parent, HashSet<int> deleteSet, List<TreeNode> results)
-        {
+        private void DeleteRoot(TreeNode node, TreeNode parent, HashSet<int> deleteSet, List<TreeNode> results) {
             if (node == null) return;
             DeleteRoot(node.left, node, deleteSet, results);
             DeleteRoot(node.right, node, deleteSet, results);
 
-            if (deleteSet.Contains(node.val))
-            {
+            if (deleteSet.Contains(node.val)) {
                 if (node.left != null) results.Add(node.left);
                 if (node.right != null) results.Add(node.right);
 

@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0359_LoggerRateLimiter_Test
     {
-        [TestMethod]
-        public void LoggerTest()
-        {
+        [Test]
+        public void LoggerTest() {
             var logger = new _0359_LoggerRateLimiter();
 
             // logging string "foo" at timestamp 1

@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0237_DeleteNodeInALinkedList
     {
-        public void DeleteNode(ListNode node)
-        {
+        public void DeleteNode(ListNode node) {
             node.val = node.next.val;
             node.next = node.next.next;
         }

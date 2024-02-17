@@ -1,14 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1265_PrintImmutableLinkedListInReverse_Test
     {
-        [TestMethod]
-        public void PrintLinkedListInReverse_1()
-        {
+        [Test]
+        public void PrintLinkedListInReverse_1() {
             var result = new List<int>();
 
             var node4 = new _1265_PrintImmutableLinkedListInReverse.ImmutableListNode(result, 4, null);
@@ -21,9 +16,8 @@ namespace LeetCode.Test
             AssertHelper.AssertList(new int[] { 4, 3, 2, 1 }, result);
         }
 
-        [TestMethod]
-        public void PrintLinkedListInReverse_2()
-        {
+        [Test]
+        public void PrintLinkedListInReverse_2() {
             var result = new List<int>();
 
             var node5 = new _1265_PrintImmutableLinkedListInReverse.ImmutableListNode(result, -5, null);
@@ -37,9 +31,8 @@ namespace LeetCode.Test
             AssertHelper.AssertList(new int[] { -5, 3, -1, -4, 0 }, result);
         }
 
-        [TestMethod]
-        public void PrintLinkedListInReverse_3()
-        {
+        [Test]
+        public void PrintLinkedListInReverse_3() {
             var result = new List<int>();
 
             var node6 = new _1265_PrintImmutableLinkedListInReverse.ImmutableListNode(result, -6, null);

@@ -4,7 +4,6 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
 using System.Text;
 
 namespace LeetCode
@@ -12,11 +11,9 @@ namespace LeetCode
     public class _0271_EncodeAndDecodeStrings
     {
         // Encodes a list of strings to a single string.
-        public string encode(IList<string> strs)
-        {
+        public string encode(IList<string> strs) {
             var sb = new StringBuilder();
-            foreach (var str in strs)
-            {
+            foreach (var str in strs) {
                 sb.Append(IntToString(str.Length));
                 sb.Append(str);
             }
@@ -24,12 +21,10 @@ namespace LeetCode
         }
 
         // Decodes a single string to a list of strings.
-        public IList<string> decode(string s)
-        {
+        public IList<string> decode(string s) {
             var index = 0;
             var result = new List<string>();
-            while (index < s.Length)
-            {
+            while (index < s.Length) {
                 var length = StringToint(s.Substring(index, 4));
                 index += 4;
                 result.Add(s.Substring(index, length));
@@ -40,8 +35,7 @@ namespace LeetCode
         }
 
 
-        private string IntToString(int num)
-        {
+        private string IntToString(int num) {
             var bytes = new char[4];
             for (int i = 3; i >= 0; i--)
                 bytes[3 - i] = (char)(num >> (i * 8) & 0xff);
@@ -49,8 +43,7 @@ namespace LeetCode
             return new string(bytes);
         }
 
-        private int StringToint(string num)
-        {
+        private int StringToint(string num) {
             var result = 0;
             foreach (var ch in num)
                 result = (result << 8) + (int)ch;

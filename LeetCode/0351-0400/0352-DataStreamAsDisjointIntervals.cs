@@ -4,10 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/382308922/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace LeetCode
 {
     public class _0352_DataStreamAsDisjointIntervals
@@ -15,37 +11,30 @@ namespace LeetCode
         private readonly SortedDictionary<int, int[]> map;
 
         /** Initialize your data structure here. */
-        public _0352_DataStreamAsDisjointIntervals()
-        {
+        public _0352_DataStreamAsDisjointIntervals() {
             map = new SortedDictionary<int, int[]>();
         }
 
-        public void AddNum(int val)
-        {
+        public void AddNum(int val) {
             if (map.ContainsKey(val)) return;
 
             var keys = map.Keys.ToArray();
             var indexHi = Array.BinarySearch(keys, val);
             indexHi = ~indexHi;
             var indexLo = indexHi - 1;
-            if (indexLo >= 0 && indexLo < keys.Length && indexHi < keys.Length && map[keys[indexLo]][1] + 1 == val && keys[indexHi] == val + 1)
-            {
+            if (indexLo >= 0 && indexLo < keys.Length && indexHi < keys.Length && map[keys[indexLo]][1] + 1 == val && keys[indexHi] == val + 1) {
                 map[keys[indexLo]][1] = map[keys[indexHi]][1];
                 map.Remove(keys[indexHi]);
-            }
-            else if (indexLo >= 0 && indexLo < keys.Length && map[keys[indexLo]][1] + 1 >= val)
+            } else if (indexLo >= 0 && indexLo < keys.Length && map[keys[indexLo]][1] + 1 >= val)
                 map[keys[indexLo]][1] = Math.Max(map[keys[indexLo]][1], val);
-            else if (indexHi < keys.Length && keys[indexHi] == val + 1)
-            {
+            else if (indexHi < keys.Length && keys[indexHi] == val + 1) {
                 map[val] = new int[] { val, map[keys[indexHi]][1] };
                 map.Remove(keys[indexHi]);
-            }
-            else
+            } else
                 map[val] = new int[] { val, val };
         }
 
-        public int[][] GetIntervals()
-        {
+        public int[][] GetIntervals() {
             return map.Values.ToArray();
         }
     }

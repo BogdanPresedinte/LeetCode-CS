@@ -4,20 +4,16 @@
 // Link: https://leetcode.com/submissions/detail/359582880/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0633_SumOfSquareNumbers
     {
-        public bool JudgeSquareSum(int c)
-        {
+        public bool JudgeSquareSum(int c) {
             int i = (int)Math.Sqrt(c);
             if (i * i == c) return true;
 
             int j = 1;
-            while (j <= i)
-            {
+            while (j <= i) {
                 if (i * i + j * j == c) return true;
                 else if (i * i + j * j < c) j++;
                 else i--;

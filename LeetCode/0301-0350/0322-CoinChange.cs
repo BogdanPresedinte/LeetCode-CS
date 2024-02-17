@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/378116878/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0322_CoinChange
     {
-        public int CoinChange(int[] coins, int amount)
-        {
+        public int CoinChange(int[] coins, int amount) {
             var dp = new long[amount + 1];
             for (int i = 0; i <= amount; i++)
                 dp[i] = int.MaxValue;

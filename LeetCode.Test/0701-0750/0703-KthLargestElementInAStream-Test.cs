@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0703_KthLargestElementInAStream_Test
     {
-        [TestMethod]
-        public void KthLargestTest_1()
-        {
+        [Test]
+        public void KthLargestTest_1() {
             int k = 3;
             int[] arr = new int[] { 4, 5, 8, 2 };
 

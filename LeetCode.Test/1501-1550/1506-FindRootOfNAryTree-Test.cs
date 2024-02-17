@@ -1,15 +1,11 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 using static LeetCode._1506_FindRootOfNAryTree;
 
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1506_FindRootOfNAryTree_Test
     {
-        [TestMethod]
-        public void FindRoot_1()
-        {
+        [Test]
+        public void FindRoot_1() {
             var node1 = new Node(1);
             var node2 = new Node(2);
             var node3 = new Node(3);
@@ -30,9 +26,8 @@ namespace LeetCode.Test
             Assert.AreEqual(1, result.val);
         }
 
-        [TestMethod]
-        public void FindRoot_2()
-        {
+        [Test]
+        public void FindRoot_2() {
             var node1 = new Node(1);
             var node2 = new Node(2);
             var node3 = new Node(3);

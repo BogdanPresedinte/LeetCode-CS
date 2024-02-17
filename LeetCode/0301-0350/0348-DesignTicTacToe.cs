@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/366145745/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0348_DesignTicTacToe
@@ -17,8 +15,7 @@ namespace LeetCode
         private int antidiagonal;
 
         /** Initialize your data structure here. */
-        public _0348_DesignTicTacToe(int n)
-        {
+        public _0348_DesignTicTacToe(int n) {
             N = n;
             rows = new int[n];
             cols = new int[n];
@@ -32,8 +29,7 @@ namespace LeetCode
                     0: No one wins.
                     1: Player 1 wins.
                     2: Player 2 wins. */
-        public int Move(int row, int col, int player)
-        {
+        public int Move(int row, int col, int player) {
             var move = player == 1 ? 1 : -1;
             rows[row] += move;
             cols[col] += move;

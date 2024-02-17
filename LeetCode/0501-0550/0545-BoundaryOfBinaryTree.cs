@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/378986347/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -25,8 +23,7 @@ namespace LeetCode
     {
         private enum Flag { ROOT, LEFT, RIGHT, MIDDLE }
 
-        public IList<int> BoundaryOfBinaryTree(TreeNode root)
-        {
+        public IList<int> BoundaryOfBinaryTree(TreeNode root) {
             if (root == null) return new List<int>();
 
             var leftBoundary = new List<int>();
@@ -42,8 +39,7 @@ namespace LeetCode
             return leftBoundary;
         }
 
-        private void PreOrder(TreeNode root, List<int> leftBoundary, List<int> leaves, List<int> rightBoundary, Flag flag)
-        {
+        private void PreOrder(TreeNode root, List<int> leftBoundary, List<int> leaves, List<int> rightBoundary, Flag flag) {
             if (root == null) return;
 
             if (flag == Flag.ROOT || flag == Flag.LEFT)
@@ -59,8 +55,7 @@ namespace LeetCode
                 PreOrder(root.right, leftBoundary, leaves, rightBoundary, UpdateFlag(root, flag, false));
         }
 
-        private Flag UpdateFlag(TreeNode root, Flag flag, bool isLeft)
-        {
+        private Flag UpdateFlag(TreeNode root, Flag flag, bool isLeft) {
             if (flag == Flag.ROOT)
                 return isLeft ? Flag.LEFT : Flag.RIGHT;
 

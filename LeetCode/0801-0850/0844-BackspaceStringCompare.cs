@@ -8,17 +8,14 @@ namespace LeetCode
 {
     public class _0844_BackspaceStringCompare
     {
-        public bool BackspaceCompare(string S, string T)
-        {
+        public bool BackspaceCompare(string S, string T) {
             var i = S.Length - 1;
             var j = T.Length - 1;
             var skipS = 0;
             var skipT = 0;
 
-            while (i >= 0 || j >= 0)
-            {
-                while (i >= 0)
-                {
+            while (i >= 0 || j >= 0) {
+                while (i >= 0) {
                     if (S[i] == '#')
                         skipS++;
                     else if (skipS > 0)
@@ -27,8 +24,7 @@ namespace LeetCode
                         break;
                     i--;
                 }
-                while (j >= 0)
-                {
+                while (j >= 0) {
                     if (T[j] == '#')
                         skipT++;
                     else if (skipT > 0)

@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0201_BitwiseANDOfNumbersRange
     {
-        public int RangeBitwiseAnd(int m, int n)
-        {
+        public int RangeBitwiseAnd(int m, int n) {
             while (m < n)
                 n = n & (n - 1);
 

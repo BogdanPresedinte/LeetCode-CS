@@ -1,15 +1,11 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 using static LeetCode._0428_SerializeAndDeserializeNAryTree;
 
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0428_SerializeAndDeserializeNAryTree_Test
     {
-        [TestMethod]
-        public void SerializeAndDeserializeNAryTreeTest_1()
-        {
+        [Test]
+        public void SerializeAndDeserializeNAryTreeTest_1() {
             var node1 = new Node(1, new List<Node>());
             var node2 = new Node(2, new List<Node>());
             var node3 = new Node(3, new List<Node>());
@@ -42,9 +38,8 @@ namespace LeetCode.Test
             Assert.AreEqual(0, node.children[0].children[1].children.Count);
         }
 
-        [TestMethod]
-        public void SerializeAndDeserializeNAryTreeTest_2()
-        {
+        [Test]
+        public void SerializeAndDeserializeNAryTreeTest_2() {
             var node1 = new Node(1, new List<Node>());
             var node2 = new Node(2, new List<Node>());
             var node3 = new Node(3, new List<Node>());

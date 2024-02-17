@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/363011471/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -23,14 +21,11 @@ namespace LeetCode
      */
     public class _1214_TwoSumBsts
     {
-        public bool TwoSumBSTs(TreeNode root1, TreeNode root2, int target)
-        {
+        public bool TwoSumBSTs(TreeNode root1, TreeNode root2, int target) {
             var stack = new Stack<TreeNode>();
             var values = new HashSet<int>();
-            while (stack.Count > 0 || root1 != null)
-            {
-                while (root1 != null)
-                {
+            while (stack.Count > 0 || root1 != null) {
+                while (root1 != null) {
                     stack.Push(root1);
                     root1 = root1.left;
                 }
@@ -40,10 +35,8 @@ namespace LeetCode
                 root1 = root1.right;
             }
 
-            while (stack.Count > 0 || root2 != null)
-            {
-                while (root2 != null)
-                {
+            while (stack.Count > 0 || root2 != null) {
+                while (root2 != null) {
                     stack.Push(root2);
                     root2 = root2.left;
                 }

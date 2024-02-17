@@ -1,15 +1,11 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 using static LeetCode._1236_WebCrawler;
 
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1236_WebCrawler_Test
     {
-        [TestMethod]
-        public void CrawlTest_1()
-        {
+        [Test]
+        public void CrawlTest_1() {
             var parser = new HtmlParser(new List<string>() {
                 "http://news.yahoo.com",
                 "http://news.yahoo.com/news",
@@ -34,9 +30,8 @@ namespace LeetCode.Test
             }, result);
         }
 
-        [TestMethod]
-        public void CrawlTest_2()
-        {
+        [Test]
+        public void CrawlTest_2() {
             var parser = new HtmlParser(new List<string>() {
                 "http://news.yahoo.com",
                 "http://news.yahoo.com/news",

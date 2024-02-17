@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0273_IntegerToEnglishWords
     {
-        public string NumberToWords(int num)
-        {
+        public string NumberToWords(int num) {
             if (num == 0) return "Zero";
 
             int billion = num / 1000000000;
@@ -19,18 +18,15 @@ namespace LeetCode
 
             string result = "";
             if (billion != 0) result = ThreeDigitsToString(billion) + " Billion";
-            if (million != 0)
-            {
+            if (million != 0) {
                 if (!string.IsNullOrEmpty(result)) result += " ";
                 result += ThreeDigitsToString(million) + " Million";
             }
-            if (thousand != 0)
-            {
+            if (thousand != 0) {
                 if (!string.IsNullOrEmpty(result)) result += " ";
                 result += ThreeDigitsToString(thousand) + " Thousand";
             }
-            if (rest != 0)
-            {
+            if (rest != 0) {
                 if (!string.IsNullOrEmpty(result)) result += " ";
                 result += ThreeDigitsToString(rest);
             }
@@ -38,10 +34,8 @@ namespace LeetCode
         }
 
 
-        private string OneDigitToString(int num)
-        {
-            switch (num)
-            {
+        private string OneDigitToString(int num) {
+            switch (num) {
                 case 1: return "One";
                 case 2: return "Two";
                 case 3: return "Three";
@@ -55,10 +49,8 @@ namespace LeetCode
             return "";
         }
 
-        private string TwoDigitsLessThan20ToString(int num)
-        {
-            switch (num)
-            {
+        private string TwoDigitsLessThan20ToString(int num) {
+            switch (num) {
                 case 10: return "Ten";
                 case 11: return "Eleven";
                 case 12: return "Twelve";
@@ -73,10 +65,8 @@ namespace LeetCode
             return "";
         }
 
-        private string TenMultipleToString(int num)
-        {
-            switch (num)
-            {
+        private string TenMultipleToString(int num) {
+            switch (num) {
                 case 2: return "Twenty";
                 case 3: return "Thirty";
                 case 4: return "Forty";
@@ -89,16 +79,14 @@ namespace LeetCode
             return "";
         }
 
-        private string TwoDigitsToString(int num)
-        {
+        private string TwoDigitsToString(int num) {
             if (num == 0)
                 return "";
             else if (num < 10)
                 return OneDigitToString(num);
             else if (num < 20)
                 return TwoDigitsLessThan20ToString(num);
-            else
-            {
+            else {
                 int tenner = num / 10;
                 int rest = num - tenner * 10;
                 if (rest != 0)
@@ -108,8 +96,7 @@ namespace LeetCode
             }
         }
 
-        private string ThreeDigitsToString(int num)
-        {
+        private string ThreeDigitsToString(int num) {
             int hundred = num / 100;
             int rest = num - hundred * 100;
             string res = "";

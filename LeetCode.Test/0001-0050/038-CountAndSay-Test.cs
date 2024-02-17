@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _038_CountAndSay_Test
     {
-        [TestMethod]
-        public void CountAndSayTest()
-        {
+        [Test]
+        public void CountAndSayTest() {
             var solution = new _038_CountAndSay();
 
             var result = solution.CountAndSay(2);
@@ -38,18 +34,16 @@ namespace LeetCode.Test
             Assert.AreEqual("13211311123113112211", result);
         }
 
-        [TestMethod]
-        public void CountAndSayTest_NEqualOne()
-        {
+        [Test]
+        public void CountAndSayTest_NEqualOne() {
             var solution = new _038_CountAndSay();
 
             var result = solution.CountAndSay(1);
             Assert.AreEqual("1", result);
         }
 
-        [TestMethod]
-        public void CountAndSayTest_NLessThanOne()
-        {
+        [Test]
+        public void CountAndSayTest_NLessThanOne() {
             var solution = new _038_CountAndSay();
 
             var result = solution.CountAndSay(0);

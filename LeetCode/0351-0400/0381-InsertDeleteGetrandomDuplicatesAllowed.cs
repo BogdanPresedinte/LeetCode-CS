@@ -4,10 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/368921727/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace LeetCode
 {
     public class _0381_InsertDeleteGetrandomDuplicatesAllowed
@@ -17,16 +13,14 @@ namespace LeetCode
         private readonly IList<int> nums;
 
         /** Initialize your data structure here. */
-        public _0381_InsertDeleteGetrandomDuplicatesAllowed()
-        {
+        public _0381_InsertDeleteGetrandomDuplicatesAllowed() {
             random = new Random();
             locations = new Dictionary<int, ISet<int>>();
             nums = new List<int>();
         }
 
         /** Inserts a value to the collection. Returns true if the collection did not already contain the specified element. */
-        public bool Insert(int val)
-        {
+        public bool Insert(int val) {
             if (!locations.ContainsKey(val))
                 locations[val] = new HashSet<int>();
 
@@ -36,8 +30,7 @@ namespace LeetCode
         }
 
         /** Removes a value from the collection. Returns true if the collection contained the specified element. */
-        public bool Remove(int val)
-        {
+        public bool Remove(int val) {
             if (!locations.ContainsKey(val)) return false;
 
             var id = locations[val].First();
@@ -55,8 +48,7 @@ namespace LeetCode
         }
 
         /** Get a random element from the collection. */
-        public int GetRandom()
-        {
+        public int GetRandom() {
             var id = random.Next(nums.Count);
             return nums[id];
         }

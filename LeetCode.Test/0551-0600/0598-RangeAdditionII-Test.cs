@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0598_RangeAdditionII_Test
     {
-        [TestMethod]
-        public void MaxCount_1()
-        {
+        [Test]
+        public void MaxCount_1() {
             var solution = new _0598_RangeAdditionII();
             var result = solution.MaxCount(3, 2, new int[][] {
                 new int[] { 2, 2 },
@@ -16,9 +12,8 @@ namespace LeetCode.Test
             Assert.AreEqual(4, result);
         }
 
-        [TestMethod]
-        public void MaxCount_2()
-        {
+        [Test]
+        public void MaxCount_2() {
             var solution = new _0598_RangeAdditionII();
             var result = solution.MaxCount(26, 17, new int[][] {
                 new int[] { 20, 10 },

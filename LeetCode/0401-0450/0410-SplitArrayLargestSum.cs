@@ -4,38 +4,30 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0410_SplitArrayLargestSum
     {
-        public int SplitArray(int[] nums, int m)
-        {
+        public int SplitArray(int[] nums, int m) {
             var largestNumber = 0;
             var total = 0;
-            for (int i = 0; i < nums.Length; i++)
-            {
+            for (int i = 0; i < nums.Length; i++) {
                 largestNumber = Math.Max(nums[i], largestNumber);
                 total += nums[i];
             }
 
             var l = largestNumber;
             var h = total;
-            while (l <= h)
-            {
+            while (l <= h) {
                 var mid = l + (h - l) / 2;
                 var count = 1;
                 var currentSum = 0;
-                for (var i = 0; i < nums.Length; i++)
-                {
-                    if (currentSum + nums[i] > mid)
-                    {
+                for (var i = 0; i < nums.Length; i++) {
+                    if (currentSum + nums[i] > mid) {
                         count++;
                         if (count > m) break;
                         currentSum = nums[i];
-                    }
-                    else
+                    } else
                         currentSum += nums[i];
                 }
                 if (count <= m)

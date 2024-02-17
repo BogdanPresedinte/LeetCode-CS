@@ -4,20 +4,16 @@
 // Link: https://leetcode.com/submissions/detail/356829519/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0174_DungeonGame
     {
-        public int CalculateMinimumHP(int[][] dungeon)
-        {
+        public int CalculateMinimumHP(int[][] dungeon) {
             var rows = dungeon.Length;
             var cols = dungeon[0].Length;
 
             for (int i = rows - 1; i >= 0; i--)
-                for (int j = cols - 1; j >= 0; j--)
-                {
+                for (int j = cols - 1; j >= 0; j--) {
                     if (i == rows - 1 && j == cols - 1) continue;
 
                     int rightValue = int.MinValue, downValue = int.MinValue;

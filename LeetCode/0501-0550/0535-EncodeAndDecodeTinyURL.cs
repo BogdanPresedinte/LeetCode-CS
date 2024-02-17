@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/262781663/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace LeetCode
@@ -18,8 +16,7 @@ namespace LeetCode
         private readonly IDictionary<string, string> map = new Dictionary<string, string>();
         private readonly Random random = new Random();
 
-        public string GetKey()
-        {
+        public string GetKey() {
             var sb = new StringBuilder();
             for (int i = 0; i < 8; i++)
                 sb.Append(ALPHABET[random.Next(62)]);
@@ -28,11 +25,9 @@ namespace LeetCode
         }
 
         // Encodes a URL to a shortened URL
-        public string encode(string longUrl)
-        {
+        public string encode(string longUrl) {
             var key = string.Empty;
-            do
-            {
+            do {
                 key = GetKey();
             } while (map.ContainsKey(key));
 
@@ -41,8 +36,7 @@ namespace LeetCode
         }
 
         // Decodes a shortened URL to its original URL.
-        public string decode(string shortUrl)
-        {
+        public string decode(string shortUrl) {
             var key = shortUrl.Replace(DOMAIN, "");
             map.TryGetValue(key, out var value);
             return value;

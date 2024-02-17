@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0427_ConstructQuadTree_Test
     {
-        [TestMethod]
-        public void Construct_1()
-        {
+        [Test]
+        public void Construct_1() {
             var solution = new _0427_ConstructQuadTree();
             var result = solution.Construct(new int[][] {
                 new int[] { 0, 1 },
@@ -49,9 +45,8 @@ namespace LeetCode.Test
             Assert.IsNull(bottomRight.bottomRight);
         }
 
-        [TestMethod]
-        public void Construct_2()
-        {
+        [Test]
+        public void Construct_2() {
             var solution = new _0427_ConstructQuadTree();
             var result = solution.Construct(new int[][] {
                 new int[] { 1, 1, 1, 1, 0, 0, 0, 0 },
@@ -128,9 +123,8 @@ namespace LeetCode.Test
             Assert.IsNull(bottomRight.bottomRight);
         }
 
-        [TestMethod]
-        public void Construct_3()
-        {
+        [Test]
+        public void Construct_3() {
             var solution = new _0427_ConstructQuadTree();
             var result = solution.Construct(new int[][] {
                 new int[] { 1, 1 },
@@ -144,9 +138,8 @@ namespace LeetCode.Test
             Assert.IsNull(result.bottomRight);
         }
 
-        [TestMethod]
-        public void Construct_4()
-        {
+        [Test]
+        public void Construct_4() {
             var solution = new _0427_ConstructQuadTree();
             var result = solution.Construct(new int[][] {
                 new int[] { 0 },
@@ -159,9 +152,8 @@ namespace LeetCode.Test
             Assert.IsNull(result.bottomRight);
         }
 
-        [TestMethod]
-        public void Construct_5()
-        {
+        [Test]
+        public void Construct_5() {
             var solution = new _0427_ConstructQuadTree();
             var result = solution.Construct(new int[][] {
                 new int[] { 1, 1, 0, 0 },

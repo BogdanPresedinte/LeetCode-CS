@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/387689354/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     /**
@@ -15,8 +13,7 @@ namespace LeetCode
      */
     public class _0470_ImplementRand10UsingRand7 : Rand7Base
     {
-        public int Rand10()
-        {
+        public int Rand10() {
             int r = 40;
 
             while (r >= 40)
@@ -30,8 +27,7 @@ namespace LeetCode
     {
         private readonly Random random = new Random();
 
-        public int Rand7()
-        {
+        public int Rand7() {
             return random.Next(7) + 1;
         }
     }

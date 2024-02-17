@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/359629468/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -19,8 +17,7 @@ namespace LeetCode
 
     public class _1265_PrintImmutableLinkedListInReverse
     {
-        public void PrintLinkedListInReverse(ImmutableListNode head)
-        {
+        public void PrintLinkedListInReverse(ImmutableListNode head) {
             if (head == null) return;
 
             PrintLinkedListInReverse(head.GetNext());
@@ -32,19 +29,16 @@ namespace LeetCode
             private readonly IList<int> list;
 
             public ImmutableListNode(IList<int> list, int value, ImmutableListNode next)
-                : base(value)
-            {
+                : base(value) {
                 this.list = list;
                 this.next = next;
             }
 
-            public void PrintValue()
-            {
+            public void PrintValue() {
                 list.Add(val);
             }
 
-            public ImmutableListNode GetNext()
-            {
+            public ImmutableListNode GetNext() {
                 return (ImmutableListNode)next;
             }
         }

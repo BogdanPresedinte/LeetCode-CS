@@ -1,14 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0624_MaximumDistanceInArrays_Test
     {
-        [TestMethod]
-        public void MaxDistance_1()
-        {
+        [Test]
+        public void MaxDistance_1() {
             var solution = new _0624_MaximumDistanceInArrays();
             var result = solution.MaxDistance(new List<IList<int>>()
             {

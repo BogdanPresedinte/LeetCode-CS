@@ -4,8 +4,6 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _099_RecoverBinarySearchTree
@@ -16,20 +14,16 @@ namespace LeetCode
         private TreeNode second = null;
         private TreeNode current = null;
 
-        public void RecoverTree(TreeNode root)
-        {
+        public void RecoverTree(TreeNode root) {
             current = root;
-            while (stack.Count > 0 || current != null)
-            {
-                while (current != null)
-                {
+            while (stack.Count > 0 || current != null) {
+                while (current != null) {
                     stack.Push(current);
                     current = current.left;
                 }
 
                 current = stack.Pop();
-                if (prev != null && current.val < prev.val)
-                {
+                if (prev != null && current.val < prev.val) {
                     if (first == null) first = prev;
                     second = current;
                 }

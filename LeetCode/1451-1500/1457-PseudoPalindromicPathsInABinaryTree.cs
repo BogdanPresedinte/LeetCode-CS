@@ -24,14 +24,12 @@ namespace LeetCode
         private int[] counts = new int[10];
         private int result = 0;
 
-        public int PseudoPalindromicPaths(TreeNode root)
-        {
+        public int PseudoPalindromicPaths(TreeNode root) {
             PreOrder(root);
             return result;
         }
 
-        private void PreOrder(TreeNode root)
-        {
+        private void PreOrder(TreeNode root) {
             if (root == null) return;
 
             counts[root.val]++;
@@ -45,8 +43,7 @@ namespace LeetCode
             counts[root.val]--;
         }
 
-        private bool IsPalindromicPath()
-        {
+        private bool IsPalindromicPath() {
             var odd = 0;
             foreach (var val in counts)
                 odd += val % 2 == 1 ? 1 : 0;

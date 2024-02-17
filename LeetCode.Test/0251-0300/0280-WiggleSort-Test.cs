@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0280_WiggleSort_Test
     {
-        [TestMethod]
-        public void WiggleSort_1()
-        {
+        [Test]
+        public void WiggleSort_1() {
             var arr = new int[] { 3, 5, 2, 1, 6, 4 };
 
             var solution = new _0280_WiggleSort();

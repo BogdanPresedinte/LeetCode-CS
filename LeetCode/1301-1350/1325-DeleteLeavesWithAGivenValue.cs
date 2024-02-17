@@ -21,8 +21,7 @@ namespace LeetCode
      */
     public class _1325_DeleteLeavesWithAGivenValue
     {
-        public TreeNode RemoveLeafNodes(TreeNode root, int target)
-        {
+        public TreeNode RemoveLeafNodes(TreeNode root, int target) {
             if (root == null) return root;
 
             root.left = RemoveLeafNodes(root.left, target);

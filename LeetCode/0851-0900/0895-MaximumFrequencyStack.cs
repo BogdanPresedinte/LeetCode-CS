@@ -4,8 +4,6 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0895_MaximumFrequencyStack
@@ -14,15 +12,13 @@ namespace LeetCode
         private readonly IDictionary<int, Stack<int>> frequencyValues;
         private int maxFrequency;
 
-        public _0895_MaximumFrequencyStack()
-        {
+        public _0895_MaximumFrequencyStack() {
             frequencyMap = new Dictionary<int, int>();
             frequencyValues = new Dictionary<int, Stack<int>>();
             maxFrequency = 0;
         }
 
-        public void Push(int x)
-        {
+        public void Push(int x) {
             if (!frequencyMap.ContainsKey(x))
                 frequencyMap[x] = 0;
             frequencyMap[x] += 1;
@@ -35,8 +31,7 @@ namespace LeetCode
             frequencyValues[frequencyMap[x]].Push(x);
         }
 
-        public int Pop()
-        {
+        public int Pop() {
             var result = frequencyValues[maxFrequency].Pop();
 
             frequencyMap[result] -= 1;

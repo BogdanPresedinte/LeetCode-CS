@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1380_LuckyNumbersInAMatrix_Test
     {
-        [TestMethod]
-        public void LuckyNumbers_1()
-        {
+        [Test]
+        public void LuckyNumbers_1() {
             var solution = new _1380_LuckyNumbersInAMatrix();
             var result = solution.LuckyNumbers(new int[][] {
                 new int[] { 3, 7, 8 },
@@ -17,9 +13,8 @@ namespace LeetCode.Test
             AssertHelper.AssertList(new int[] { 15 }, result);
         }
 
-        [TestMethod]
-        public void LuckyNumbers_2()
-        {
+        [Test]
+        public void LuckyNumbers_2() {
             var solution = new _1380_LuckyNumbersInAMatrix();
             var result = solution.LuckyNumbers(new int[][] {
                 new int[] { 1, 10, 4, 2 },
@@ -29,9 +24,8 @@ namespace LeetCode.Test
             AssertHelper.AssertList(new int[] { 12 }, result);
         }
 
-        [TestMethod]
-        public void LuckyNumbers_3()
-        {
+        [Test]
+        public void LuckyNumbers_3() {
             var solution = new _1380_LuckyNumbersInAMatrix();
             var result = solution.LuckyNumbers(new int[][] {
                 new int[] { 7, 8 },
@@ -40,9 +34,8 @@ namespace LeetCode.Test
             AssertHelper.AssertList(new int[] { 7 }, result);
         }
 
-        [TestMethod]
-        public void LuckyNumbers_4()
-        {
+        [Test]
+        public void LuckyNumbers_4() {
             var solution = new _1380_LuckyNumbersInAMatrix();
             var result = solution.LuckyNumbers(new int[][] {
                 new int[] { 1, 4 },

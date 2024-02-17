@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1037_ValidBoomerang_Test
     {
-        [TestMethod]
-        public void IsBoomerang_1()
-        {
+        [Test]
+        public void IsBoomerang_1() {
             var solution = new _1037_ValidBoomerang();
             var result = solution.IsBoomerang(new int[][] {
                 new int[] { 1, 2 },
@@ -17,9 +13,8 @@ namespace LeetCode.Test
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void IsBoomerang_2()
-        {
+        [Test]
+        public void IsBoomerang_2() {
             var solution = new _1037_ValidBoomerang();
             var result = solution.IsBoomerang(new int[][] {
                 new int[] { 1, 1 },
@@ -29,9 +24,8 @@ namespace LeetCode.Test
             Assert.IsFalse(result);
         }
 
-        [TestMethod]
-        public void IsBoomerang_3()
-        {
+        [Test]
+        public void IsBoomerang_3() {
             var solution = new _1037_ValidBoomerang();
             var result = solution.IsBoomerang(new int[][] {
                 new int[] { 0, 1 },
@@ -41,9 +35,8 @@ namespace LeetCode.Test
             Assert.IsFalse(result);
         }
 
-        [TestMethod]
-        public void IsBoomerang_4()
-        {
+        [Test]
+        public void IsBoomerang_4() {
             var solution = new _1037_ValidBoomerang();
             var result = solution.IsBoomerang(new int[][] {
                 new int[] { 1, 0 },
@@ -53,9 +46,8 @@ namespace LeetCode.Test
             Assert.IsFalse(result);
         }
 
-        [TestMethod]
-        public void IsBoomerang_5()
-        {
+        [Test]
+        public void IsBoomerang_5() {
             var solution = new _1037_ValidBoomerang();
             var result = solution.IsBoomerang(new int[][] {
                 new int[] { 0, 1 },
@@ -64,10 +56,9 @@ namespace LeetCode.Test
             });
             Assert.IsFalse(result);
         }
-        
-        [TestMethod]
-        public void IsBoomerang_6()
-        {
+
+        [Test]
+        public void IsBoomerang_6() {
             var solution = new _1037_ValidBoomerang();
             var result = solution.IsBoomerang(new int[][] {
                 new int[] { 1, 0 },

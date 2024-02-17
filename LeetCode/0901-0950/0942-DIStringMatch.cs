@@ -8,12 +8,10 @@ namespace LeetCode
 {
     public class _0942_DIStringMatch
     {
-        public int[] DiStringMatch(string S)
-        {
+        public int[] DiStringMatch(string S) {
             var result = new int[S.Length + 1];
             int lo = 0, hi = S.Length;
-            for (int i = 0; i < S.Length; i++)
-            {
+            for (int i = 0; i < S.Length; i++) {
                 if (S[i] == 'I') result[i] = lo++;
                 else if (S[i] == 'D') result[i] = hi--;
             }

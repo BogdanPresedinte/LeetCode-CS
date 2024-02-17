@@ -4,18 +4,14 @@
 // Link: https://leetcode.com/submissions/detail/257155145/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0929_UniqueEmailAddresses
     {
-        public int NumUniqueEmails(string[] emails)
-        {
+        public int NumUniqueEmails(string[] emails) {
             var hashSet = new HashSet<string>();
 
-            foreach (var email in emails)
-            {
+            foreach (var email in emails) {
                 var at_index = email.IndexOf('@');
                 var local = email.Substring(0, at_index);
                 var domain = email.Substring(at_index);

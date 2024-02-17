@@ -16,8 +16,7 @@ namespace LeetCode
         private readonly string str;
         private int index;
 
-        public _0157_ReadNCharactersGivenRead4(string str)
-        {
+        public _0157_ReadNCharactersGivenRead4(string str) {
             index = 0;
             this.str = str;
         }
@@ -28,17 +27,14 @@ namespace LeetCode
          * @param n   Number of characters to read
          * @return    The number of actual characters read
          */
-        public int Read(char[] buf, int n)
-        {
+        public int Read(char[] buf, int n) {
             if (n == 0) return 0;
 
             char[] myBuf = new char[4];
             int idx = 0;
-            while (idx < n)
-            {
+            while (idx < n) {
                 int curr = Read4(myBuf);
-                for (int i = 0; i < curr && idx < n; i++)
-                {
+                for (int i = 0; i < curr && idx < n; i++) {
                     buf[idx] = myBuf[i];
                     idx++;
                 }
@@ -47,10 +43,8 @@ namespace LeetCode
             return idx;
         }
 
-        public int Read4(char[] buf)
-        {
-            for (int i = 0; i < 4; i++)
-            {
+        public int Read4(char[] buf) {
+            for (int i = 0; i < 4; i++) {
                 if (index < str.Length)
                     buf[i] = str[index++];
                 else

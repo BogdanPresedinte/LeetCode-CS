@@ -4,15 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/390096592/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Linq;
-
 namespace LeetCode
 {
     public class _0220_ContainsDuplicateIII
     {
-        public bool ContainsNearbyAlmostDuplicate(int[] nums, int k, int t)
-        {
+        public bool ContainsNearbyAlmostDuplicate(int[] nums, int k, int t) {
             var arr = nums.Select((num, index) => new { num, index })
                           .OrderBy(u => u.num)
                           .ToArray();

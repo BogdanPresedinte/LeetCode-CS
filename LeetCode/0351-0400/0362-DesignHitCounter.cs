@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/369498426/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0362_DesignHitCounter
@@ -13,15 +11,13 @@ namespace LeetCode
         private readonly Queue<int> queue;
 
         /** Initialize your data structure here. */
-        public _0362_DesignHitCounter()
-        {
+        public _0362_DesignHitCounter() {
             queue = new Queue<int>();
         }
 
         /** Record a hit.
             @param timestamp - The current timestamp (in seconds granularity). */
-        public void Hit(int timestamp)
-        {
+        public void Hit(int timestamp) {
             while (queue.Count > 0 && queue.Peek() <= timestamp - 300)
                 queue.Dequeue();
 
@@ -30,8 +26,7 @@ namespace LeetCode
 
         /** Return the number of hits in the past 5 minutes.
             @param timestamp - The current timestamp (in seconds granularity). */
-        public int GetHits(int timestamp)
-        {
+        public int GetHits(int timestamp) {
             while (queue.Count > 0 && queue.Peek() <= timestamp - 300)
                 queue.Dequeue();
 

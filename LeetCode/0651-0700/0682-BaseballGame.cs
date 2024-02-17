@@ -8,26 +8,20 @@ namespace LeetCode
 {
     public class _0682_BaseballGame
     {
-        public int CalPoints(string[] ops)
-        {
+        public int CalPoints(string[] ops) {
             var roundPoints = new int[ops.Length];
             var index = 0;
 
-            foreach (var op in ops)
-            {
+            foreach (var op in ops) {
                 if (op == "C")
                     index--;
-                else if (op == "D")
-                {
+                else if (op == "D") {
                     roundPoints[index] = roundPoints[index - 1] * 2;
                     index++;
-                }
-                else if (op == "+")
-                {
+                } else if (op == "+") {
                     roundPoints[index] = roundPoints[index - 1] + roundPoints[index - 2];
                     index++;
-                }
-                else
+                } else
                     roundPoints[index++] = int.Parse(op);
             }
 

@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1152_AnalyzeUserWebsiteVisitPattern_Test
     {
-        [TestMethod]
-        public void MostVisitedPattern_1()
-        {
+        [Test]
+        public void MostVisitedPattern_1() {
             var solution = new _1152_AnalyzeUserWebsiteVisitPattern();
             var result = solution.MostVisitedPattern(
                 new string[] { "joe", "joe", "joe", "james", "james", "james", "james", "mary", "mary", "mary" },
@@ -16,9 +12,8 @@ namespace LeetCode.Test
             AssertHelper.AssertList(new string[] { "home", "about", "career" }, result);
         }
 
-        [TestMethod]
-        public void MostVisitedPattern_2()
-        {
+        [Test]
+        public void MostVisitedPattern_2() {
             var solution = new _1152_AnalyzeUserWebsiteVisitPattern();
             var result = solution.MostVisitedPattern(
                 new string[] { "u1", "u1", "u1", "u2", "u2", "u2" },
@@ -27,9 +22,8 @@ namespace LeetCode.Test
             AssertHelper.AssertList(new string[] { "a", "b", "a" }, result);
         }
 
-        [TestMethod]
-        public void MostVisitedPattern_3()
-        {
+        [Test]
+        public void MostVisitedPattern_3() {
             var solution = new _1152_AnalyzeUserWebsiteVisitPattern();
             var result = solution.MostVisitedPattern(
                 new string[] { "h", "eiy", "cq", "h", "cq", "txldsscx", "cq", "txldsscx", "h", "cq", "cq" },
@@ -38,9 +32,8 @@ namespace LeetCode.Test
             AssertHelper.AssertList(new string[] { "hibympufi", "hibympufi", "yljmntrclw" }, result);
         }
 
-        [TestMethod]
-        public void MostVisitedPattern_4()
-        {
+        [Test]
+        public void MostVisitedPattern_4() {
             var solution = new _1152_AnalyzeUserWebsiteVisitPattern();
             var result = solution.MostVisitedPattern(
                 new string[] { "lpgbr", "by", "by", "lpgbr", "by", "ditctqnahs", "by" },

@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1261_FindElementsInAContaminatedBinaryTree_Test
     {
-        [TestMethod]
-        public void FindElementsInAContaminatedBinaryTree_1()
-        {
+        [Test]
+        public void FindElementsInAContaminatedBinaryTree_1() {
             var root = TestHelper.GenerateTree(new int?[] { -1, null, -1 });
 
             var solution = new _1261_FindElementsInAContaminatedBinaryTree(root);
@@ -15,9 +11,8 @@ namespace LeetCode.Test
             Assert.IsTrue(solution.Find(2));
         }
 
-        [TestMethod]
-        public void FindElementsInAContaminatedBinaryTree_2()
-        {
+        [Test]
+        public void FindElementsInAContaminatedBinaryTree_2() {
             var root = TestHelper.GenerateTree(new int?[] { -1, -1, -1, -1, -1 });
 
             var solution = new _1261_FindElementsInAContaminatedBinaryTree(root);
@@ -26,9 +21,8 @@ namespace LeetCode.Test
             Assert.IsFalse(solution.Find(5));
         }
 
-        [TestMethod]
-        public void FindElementsInAContaminatedBinaryTree_3()
-        {
+        [Test]
+        public void FindElementsInAContaminatedBinaryTree_3() {
             var root = TestHelper.GenerateTree(new int?[] { -1, null, -1, -1, null, -1 });
 
             var solution = new _1261_FindElementsInAContaminatedBinaryTree(root);

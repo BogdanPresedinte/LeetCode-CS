@@ -19,14 +19,12 @@ namespace LeetCode
     {
         private TreeNode result;
 
-        public TreeNode LowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q)
-        {
+        public TreeNode LowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
             Find(root, p, q);
             return result;
         }
 
-        public bool Find(TreeNode root, TreeNode p, TreeNode q)
-        {
+        public bool Find(TreeNode root, TreeNode p, TreeNode q) {
             if (root == null) return false;
 
             var left = Find(root.left, p, q) ? 1 : 0;

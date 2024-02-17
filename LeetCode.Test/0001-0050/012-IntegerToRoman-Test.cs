@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _012_IntegerToRoman_Test
     {
-        [TestMethod]
-        public void IntToRomanTest_LessThan10()
-        {
+        [Test]
+        public void IntToRomanTest_LessThan10() {
             var solution = new _012_IntegerToRoman();
 
             var result = solution.IntToRoman(1);
@@ -26,9 +22,8 @@ namespace LeetCode.Test
             Assert.AreEqual("IX", result);
         }
 
-        [TestMethod]
-        public void IntToRomanTest_LessThan100()
-        {
+        [Test]
+        public void IntToRomanTest_LessThan100() {
             var solution = new _012_IntegerToRoman();
 
             var result = solution.IntToRoman(10);
@@ -47,9 +42,8 @@ namespace LeetCode.Test
             Assert.AreEqual("XC", result);
         }
 
-        [TestMethod]
-        public void IntToRomanTest_LessThan1000()
-        {
+        [Test]
+        public void IntToRomanTest_LessThan1000() {
             var solution = new _012_IntegerToRoman();
 
             var result = solution.IntToRoman(100);
@@ -68,9 +62,8 @@ namespace LeetCode.Test
             Assert.AreEqual("CM", result);
         }
 
-        [TestMethod]
-        public void IntToRomanTest_LessThan4000()
-        {
+        [Test]
+        public void IntToRomanTest_LessThan4000() {
             var solution = new _012_IntegerToRoman();
 
             var result = solution.IntToRoman(1000);

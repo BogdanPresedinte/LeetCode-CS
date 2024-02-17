@@ -21,13 +21,11 @@ namespace LeetCode
      */
     public class _0889_ConstructBinaryTreeFromPreorderAndPostorderTraversal
     {
-        public TreeNode ConstructFromPrePost(int[] pre, int[] post)
-        {
+        public TreeNode ConstructFromPrePost(int[] pre, int[] post) {
             return ConstructFromPrePost(pre, post, 0, pre.Length - 1, 0, post.Length - 1);
         }
 
-        private TreeNode ConstructFromPrePost(int[] pre, int[] post, int preLeft, int preRight, int postLeft, int postRight)
-        {
+        private TreeNode ConstructFromPrePost(int[] pre, int[] post, int preLeft, int preRight, int postLeft, int postRight) {
             var length = preRight - preLeft;
             if (length < 0) return null;
             var root = new TreeNode(pre[preLeft]);

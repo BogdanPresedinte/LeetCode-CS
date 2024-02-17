@@ -8,14 +8,12 @@ namespace LeetCode
 {
     public class _0383_RansomNote
     {
-        public bool CanConstruct(string ransomNote, string magazine)
-        {
+        public bool CanConstruct(string ransomNote, string magazine) {
             var counts = new int[26];
             foreach (var ch in magazine)
                 counts[ch - 'a']++;
 
-            foreach (var ch in ransomNote)
-            {
+            foreach (var ch in ransomNote) {
                 if (counts[ch - 'a'] == 0)
                     return false;
                 counts[ch - 'a']--;

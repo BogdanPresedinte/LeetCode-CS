@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0812_LargestTriangleArea_Test
     {
-        [TestMethod]
-        public void LargestTriangleArea_1()
-        {
+        [Test]
+        public void LargestTriangleArea_1() {
             var solution = new _0812_LargestTriangleArea();
             var result = solution.LargestTriangleArea(new int[][] {
                 new int[] { 0, 0 },

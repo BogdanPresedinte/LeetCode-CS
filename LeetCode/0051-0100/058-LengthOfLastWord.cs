@@ -8,17 +8,14 @@ namespace LeetCode
 {
     public class _058_LengthOfLastWord
     {
-        public int LengthOfLastWord(string s)
-        {
+        public int LengthOfLastWord(string s) {
             var index = s.Length - 1;
-            while (index >= 0 && s[index] == ' ')
-            {
+            while (index >= 0 && s[index] == ' ') {
                 index--;
             }
 
             var result = 0;
-            while (index >= 0 && s[index] != ' ')
-            {
+            while (index >= 0 && s[index] != ' ') {
                 result++;
                 index--;
             }

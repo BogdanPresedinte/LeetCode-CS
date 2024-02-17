@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1024_VideoStitching_Test
     {
-        [TestMethod]
-        public void VideoStitching_1()
-        {
+        [Test]
+        public void VideoStitching_1() {
             var solution = new _1024_VideoStitching();
             var result = solution.VideoStitching(new int[][] {
                 new int[] { 0, 2 },
@@ -20,9 +16,8 @@ namespace LeetCode.Test
             Assert.AreEqual(3, result);
         }
 
-        [TestMethod]
-        public void VideoStitching_2()
-        {
+        [Test]
+        public void VideoStitching_2() {
             var solution = new _1024_VideoStitching();
             var result = solution.VideoStitching(new int[][] {
                 new int[] { 0, 1 },
@@ -31,9 +26,8 @@ namespace LeetCode.Test
             Assert.AreEqual(-1, result);
         }
 
-        [TestMethod]
-        public void VideoStitching_3()
-        {
+        [Test]
+        public void VideoStitching_3() {
             var solution = new _1024_VideoStitching();
             var result = solution.VideoStitching(new int[][] {
                 new int[] { 0, 1 },
@@ -56,9 +50,8 @@ namespace LeetCode.Test
             Assert.AreEqual(3, result);
         }
 
-        [TestMethod]
-        public void VideoStitching_4()
-        {
+        [Test]
+        public void VideoStitching_4() {
             var solution = new _1024_VideoStitching();
             var result = solution.VideoStitching(new int[][] {
                 new int[] { 0, 4 },

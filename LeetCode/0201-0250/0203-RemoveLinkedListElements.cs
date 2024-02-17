@@ -19,13 +19,11 @@ namespace LeetCode
      */
     public class _0203_RemoveLinkedListElements
     {
-        public ListNode RemoveElements(ListNode head, int val)
-        {
+        public ListNode RemoveElements(ListNode head, int val) {
             var dummy = new ListNode(-1);
             dummy.next = head;
             ListNode prev = dummy, curr = head;
-            while (curr != null)
-            {
+            while (curr != null) {
                 if (curr.val == val)
                     prev.next = curr.next;
                 else

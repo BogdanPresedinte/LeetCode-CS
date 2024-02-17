@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _1150_CheckIfANumberIsMajorityElementInASortedArray
     {
-        public bool IsMajorityElement(int[] nums, int target)
-        {
+        public bool IsMajorityElement(int[] nums, int target) {
             var count = 0;
             foreach (var num in nums)
                 if (num == target) count++;

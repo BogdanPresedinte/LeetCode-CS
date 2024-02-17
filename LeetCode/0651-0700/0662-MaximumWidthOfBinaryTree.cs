@@ -4,9 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/364425328/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -24,20 +21,16 @@ namespace LeetCode
      */
     public class _0662_MaximumWidthOfBinaryTree
     {
-        public int WidthOfBinaryTree(TreeNode root)
-        {
+        public int WidthOfBinaryTree(TreeNode root) {
             return dfs(root, 0, 1, new Dictionary<int, int>(), new Dictionary<int, int>());
         }
 
-        public int dfs(TreeNode root, int level, int order, IDictionary<int, int> start, IDictionary<int, int> end)
-        {
+        public int dfs(TreeNode root, int level, int order, IDictionary<int, int> start, IDictionary<int, int> end) {
             if (root == null) return 0;
-            if (start.Count == level)
-            {
+            if (start.Count == level) {
                 start[level] = order;
                 end[level] = order;
-            }
-            else
+            } else
                 end[level] = order;
 
             int cur = end[level] - start[level] + 1;

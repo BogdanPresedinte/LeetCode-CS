@@ -8,18 +8,13 @@ namespace LeetCode
 {
     public class _0925_LongPressedName
     {
-        public bool IsLongPressedName(string name, string typed)
-        {
+        public bool IsLongPressedName(string name, string typed) {
             int i = 0, j = 0;
-            while (i < name.Length && j < typed.Length)
-            {
-                if (name[i] == typed[j])
-                {
+            while (i < name.Length && j < typed.Length) {
+                if (name[i] == typed[j]) {
                     i++;
                     j++;
-                }
-                else
-                {
+                } else {
                     if (j > 0 && typed[j] == typed[j - 1])
                         j++;
                     else

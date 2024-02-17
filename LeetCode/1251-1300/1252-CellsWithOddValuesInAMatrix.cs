@@ -8,13 +8,11 @@ namespace LeetCode
 {
     public class _1252_CellsWithOddValuesInAMatrix
     {
-        public int OddCells(int n, int m, int[][] indices)
-        {
+        public int OddCells(int n, int m, int[][] indices) {
             var row = new bool[n];
             var col = new bool[m];
 
-            foreach (var indice in indices)
-            {
+            foreach (var indice in indices) {
                 row[indice[0]] = !row[indice[0]];
                 col[indice[1]] = !col[indice[1]];
             }

@@ -10,13 +10,10 @@ namespace LeetCode
 {
     public class _1119_RemoveVowelsFromAString
     {
-        public string RemoveVowels(string S)
-        {
+        public string RemoveVowels(string S) {
             var sb = new StringBuilder();
-            foreach (var ch in S)
-            {
-                switch (ch)
-                {
+            foreach (var ch in S) {
+                switch (ch) {
                     case 'a':
                     case 'e':
                     case 'i':

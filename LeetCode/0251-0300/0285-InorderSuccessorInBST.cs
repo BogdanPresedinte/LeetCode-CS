@@ -17,10 +17,8 @@ namespace LeetCode
      */
     public class _0285_InorderSuccessorInBST
     {
-        public TreeNode InorderSuccessor(TreeNode root, TreeNode p)
-        {
-            if (p.right != null)
-            {
+        public TreeNode InorderSuccessor(TreeNode root, TreeNode p) {
+            if (p.right != null) {
                 p = p.right;
                 while (p.left != null)
                     p = p.left;
@@ -28,14 +26,11 @@ namespace LeetCode
             }
 
             TreeNode successor = null;
-            while (root != null)
-            {
-                if (p.val < root.val)
-                {
+            while (root != null) {
+                if (p.val < root.val) {
                     successor = root;
                     root = root.left;
-                }
-                else
+                } else
                     root = root.right;
             }
             return successor;

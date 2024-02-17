@@ -8,12 +8,10 @@ namespace LeetCode
 {
     public class _0905_SortArrayByParity
     {
-        public int[] SortArrayByParity(int[] A)
-        {
+        public int[] SortArrayByParity(int[] A) {
             int left = 0;
             int right = A.Length - 1;
-            while (left < right)
-            {
+            while (left < right) {
                 while (left < right && A[left] % 2 == 0) left++;
                 while (left < right && A[right] % 2 == 1) right--;
 

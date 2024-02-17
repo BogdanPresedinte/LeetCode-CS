@@ -4,29 +4,24 @@
 // Link: https://leetcode.com/submissions/detail/370019042/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _103_BinaryTreeZigzagLevelOrderTraversal
     {
         private Queue<TreeNode> queue = new Queue<TreeNode>();
 
-        public IList<IList<int>> ZigzagLevelOrder(TreeNode root)
-        {
+        public IList<IList<int>> ZigzagLevelOrder(TreeNode root) {
             var results = new List<IList<int>>();
             if (root == null) return results;
 
             queue.Enqueue(root);
             var leftToRight = true;
 
-            while (queue.Count > 0)
-            {
+            while (queue.Count > 0) {
                 var levelSize = queue.Count;
                 var result = new int[levelSize];
 
-                for (int i = 0; i < levelSize; i++)
-                {
+                for (int i = 0; i < levelSize; i++) {
                     var node = queue.Dequeue();
                     result[leftToRight ? i : (levelSize - i - 1)] = node.val;
 

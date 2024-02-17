@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1065_IndexPairsOfAString_Test
     {
-        [TestMethod]
-        public void IndexPairs_1()
-        {
+        [Test]
+        public void IndexPairs_1() {
             var solution = new _1065_IndexPairsOfAString();
             var result = solution.IndexPairs("thestoryofleetcodeandme", new string[] { "story", "fleet", "leetcode" });
             AssertHelper.AssertArray(
@@ -19,9 +15,8 @@ namespace LeetCode.Test
                 }, result);
         }
 
-        [TestMethod]
-        public void IndexPairs_2()
-        {
+        [Test]
+        public void IndexPairs_2() {
             var solution = new _1065_IndexPairsOfAString();
             var result = solution.IndexPairs("ababa", new string[] { "aba", "ab" });
             AssertHelper.AssertArray(

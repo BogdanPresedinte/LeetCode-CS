@@ -24,22 +24,19 @@ namespace LeetCode
         private int min = int.MaxValue;
         private long result = long.MaxValue;
 
-        public int FindSecondMinimumValue(TreeNode root)
-        {
+        public int FindSecondMinimumValue(TreeNode root) {
             min = root.val;
             Traverse(root);
             return (result == long.MaxValue) ? -1 : (int)result;
         }
 
-        private void Traverse(TreeNode node)
-        {
+        private void Traverse(TreeNode node) {
             if (node == null) return;
             if (node.val > result) return;
 
             if (min < node.val && result > node.val)
                 result = node.val;
-            else
-            {
+            else {
                 Traverse(node.left);
                 Traverse(node.right);
             }

@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0240_SearchA2DMatrixII_Test
     {
-        [TestMethod]
-        public void SearchMatrixTest_1()
-        {
+        [Test]
+        public void SearchMatrixTest_1() {
             var input = new int[,]
             {
                 { 1, 4, 7, 11, 15 },

@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0941_ValidMountainArray
     {
-        public bool ValidMountainArray(int[] A)
-        {
+        public bool ValidMountainArray(int[] A) {
             int i = 0, N = A.Length;
 
             while (i + 1 < N && A[i] < A[i + 1])

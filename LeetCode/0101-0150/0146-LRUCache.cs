@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/329550034/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0146_LRUCache
@@ -16,8 +14,7 @@ namespace LeetCode
         private readonly DoubleLinkNode dummyTail;
         private int size;
 
-        public _0146_LRUCache(int capacity)
-        {
+        public _0146_LRUCache(int capacity) {
             this.size = 0;
             this.capacity = capacity;
             this.hashMap = new Dictionary<int, DoubleLinkNode>();
@@ -28,8 +25,7 @@ namespace LeetCode
             dummyTail.Prev = dummyHead;
         }
 
-        public int Get(int key)
-        {
+        public int Get(int key) {
             if (!hashMap.ContainsKey(key)) return -1;
 
             var node = hashMap[key];
@@ -37,18 +33,15 @@ namespace LeetCode
             return node.Value;
         }
 
-        public void Put(int key, int value)
-        {
-            if (hashMap.ContainsKey(key))
-            {
+        public void Put(int key, int value) {
+            if (hashMap.ContainsKey(key)) {
                 var node = hashMap[key];
                 node.Value = value;
                 MoveNodeToHead(node);
                 return;
             }
 
-            var newNode = new DoubleLinkNode()
-            {
+            var newNode = new DoubleLinkNode() {
                 Key = key,
                 Value = value
             };
@@ -56,8 +49,7 @@ namespace LeetCode
             AddNodeToHead(newNode);
             size++;
 
-            if (size > capacity)
-            {
+            if (size > capacity) {
                 var node = RemoveLatestNode();
                 hashMap.Remove(node.Key);
                 size--;
@@ -65,14 +57,12 @@ namespace LeetCode
         }
 
 
-        private void MoveNodeToHead(DoubleLinkNode node)
-        {
+        private void MoveNodeToHead(DoubleLinkNode node) {
             RemoveNode(node);
             AddNodeToHead(node);
         }
 
-        private void RemoveNode(DoubleLinkNode node)
-        {
+        private void RemoveNode(DoubleLinkNode node) {
             var previous = node.Prev;
             var next = node.Next;
 
@@ -80,8 +70,7 @@ namespace LeetCode
             next.Prev = previous;
         }
 
-        private void AddNodeToHead(DoubleLinkNode node)
-        {
+        private void AddNodeToHead(DoubleLinkNode node) {
             var next = dummyHead.Next;
 
             node.Next = next;
@@ -91,8 +80,7 @@ namespace LeetCode
             node.Prev = dummyHead;
         }
 
-        private DoubleLinkNode RemoveLatestNode()
-        {
+        private DoubleLinkNode RemoveLatestNode() {
             var last = dummyTail.Prev;
             RemoveNode(last);
             return last;

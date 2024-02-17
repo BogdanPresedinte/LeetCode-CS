@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0705_DesignHashset_Test
     {
-        [TestMethod]
-        public void MyHashSet_1()
-        {
+        [Test]
+        public void MyHashSet_1() {
             var hashSet = new _0705_DesignHashset();
 
             hashSet.Add(1);

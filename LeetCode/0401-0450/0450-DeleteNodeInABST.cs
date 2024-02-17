@@ -21,23 +21,18 @@ namespace LeetCode
      */
     public class _0450_DeleteNodeInABST
     {
-        public TreeNode DeleteNode(TreeNode root, int key)
-        {
+        public TreeNode DeleteNode(TreeNode root, int key) {
             if (root == null) return null;
 
             if (key > root.val) root.right = DeleteNode(root.right, key);
             else if (key < root.val) root.left = DeleteNode(root.left, key);
-            else
-            {
+            else {
                 if (root.left == null && root.right == null)
                     return null;
-                else if (root.right != null)
-                {
+                else if (root.right != null) {
                     root.val = GetSuccessor(root);
                     root.right = DeleteNode(root.right, root.val);
-                }
-                else
-                {
+                } else {
                     root.val = GetPredecessor(root);
                     root.left = DeleteNode(root.left, root.val);
                 }
@@ -46,8 +41,7 @@ namespace LeetCode
             return root;
         }
 
-        private int GetSuccessor(TreeNode node)
-        {
+        private int GetSuccessor(TreeNode node) {
             node = node.right;
             while (node.left != null)
                 node = node.left;
@@ -55,8 +49,7 @@ namespace LeetCode
             return node.val;
         }
 
-        private int GetPredecessor(TreeNode node)
-        {
+        private int GetPredecessor(TreeNode node) {
             node = node.left;
             while (node.right != null)
                 node = node.right;

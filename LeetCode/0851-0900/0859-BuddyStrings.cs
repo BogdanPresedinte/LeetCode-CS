@@ -8,11 +8,9 @@ namespace LeetCode
 {
     public class _0859_BuddyStrings
     {
-        public bool BuddyStrings(string A, string B)
-        {
+        public bool BuddyStrings(string A, string B) {
             if (A.Length != B.Length) return false;
-            if (A == B)
-            {
+            if (A == B) {
                 int[] counts = new int[26];
                 for (int i = 0; i < A.Length; ++i)
                     counts[A[i] - 'a']++;
@@ -23,10 +21,8 @@ namespace LeetCode
             }
 
             int first = -1, second = -1;
-            for (int i = 0; i < A.Length; ++i)
-            {
-                if (A[i] != B[i])
-                {
+            for (int i = 0; i < A.Length; ++i) {
+                if (A[i] != B[i]) {
                     if (first == -1)
                         first = i;
                     else if (second == -1)

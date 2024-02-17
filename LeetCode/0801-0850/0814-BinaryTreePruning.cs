@@ -21,8 +21,7 @@ namespace LeetCode
      */
     public class _0814_BinaryTreePruning
     {
-        public TreeNode PruneTree(TreeNode root)
-        {
+        public TreeNode PruneTree(TreeNode root) {
             if (root == null) return null;
             if (root.left == null && root.right == null && root.val == 0) return null;
 

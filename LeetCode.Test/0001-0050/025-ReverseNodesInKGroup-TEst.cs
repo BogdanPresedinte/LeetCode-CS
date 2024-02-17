@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _025_ReverseNodesInKGroup_Test
     {
-        [TestMethod]
-        public void ReverseKGroupTest()
-        {
+        [Test]
+        public void ReverseKGroupTest() {
             var input = TestHelper.GenerateList(new int[] { 1, 2, 3, 4, 5 });
             var solution = new _025_ReverseNodesInKGroup();
 
@@ -19,18 +15,16 @@ namespace LeetCode.Test
             AssertHelper.AssertLinkList(new int[] { 3, 2, 1, 4, 5 }, result);
         }
 
-        [TestMethod]
-        public void ReverseKGroupTest_EmptyList()
-        {
+        [Test]
+        public void ReverseKGroupTest_EmptyList() {
             var solution = new _025_ReverseNodesInKGroup();
             var result = solution.ReverseKGroup(null, 2);
 
             Assert.IsNull(result);
         }
 
-        [TestMethod]
-        public void ReverseKGroupTest_KEqualZero()
-        {
+        [Test]
+        public void ReverseKGroupTest_KEqualZero() {
             var input = TestHelper.GenerateList(new int[] { 1, 2, 3, 4, 5 });
 
             var solution = new _025_ReverseNodesInKGroup();
@@ -39,9 +33,8 @@ namespace LeetCode.Test
             AssertHelper.AssertLinkList(new int[] { 1, 2, 3, 4, 5 }, result);
         }
 
-        [TestMethod]
-        public void ReverseKGroupTest_KEqualOne()
-        {
+        [Test]
+        public void ReverseKGroupTest_KEqualOne() {
             var input = TestHelper.GenerateList(new int[] { 1, 2, 3, 4, 5 });
 
             var solution = new _025_ReverseNodesInKGroup();
@@ -50,9 +43,8 @@ namespace LeetCode.Test
             AssertHelper.AssertLinkList(new int[] { 1, 2, 3, 4, 5 }, result);
         }
 
-        [TestMethod]
-        public void ReverseKGroupTest_KEqualLenght()
-        {
+        [Test]
+        public void ReverseKGroupTest_KEqualLenght() {
             var input = TestHelper.GenerateList(new int[] { 1, 2, 3, 4, 5 });
             var solution = new _025_ReverseNodesInKGroup();
 
@@ -60,9 +52,8 @@ namespace LeetCode.Test
             AssertHelper.AssertLinkList(new int[] { 5, 4, 3, 2, 1 }, result);
         }
 
-        [TestMethod]
-        public void ReverseKGroupTest_KLargerThanLenght()
-        {
+        [Test]
+        public void ReverseKGroupTest_KLargerThanLenght() {
             var input = TestHelper.GenerateList(new int[] { 1, 2, 3, 4, 5 });
             var solution = new _025_ReverseNodesInKGroup();
 

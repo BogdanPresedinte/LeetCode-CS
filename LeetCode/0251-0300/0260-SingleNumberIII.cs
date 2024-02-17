@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0260_SingleNumberIII
     {
-        public int[] SingleNumber(int[] nums)
-        {
+        public int[] SingleNumber(int[] nums) {
             int bitmask = 0;
             foreach (int num in nums)
                 bitmask ^= num;

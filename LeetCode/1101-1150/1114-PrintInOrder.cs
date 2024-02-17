@@ -4,9 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/333626473/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Threading;
-
 namespace LeetCode
 {
     public class Foo
@@ -14,14 +11,12 @@ namespace LeetCode
         private EventWaitHandle waitHandle1;
         private EventWaitHandle waitHandle2;
 
-        public Foo()
-        {
+        public Foo() {
             waitHandle1 = new AutoResetEvent(false);
             waitHandle2 = new AutoResetEvent(false);
         }
 
-        public void First(Action printFirst)
-        {
+        public void First(Action printFirst) {
 
             // printFirst() outputs "first". Do not change or remove this line.
             printFirst();
@@ -29,8 +24,7 @@ namespace LeetCode
             waitHandle1.Set();
         }
 
-        public void Second(Action printSecond)
-        {
+        public void Second(Action printSecond) {
             waitHandle1.WaitOne();
 
             // printSecond() outputs "second". Do not change or remove this line.
@@ -39,8 +33,7 @@ namespace LeetCode
             waitHandle2.Set();
         }
 
-        public void Third(Action printThird)
-        {
+        public void Third(Action printThird) {
             waitHandle2.WaitOne();
 
             // printThird() outputs "third". Do not change or remove this line.

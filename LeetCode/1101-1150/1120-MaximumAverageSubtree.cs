@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/370200185/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     /**
@@ -25,14 +23,12 @@ namespace LeetCode
     {
         private double maxAverage = double.MinValue;
 
-        public double MaximumAverageSubtree(TreeNode root)
-        {
+        public double MaximumAverageSubtree(TreeNode root) {
             Traversal(root);
             return maxAverage;
         }
 
-        private (int sum, int count) Traversal(TreeNode node)
-        {
+        private (int sum, int count) Traversal(TreeNode node) {
             if (node == null) return (0, 0);
 
             (int leftSum, int leftCount) = Traversal(node.left);

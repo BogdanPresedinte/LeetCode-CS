@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0387_FirstUniqueCharacterInAString
     {
-        public int FirstUniqChar(string s)
-        {
+        public int FirstUniqChar(string s) {
             var counts = new int[26];
             foreach (var ch in s)
                 counts[ch - 'a']++;

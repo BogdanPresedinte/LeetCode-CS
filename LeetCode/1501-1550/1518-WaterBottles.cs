@@ -8,12 +8,10 @@ namespace LeetCode
 {
     public class _1518_WaterBottles
     {
-        public int NumWaterBottles(int numBottles, int numExchange)
-        {
+        public int NumWaterBottles(int numBottles, int numExchange) {
             var result = 0;
             var rest = 0;
-            while (numBottles > 0)
-            {
+            while (numBottles > 0) {
                 result += numBottles;
                 var temp = (numBottles + rest) % numExchange;
                 numBottles = (numBottles + rest) / numExchange;

@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0913_CatAndMouse_Test
     {
-        [TestMethod]
-        public void CatMouseGameTest()
-        {
+        [Test]
+        public void CatMouseGameTest() {
             var solution = new _0913_CatAndMouse();
             var result = solution.CatMouseGame(
                 new int[][] {
@@ -21,9 +17,8 @@ namespace LeetCode.Test
             Assert.AreEqual(0, result);
         }
 
-        [TestMethod]
-        public void CatMouseGameTest_2()
-        {
+        [Test]
+        public void CatMouseGameTest_2() {
             var solution = new _0913_CatAndMouse();
             var result = solution.CatMouseGame(
                 new int[][] {

@@ -19,13 +19,11 @@ namespace LeetCode
      */
     public class _0148_SortList
     {
-        public ListNode SortList(ListNode head)
-        {
+        public ListNode SortList(ListNode head) {
             if (head == null || head.next == null) return head;
 
             ListNode prev = null, slow = head, fast = head;
-            while (fast != null && fast.next != null)
-            {
+            while (fast != null && fast.next != null) {
                 prev = slow;
                 slow = slow.next;
                 fast = fast.next.next;
@@ -39,20 +37,15 @@ namespace LeetCode
             return Merge(left, right);
         }
 
-        private ListNode Merge(ListNode left, ListNode right)
-        {
+        private ListNode Merge(ListNode left, ListNode right) {
             var dummy = new ListNode();
             var current = dummy;
 
-            while (left != null && right != null)
-            {
-                if (left.val < right.val)
-                {
+            while (left != null && right != null) {
+                if (left.val < right.val) {
                     current.next = left;
                     left = left.next;
-                }
-                else
-                {
+                } else {
                     current.next = right;
                     right = right.next;
                 }

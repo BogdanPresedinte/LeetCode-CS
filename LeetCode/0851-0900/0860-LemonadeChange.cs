@@ -8,31 +8,22 @@ namespace LeetCode
 {
     public class _0860_LemonadeChange
     {
-        public bool LemonadeChange(int[] bills)
-        {
+        public bool LemonadeChange(int[] bills) {
             int fives = 0, tens = 0;
-            foreach (var bill in bills)
-            {
+            foreach (var bill in bills) {
                 if (bill == 5)
                     fives++;
-                else if (bill == 10)
-                {
-                    if (fives > 0)
-                    {
+                else if (bill == 10) {
+                    if (fives > 0) {
                         fives--;
                         tens++;
-                    }
-                    else
+                    } else
                         return false;
-                }
-                else
-                {
-                    if (fives > 0 && tens > 0)
-                    {
+                } else {
+                    if (fives > 0 && tens > 0) {
                         fives--;
                         tens--;
-                    }
-                    else if (fives >= 3)
+                    } else if (fives >= 3)
                         fives -= 3;
                     else
                         return false;

@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/378582740/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _017_LetterCombinationsOfAPhoneNumber
     {
-        public IList<string> LetterCombinations(string digits)
-        {
+        public IList<string> LetterCombinations(string digits) {
             string[] phoneChars = new string[] { " ",
                                                  "",
                                                  "abc",
@@ -27,8 +24,7 @@ namespace LeetCode
             if (digits.Length == 0) return new List<string>();
 
             var results = new List<string>() { "" };
-            foreach (var digit in digits)
-            {
+            foreach (var digit in digits) {
                 var keys = phoneChars[digit - '0'];
                 if (keys.Length == 0) continue;
 

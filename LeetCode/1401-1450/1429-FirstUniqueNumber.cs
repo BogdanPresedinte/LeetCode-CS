@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/331668261/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _1429_FirstUniqueNumber
@@ -14,8 +12,7 @@ namespace LeetCode
         private readonly DoubleLinkNode dummyHead;
         private readonly DoubleLinkNode dummyTail;
 
-        public _1429_FirstUniqueNumber(int[] nums)
-        {
+        public _1429_FirstUniqueNumber(int[] nums) {
             this.hashMap = new Dictionary<int, DoubleLinkNode>();
             this.dummyHead = new DoubleLinkNode();
             this.dummyTail = new DoubleLinkNode();
@@ -27,20 +24,16 @@ namespace LeetCode
                 Add(num);
         }
 
-        public int ShowFirstUnique()
-        {
+        public int ShowFirstUnique() {
             if (dummyHead.Next != dummyTail)
                 return dummyHead.Next.Value;
             else
                 return -1;
         }
 
-        public void Add(int value)
-        {
-            if (hashMap.ContainsKey(value))
-            {
-                if (hashMap[value] != null)
-                {
+        public void Add(int value) {
+            if (hashMap.ContainsKey(value)) {
+                if (hashMap[value] != null) {
                     var node = hashMap[value];
                     hashMap[value] = null;
                     RemoveNode(node);
@@ -48,16 +41,14 @@ namespace LeetCode
                 return;
             }
 
-            var newNode = new DoubleLinkNode()
-            {
+            var newNode = new DoubleLinkNode() {
                 Value = value
             };
             hashMap.Add(value, newNode);
             AddNodeToTail(newNode);
         }
 
-        private void RemoveNode(DoubleLinkNode node)
-        {
+        private void RemoveNode(DoubleLinkNode node) {
             var previous = node.Prev;
             var next = node.Next;
 
@@ -65,8 +56,7 @@ namespace LeetCode
             next.Prev = previous;
         }
 
-        private void AddNodeToTail(DoubleLinkNode node)
-        {
+        private void AddNodeToTail(DoubleLinkNode node) {
             var prev = dummyTail.Prev;
 
             node.Prev = prev;

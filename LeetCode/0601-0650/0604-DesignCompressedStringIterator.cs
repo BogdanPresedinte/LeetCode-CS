@@ -4,7 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/358686477/
 //-----------------------------------------------------------------------------
 
-using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace LeetCode
@@ -15,16 +14,14 @@ namespace LeetCode
         private char[] chArray;
         private int[] counts;
 
-        public _0604_DesignCompressedStringIterator(string compressedString)
-        {
+        public _0604_DesignCompressedStringIterator(string compressedString) {
             index = 0;
             var slit = Regex.Split(compressedString, "[0-9]+");
             chArray = Regex.Split(compressedString, "[0-9]+").Where(s => !string.IsNullOrEmpty(s)).Select(s => s[0]).ToArray();
             counts = Regex.Split(compressedString, "[a-zA-Z]+").Where(s => !string.IsNullOrEmpty(s)).Select(s => int.Parse(s)).ToArray();
         }
 
-        public char Next()
-        {
+        public char Next() {
             if (!HasNext()) return ' ';
 
             var ch = chArray[index];
@@ -36,8 +33,7 @@ namespace LeetCode
             return ch;
         }
 
-        public bool HasNext()
-        {
+        public bool HasNext() {
             return index < counts.Length;
         }
     }

@@ -21,31 +21,22 @@ namespace LeetCode
      */
     public class _0701_InsertIntoABinarySearchTree
     {
-        public TreeNode InsertIntoBST(TreeNode root, int val)
-        {
+        public TreeNode InsertIntoBST(TreeNode root, int val) {
             if (root == null) return new TreeNode(val);
 
             var node = root;
-            while (node != null)
-            {
-                if (val < node.val)
-                {
-                    if (node.left == null)
-                    {
+            while (node != null) {
+                if (val < node.val) {
+                    if (node.left == null) {
                         node.left = new TreeNode(val);
                         return root;
-                    }
-                    else
+                    } else
                         node = node.left;
-                }
-                else
-                {
-                    if (node.right == null)
-                    {
+                } else {
+                    if (node.right == null) {
                         node.right = new TreeNode(val);
                         return root;
-                    }
-                    else
+                    } else
                         node = node.right;
                 }
             }

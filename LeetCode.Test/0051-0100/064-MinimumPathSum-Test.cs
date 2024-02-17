@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _064_MinimumPathSum_Test
     {
-        [TestMethod]
-        public void MinPathSumTest()
-        {
+        [Test]
+        public void MinPathSumTest() {
             var input = new int[3][]
             {
                 new int[3] { 1, 2, 2 },
@@ -21,9 +17,8 @@ namespace LeetCode.Test
             Assert.AreEqual(2, result);
         }
 
-        [TestMethod]
-        public void MinPathSumTest_OneItem()
-        {
+        [Test]
+        public void MinPathSumTest_OneItem() {
             var input = new int[1][]
             {
                 new int[1] { 5 },
@@ -35,9 +30,8 @@ namespace LeetCode.Test
             Assert.AreEqual(5, result);
         }
 
-        [TestMethod]
-        public void MinPathSumTest_RowLarger()
-        {
+        [Test]
+        public void MinPathSumTest_RowLarger() {
             var input = new int[4][]
             {
                 new int[3] { 1, 2, 2 },
@@ -52,9 +46,8 @@ namespace LeetCode.Test
             Assert.AreEqual(4, result);
         }
 
-        [TestMethod]
-        public void MinPathSumTest_ColumnLarger()
-        {
+        [Test]
+        public void MinPathSumTest_ColumnLarger() {
             var input = new int[3][]
             {
                 new int[4] { 1, 0, 1, 0 },

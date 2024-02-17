@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0292_NimGame
     {
-        public bool CanWinNim(int n)
-        {
+        public bool CanWinNim(int n) {
             return n % 4 != 0;
         }
     }

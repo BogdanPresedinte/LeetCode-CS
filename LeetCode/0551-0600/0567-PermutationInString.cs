@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/341590841/
 //-----------------------------------------------------------------------------
 
-using System.Linq;
-
 namespace LeetCode
 {
     public class _0567_PermutationInString
     {
-        public bool CheckInclusion(string s1, string s2)
-        {
+        public bool CheckInclusion(string s1, string s2) {
             var s1Length = s1.Length;
             var s2Length = s2.Length;
 
@@ -22,8 +19,7 @@ namespace LeetCode
                 s1Count[ch - 'a']++;
 
             var s2Count = new int[26];
-            for (int i = 0; i < s2Length; i++)
-            {
+            for (int i = 0; i < s2Length; i++) {
                 s2Count[s2[i] - 'a']++;
                 if (i >= s1Length)
                     s2Count[s2[i - s1Length] - 'a']--;

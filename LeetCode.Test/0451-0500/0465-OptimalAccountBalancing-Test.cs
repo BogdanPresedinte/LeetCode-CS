@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0465_OptimalAccountBalancing_Test
     {
-        [TestMethod]
-        public void MinTransfers_1()
-        {
+        [Test]
+        public void MinTransfers_1() {
             var solution = new _0465_OptimalAccountBalancing();
             var result = solution.MinTransfers(
                 new int[][] {
@@ -18,9 +14,8 @@ namespace LeetCode.Test
             Assert.AreEqual(2, result);
         }
 
-        [TestMethod]
-        public void MinTransfers_2()
-        {
+        [Test]
+        public void MinTransfers_2() {
             var solution = new _0465_OptimalAccountBalancing();
             var result = solution.MinTransfers(
                 new int[][] {
@@ -33,9 +28,8 @@ namespace LeetCode.Test
             Assert.AreEqual(1, result);
         }
 
-        [TestMethod]
-        public void MinTransfers_3()
-        {
+        [Test]
+        public void MinTransfers_3() {
             var solution = new _0465_OptimalAccountBalancing();
             var result = solution.MinTransfers(
                 new int[][] {

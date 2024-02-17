@@ -4,21 +4,16 @@
 // Link: https://leetcode.com/submissions/detail/336996248/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _1065_IndexPairsOfAString
     {
-        public int[][] IndexPairs(string text, string[] words)
-        {
+        public int[][] IndexPairs(string text, string[] words) {
             var trie = new Trie();
 
-            foreach (var word in words)
-            {
+            foreach (var word in words) {
                 var current = trie;
-                foreach (var ch in word)
-                {
+                foreach (var ch in word) {
                     if (current[ch] == null)
                         current[ch] = new Trie();
                     current = current[ch];
@@ -27,11 +22,9 @@ namespace LeetCode
             }
 
             var result = new List<int[]>();
-            for (int left = 0; left < text.Length; left++)
-            {
+            for (int left = 0; left < text.Length; left++) {
                 var current = trie;
-                for (int right = left; right < text.Length; right++)
-                {
+                for (int right = left; right < text.Length; right++) {
                     var ch = text[right];
                     if (current[ch] == null)
                         break;
@@ -51,10 +44,8 @@ namespace LeetCode
     {
         private IDictionary<char, Trie> list = new Dictionary<char, Trie>();
 
-        public Trie this[char key]
-        {
-            get
-            {
+        public Trie this[char key] {
+            get {
                 if (!list.ContainsKey(key))
                     return null;
                 return list[key];

@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0155_MinStack_Test
     {
-        [TestMethod]
-        public void MinStackTest()
-        {
+        [Test]
+        public void MinStackTest() {
             _0155_MinStack minStack = new _0155_MinStack();
 
             minStack.Push(-2);

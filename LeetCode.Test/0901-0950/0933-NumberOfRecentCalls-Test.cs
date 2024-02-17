@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0933_NumberOfRecentCalls_Test
     {
-        [TestMethod]
-        public void PingTest_1()
-        {
+        [Test]
+        public void PingTest_1() {
             var solution = new _0933_NumberOfRecentCalls();
             var result = solution.Ping(1);
             Assert.AreEqual(1, result);

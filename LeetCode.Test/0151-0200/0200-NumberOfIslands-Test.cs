@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _0200_NumberOfIslands_Test
     {
-        [TestMethod]
-        public void NumIslandsTest_1()
-        {
+        [Test]
+        public void NumIslandsTest_1() {
             var solution = new _0200_NumberOfIslands();
             var result = solution.NumIslands(
                 new char[][]
@@ -21,9 +17,8 @@ namespace LeetCode.Test
             Assert.AreEqual(1, result);
         }
 
-        [TestMethod]
-        public void NumIslandsTest_2()
-        {
+        [Test]
+        public void NumIslandsTest_2() {
             var solution = new _0200_NumberOfIslands();
             var result = solution.NumIslands(
                 new char[][]

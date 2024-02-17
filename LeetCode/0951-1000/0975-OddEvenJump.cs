@@ -4,14 +4,11 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0975_OddEvenJump
     {
-        public int OddEvenJumps(int[] A)
-        {
+        public int OddEvenJumps(int[] A) {
             var length = A.Length;
             var oddPosibility = new bool[length];
             var evenPosibility = new bool[length];
@@ -23,18 +20,14 @@ namespace LeetCode
                 { A[length - 1], length - 1 }
             };
             var result = 1;
-            for (int i = length - 2; i >= 0; i--)
-            {
+            for (int i = length - 2; i >= 0; i--) {
                 var existed = map.TryGetValue(A[i], out int index);
                 map[A[i]] = i;
 
-                if (existed)
-                {
+                if (existed) {
                     oddPosibility[i] = evenPosibility[index];
                     evenPosibility[i] = oddPosibility[index];
-                }
-                else
-                {
+                } else {
                     index = map.IndexOfKey(A[i]);
                     if (index != map.Count - 1)
                         oddPosibility[i] = evenPosibility[map.Values[index + 1]];

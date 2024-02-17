@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0362_DesignHitCounter_Test
     {
-        [TestMethod]
-        public void HitCounterTest_1()
-        {
+        [Test]
+        public void HitCounterTest_1() {
             var counter = new _0362_DesignHitCounter();
 
             // hit at timestamp 1.

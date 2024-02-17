@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _1486_XOROperationInAnArray
     {
-        public int XorOperation(int n, int start)
-        {
+        public int XorOperation(int n, int start) {
             var result = 0;
             for (int i = 0; i < n; i++)
                 result ^= start + i * 2;

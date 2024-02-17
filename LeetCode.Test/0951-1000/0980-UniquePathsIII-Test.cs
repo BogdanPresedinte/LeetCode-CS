@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0980_UniquePathsIII_Test
     {
-        [TestMethod]
-        public void UniquePathsIII_1()
-        {
+        [Test]
+        public void UniquePathsIII_1() {
             var solution = new _0980_UniquePathsIII();
             var result = solution.UniquePathsIII(new int[][] {
                 new int[] { 1, 0, 0, 0 },
@@ -17,9 +13,8 @@ namespace LeetCode.Test
             Assert.AreEqual(2, result);
         }
 
-        [TestMethod]
-        public void UniquePathsIII_2()
-        {
+        [Test]
+        public void UniquePathsIII_2() {
             var solution = new _0980_UniquePathsIII();
             var result = solution.UniquePathsIII(new int[][] {
                 new int[] { 1, 0, 0, 0 },
@@ -29,9 +24,8 @@ namespace LeetCode.Test
             Assert.AreEqual(4, result);
         }
 
-        [TestMethod]
-        public void UniquePathsIII_3()
-        {
+        [Test]
+        public void UniquePathsIII_3() {
             var solution = new _0980_UniquePathsIII();
             var result = solution.UniquePathsIII(new int[][] {
                 new int[] { 0, 1 },

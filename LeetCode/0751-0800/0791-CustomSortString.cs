@@ -10,15 +10,13 @@ namespace LeetCode
 {
     public class _0791_CustomSortString
     {
-        public string CustomSortString(string S, string T)
-        {
+        public string CustomSortString(string S, string T) {
             var counts = new int[26];
             foreach (var ch in T)
                 counts[ch - 'a']++;
 
             var sb = new StringBuilder();
-            foreach (var ch in S)
-            {
+            foreach (var ch in S) {
                 sb.Append(ch, counts[ch - 'a']);
                 counts[ch - 'a'] = 0;
             }

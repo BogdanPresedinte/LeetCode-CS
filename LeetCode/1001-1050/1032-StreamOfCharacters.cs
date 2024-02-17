@@ -4,9 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/385354300/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Linq;
-
 namespace LeetCode
 {
     public class _1032_StreamOfCharacters
@@ -14,16 +11,13 @@ namespace LeetCode
         private readonly Trie root;
         private readonly List<char> stream;
 
-        public _1032_StreamOfCharacters(string[] words)
-        {
+        public _1032_StreamOfCharacters(string[] words) {
             root = new Trie();
             stream = new List<char>();
 
-            foreach (var word in words)
-            {
+            foreach (var word in words) {
                 var current = root;
-                foreach (var ch in new string(word.Reverse().ToArray()))
-                {
+                foreach (var ch in new string(word.Reverse().ToArray())) {
                     if (current.Children[ch - 'a'] == null)
                         current.Children[ch - 'a'] = new Trie();
                     current = current.Children[ch - 'a'];
@@ -32,13 +26,11 @@ namespace LeetCode
             }
         }
 
-        public bool Query(char letter)
-        {
+        public bool Query(char letter) {
             stream.Add(letter);
             var current = root;
 
-            for (int i = stream.Count - 1; i >= 0; i--)
-            {
+            for (int i = stream.Count - 1; i >= 0; i--) {
                 if (current.IsFinished) return true;
 
                 if (current.Children[stream[i] - 'a'] == null)

@@ -4,11 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/367598201/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace LeetCode
 {
     /**
@@ -20,18 +15,15 @@ namespace LeetCode
      */
     public class _1242_WebCrawlerMultithreaded
     {
-        public IList<string> Crawl(string startUrl, HtmlParser htmlParser)
-        {
+        public IList<string> Crawl(string startUrl, HtmlParser htmlParser) {
             var uri = new Uri(startUrl);
             var visited = new HashSet<string>();
             var queue = new List<string>();
             queue.Add(startUrl);
 
-            while (queue.Count > 0)
-            {
+            while (queue.Count > 0) {
                 var nextWave = new List<string>();
-                Parallel.ForEach(queue, (next) =>
-                {
+                Parallel.ForEach(queue, (next) => {
                     if (visited.Contains(next) || !next.StartsWith($"http://{uri.Host}")) return;
 
                     visited.Add(next);
@@ -47,8 +39,7 @@ namespace LeetCode
         {
             private readonly IDictionary<string, List<string>> connections;
 
-            public HtmlParser(List<string> urls, List<int[]> edges)
-            {
+            public HtmlParser(List<string> urls, List<int[]> edges) {
                 connections = new Dictionary<string, List<string>>();
                 foreach (var url in urls)
                     connections.Add(url, new List<string>());
@@ -57,8 +48,7 @@ namespace LeetCode
                     connections[urls[edge[0]]].Add(urls[edge[1]]);
             }
 
-            public List<string> GetUrls(string url)
-            {
+            public List<string> GetUrls(string url) {
                 return connections[url];
             }
         }

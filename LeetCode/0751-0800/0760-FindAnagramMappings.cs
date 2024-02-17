@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/326845848/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0760_FindAnagramMappings
     {
-        public int[] AnagramMappings(int[] A, int[] B)
-        {
+        public int[] AnagramMappings(int[] A, int[] B) {
             var list = new List<int>(B);
 
             var result = new int[A.Length];

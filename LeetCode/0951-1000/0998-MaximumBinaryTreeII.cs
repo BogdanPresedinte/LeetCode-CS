@@ -21,13 +21,11 @@ namespace LeetCode
      */
     public class _0998_MaximumBinaryTreeII
     {
-        public TreeNode InsertIntoMaxTree(TreeNode root, int val)
-        {
+        public TreeNode InsertIntoMaxTree(TreeNode root, int val) {
             var newNode = new TreeNode(val);
             TreeNode prev = null, curr = root;
 
-            while (curr != null && curr.val > newNode.val)
-            {
+            while (curr != null && curr.val > newNode.val) {
                 prev = curr;
                 curr = curr.right;
             }

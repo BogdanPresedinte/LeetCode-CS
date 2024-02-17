@@ -8,11 +8,9 @@ namespace LeetCode
 {
     public class _1342_NumberOfStepsToReduceANumberToZero
     {
-        public int NumberOfSteps(int num)
-        {
+        public int NumberOfSteps(int num) {
             var step = 0;
-            while (num > 0)
-            {
+            while (num > 0) {
                 if ((num & 1) == 1)
                     step++;
                 num /= 2;

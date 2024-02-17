@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0750_NumberOfCornerRectangles_Test
     {
-        [TestMethod]
-        public void CountCornerRectangles_1()
-        {
+        [Test]
+        public void CountCornerRectangles_1() {
             var solution = new _0750_NumberOfCornerRectangles();
             var result = solution.CountCornerRectangles(new int[][] {
                 new int[] { 1, 0, 0, 1, 0 },
@@ -18,9 +14,8 @@ namespace LeetCode.Test
             Assert.AreEqual(1, result);
         }
 
-        [TestMethod]
-        public void CountCornerRectangles_2()
-        {
+        [Test]
+        public void CountCornerRectangles_2() {
             var solution = new _0750_NumberOfCornerRectangles();
             var result = solution.CountCornerRectangles(new int[][] {
                 new int[] { 1, 1, 1 },
@@ -30,9 +25,8 @@ namespace LeetCode.Test
             Assert.AreEqual(9, result);
         }
 
-        [TestMethod]
-        public void CountCornerRectangles_3()
-        {
+        [Test]
+        public void CountCornerRectangles_3() {
             var solution = new _0750_NumberOfCornerRectangles();
             var result = solution.CountCornerRectangles(new int[][] {
                 new int[] { 1, 1, 1, 1 },

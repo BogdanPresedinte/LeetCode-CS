@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0588_DesignInMemoryFileSystem_Test
     {
-        [TestMethod]
-        public void DesignInMemoryFileSystem_1()
-        {
+        [Test]
+        public void DesignInMemoryFileSystem_1() {
             var solution = new _0588_DesignInMemoryFileSystem();
             Assert.AreEqual(0, solution.Ls("/").Count);
             solution.Mkdir("/a/b/c");

@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _1347_MinimumNumberOfStepsToMakeTwoStringsAnagram
     {
-        public int MinSteps(string s, string t)
-        {
+        public int MinSteps(string s, string t) {
             var counts = new int[26];
             foreach (var ch in s)
                 counts[ch - 'a']++;

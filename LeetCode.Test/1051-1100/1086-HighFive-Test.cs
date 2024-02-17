@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1086_HighFive_Test
     {
-        [TestMethod]
-        public void HighFive_1()
-        {
+        [Test]
+        public void HighFive_1() {
             var solution = new _1086_HighFive();
             var result = solution.HighFive(new int[][]
                 {

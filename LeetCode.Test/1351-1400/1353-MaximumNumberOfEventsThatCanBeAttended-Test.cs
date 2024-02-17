@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1353_MaximumNumberOfEventsThatCanBeAttended_Test
     {
-        [TestMethod]
-        public void MaxEvents_1()
-        {
+        [Test]
+        public void MaxEvents_1() {
             var solution = new _1353_MaximumNumberOfEventsThatCanBeAttended();
             var result = solution.MaxEvents(new int[][] {
                 new int[] { 1, 2 },
@@ -17,9 +13,8 @@ namespace LeetCode.Test
             Assert.AreEqual(3, result);
         }
 
-        [TestMethod]
-        public void MaxEvents_2()
-        {
+        [Test]
+        public void MaxEvents_2() {
             var solution = new _1353_MaximumNumberOfEventsThatCanBeAttended();
             var result = solution.MaxEvents(new int[][] {
                 new int[] { 1, 2 },
@@ -30,9 +25,8 @@ namespace LeetCode.Test
             Assert.AreEqual(4, result);
         }
 
-        [TestMethod]
-        public void MaxEvents_3()
-        {
+        [Test]
+        public void MaxEvents_3() {
             var solution = new _1353_MaximumNumberOfEventsThatCanBeAttended();
             var result = solution.MaxEvents(new int[][] {
                 new int[] { 1, 4 },
@@ -44,9 +38,8 @@ namespace LeetCode.Test
             Assert.AreEqual(4, result);
         }
 
-        [TestMethod]
-        public void MaxEvents_4()
-        {
+        [Test]
+        public void MaxEvents_4() {
             var solution = new _1353_MaximumNumberOfEventsThatCanBeAttended();
             var result = solution.MaxEvents(new int[][] {
                 new int[] { 1, 100000 },
@@ -54,9 +47,8 @@ namespace LeetCode.Test
             Assert.AreEqual(1, result);
         }
 
-        [TestMethod]
-        public void MaxEvents_5()
-        {
+        [Test]
+        public void MaxEvents_5() {
             var solution = new _1353_MaximumNumberOfEventsThatCanBeAttended();
             var result = solution.MaxEvents(new int[][] {
                 new int[] { 1, 1 },

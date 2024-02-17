@@ -4,9 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/372948719/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /**
@@ -30,17 +27,14 @@ namespace LeetCode
     {
         private Stack<NestedInteger> stack;
 
-        public _0341_FlattenNestedListIterator(IList<NestedInteger> nestedList)
-        {
+        public _0341_FlattenNestedListIterator(IList<NestedInteger> nestedList) {
             this.stack = new Stack<NestedInteger>();
             for (int i = nestedList.Count - 1; i >= 0; i--)
                 stack.Push(nestedList[i]);
         }
 
-        public bool HasNext()
-        {
-            while (stack.Count > 0 && !stack.Peek().IsInteger())
-            {
+        public bool HasNext() {
+            while (stack.Count > 0 && !stack.Peek().IsInteger()) {
                 var ni = stack.Pop();
                 var list = ni.GetList();
                 for (int i = list.Count - 1; i >= 0; i--)
@@ -50,8 +44,7 @@ namespace LeetCode
             return stack.Count > 0;
         }
 
-        public int Next()
-        {
+        public int Next() {
             if (!HasNext()) throw new IndexOutOfRangeException();
             return stack.Pop().GetInteger();
         }
@@ -64,43 +57,37 @@ namespace LeetCode
 
 
             // Constructor initializes an empty nested list.
-            public NestedInteger()
-            {
+            public NestedInteger() {
                 number = null;
                 list = new List<NestedInteger>();
             }
 
             // Constructor initializes a single integer.
-            public NestedInteger(int value)
-            {
+            public NestedInteger(int value) {
                 number = value;
                 list = new List<NestedInteger>();
             }
 
 
             // @return true if this NestedInteger holds a single integer, rather than a nested list.
-            public bool IsInteger()
-            {
+            public bool IsInteger() {
                 return number.HasValue;
             }
 
             // @return the single integer that this NestedInteger holds, if it holds a single integer
             // Return null if this NestedInteger holds a nested list
-            public int GetInteger()
-            {
+            public int GetInteger() {
                 return number.Value;
             }
 
             // Set this NestedInteger to hold a single integer.
-            public void SetInteger(int value)
-            {
+            public void SetInteger(int value) {
                 number = value;
                 list = null;
             }
 
             // Set this NestedInteger to hold a nested list and adds a nested integer to it.
-            public void Add(NestedInteger ni)
-            {
+            public void Add(NestedInteger ni) {
                 number = null;
                 if (list == null)
                     list = new List<NestedInteger>() { ni };
@@ -110,8 +97,7 @@ namespace LeetCode
 
             // @return the nested list that this NestedInteger holds, if it holds a nested list
             // Return null if this NestedInteger holds a single integer
-            public IList<NestedInteger> GetList()
-            {
+            public IList<NestedInteger> GetList() {
                 return list;
             }
         }

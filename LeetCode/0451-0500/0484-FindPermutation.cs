@@ -8,17 +8,14 @@ namespace LeetCode
 {
     public class _0484_FindPermutation
     {
-        public int[] FindPermutation(string s)
-        {
+        public int[] FindPermutation(string s) {
             var result = new int[s.Length + 1];
             result[0] = 1;
 
-            for (int i = 0; i < s.Length; i++)
-            {
+            for (int i = 0; i < s.Length; i++) {
                 if (s[i] == 'I')
                     result[i + 1] = i + 2;
-                else
-                {
+                else {
                     var j = i;
                     while (i < s.Length && s[i] == 'D')
                         i++;

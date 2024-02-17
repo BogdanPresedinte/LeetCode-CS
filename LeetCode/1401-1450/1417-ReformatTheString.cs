@@ -4,20 +4,17 @@
 // Link: https://leetcode.com/submissions/detail/340997010/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
 using System.Text;
 
 namespace LeetCode
 {
     public class _1417_ReformatTheString
     {
-        public string Reformat(string s)
-        {
+        public string Reformat(string s) {
             var letterQueue = new Queue<char>();
             var digitQueue = new Queue<char>();
 
-            foreach (var ch in s)
-            {
+            foreach (var ch in s) {
                 if (char.IsLetter(ch))
                     letterQueue.Enqueue(ch);
                 else
@@ -32,8 +29,7 @@ namespace LeetCode
             if (different == 1)
                 sb.Append(letterQueue.Dequeue());
 
-            while (letterQueue.Count > 0)
-            {
+            while (letterQueue.Count > 0) {
                 sb.Append(digitQueue.Dequeue());
                 sb.Append(letterQueue.Dequeue());
             }

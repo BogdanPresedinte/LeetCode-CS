@@ -4,14 +4,11 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _1197_MinimumKnightMoves
     {
-        public int MinKnightMoves(int x, int y)
-        {
+        public int MinKnightMoves(int x, int y) {
             var dp = new int[301, 301];
             dp[0, 0] = 0;
             dp[1, 2] = dp[2, 1] = 1;
@@ -19,8 +16,7 @@ namespace LeetCode
             return DP(dp, Math.Abs(x), Math.Abs(y));
         }
 
-        public int DP(int[,] dp, int x, int y)
-        {
+        public int DP(int[,] dp, int x, int y) {
             if (x == 0 && y == 0) return 0;
             if ((x == 1 && y == 2) || (x == 2 && y == 1)) return 1;
             if (dp[x, y] > 0) return dp[x, y];

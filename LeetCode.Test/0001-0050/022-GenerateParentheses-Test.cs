@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _022_GenerateParentheses_Test
     {
-        [TestMethod]
-        public void GenerateParenthesisTest()
-        {
+        [Test]
+        public void GenerateParenthesisTest() {
             var solution = new _022_GenerateParentheses();
             var result = solution.GenerateParenthesis(3);
 
@@ -19,27 +15,24 @@ namespace LeetCode.Test
             Assert.AreEqual("()()()", result[4]);
         }
 
-        [TestMethod]
-        public void GenerateParenthesisTest_NLessThanZero()
-        {
+        [Test]
+        public void GenerateParenthesisTest_NLessThanZero() {
             var solution = new _022_GenerateParentheses();
             var result = solution.GenerateParenthesis(-1);
 
             Assert.AreEqual(0, result.Count);
         }
 
-        [TestMethod]
-        public void GenerateParenthesisTest_NEqualZero()
-        {
+        [Test]
+        public void GenerateParenthesisTest_NEqualZero() {
             var solution = new _022_GenerateParentheses();
             var result = solution.GenerateParenthesis(0);
 
             Assert.AreEqual(0, result.Count);
         }
 
-        [TestMethod]
-        public void GenerateParenthesisTest_NEqualOne()
-        {
+        [Test]
+        public void GenerateParenthesisTest_NEqualOne() {
             var solution = new _022_GenerateParentheses();
             var result = solution.GenerateParenthesis(1);
 
@@ -47,9 +40,8 @@ namespace LeetCode.Test
             Assert.AreEqual("()", result[0]);
         }
 
-        [TestMethod]
-        public void GenerateParenthesisTest_LargeN()
-        {
+        [Test]
+        public void GenerateParenthesisTest_LargeN() {
             var solution = new _022_GenerateParentheses();
             var result = solution.GenerateParenthesis(4);
             Assert.AreEqual(14, result.Count);

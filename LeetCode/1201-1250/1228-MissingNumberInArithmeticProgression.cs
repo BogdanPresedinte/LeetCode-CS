@@ -8,15 +8,13 @@ namespace LeetCode
 {
     public class _1228_MissingNumberInArithmeticProgression
     {
-        public int MissingNumber(int[] arr)
-        {
+        public int MissingNumber(int[] arr) {
             var diff = (arr[arr.Length - 1] - arr[0]) / arr.Length;
 
             int lo = 0;
             int hi = arr.Length - 1;
 
-            while (lo <= hi)
-            {
+            while (lo <= hi) {
                 int mid = lo + (hi - lo) / 2;
 
                 if (arr[mid] == (arr[0] + mid * diff))

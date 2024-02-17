@@ -4,9 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/344758530/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.Linq;
-
 namespace LeetCode
 {
     /**
@@ -24,8 +21,7 @@ namespace LeetCode
      */
     public class _0257_BinaryTreePaths
     {
-        public IList<string> BinaryTreePaths(TreeNode root)
-        {
+        public IList<string> BinaryTreePaths(TreeNode root) {
             if (root == null) return new List<string>();
 
             var result = new List<IList<int>>();
@@ -34,16 +30,14 @@ namespace LeetCode
             return result.Select(i => string.Join("->", i)).ToList();
         }
 
-        public void GetPath(TreeNode node, IList<int> current, IList<IList<int>> result)
-        {
+        public void GetPath(TreeNode node, IList<int> current, IList<IList<int>> result) {
             var next = new List<int>(current);
             if (node == null) return;
 
             next.Add(node.val);
             if (node.left == null && node.right == null)
                 result.Add(next);
-            else
-            {
+            else {
                 GetPath(node.left, next, result);
                 GetPath(node.right, next, result);
             }

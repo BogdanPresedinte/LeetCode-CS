@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _1427_PerformStringShifts
     {
-        public string StringShift(string s, int[][] shift)
-        {
+        public string StringShift(string s, int[][] shift) {
             var leftShift = 0;
             foreach (var oneShift in shift)
                 leftShift += oneShift[0] == 0 ? oneShift[1] : -oneShift[1];

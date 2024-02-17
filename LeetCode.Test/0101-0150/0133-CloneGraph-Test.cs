@@ -1,15 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
-using static LeetCode._0133_CloneGraph;
+﻿using static LeetCode._0133_CloneGraph;
 
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0133_CloneGraph_Test
     {
-        [TestMethod]
-        public void CloneGraphTest()
-        {
+        [Test]
+        public void CloneGraphTest() {
             var node1 = new Node(1, new List<Node>());
             var node2 = new Node(2, new List<Node>());
             var node3 = new Node(3, new List<Node>());

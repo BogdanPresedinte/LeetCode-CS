@@ -19,13 +19,11 @@ namespace LeetCode
      */
     public class _0141_LinkedListCycle
     {
-        public bool HasCycle(ListNode head)
-        {
+        public bool HasCycle(ListNode head) {
             if (head == null || head.next == null) return false;
 
             ListNode slow = head, fast = head.next;
-            while (slow != fast)
-            {
+            while (slow != fast) {
                 if (fast == null || fast.next == null) return false;
                 slow = slow.next;
                 fast = fast.next.next;

@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/379087578/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _0528_RandomPickWithWeight
@@ -14,24 +12,20 @@ namespace LeetCode
         private readonly int totalSum;
         private readonly Random random;
 
-        public _0528_RandomPickWithWeight(int[] w)
-        {
+        public _0528_RandomPickWithWeight(int[] w) {
             prefixSums = new int[w.Length];
-            for (int i = 0; i < w.Length; i++)
-            {
+            for (int i = 0; i < w.Length; i++) {
                 totalSum += w[i];
                 prefixSums[i] = totalSum;
             }
             random = new Random();
         }
 
-        public int PickIndex()
-        {
+        public int PickIndex() {
             var target = random.Next(totalSum) + 1;
 
             int lo = 0, hi = prefixSums.Length - 1;
-            while (lo <= hi)
-            {
+            while (lo <= hi) {
                 int mid = lo + (hi - lo) / 2;
                 if (target == prefixSums[mid]) return mid;
                 if (target > prefixSums[mid])

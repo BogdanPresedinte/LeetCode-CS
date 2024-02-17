@@ -4,14 +4,11 @@
 // Link: 
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _030_SubstringWithConcatenationOfAllWords
     {
-        public IList<int> FindSubstring(string s, string[] words)
-        {
+        public IList<int> FindSubstring(string s, string[] words) {
             var result = new List<int>();
             var wordsLenght = words.Length;
             var sLenght = s.Length;
@@ -23,14 +20,10 @@ namespace LeetCode
             if (concatLenght > sLenght) { return result; }
 
             var wordsMap = new Dictionary<string, int>();
-            foreach (var word in words)
-            {
-                if (wordsMap.ContainsKey(word))
-                {
+            foreach (var word in words) {
+                if (wordsMap.ContainsKey(word)) {
                     wordsMap[word]++;
-                }
-                else
-                {
+                } else {
                     wordsMap[word] = 1;
                 }
             }
@@ -39,27 +32,21 @@ namespace LeetCode
             int i, j, count;
             var subString = string.Empty;
             bool allUsed = false;
-            for (i = 0; i <= sLenght - concatLenght; i++)
-            {
+            for (i = 0; i <= sLenght - concatLenght; i++) {
                 used = new Dictionary<string, int>(wordsMap);
 
-                for (j = i; j <= sLenght - wordLenght; j += wordLenght)
-                {
+                for (j = i; j <= sLenght - wordLenght; j += wordLenght) {
                     subString = s.Substring(j, wordLenght);
-                    if (used.TryGetValue(subString, out count))
-                    {
+                    if (used.TryGetValue(subString, out count)) {
                         if (count == 0) { break; }
                         used[subString]--;
-                    }
-                    else
-                    {
+                    } else {
                         break;
                     }
                 }
 
                 allUsed = true;
-                foreach (var pair in used)
-                {
+                foreach (var pair in used) {
                     if (pair.Value > 0) { allUsed = false; break; }
                 }
 

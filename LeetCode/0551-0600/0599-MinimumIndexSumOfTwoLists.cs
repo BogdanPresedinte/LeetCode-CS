@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/344732795/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     public class _0599_MinimumIndexSumOfTwoLists
     {
-        public string[] FindRestaurant(string[] list1, string[] list2)
-        {
+        public string[] FindRestaurant(string[] list1, string[] list2) {
             if (list1.Length > list2.Length) return FindRestaurant(list2, list1);
 
             var map = new Dictionary<string, int>();
@@ -20,19 +17,16 @@ namespace LeetCode
 
             var result = new List<string>();
             var sum = int.MaxValue;
-            for (int i = 0; i < list2.Length; i++)
-            {
+            for (int i = 0; i < list2.Length; i++) {
                 if (!map.ContainsKey(list2[i]))
                     continue;
 
                 var cur = map[list2[i]] + i;
-                if (cur < sum)
-                {
+                if (cur < sum) {
                     sum = cur;
                     result.Clear();
                     result.Add(list2[i]);
-                }
-                else if (cur == sum)
+                } else if (cur == sum)
                     result.Add(list2[i]);
             }
 

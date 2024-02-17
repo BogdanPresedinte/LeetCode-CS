@@ -4,16 +4,13 @@
 // Link: https://leetcode.com/submissions/detail/375095783/
 //-----------------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace LeetCode
 {
     public class _0166_FractionToRecurringDecimal
     {
-        public string FractionToDecimal(int numerator, int denominator)
-        {
+        public string FractionToDecimal(int numerator, int denominator) {
             if (numerator == 0) return "0";
 
             StringBuilder sb = new StringBuilder();
@@ -28,10 +25,8 @@ namespace LeetCode
 
             sb.Append('.');
             var map = new Dictionary<long, int>();
-            while (remainder != 0)
-            {
-                if (map.ContainsKey(remainder))
-                {
+            while (remainder != 0) {
+                if (map.ContainsKey(remainder)) {
                     sb.Insert(map[remainder], "(");
                     sb.Append(")");
                     break;

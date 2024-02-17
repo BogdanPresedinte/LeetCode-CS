@@ -10,11 +10,9 @@ namespace LeetCode
 {
     public class _1108_DefangingAnIPAddress
     {
-        public string DefangIPaddr(string address)
-        {
+        public string DefangIPaddr(string address) {
             var sb = new StringBuilder();
-            foreach (var ch in address)
-            {
+            foreach (var ch in address) {
                 if (ch == '.')
                     sb.Append("[.]");
                 else

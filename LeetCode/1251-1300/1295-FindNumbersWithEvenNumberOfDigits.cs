@@ -4,14 +4,11 @@
 // Link: https://leetcode.com/submissions/detail/326443837/
 //-----------------------------------------------------------------------------
 
-using System.Linq;
-
 namespace LeetCode
 {
     public class _1295_FindNumbersWithEvenNumberOfDigits
     {
-        public int FindNumbers(int[] nums)
-        {
+        public int FindNumbers(int[] nums) {
             return nums.Count(num => num.ToString().Length % 2 == 0);
         }
     }

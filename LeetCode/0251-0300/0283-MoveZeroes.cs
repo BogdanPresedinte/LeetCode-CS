@@ -8,8 +8,7 @@ namespace LeetCode
 {
     public class _0283_MoveZeroes
     {
-        public void MoveZeroes(int[] nums)
-        {
+        public void MoveZeroes(int[] nums) {
             if (nums == null || nums.Length <= 1) return;
 
             int cur = 0;

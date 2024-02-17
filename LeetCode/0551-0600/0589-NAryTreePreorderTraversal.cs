@@ -4,8 +4,6 @@
 // Link: https://leetcode.com/submissions/detail/328759241/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace LeetCode
 {
     /*
@@ -29,15 +27,13 @@ namespace LeetCode
 
     public class _0589_NAryTreePreorderTraversal
     {
-        public IList<int> Preorder(Node root)
-        {
+        public IList<int> Preorder(Node root) {
             var result = new List<int>();
             if (root == null) return result;
 
             var stack = new Stack<Node>();
             stack.Push(root);
-            while (stack.Count > 0)
-            {
+            while (stack.Count > 0) {
                 var node = stack.Pop();
                 result.Add(node.val);
                 if (node.children != null)
@@ -55,13 +51,11 @@ namespace LeetCode
 
             public Node() { }
 
-            public Node(int _val)
-            {
+            public Node(int _val) {
                 val = _val;
             }
 
-            public Node(int _val, IList<Node> _children)
-            {
+            public Node(int _val, IList<Node> _children) {
                 val = _val;
                 children = _children;
             }

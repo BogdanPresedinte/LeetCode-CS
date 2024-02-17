@@ -4,18 +4,14 @@
 // Link: https://leetcode.com/submissions/detail/331981659/
 //-----------------------------------------------------------------------------
 
-using System;
-
 namespace LeetCode
 {
     public class _1413_MinimumValueToGetPositiveStepByStepSum
     {
-        public int MinStartValue(int[] nums)
-        {
+        public int MinStartValue(int[] nums) {
             var minSum = int.MaxValue;
             var sum = 0;
-            foreach (var num in nums)
-            {
+            foreach (var num in nums) {
                 sum += num;
                 minSum = Math.Min(minSum, sum);
             }

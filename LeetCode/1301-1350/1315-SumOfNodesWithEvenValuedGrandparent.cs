@@ -21,13 +21,11 @@ namespace LeetCode
      */
     public class _1315_SumOfNodesWithEvenValuedGrandparent
     {
-        public int SumEvenGrandparent(TreeNode root)
-        {
+        public int SumEvenGrandparent(TreeNode root) {
             return SumEvenGrandparent(root, 1, 1);
         }
 
-        private int SumEvenGrandparent(TreeNode node, int parentValue, int grandparentValue)
-        {
+        private int SumEvenGrandparent(TreeNode node, int parentValue, int grandparentValue) {
             if (node == null) return 0;
 
             return SumEvenGrandparent(node.left, node.val, parentValue) + SumEvenGrandparent(node.right, node.val, parentValue)

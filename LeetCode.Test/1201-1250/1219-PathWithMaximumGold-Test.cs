@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _1219_PathWithMaximumGold_Test
     {
-        [TestMethod]
-        public void GetMaximumGold_1()
-        {
+        [Test]
+        public void GetMaximumGold_1() {
             var solution = new _1219_PathWithMaximumGold();
             var result = solution.GetMaximumGold(new int[][] {
                 new int[] { 0, 6, 0 },
@@ -17,9 +13,8 @@ namespace LeetCode.Test
             Assert.AreEqual(24, result);
         }
 
-        [TestMethod]
-        public void GetMaximumGold_2()
-        {
+        [Test]
+        public void GetMaximumGold_2() {
             var solution = new _1219_PathWithMaximumGold();
             var result = solution.GetMaximumGold(new int[][] {
                 new int[] { 1, 0, 7 },

@@ -4,19 +4,16 @@
 // Link: https://leetcode.com/submissions/detail/356457712/
 //-----------------------------------------------------------------------------
 
-using System.Collections.Generic;
 using System.Text;
 
 namespace LeetCode
 {
     public class _060_PermutationSequence
     {
-        public string GetPermutation(int n, int k)
-        {
+        public string GetPermutation(int n, int k) {
             var nums = new List<int>();
             var group = 1;
-            for (int i = 1; i <= n; i++)
-            {
+            for (int i = 1; i <= n; i++) {
                 nums.Add(i);
                 group *= i;
             }
@@ -26,8 +23,7 @@ namespace LeetCode
 
             var result = new StringBuilder();
             var index = -1;
-            while (n > 0)
-            {
+            while (n > 0) {
                 group /= n;
                 index = k / group;
                 result.Append(nums[index]);

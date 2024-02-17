@@ -8,20 +8,15 @@ namespace LeetCode
 {
     public class _021_MergeTwoSortedLists
     {
-        public ListNode MergeTwoLists(ListNode l1, ListNode l2)
-        {
+        public ListNode MergeTwoLists(ListNode l1, ListNode l2) {
             var head = new ListNode(-1);
             var current = head;
 
-            while (l1 != null && l2 != null)
-            {
-                if (l1.val <= l2.val)
-                {
+            while (l1 != null && l2 != null) {
+                if (l1.val <= l2.val) {
                     current.next = l1;
                     l1 = l1.next;
-                }
-                else
-                {
+                } else {
                     current.next = l2;
                     l2 = l2.next;
                 }

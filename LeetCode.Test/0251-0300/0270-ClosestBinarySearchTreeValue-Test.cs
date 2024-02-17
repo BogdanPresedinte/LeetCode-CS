@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace LeetCode.Test
 {
-    [TestClass]
     public class _0270_ClosestBinarySearchTreeValue_Test
     {
-        [TestMethod]
-        public void ClosestValue_1()
-        {
+        [Test]
+        public void ClosestValue_1() {
             var root = TestHelper.GenerateTree(new int?[] { 4, 2, 5, 1, 3 });
 
             var solution = new _0270_ClosestBinarySearchTreeValue();
@@ -15,9 +11,8 @@ namespace LeetCode.Test
             Assert.AreEqual(4, result);
         }
 
-        [TestMethod]
-        public void ClosestValue_2()
-        {
+        [Test]
+        public void ClosestValue_2() {
             var root = TestHelper.GenerateTree(new int?[] { 2147483647 });
 
             var solution = new _0270_ClosestBinarySearchTreeValue();

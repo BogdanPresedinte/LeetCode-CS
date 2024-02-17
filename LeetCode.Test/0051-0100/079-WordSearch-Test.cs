@@ -1,13 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace LeetCode.Test
+﻿namespace LeetCode.Test
 {
-    [TestClass]
     public class _079_WordSearch_Test
     {
-        [TestMethod]
-        public void ExistTest_Exist()
-        {
+        [Test]
+        public void ExistTest_Exist() {
             var input = new char[3][]
             {
                 new char[] { 'A', 'B', 'C', 'E' },
@@ -21,9 +17,8 @@ namespace LeetCode.Test
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void ExistTest_Exist_2()
-        {
+        [Test]
+        public void ExistTest_Exist_2() {
             var input = new char[3][]
             {
                 new char[] { 'A', 'B', 'C', 'E' },
@@ -37,9 +32,8 @@ namespace LeetCode.Test
             Assert.IsTrue(result);
         }
 
-        [TestMethod]
-        public void ExistTest_NotExist()
-        {
+        [Test]
+        public void ExistTest_NotExist() {
             var input = new char[3][]
             {
                 new char[] { 'A', 'B', 'C', 'E' },

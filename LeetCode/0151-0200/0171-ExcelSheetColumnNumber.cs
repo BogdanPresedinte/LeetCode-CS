@@ -8,11 +8,9 @@ namespace LeetCode
 {
     public class _0171_ExcelSheetColumnNumber
     {
-        public int TitleToNumber(string s)
-        {
+        public int TitleToNumber(string s) {
             var value = 0;
-            foreach (var ch in s)
-            {
+            foreach (var ch in s) {
                 value *= 26;
                 value += ch - 'A' + 1;
             }

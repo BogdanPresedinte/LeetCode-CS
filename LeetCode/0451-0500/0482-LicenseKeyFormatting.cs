@@ -10,17 +10,14 @@ namespace LeetCode
 {
     public class _0482_LicenseKeyFormatting
     {
-        public string LicenseKeyFormatting(string S, int K)
-        {
+        public string LicenseKeyFormatting(string S, int K) {
             S = S.ToUpper().Replace("-", "");
             var sb = new StringBuilder();
             var groupSize = S.Length % K;
             if (groupSize == 0) groupSize = K;
 
-            for (int i = 0; i < S.Length; i++)
-            {
-                if (groupSize == 0)
-                {
+            for (int i = 0; i < S.Length; i++) {
+                if (groupSize == 0) {
                     sb.Append("-");
                     groupSize = K;
                 }
