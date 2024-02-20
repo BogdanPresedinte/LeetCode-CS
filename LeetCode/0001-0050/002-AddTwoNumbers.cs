@@ -8,27 +8,28 @@ namespace LeetCode
 {
     public class _002_AddTwoNumbers
     {
-        public ListNode AddTwoNumbers(ListNode l1, ListNode l2) {
-            var dummy = new ListNode(-1);
-            var current = dummy;
+        public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
+        {
+            ListNode dummy = new(-1);
+            ListNode current = dummy;
 
-            var carry = 0;
+            int carry = 0;
             while (l1 != null || l2 != null) {
-                var value1 = l1 == null ? 0 : l1.val;
-                var value2 = l2 == null ? 0 : l2.val;
+                int value1 = l1 == null ? 0 : l1.val;
+                int value2 = l2 == null ? 0 : l2.val;
 
-                var sum = value1 + value2 + carry;
+                int sum = value1 + value2 + carry;
                 carry = sum / 10;
-                sum %= 10;
-                current.next = new ListNode(sum);
+                current.next = new ListNode(sum % 10);
 
                 current = current.next;
-                l1 = l1 == null ? null : l1.next;
-                l2 = l2 == null ? null : l2.next;
+                l1 = l1?.next;
+                l2 = l2?.next;
             }
 
-            if (carry != 0)
+            if (carry != 0) {
                 current.next = new ListNode(carry);
+            }
 
             return dummy.next;
         }
